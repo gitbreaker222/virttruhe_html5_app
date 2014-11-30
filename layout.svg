@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="472.7514"
+   height="685.89355"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   enable-background="new"
+   sodipodi:docname="layout.svg">
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       id="filter3794">
+      <feBlend
+         inkscape:collect="always"
+         mode="multiply"
+         in2="BackgroundImage"
+         id="feBlend3796" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#141414"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="216.35456"
+     inkscape:cy="316.63856"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:object-nodes="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-page="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="1406"
+     inkscape:window-height="988"
+     inkscape:window-x="-2"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-187.88837,-58.372078)">
+    <rect
+       style="fill:#2d2d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3775"
+       width="472.7514"
+       height="685.89355"
+       x="187.88837"
+       y="58.372078"
+       ry="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Inventory" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="place">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3778"
+       width="472.7514"
+       height="72.730965"
+       x="-3.3007814e-06"
+       y="613.1626" />
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="200.49319"
+       y="659.96655"
+       id="text3780"><tspan
+         sodipodi:role="line"
+         id="tspan3782"
+         x="200.49319"
+         y="659.96655">Kokiri Forest</tspan></text>
+    <g
+       id="g3798"
+       transform="translate(44.951777,5.0507627)">
+      <rect
+         ry="1.0101526"
+         y="631.34534"
+         x="367.69553"
+         height="4.0405679"
+         width="44.446686"
+         id="rect3785"
+         style="fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <use
+         height="685.89355"
+         width="472.7514"
+         transform="translate(0,11.86929)"
+         id="use3787"
+         xlink:href="#rect3785"
+         y="0"
+         x="0" />
+      <use
+         height="685.89355"
+         width="472.7514"
+         transform="translate(0,11.869292)"
+         id="use3789"
+         xlink:href="#use3787"
+         y="0"
+         x="0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="place layout"
+     style="display:inline">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 1;stroke-dashoffset:0"
+       id="rect3803"
+       width="388.90872"
+       height="58.588844"
+       x="7.0710645"
+       y="620.23364"
+       ry="1.0101526" />
+    <rect
+       ry="1.0101526"
+       y="620.23364"
+       x="404.061"
+       height="58.588867"
+       width="61.619282"
+       id="rect3807"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 1;stroke-dashoffset:0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="color"
+     style="display:none;filter:url(#filter3794)">
+    <rect
+       style="fill:#ffdd33;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3792"
+       width="472.7514"
+       height="685.89355"
+       x="0"
+       y="0" />
+  </g>
+</svg>
