@@ -60,11 +60,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="217.89499"
-     inkscape:cy="331.26575"
+     inkscape:zoom="0.7"
+     inkscape:cx="88.698278"
+     inkscape:cy="405.23148"
      inkscape:document-units="px"
-     inkscape:current-layer="layer9"
+     inkscape:current-layer="g4476"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:object-nodes="false"
@@ -1282,15 +1282,98 @@ PIQJvkfav4Nz7RPxnFjAQyHDz1Uqza/GmP59aGjiuzH2AXMZwOVbxJju/3SJYvUeeys+tYAj4uAl
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Inventory - dialogue box"
-     style="display:none">
+     style="display:inline">
     <rect
        style="fill:#cccccc;fill-opacity:0.9260355;stroke:none"
        id="rect4389"
        width="435.41995"
-       height="383.80014"
-       x="16.118229"
-       y="112.18474"
+       height="316.65729"
+       x="16.475372"
+       y="111.50199"
        ry="17.172594" />
+    <path
+       style="fill:#2d2d2d;fill-opacity:0.9260355;fill-rule:nonzero;stroke:none"
+       d="m 411.79605,124.20112 -5.26663,5.26663 11.96962,11.96963 -11.96962,11.95189 5.26663,5.26663 11.95189,-11.96962 11.96963,11.96962 5.26663,-5.26663 -11.95189,-11.95189 11.95189,-11.96963 -5.26663,-5.26663 -11.96963,11.95189 -11.95189,-11.95189 z"
+       id="rect4438"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4444"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2d2d2d;fill-opacity:0.9260355;fill-rule:nonzero;stroke:none;font-family:Liberation Serif;-inkscape-font-specification:Liberation Serif"
+       transform="translate(0,20)"><flowRegion
+         id="flowRegion4446"><rect
+           id="rect4448"
+           width="396.98996"
+           height="260.61935"
+           x="28.284271"
+           y="171.72591"
+           style="text-align:start;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara4450">Infotext about the Deku-Shild. You can block enemy attacks with it, when equipped</flowPara></flowRoot>    <g
+       id="g4471"
+       transform="translate(3.1370928,-310)">
+      <rect
+         ry="8.0812206"
+         y="431.33511"
+         x="26.263966"
+         height="50.507626"
+         width="180.81731"
+         id="rect4452"
+         style="fill:none;stroke:#666666" />
+      <text
+         id="text4454"
+         y="462.64984"
+         x="83.374771"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2d2d2d;stroke:none;font-family:Liberation Serif;-inkscape-font-specification:Liberation Serif"
+         xml:space="preserve"><tspan
+           y="462.64984"
+           x="83.374771"
+           id="tspan4456"
+           sodipodi:role="line">Equip</tspan></text>
+    </g>
+    <g
+       id="g4465"
+       transform="matrix(0.81752085,0,0,0.81752085,107.76046,16.302277)">
+      <path
+         id="path4458"
+         d="m 379.8125,427.28125 -4.25,0.125 -3.0625,30.28125 -1.78125,1.78125 0.6875,-31.90625 -5.65625,0.15625 0.6875,30.3125 -4.28125,0 0,-30.1875 -6.8125,0.21875 0,29.96875 -2.5,1.0625 -1.6875,-30.90625 -3.65625,0.125 3.03125,41.40625 26.25,0 3.03125,-42.4375 z"
+         style="fill:#2d2d2d;fill-opacity:0.9260355;fill-rule:nonzero;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4460"
+         d="m 341.42857,425.53641 44.28572,-0.71428 -0.35715,-4.28572 -14.64285,0 -1.60715,-1.60714 -9.82143,0 -2.23214,2.23214 -14.91071,0 z"
+         style="fill:#2d2d2d;fill-opacity:0.9260355;fill-rule:nonzero;stroke:none" />
+    </g>
+    <rect
+       ry="8.0812206"
+       y="357.04941"
+       x="375.77673"
+       height="50.507629"
+       width="58.588844"
+       id="rect4469"
+       style="fill:none;stroke:#666666" />
+    <g
+       transform="translate(187.42281,-310)"
+       id="g4476">
+      <rect
+         style="fill:none;stroke:#666666"
+         id="rect4478"
+         width="180.81731"
+         height="50.507626"
+         x="26.263966"
+         y="431.33511"
+         ry="8.0812206" />
+      <text
+         xml:space="preserve"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2d2d2d;stroke:none;font-family:Liberation Serif;-inkscape-font-specification:Liberation Serif"
+         x="64.869888"
+         y="462.64984"
+         id="text4480"><tspan
+           sodipodi:role="line"
+           id="tspan4482"
+           x="64.869888"
+           y="462.64984">Option II</tspan></text>
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
