@@ -1,0 +1,342 @@
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Page Title</title>
+	
+	
+	<!-- 
+		this will tell the site, how big the screen is - independet from the pixels. 
+		Remember, that the resolution of mobile devices is much higher than of big screens 
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- CUSTOM STYLE sheet -->
+	<link rel="stylesheet" href="css/themes/R_test.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	
+	
+	<!-- jQuery style ans lib -->
+	<link rel="stylesheet" href="script/jquery.mobile-1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="script/jquery-1.11.1.js"></script>
+	<script src="script/jquery.mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	
+	<script>
+	
+	//Code copied from: http://davidwalsh.name/browser-camera
+	
+		// Put event listeners into place
+		window.addEventListener("DOMContentLoaded", function() {
+			// Grab elements, create settings, etc.
+			var canvas = document.getElementById("canvas"),
+				context = canvas.getContext("2d"),
+				video = document.getElementById("camera"),
+				videoObj = { "video": true },
+				errBack = function(error) {
+					console.log("Video capture error: ", error.code); 
+				};
+		
+			// Put video listeners into place
+			if(navigator.getUserMedia) { // Standard
+				navigator.getUserMedia(videoObj, function(stream) {
+					video.src = stream;
+					video.play();
+				}, errBack);
+			} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+				navigator.webkitGetUserMedia(videoObj, function(stream){
+					video.src = window.webkitURL.createObjectURL(stream);
+					video.play();
+				}, errBack);
+			}
+			else if(navigator.mozGetUserMedia) { // Firefox-prefixed
+				navigator.mozGetUserMedia(videoObj, function(stream){
+					video.src = window.URL.createObjectURL(stream);
+					video.play();
+				}, errBack);
+			}
+		}, false);
+		
+		//take a snapshot with a click on the button
+		document.getElementById("snap").addEventListener("click", function() {
+			context.drawImage(video, 0, 0, 640, 480);
+		});
+		
+	</script>
+	
+</head>
+
+<body>
+	<!-- THE HOME SCREEN OR SO -->
+	<div data-role="page" id="page01">
+		<div data-role="header">
+			<h1>HTML5 Mobile App</h1>
+		</div>
+		<div data-role="content" style="text-align: center">
+			<h1>Welcome!</h1>
+			<p>
+				Home page placeholder text
+			</p>
+					
+			<p>
+				This page built with HTML5 using jQuery Mobile
+			</p>
+			<img src="http://view.jquerymobile.com/1.3.2/dist/demos/
+			_assets/img/jquery-logo.png" width=240px>
+		</div>
+		<div data-role="footer">
+				<h4><a href="#menu" data-role="button" data-transition="slideup">MENU</a></h4>
+		</div>
+	</div>
+		
+		
+			
+		<div data-role="page" id="page02" data-theme="b">
+				<div data-role="header" data-position="fixed">
+				<h1>Page 2
+					<a href="#menu" data-role="button" data-inline="true" data-transition="slideup">MENU</a>
+					</h1>
+				
+				</div>
+				<div data-role="collapsible">
+					
+					<h3>LARP</h3>
+					<p>LARP bedeutet "Live action role playing game"</p>
+					
+					<p>
+						Dabei stellen die Spieler ihre Spielfiguren selbst physisch dar. Es handelt sich also um eine Mischung aus dem Pen-&-Paper-Rollenspiel und dem Improvisationstheater. Das Spiel findet in der Regel ohne Zuschauer statt. Die Teilnehmenden können im Rahmen einer Rolle, die die eigene Figur und ihre Eigenschaften und Möglichkeiten beschreibt, frei improvisieren.
+					</p>
+					
+					<p>
+						Soweit möglich finden Liverollenspielveranstaltungen an Spielorten statt, deren Ambiente dem Szenario der Spielhandlung entspricht, und die Charaktere werden mit einer entsprechenden Gewandung kostümiert.
+					</p>
+					
+					<h2><span class="mw-headline" id="Grunds.C3.A4tzliches">Grundsätzliches</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live_Action_Role_Playing&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Grundsätzliches">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Datei:LARP_Gaslight_2006-03-11.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/LARP_Gaslight_2006-03-11.jpg/220px-LARP_Gaslight_2006-03-11.jpg" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/LARP_Gaslight_2006-03-11.jpg/330px-LARP_Gaslight_2006-03-11.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/LARP_Gaslight_2006-03-11.jpg/440px-LARP_Gaslight_2006-03-11.jpg 2x" data-file-width="3504" data-file-height="2336" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Datei:LARP_Gaslight_2006-03-11.jpg" class="internal" title="vergrößern und Informationen zum Bild anzeigen"></a></div>
+LARP mit viktorianischem Szenario</div>
+</div>
+</div>
+<p>Die Szenarien der Liverollenspiele fallen in verschiedene Genres wie etwa <a href="/wiki/Fantasy" title="Fantasy">Fantasy</a>, <a href="/wiki/Vampire_(Rollenspiel)" title="Vampire (Rollenspiel)">Vampire</a>, <a href="/wiki/Western" title="Western">Western</a>, <a href="/wiki/Science-Fiction" title="Science-Fiction">Science Fiction</a>, <a href="/wiki/Horrorfilm" title="Horrorfilm">Horror</a>, <a href="/wiki/Postapokalypse" title="Postapokalypse">Endzeit/Postapokalypse</a>, <a href="/wiki/Cyberpunk" title="Cyberpunk">Cyberpunk</a> oder <a href="/wiki/Steampunk" title="Steampunk">Steampunk</a>. Die meisten Veranstaltungen können dem Fantasy-Bereich zugeordnet werden.</p>
+<p>Derzeit gibt es in Deutschland etwa 500–600 öffentlich ausgeschriebene Liverollenspiel-Veranstaltungen pro Jahr. Die ein- oder mehrtägigen Veranstaltungen werden oft kurz als <i><a href="/wiki/Convention" title="Convention">Con</a></i>, <i>LARP</i> oder <i>Live</i> bezeichnet. Liverollenspiel-Veranstaltungen werden in Deutschland überwiegend nichtgewerblich von Privatleuten oder Vereinen organisiert. Die Veranstaltungen werden dabei mittlerweile mehrheitlich im Internet über spezialisierte Communitys und Online-Veranstaltungskalender beworben und koordiniert (s. Weblinks). Die Teilnehmerzahlen der einzelnen Veranstaltungen variieren von einer Handvoll bis hin zu mehreren tausend Personen. Das jährlich in England stattfindende <i>Gathering</i> schaffte es schon einmal, fast 10.000 Spieler in einem Spiel zu vereinen. Die größten Veranstaltungen in Deutschland sind im Moment die Groß-Cons <i>Conquest of Mythodea</i> und <i>Drachenfest</i>. An beiden Veranstaltungen nehmen je 6000-9000 Spieler teil. Das "Conquest of Mythodea" verzeichnete im Jahr 2013 ca 8500 Teilnehmer ( Inkl. Team). Solche Großveranstaltungen sind jedoch eher die Ausnahme. Übliche Veranstaltungsgrößen liegen zwischen 30 und 200 Teilnehmern.</p>
+<p>Je nach thematischer Ausrichtung werden verschiedene Arten von Cons unterschieden, darunter Schlachtencons, Ambientecons, Abenteuercons, Hofhaltungen, Tavernencons und weitere. Fast immer anzutreffen sind jedoch Mischformen mit oder ohne Schwerpunkt, bei denen es dem Spieler überlassen bleibt, ob er sich z.&#160;B. in der Taverne aufhalten, an Kampfhandlungen teilnehmen und/oder Rätsel lösen will.</p>
+<p>Gelegentlich wird LARP auch als „<span lang="en" xml:lang="en">Live Adventure Role Playing</span>“ ausgeschrieben, um den Abenteuergedanken in den Vordergrund zu stellen. Das Wort „Action“ im ursprünglichen Begriff bezeichnet allerdings nicht das <a href="/wiki/Action_(Film)" title="Action (Film)" class="mw-redirect">Action</a>-Genre oder besonders aktionsreiche Spielinhalte, sondern entstammt dem feststehenden englischen Begriff „Live-action“, der auch z.&#160;B. beim Film eine Darstellung mit menschlichen Akteuren bezeichnet.</p>
+<h2><span class="mw-headline" id="Spielwelt_und_Handlung">Spielwelt und Handlung</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live_Action_Role_Playing&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Spielwelt und Handlung">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Datei:Endzeit_LARP.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Endzeit_LARP.jpg/220px-Endzeit_LARP.jpg" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Endzeit_LARP.jpg/330px-Endzeit_LARP.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Endzeit_LARP.jpg/440px-Endzeit_LARP.jpg 2x" data-file-width="2048" data-file-height="1366" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Datei:Endzeit_LARP.jpg" class="internal" title="vergrößern und Informationen zum Bild anzeigen"></a></div>
+Charakter aus dem Endzeit-Szenario</div>
+</div>
+</div>
+<p>Viele Veranstaltungen sind Abenteuerspiele, bei denen eine Spielleitung Ansätze zu einer Geschichte als Spielhandlung oder Plot vorbereitet hat. Die Handlung wird dabei durch Requisiten und vorbereitete Helfer präsentiert. Letztere werden analog zum <a href="/wiki/Pen-%26-Paper-Rollenspiel" title="Pen-&amp;-Paper-Rollenspiel">Pen-&amp;-Paper-Rollenspiel</a> als <a href="/wiki/Nicht-Spieler-Charakter" title="Nicht-Spieler-Charakter">Nicht-Spieler-Charaktere</a> oder NSCs bezeichnet. Die <a href="/wiki/Spielercharakter" title="Spielercharakter">Spielercharaktere</a> sollen dann mit den NSCs <a href="/wiki/Interaktion" title="Interaktion">interagieren</a> und durch Rätsel, Spionage, Nachfragen, Kämpfe, Mutproben und Ähnliches die Spielhandlung verfolgen und zu einem Abschluss bringen.</p>
+<p>In „freien“ Spielsystemen steckt die Spielleitung hingegen lediglich einen Rahmen ab, der sich hauptsächlich durch das <a href="/wiki/Schauplatz" title="Schauplatz">Setting</a> in der Spielwelt definiert. In diesem können die Spieler nach Spielbeginn frei agieren, ohne einen von der Spielleitung gewollten Handlungsfaden zu verfolgen. <a href="/wiki/Interaktion" title="Interaktion">Interaktion</a> ergibt sich hierbei aus der gemeinsamen Spielwelt und der gemeinsamen Geschichte der Spieler.</p>
+<p>Vor allem in den Genres <a href="/wiki/Fantasy" title="Fantasy">Fantasy</a> und <a href="/wiki/Vampire_(Rollenspiel)" title="Vampire (Rollenspiel)">Vampire</a> schließen sich Veranstalter häufig zu sogenannten Kampagnen zusammen. Die Mitglieder einer Kampagne spielen in einer gemeinsamen Spielwelt; so hat etwa jeder Veranstalter ein eigenes Land auf einem fiktiven Kontinent und spielt dessen Geschichte. Die Länder knüpfen untereinander diplomatische Beziehungen oder führen Krieg gegeneinander. Auch hier ist fast nichts geplant, und es entwickelt sich alles beim Spielen. So kann niemand vor einer Schlacht deren Ausgang kennen, da sie eben nicht in den Köpfen der Spieler, sondern auf einem Schlachtfeld mit LARP-Waffen ausgetragen wird.</p>
+
+				</div>
+			<div data-role="footer">
+				<h4><a href="#menu">MENU</a></h4>
+			</div>
+		</div>
+		
+		
+			
+		<div data-role="page" id="page03">
+				<div data-role="header">
+				<h1>Page 3: Video</h1>
+				</div>
+				
+				<div data-role="content">
+					<video controls>
+						<source src="vid/Report 01 - User Research.mp4" type="video/mp4">
+						Your browser doesn’t support the video tag.
+					</video>
+				</div>
+				
+			<div data-role="footer">
+				<h4><a href="#menu">MENU</a></h4>
+			</div>
+		</div>
+			
+			
+			
+			
+		<div data-role="page" id="page04">
+			<div data-role="header">
+				<h1>Page 4: Audio</h1>
+			</div>
+			
+			<div data-role="content">
+				
+				<button onclick="document.getElementById('open_chest').play()">Truhe öffnen</button>
+				
+				<audio id="click">
+					<source src="audio/click.ogg" type="audio/ogg">
+				</audio>
+				<audio id="bling" src="audio/Pickup_Coin2.wav"></audio>
+				<audio id="open_chest" src="audio/open_chest.ogg"></audio>
+				
+				<audio id="player" src="audio/Pickup_Coin2.wav"></audio>
+				<div>
+				<button onclick="document.getElementById('player').play()" data-inline="true">Play</button>
+				<button onclick="document.getElementById('player').pause()" data-inline="true">Pause</button>
+				<button onclick="document.getElementById('player').volume += 0.1" data-inline="true">Vol+ </button>
+				<button onclick="document.getElementById('player').volume -= 0.1" data-inline="true">Vol- </button>
+				</div>
+				
+			</div>
+			
+			<div data-role="footer">
+				<h4><a href="#menu">MENU</a></h4>
+			</div>
+		</div>
+			
+			
+			
+			
+		<div data-role="page" id="page05">
+			<div data-role="header">
+				<h1>Page 5: User Interaction</h1>
+			</div>
+				
+			<div data-role="content">
+				
+				<form id="myForm" action="mailto:email@email.com">
+					form content here
+					<input type="submit" name="submit" id="submit" value="Submit">
+					<input type="reset" name="reset" id="reset" value="Reset">
+					
+					<!--label test-->
+					<label for="name">label content:</label>
+					<input type="text" name="name" id="name" placeholder="start typing">
+					
+					
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" />
+					
+					
+					<label for="color">Favorite color:</label>
+					<input type="color" name="color" id="color" placeholder="wähle ein Farbe aus der Farbpalette"/>
+					
+					
+					<label for="birthday">Birthday:</label>
+					<input type="date" name="birthday" id="birthday" />
+					
+					
+					<label for="number">Lucky number:</label>
+					<input type="number" name="number" id="number" />
+					
+					
+					<label for="phone">Phone:</label>
+					<input type="tel" name="phone" id="phone" />
+					
+					
+					<label for="url">Favorite website:</label>
+					<input type="url" name="url" id="url" />
+
+					
+					<label for="rating">Rate this site (10 is best):</label>
+					<input type="range" name="rating" id="rating" value="5" min="0" max="1000" />
+					
+				</form>
+				
+				<h1>Example for an Dropdown menu</h1>
+				<select name="veggie" id="veggie">
+					<option value="0">Pick one</option>
+					<option value="1">Asparagus</option>
+					<option value="2">Avocado</option>
+					<option value="3">Barley</option>
+					<option value="4">Beets</option>
+					<option value="5">Bell Peppers</option>
+					<option value="6">Black Beans</option>
+					<option value="7">Bok Choy</option>
+					<option value="8">Broccoli</option>
+					<option value="9">Brussels Sprouts</option>
+					<option value="10">Cabbage</option>
+				</select>
+				
+				<h1>Example for an Jump menu</h1>
+				<input list="veggies" name="veggies">
+				<datalist id="veggies">
+					<option value="asparagus">Asparagus</option">
+					<option value="artichoke ">Artichoke</option>
+					<option value="cabbage">Cabbage</option>
+					<option value="corn">Corn</option>
+					<option value="cucumber">Cucumber</option">
+				</datalist>
+				
+				<h1>Example for cal</h1>
+				<form oninput="x.value=parseInt(num_a.value)*parseInt(num_b.value)">
+					<input type="number" id="num_a">* <input type="number" id="num_b">= <output name="x" for="num_a num_b">
+					</output>
+				</form>
+				
+			</div>
+				
+			<div data-role="footer">
+				<h4><a href="#menu">MENU</a></h4>
+			</div>
+		</div>
+		
+		
+		
+		<div data-role="page" id="page06">
+			<div data-role="header">
+				<h1>Page 6: Kamera</h1>
+			</div>
+			
+			<div data-role="content">
+				
+				<video id="camera" width="640" height="480" autoplay></video>
+				<button id="snap">Snap Photo</button>
+				<canvas id="canvas" width="640" height="480"></canvas>
+				
+			</div>
+			
+			<div data-role="footer">
+				<h4><a href="#menu">MENU</a></h4>
+			</div>
+		</div>
+		
+		
+		
+		<!-- here we have THE MENU in a dialog box that pops up.
+	responsible for that is the part:
+									"data-dialog="true" -->
+	<div id="menu" data-role="page" data-dialog="true" data-close-btn="right" data-theme="b">
+		<div data-role="header">
+			<h1>HTML5 Mobile App</h1>
+		</div>
+		<div data-role="content">
+			<h1>Menu</h1>
+			<ul data-role="listview" data-transition="slide" style="background: url('img/background_pattern.png')">
+				<li>
+					<a href="#page01">Page 1 - Home</a>
+				</li>
+				<li>
+					<a href="#page02">Page 2</a>
+				</li>
+				<li>
+					<a href="#page03">Page 3: Video</a>
+				</li>
+				<li>
+					<a href="#page04">Page 4: Audio</a>
+				</li>
+				<li>
+					<a href="#page05">Page 5: User Interaction</a>
+				</li>
+				<li>
+					<a href="#page06">Page 6: Kamera</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div data-role="footer">
+			<p style="text-align: center">*********************</p>
+		</div>
+	</div>
+			
+			
+	</div>
+</body>
+</html>
