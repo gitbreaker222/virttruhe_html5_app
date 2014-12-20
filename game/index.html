@@ -5,20 +5,23 @@
 	
 	
 	<!-- 
-		this will tell the site, how big the screen is - independet from the pixels. 
-		Remember, that the resolution of mobile devices is much higher than of big screens 
+		this will tell the site, how big the screen is - independet from the pixels.  
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	
+	<!-- jQuery style and lib -->
+	<link rel="stylesheet" href="script/jquery.mobile-1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="script/jquery-1.11.1.js"></script>
+	<script src="script/jquery.mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	
 	<!-- CUSTOM STYLE sheet -->
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	
 	
-	<!-- jQuery style ans lib -->
-	<link rel="stylesheet" href="script/jquery.mobile-1.4.3/jquery.mobile.structure-1.4.3.min.css" />
-	<script src="script/jquery-1.11.1.js"></script>
-	<script src="script/jquery.mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	
 	
 	<script>
 	
@@ -68,45 +71,40 @@
 
 
 
-
-
 <body>
 	
 	
-	<div id="wrapper">
-		<!-- ### PAUSE MENU: Optins in the background hidden top menu ### -->
-		<div id="pause_menu">
-			pause
+	<!-- ### PAUSE MENU: Optins in the background hidden top menu ### -->
+	<div id="pause_menu" data-role="page">
+		pause
+	</div>
+	
+	
+	
+	<div id="main" data-role="page">
+		
+		
+		<!-- ### HEADER: current layer and tool options/scan button ### -->
+		<div id="header" data-role="header">
+			header
 		</div>
 		
 		
+		<!-- ### STATUS BAR: life and rupees ### -->
+		<div id="status">
+			status
+		</div>
 		
-		<div id="main">
-			
-			
-			<!-- ### HEADER: current layer and tool options/scan button ### -->
-			<div id="header" data-role="header">
-				header
-			</div>
-			
-			
-			<!-- ### STATUS BAR: life and rupees ### -->
-			<div id="status">
-				status
-			</div>
-			
-			
-			<!-- ### CONTENT: inventory ### -->
-			<div id="content">
-				content
-			</div>
-			
-			
-			<!-- ### FOOTER: item information and actions ### -->
-			<div id="footer">
-				footer
-			</div>
-			
+		
+		<!-- ### CONTENT: inventory ### -->
+		<div id="content" data-role="content">
+			content
+		</div>
+		
+		
+		<!-- ### FOOTER: item information and actions ### -->
+		<div id="footer" data-role="footer">
+			footer
 		</div>
 		
 	</div>
