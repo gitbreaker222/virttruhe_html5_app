@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>qr scan module</title>
+		
+		
+		<!-- 
+			this will tell the site, how big the screen is - independet from the pixels. 
+			Remember, that the resolution of mobile devices is much higher than of big screens 
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css" />
+		
+		
+		
+		<!-- jQuery style and lib -->
+		<link rel="stylesheet" href="../script/jquery.mobile-1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+		<script src="../script/jquery-1.11.1.js"></script>
+		<script src="../script/jquery.mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script>
+		
+		
+		<!-- jsqrcode -->
+		<script type="text/javascript" src="../script/dwa012-html5-qrcode-f0b192c/lib/html5-qrcode.min.js"></script>
+		
+		
+	</head>
+	
+	
+	<body>
+		
+		<div id="reader" style="width:300px;height:250px">
+ 		</div>
+ 		<script>
+ 			$('#reader').html5_qrcode(function(data){
+			 		 // do something when code is read
+			 		 console.log("qr code says:");
+			 		 console.log(data);
+			 	},
+			 	function(error){
+					//show read errors 
+				}, function(videoError){
+					//the video stream could be opened
+					console.log("your browser does not support camera access");
+				}
+			);
+ 		</script>
+		
+	</body>
+	
+	
+	
+	
+	
+	
+</html>
