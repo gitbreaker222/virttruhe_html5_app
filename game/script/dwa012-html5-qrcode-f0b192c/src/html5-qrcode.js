@@ -32,13 +32,12 @@
             } catch(e) {
               qrcodeError(e);
             }
-    
-            setTimeout(scan, 500);
+    		setTimeout(scan, 500);
     
           } else {
-            setTimeout(scan,500);
+          	setTimeout(scan,500);
           }
-        }//end snapshot function
+        };//end snapshot function
         
         window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
         navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
@@ -49,7 +48,7 @@
     
             video.play();
             setTimeout(scan,1000);
-        }
+        };
     
         // Call the getUserMedia method with our callback functions
         if (navigator.getUserMedia) {
