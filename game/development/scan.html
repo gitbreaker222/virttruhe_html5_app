@@ -43,15 +43,27 @@
 		<script type="text/javascript" src="../script/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
 		
 		<script>
-			function qr_stop(){
+			function qr_stop(passive){
+				set_scan_status(passive);
 				
+				var parent = document.getElementById("reader");
+				var child = document.getElementsByTagName("video")[0];
+				parent.removeChild(child);
 			}
-			
-			function qr_start(){
+			function qr_start(active){
+				set_scan_status(active);
 				$('#reader').html5_qrcode(function(data){
-				 		 // do something when code is read
-				 		 console.log("qr code says:");
-				 		 console.log(data);
+				 		// do something when code is read
+				 		console.log("qr code says:");
+				 		console.log(data);
+				 		
+				 		// - remove camera picture
+				 		var parent = document.getElementById("reader");
+						var child = document.getElementsByTagName("video")[0];
+						parent.removeChild(child);
+						
+						// - set scan_status back to passive
+						set_scan_status(false);
 				 	},
 				 	function(error){
 						//show read errors 
@@ -71,8 +83,8 @@
 	
 	<body>
 		
-		<button id="button_qr_start" onclick="qr_start()">start</button>
-		<button id="button_qr_stop" onclick="qr_stop()">stop</button>
+		<button id="button_qr_start" onclick="qr_start(true)">start</button>
+		<button id="button_qr_stop" onclick="qr_stop(false)">stop</button>
 		
 		<div id="reader" style="width:500px;height:500px">
  		</div>

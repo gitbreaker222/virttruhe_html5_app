@@ -1,8 +1,15 @@
+var scan_status = false;
+function get_scan_status(){
+	return scan_status;
+}
+function set_scan_status(status){
+	scan_status = status;
+}
 
-
+// code from dwa012 @ github
 (function( $ ){
   jQuery.fn.extend({
-    html5_qrcode: function(qrcodeSuccess, qrcodeError, videoError) {
+    html5_qrcode: function(qrcodeSuccess, qrcodeError, videoError, active) {
       return this.each(function() {
         var currentElem = $( this );
         
@@ -24,16 +31,16 @@
         var canvas = canvasElem[0];
         var context = canvas.getContext('2d');
         var localMediaStream;
-        var active = true;
         
         var scan = function() {
-        	if (active){
+        	if (get_scan_status()){
         		if (localMediaStream) {
 		            context.drawImage(video, 0, 0, 307,250);
 		    
 		            try {
 		              qrcode.decode();
 		              console.log("QR-Code recognized! Stopping scan...");
+		              context = null;
 		              return;
 		            } catch(e) {
 		              qrcodeError(e);
@@ -43,6 +50,9 @@
 		          } else {
 		          	setTimeout(scan,500);
 		          }
+        	}else{
+        		console.log("Scan stopped manually.");
+        		return;
         	};
         };//end snapshot function
         
