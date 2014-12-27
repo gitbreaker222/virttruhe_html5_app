@@ -1,3 +1,5 @@
+
+
 (function( $ ){
   jQuery.fn.extend({
     html5_qrcode: function(qrcodeSuccess, qrcodeError, videoError) {
@@ -32,7 +34,7 @@
             } catch(e) {
               qrcodeError(e);
             }
-    		setTimeout(scan, 500);
+    		setTimeout(scan, 50);
     
           } else {
           	setTimeout(scan,500);
