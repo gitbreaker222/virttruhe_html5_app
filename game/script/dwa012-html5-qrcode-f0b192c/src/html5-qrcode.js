@@ -24,21 +24,26 @@
         var canvas = canvasElem[0];
         var context = canvas.getContext('2d');
         var localMediaStream;
+        var active = true;
         
         var scan = function() {
-          if (localMediaStream) {
-            context.drawImage(video, 0, 0, 307,250);
-    
-            try {
-              qrcode.decode();
-            } catch(e) {
-              qrcodeError(e);
-            }
-    		setTimeout(scan, 50);
-    
-          } else {
-          	setTimeout(scan,500);
-          }
+        	if (active){
+        		if (localMediaStream) {
+		            context.drawImage(video, 0, 0, 307,250);
+		    
+		            try {
+		              qrcode.decode();
+		              console.log("QR-Code recognized! Stopping scan...");
+		              return;
+		            } catch(e) {
+		              qrcodeError(e);
+		            }
+		    		setTimeout(scan, 500);
+		    
+		          } else {
+		          	setTimeout(scan,500);
+		          }
+        	};
         };//end snapshot function
         
         window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
@@ -49,7 +54,7 @@
             localMediaStream = stream;
     
             video.play();
-            setTimeout(scan,1000);
+            setTimeout(scan,1000); //first scan call
         };
     
         // Call the getUserMedia method with our callback functions
