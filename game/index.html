@@ -21,50 +21,6 @@
 	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	
 	
-	
-	
-	<script>
-	
-	//Code copied from: http://davidwalsh.name/browser-camera
-	
-		// Put event listeners into place
-		window.addEventListener("DOMContentLoaded", function() {
-			// Grab elements, create settings, etc.
-			var canvas = document.getElementById("canvas"),
-				context = canvas.getContext("2d"),
-				video = document.getElementById("camera"),
-				videoObj = { "video": true },
-				errBack = function(error) {
-					console.log("Video capture error: ", error.code); 
-				};
-		
-			// Put video listeners into place
-			if(navigator.getUserMedia) { // Standard
-				navigator.getUserMedia(videoObj, function(stream) {
-					video.src = stream;
-					video.play();
-				}, errBack);
-			} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
-				navigator.webkitGetUserMedia(videoObj, function(stream){
-					video.src = window.webkitURL.createObjectURL(stream);
-					video.play();
-				}, errBack);
-			}
-			else if(navigator.mozGetUserMedia) { // Firefox-prefixed
-				navigator.mozGetUserMedia(videoObj, function(stream){
-					video.src = window.URL.createObjectURL(stream);
-					video.play();
-				}, errBack);
-			}
-		}, false);
-		
-		//take a snapshot with a click on the button
-		document.getElementById("snap").addEventListener("click", function() {
-			context.drawImage(video, 0, 0, 640, 480);
-		});
-		
-	</script>
-	
 </head>
 
 
@@ -73,41 +29,6 @@
 
 <body>
 	
-	
-	<!-- ### PAUSE MENU: Optins in the background hidden top menu ### -->
-	<div id="pause_menu" data-role="page">
-		pause
-	</div>
-	
-	
-	
-	<div id="main" data-role="page">
-		
-		
-		<!-- ### HEADER: current layer and tool options/scan button ### -->
-		<div id="header" data-role="header">
-			header
-		</div>
-		
-		
-		<!-- ### STATUS BAR: life and rupees ### -->
-		<div id="status">
-			status
-		</div>
-		
-		
-		<!-- ### CONTENT: inventory ### -->
-		<div id="content" data-role="content">
-			content
-		</div>
-		
-		
-		<!-- ### FOOTER: item information and actions ### -->
-		<div id="footer" data-role="footer">
-			footer
-		</div>
-		
-	</div>
 	
 	
 </body>

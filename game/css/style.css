@@ -1,6 +1,9 @@
-body{
-	background-color: #212121;
+.center{
+	margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
+
 #pause_menu{
 	color: white;
 	width: 100%;
@@ -11,28 +14,23 @@ body{
 	z-index: -1;
 }
 
-#main{
-	background-color: rgba(179, 179, 179, 1);
-	
-}
-
 #header{
-	background-color: #444;
 	
 }
 
-#status{
-	background-color: #DBD436;
-	
+#status{	
 	
 }
 
-#content{
-	background-color: #888;
-	
+#content li{
+	list-style: none;
+	float: left;
+	width: 48px;
+	height: 48px;
+	background-color: blue;
+	margin: 5px;
 }	
 
 #footer{
-	background-color: #7A2A22;
 	
 }
