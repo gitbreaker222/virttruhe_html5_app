@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="48"
+   height="48"
+   id="svg2">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4507">
+      <stop
+         id="stop4509"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop4511"
+         style="stop-color:#cccccc;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         id="path3844"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
+    </marker>
+    <linearGradient
+       x1="-124.69255"
+       y1="508.51257"
+       x2="-89.161079"
+       y2="508.51257"
+       id="linearGradient4513"
+       xlink:href="#linearGradient4507"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(129.44471,-429.97976)"
+     id="layer1">
+    <g
+       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,329.14508,171.25174)"
+       id="g3048">
+      <path
+         d="m -116.77884,494.5107 -1e-5,26.45983 9.85206,9.85206 9.85206,-9.85206 6e-6,-26.45983 -9.852056,-9.85206 z"
+         id="path3050"
+         style="fill:#009100;fill-opacity:1;stroke:none" />
+      <path
+         d="m -97.074739,494.51071 9e-6,26.45982 -9.85207,9.85207 -0.87484,-9.30901 5.70179,-5.70179 -0.16373,-16.12197 z"
+         id="path3052"
+         style="fill:#2d2d2d;fill-opacity:0.5118343;stroke:none" />
+    </g>
+  </g>
+</svg>
