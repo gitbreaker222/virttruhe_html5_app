@@ -10,16 +10,19 @@
 		<title>inventory</title>
 		<meta name="description" content="">
 		<meta name="author" content="Ruben La Biunda">
+		
+		<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<!-- Sets initial viewport load and disables zooming  -->
+		<meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1">
 
 		<link rel="shortcut icon" href="/favicon.ico">
 		
-		<!-- jQuery style and lib -->
-		<link rel="stylesheet" href="../script/jquery.mobile-1.4.3/jquery.mobile-1.4.3.css" />
-		<script src="../script/jquery-1.11.1.js"></script>
-		<script src="../script/jquery.mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script>
-		<link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css" />
+		<!-- ratchet style and lib -->
+		<link href="../lib/ratchet-2.0.2/css/ratchet.css" rel="stylesheet">
+		<script src="../lib/ratchet-2.0.2/js/ratchet.js"></script>
 		
 		<!-- CUSTOM STYLE sheet -->
 		<link rel="stylesheet" href="../css/style.css" />
@@ -30,61 +33,65 @@
 
 	<body>
 		
-		<div data-role="page" data-theme="b" id="inventory">
+		<header id="header" class="bar bar-nav">
+			<a id="button_pause" class="icon pull-right icon icon-more-vertical"></button>
+			<a id="button_scan" class="btn pull-right">
+			    [scan]
+			</button>
 			
-				<div id="header" data-role="controlgroup" data-type="horizontal" class="ui-controlgroup ui-controlgroup-controls ui-controlgroup-horizontal">
-					<div class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-first-child">
-						<p id="current_location">The incredible location</p>
-					</div>
-					<button class="ui-btn ui-icon-eye ui-btn-icon-notext ui-shadow ui-corner-all" id="button_scan"></button>
-					<button class="ui-btn ui-icon-bars ui-btn-icon-notext ui-shadow ui-corner-all ui-last-child" id="button_pause"></button>
-				</div>
-			
-			<div id="status" class="center">
-				<span>hearts</span>
-				<span>rupees</span>
-			</div>
-			
-			<div class="ui-content" id="content">
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
-			
-				<div id="footer" class="ui-bar, ui-bar-a">
-						<h3 id="item_title">Item Name</h3>
-						<button class="ui-btn" id="button_use">[use]</button>
-						<button class="ui-btn" id="button_delete">[del]</button>
-				</div>
-			
+			<h1 id="current_location" class="title">The incredible location</h1>
+		</header>
+		
+		
+		<div id="status" class="bar bar-standard bar-header-secondary">
+			<span class="pull-right">rupees</span>
+			<span>hearts</span>
 		</div>
+		
+		
+		
+		<div class="content" id="content">
+			<ul class="card">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+			
+			
+		<div id="footer" class="bar">
+			<button class="btn pull-right" id="button_use">[use]</button>
+			<button class="btn pull-right" id="button_delete">[del]</button>
+			<h3 id="item_title">Item Name</h3>
+		</div>
+			
+		
 		
 	</body>
 </html>
