@@ -1,0 +1,10 @@
+item{
+	item key :	{							<-- the key revealed by scanning the artefact. (Variation: Artefact 
+												key and item key relate different depending on the
+												virtual layer.
+				name: item_name string,		<-- simply the name of an item
+				image: path_to_file string	<-- the bigger and more detailed image, presented when opened a chest
+				icon: path_to_file string	<-- the icons are displayed in the inventory
+				found: bool					<-- changes from false to true after the item has been found
+				},
+}
