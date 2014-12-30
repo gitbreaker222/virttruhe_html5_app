@@ -1,0 +1,146 @@
+body{
+	background-color: rgba(51, 51, 51, 1);
+}
+
+button{
+	background-color: #FFF;
+}
+button:active{
+	background-color: #CCC;
+}
+img{
+	display: inline-block;
+	border: none;
+}
+
+.clear{
+	clear: both;
+}
+
+.bar{
+	width: 100%;
+	height: 40px;
+	display: block;
+	border-bottom: solid 1px rgba(255, 253, 253, 0.4);
+	background-color: rgba(255, 253, 253, 0.8);
+}
+
+.bar *{
+	margin: 0px;
+	padding: 0.3em;
+}
+
+.pull-right{
+	float: right;
+}
+.pull-left{
+	float: left;
+}
+
+.btn-icon{
+	width: 60px;
+	height: 38px;
+	background-size: 38px;
+	background-repeat: no-repeat;
+	border-radius: 6px;
+	border: solid 1px #CCC;
+	margin: 2px;
+	z-index: 20;
+}
+
+
+/* HEADER ------------*/
+#header{
+}
+
+#button_scan{
+	background-image: url("../img/icons/scan.svg");
+}
+#button_pause{
+	background-image: url("../img/icons/options.svg");
+}
+
+#current_location{
+	font-size: 1em;
+	position: absolute;
+	left: 0px;
+	right: 130px;
+	margin: auto;
+	overflow: auto;
+}
+
+
+/* STATUS BAR------------*/
+#status, #status > div{
+	height: 24px;
+	margin-top:1px;
+	padding: 0px inherit;
+	background: none;
+	border: none;
+}
+#status .img{
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 100%;
+	width: 24px;
+	background-size: 100%;
+	border: none;
+	display: inline-block;
+}
+
+.icon-heart{
+	background-image: url("../img/icons/heart.svg");
+}
+
+#rupee{
+	background-image: url("../img/icons/rupee.svg");
+}
+#rupee_counter{
+	font-style: italic;
+	color: green;
+	padding: 0px;
+	vertical-align: top;
+}
+
+
+/* CONTENT SECTION------------*/
+#content{
+	width: 94%;  		/* !!! margin-left + margin-right + width = 100% !!! */
+	margin: 5% 3%; 		/* margin: x y = margin: x y x y */
+	position: absolute;
+	top: 55px;
+	bottom: 27px;
+	display: block;
+	overflow: auto;
+	border: 1px solid #DDD;
+	border-radius: 6px;
+}
+
+#inventory{
+	text-align: center;
+}
+
+#inventory li{
+	list-style: none;
+	/*float: left;*/
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background-color: rgba(218, 218, 218, 0.6);
+	border: none
+}	
+
+
+
+/* FOOTER BAR ------------*/
+#footer{
+	position: fixed;
+	bottom: 0px;
+}
+
+#button_use{
+	background-image: url("../img/icons/hand-grab.svg");
+}
+#button_delete{
+	background-image: url("../img/icons/delete.svg");
+}

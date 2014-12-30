@@ -42,7 +42,23 @@
 #status{	
 	height: 30px;
 }
-
+#status img{
+	background-repeat: no-repeat;
+	/*width: 20px;*/
+}
+#rupee{
+	background-image: url("../img/icons/rupee.svg");
+}
+#rupee_counter{
+	font-style: italic;
+	position: relative;
+	top: -11px;
+}
+#life_bar .icon-heart{
+	background-image: url("../img/icons/heart.svg");
+	background-size: 20px;
+	width: 20px;
+}
 
 
 /* CONTENT SECTION------------*/
