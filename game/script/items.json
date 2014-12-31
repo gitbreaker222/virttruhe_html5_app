@@ -1,8 +1,0 @@
-item{
-	0000FFFF :	{							 
-					name: item_name string,		
-					image: path_to_file string	
-					icon: path_to_file string	
-					found: bool					
-				},
-}
