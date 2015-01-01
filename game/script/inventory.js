@@ -61,7 +61,19 @@ function delete_all_from_inventory(){
 	reload_inventory();
 }
 
+function unselect_all(){
+	//remove class attribute from each li-element
+	var ul = document.getElementById("inventory").children;
+	var li;
+	
+	for (i = 0; i < ul.length; i++){
+		ul[i].removeAttribute("class");
+	}
+}
+
 function select_item(node, item){
+	unselect_all();
+	
 	//if no specific item, reset - e.g. delete button
 	var text = document.getElementById("item_title");
 	if (item == undefined){
