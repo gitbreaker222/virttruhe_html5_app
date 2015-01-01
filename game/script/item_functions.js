@@ -17,6 +17,7 @@ function generate_key(){
 	    x = x.toString(16); // here x is smth between 0 and f
 	    key = key + x;
 	};
-	 console.log("new key generated: " + key);
+	
+	window.alert("new key generated: " + key);
 	return(key);
 }

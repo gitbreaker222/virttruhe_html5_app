@@ -31,6 +31,8 @@
 		<!-- VIRTTRUHE SCRIPT -->
 		<script src="../script/item_functions.js"></script>
 		<script src="../script/inventory.js"></script>
+		<script src="../script/audio.js"></script>
+		<script src="../script/buttons.js"></script>
 		
 		
 	</head>
@@ -39,13 +41,18 @@
 
 
 
-	<body>
+	<body onload="reload_inventory(); change_music()">
 		
 		<div id="header" class="bar">
-			<button id="button_pause" class="btn-icon pull-right" onclick="generate_key()"></button>
-			<button id="button_scan" class="btn-icon pull-right"></button>
+			<button id="button_pause" class="btn-icon pull-right" onclick="btn_options()"></button>
+			<button id="button_scan" class="btn-icon pull-right" onclick="btn_scan()"></button>
 			<span class="clear"></span>
 			<text id="current_location">The incredible location of this fabulous game</text>
+			
+			
+			<!-- THE HIDDEN AUDIO PLAYERS ;) ONE FOR EACH TRACK (like: music, sfx) -->
+			<audio id="audio_player"></audio>
+			<audio id="audio_sfx"></audio>
 		</div>
 		
 		
@@ -54,6 +61,7 @@
 				<span class="icon-heart img"></span>
 				<span class="icon-heart img"></span>
 			</div>
+			
 			<div class="pull-right">
 				<div id="rupee" class="img"></div>
 				<span id="rupee_counter">999</span>
@@ -64,58 +72,15 @@
 		
 		<div id="content">
 			<ul id="inventory">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
 			</ul>
 		</div>
 		
 			
 			
 		<div id="footer" class="bar">
-			<button class="btn-icon pull-right" id="button_delete"></button>
-			<button class="btn-icon pull-right" id="button_use" onclick="generate_new_item_list()"></button>
-			<h3 id="item_title">Item Name</h3>
+			<button class="btn-icon pull-right" id="button_delete" onclick="btn_delete()"></button>
+			<button class="btn-icon pull-right" id="button_use" onclick="btn_use()"></button>
+			<h3 id="item_title"></h3>
 		</div>
 			
 		

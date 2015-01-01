@@ -10,7 +10,9 @@ button:active{
 }
 img{
 	display: inline-block;
-	border: none;
+}
+audio{
+	display: none;
 }
 
 .clear{
@@ -55,6 +57,7 @@ img{
 
 #button_scan{
 	background-image: url("../img/icons/scan.svg");
+	
 }
 #button_pause{
 	background-image: url("../img/icons/options.svg");
@@ -103,6 +106,7 @@ img{
 }
 
 
+
 /* CONTENT SECTION------------*/
 #content{
 	width: 94%;  		/* !!! margin-left + margin-right + width = 100% !!! */
@@ -126,9 +130,19 @@ img{
 	display: inline-block;
 	width: 48px;
 	height: 48px;
-	background-color: rgba(218, 218, 218, 0.6);
+	margin: 2px;
+	background-color: rgba(151, 234, 225, 0.6);
 	border: none
-}	
+}
+
+#inventory li:focus{
+	border: solid 2px blue;
+}
+
+#inventory li > *{
+	position: absolute;
+	display: table-cell;
+}
 
 
 
