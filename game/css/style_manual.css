@@ -135,8 +135,8 @@ audio{
 	border: none
 }
 
-#inventory li:focus{
-	border: solid 2px blue;
+.selected{
+	box-shadow: 0px 0px 15px blue;
 }
 
 #inventory li > *{

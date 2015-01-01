@@ -13,20 +13,23 @@ function reload_inventory(){
 	//resetting the html content to prevent producing an ongoing list with the old inventory items
 	inventory.innerHTML = "";
 	
+	//look at each item object
 	for (i = 0; i < items.length; i++){
-		node = document.createElement("LI");
+		//create empty list item 
+		var node = document.createElement("LI");
 		inventory.appendChild(node);
-		
 		if (items[i].found == true){
-			node = document.createElement("IMG");
+			//if item is labeled "found=true" create clickable icon in li
+			var node = document.createElement("IMG");
 			node.setAttribute("src", "../" + items[i].icon);
-			node.setAttribute("onclick", "select_item('"+ items[i].name +"')");
+			node.setAttribute("onclick", "select_item(this, '"+ items[i].name +"')");
 			inventory.lastChild.appendChild(node);
+			//result: <li><img src="../img/items/small/arrows.png" onclick="select_item("Arrows")" /></li>
 		}
 	}
 	
 	
-	//<li><img src="../img/items/small/arrows.png" /></li>
+	
 	
 };
 
@@ -49,16 +52,31 @@ function delete_from_inventory(item){
 };
 
 function delete_all_from_inventory(){
+	//make each found status "false"
 	for (i = 0; i < items.length; i++){
 		items[i].found = false;
 		console.log("removed from inventory: " + items[i].name);
 	}
+	
 	reload_inventory();
 }
 
-function select_item(item){
+function select_item(node, item){
+	//if no specific item, reset - e.g. delete button
+	var text = document.getElementById("item_title");
+	if (item == undefined){
+		text.innerHTML = "";
+		return;
+	}
+	
+	//beep
 	play_sfx("OOT_PauseMenu_Cursor.wav");
-	//titel in bottom bar
+	
+	//item title in bottom bar
+	text.innerHTML = item;
+	
+	//graphical select
+	node.parentNode.setAttribute("class", "selected");
 }
 
 

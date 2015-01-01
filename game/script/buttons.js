@@ -19,5 +19,7 @@ function btn_use(){
 }
 
 function btn_delete(){
+	play_sfx("OOT_Dialogue_No.wav");
 	delete_all_from_inventory();
+	select_item();
 }
