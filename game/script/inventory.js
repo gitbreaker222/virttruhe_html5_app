@@ -4,6 +4,7 @@ function generate_new_item_list(){
 	var item_path = "img/";
 	var list_path = "";
 	window.alert("no function yet");
+	//unfinished***************
 };
 
 function reload_inventory(){
@@ -21,7 +22,7 @@ function reload_inventory(){
 		if (items[i].found == true){
 			//if item is labeled "found=true" create clickable icon in li
 			var node = document.createElement("IMG");
-			node.setAttribute("src", "../" + items[i].icon);
+			node.setAttribute("src", items[i].icon);
 			node.setAttribute("onclick", "select_item(this, '"+ items[i].name +"')");
 			inventory.lastChild.appendChild(node);
 			//result: <li><img src="../img/items/small/arrows.png" onclick="select_item("Arrows")" /></li>
