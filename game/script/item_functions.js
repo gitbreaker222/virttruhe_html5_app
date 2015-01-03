@@ -21,3 +21,18 @@ function generate_key(){
 	window.alert("new key generated: " + key);
 	return(key);
 }
+
+function found_key(scan_key){
+	var item;
+	for (i in items){
+		if (items[i].key == scan_key){
+			item = items[i].name;
+			return(item);
+		}
+	}
+	alert("This key does not fit to any VIRTTRUHE chest");
+}
+
+function add_rupees(){
+	//does this belong here??
+}

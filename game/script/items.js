@@ -12,5 +12,118 @@ var items = [
 		"image": "img/items/small/deku_nut.png",
 		"icon": "img/items/small/deku_nut.png",
 		"found": true
-		}
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		{
+		"key": "#ffffffff",
+		"name": "Test Icon",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"found": true
+		},
+		
 ];

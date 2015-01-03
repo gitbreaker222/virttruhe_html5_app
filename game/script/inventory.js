@@ -29,12 +29,11 @@ function reload_inventory(){
 		}
 	}
 	
-	
-	
-	
 };
 
+
 function add_to_inventory(item){
+	//search item list for a match with given item
 	for (i = 0; i < items.length; i++){
 		if (items[i].name == item){
 			items[i].found = true;
@@ -43,22 +42,31 @@ function add_to_inventory(item){
 			reload_inventory();
 			return;
 		};
-		
 	}
 	console.log("cannot find '" + item + "'");
 };
+
 
 function delete_from_inventory(item){
 
 };
 
+
 function delete_all_from_inventory(){
+	//confirm action with an alert-popup box
+	play_sfx("OOT_MainMenu_Letter.wav");
+	if (window.confirm("Delete all items from the inventory. \n Are you sure?") == false){
+		//abort action
+		play_sfx("OOT_Dialogue_Done.wav");
+		return;
+	}
+	play_sfx("OOT_Dialogue_No.wav");
+	
 	//make each found status "false"
 	for (i = 0; i < items.length; i++){
 		items[i].found = false;
 		console.log("removed from inventory: " + items[i].name);
 	}
-	
 	reload_inventory();
 }
 
@@ -70,6 +78,9 @@ function unselect_all(){
 	for (i = 0; i < ul.length; i++){
 		ul[i].removeAttribute("class");
 	}
+	//remove item name from bottom bar
+	var text = document.getElementById("item_title");
+	text.innerHTML = "";
 }
 
 function select_item(node, item){
@@ -85,7 +96,7 @@ function select_item(node, item){
 	//beep
 	play_sfx("OOT_PauseMenu_Cursor.wav");
 	
-	//item title in bottom bar
+	//show item name in bottom bar
 	text.innerHTML = item;
 	
 	//graphical select

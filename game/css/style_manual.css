@@ -39,6 +39,14 @@ audio{
 	float: left;
 }
 
+.show{
+	display: block;
+}
+
+.hide{
+	display: none;
+}
+
 .btn-icon{
 	width: 60px;
 	height: 38px;
@@ -118,6 +126,7 @@ audio{
 	overflow: auto;
 	border: 1px solid #DDD;
 	border-radius: 6px;
+	z-index: -10;
 }
 
 #inventory{
@@ -132,7 +141,7 @@ audio{
 	height: 48px;
 	margin: 2px;
 	background-color: rgba(151, 234, 225, 0.6);
-	border: none
+	border: none;
 }
 
 .selected{
@@ -141,6 +150,8 @@ audio{
 
 #inventory li > *{
 	position: absolute;
+	width: 48px;
+	height: 48px;
 	display: table-cell;
 }
 

@@ -1,11 +1,3 @@
-var scan_status = false;
-function get_scan_status(){
-	return scan_status;
-}
-function set_scan_status(status){
-	scan_status = status;
-}
-
 // code from dwa012 @ github
 (function( $ ){
   jQuery.fn.extend({

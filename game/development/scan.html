@@ -15,11 +15,11 @@
 		
 		
 		<!-- jQuery style and lib -->
-		<link rel="stylesheet" href="../script/jquery.mobile-1.4.3/jquery.mobile.structure-1.4.3.min.css" />
-		<script src="../script/jquery-1.11.1.js"></script>
-		<script src="../script/jquery.mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script>
+		<!-- <link rel="stylesheet" href="../lib/jquery.mobile-1.4.3/jquery.mobile.structure-1.4.3.min.css" /> -->
+		<script src="../lib/jquery-1.11.1.js"></script>
+		<!-- <script src="../lib/jquery.mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script> -->
 		
-		<!-- jsqrcode -->
+		<!-- jsqrcode (order is important)-->
 		<script type="text/javascript" src="../script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
 		<script type="text/javascript" src="../script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/version.js"></script>
 		<script type="text/javascript" src="../script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/detector.js"></script>
@@ -41,41 +41,8 @@
 
 		<!-- html5 qrcode -->
 		<script type="text/javascript" src="../script/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
+		<script type="text/javascript" src="../script/scan.js"></script>
 		
-		<script>
-			function qr_stop(passive){
-				set_scan_status(passive);
-				
-				var parent = document.getElementById("reader");
-				var child = document.getElementsByTagName("video")[0];
-				parent.removeChild(child);
-			}
-			function qr_start(active){
-				set_scan_status(active);
-				$('#reader').html5_qrcode(function(data){
-				 		// do something when code is read
-				 		console.log("qr code says:");
-				 		console.log(data);
-				 		
-				 		// - remove camera picture
-				 		var parent = document.getElementById("reader");
-						var child = document.getElementsByTagName("video")[0];
-						parent.removeChild(child);
-						
-						// - set scan_status back to passive
-						set_scan_status(false);
-				 	},
-				 	function(error){
-						//show read errors 
-						console.log("...scanning...");
-					}, function(videoError){
-						//the video stream could be opened
-						console.log("your browser does not support camera access");
-					}
-				);
-			}
-			
-		</script>
 		
 		
 	</head>
