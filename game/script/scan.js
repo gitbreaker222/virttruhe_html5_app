@@ -52,7 +52,7 @@ function qr_start(){
 	 	function(error){
 			//show read errors 
 			console.log("...scanning...");
-			play_sfx("beep.wav");
+			play_sfx("beep2_quiet.wav");
 		}, function(videoError){
 			//the video stream could be opened
 			alert("your browser does not support camera access");
