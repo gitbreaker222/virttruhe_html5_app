@@ -12,7 +12,7 @@ function btn_scan(){
 		page_scan.setAttribute("class", "show");
 		page_pause.setAttribute("class", "hide");
 		unselect_all();
-		qr_start();
+			//qr_start();
 		
 	}else{
 		//close scanner view, show inventory

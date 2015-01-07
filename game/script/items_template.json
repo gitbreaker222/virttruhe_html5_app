@@ -1,48 +1,18 @@
-items = {
-	"item key" :{							<-- the key revealed by scanning the artefact. (Variation: Artefact 
-												key and item key relate different depending on the
-												virtual layer.
-				"name": "item_name" string,		<-- simply the name of an item
-				"image": "path_to_file" string,	<-- the bigger and more detailed image, presented when opened a chest
-				"icon": "path_to_file" string,	<-- the icons are displayed in the inventory
-				"found": false bool					<-- changes from false to true after the item has been found
-				},
-}
-
-
-the paths absolute from the root folder:
-(root/) path/to/folder/item.png
-
-
-________________________best????
-
-var items = {
-	"#0000ffff":
-		{
-		"name": "arrows",
-		"image": "img/items/small/arrows.png",
-		"icon": "img/items/small/arrows.png",
-		"found": false
-		}
-};
-
-var items = {
-	"arrows":
-		{
-		"key": "#0000ffff",
-		"image": "img/items/small/arrows.png",
-		"icon": "img/items/small/arrows.png",
-		"found": false
-		}
-};
-
 var items = [
 		{
-		"key": "#0000ffff",
-		"name": "arrows",
-		"image": "img/items/small/arrows.png",
-		"icon": "img/items/small/arrows.png",
-		"found": false
+		"key": 		"#0000ffff",
+		"name":		"arrows",
+		"image":	"img/items/small/arrows.png",
+		"icon":		"img/items/small/arrows.png",
+		"unlocked": true,
+		"found": 	false
 		}
 ];
+
+"key": "#0000ffff",							<-- key in QR-Code must match this key
+"name": "arrows",							<-- simply the name of an item
+"image": "img/items/small/arrows.png",		<-- the bigger and more detailed image, presented when opened a chest
+"icon": "img/items/small/arrows.png",		<-- the icons are displayed in the inventory
+"unlocked": true,							<-- locked items/portals (= unlocked: false) need a key (item) to unlock
+"found": false								<-- changes from false to true after the item has been found
 
