@@ -1,5 +1,12 @@
+/* VCLSD-Pattern: CONTROL
+ * VIEW		
+ * CONTROL	<--
+ * LOGIC	
+ * SERVICE	
+ * DATA		
+ */
+
 function btn_scan(){
-	var music = document.getElementById("audio_player");
 	var page_inventory = document.getElementById("inventory");
 	var page_scan = document.getElementById("scan");
 	var page_pause = document.getElementById("pause");
@@ -27,7 +34,6 @@ function btn_scan(){
 }
 
 function btn_options(){
-	var music = document.getElementById("audio_player");
 	//toggle page views and play/pause music
 	var page_inventory = document.getElementById("inventory");
 	var page_scan = document.getElementById("scan");
@@ -52,8 +58,6 @@ function btn_options(){
 }
 
 function btn_use(){
-	var music = document.getElementById("audio_player");
-	
 	if (music.paused){
 		music.play();
 	}else{
@@ -68,8 +72,12 @@ function btn_delete(){
 }
 
 function btn_toggle_sound(){
+	var button = document.getElementById("button_toggle_sound")
 	music_on_off();
 	play_sfx("OOT_PauseMenu_Select.wav");
+	if(status_muted){
+		button.setActive;
+	}
 }
 
 //not in use, as it fired everytime

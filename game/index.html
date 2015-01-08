@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+	<!-- VCLSD-Pattern: VIEW -->
 	<head>
 		<meta charset="utf-8">
 
@@ -27,14 +28,17 @@
 		<!-- CUSTOM STYLE sheet -->
 		<link rel="stylesheet" href="css/style_manual.css" />
 		
-		<!-- ITEM LIST (load before script)-->
+		<!-- ITEM LIST (load before CONTROL-/LOGIC-skripts)-->
 		<script src="script/items.js"></script>
 		
 		<!-- VIRTTRUHE SCRIPT -->
+		<script src="script/game_status.js"></script>
+		<script src="script/game_objects.js"></script>
 		<script src="script/item_functions.js"></script>
 		<script src="script/inventory.js"></script>
 		<script src="script/audio.js"></script>
 		<script src="script/buttons.js"></script>
+		
 		
 		<!-- jsqrcode (order important)-->
 		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
@@ -65,7 +69,7 @@
 
 
 
-	<body onload="reload_inventory(); change_music()">
+	<body onload="init_objects; reload_inventory(); change_music()">
 		
 		<div id="header" class="bar">
 			<button id="button_pause" class="btn-icon pull-right" onclick="btn_options()"></button>

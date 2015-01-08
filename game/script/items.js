@@ -1,3 +1,11 @@
+/* VCLSD-Pattern: CONTROL
+ * VIEW		
+ * CONTROL	
+ * LOGIC	
+ * SERVICE	
+ * DATA		<--
+ */
+
 var items = [
 		{
 		"key": "#00000000",

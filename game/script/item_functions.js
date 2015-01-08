@@ -1,3 +1,11 @@
+/* VCLSD-Pattern: LOGIC
+ * VIEW		
+ * CONTROL	
+ * LOGIC	<--
+ * SERVICE	
+ * DATA		
+ */
+
 function generate_key(){
 	/*
 	 * generates a hexadecimal (0-9 a-f) string

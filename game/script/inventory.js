@@ -1,3 +1,10 @@
+/* VCLSD-Pattern: LOGIC
+ * VIEW		
+ * CONTROL	
+ * LOGIC	<--
+ * SERVICE	
+ * DATA		
+ */
 
 function generate_new_item_list(){
 	//search item folder for images and create json "items.js" based on their names

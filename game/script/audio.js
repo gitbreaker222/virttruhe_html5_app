@@ -1,13 +1,17 @@
+/* VCLSD-Pattern: LOGIC
+ * VIEW		
+ * CONTROL	
+ * LOGIC	<--
+ * SERVICE	
+ * DATA		
+ */
+
 function change_music(){
-	var music = document.getElementById("audio_player");
-	
 	music.setAttribute("src", "audio/The Legend of Zelda - Gerudo Valley.mp3");
 	music.setAttribute("type", "audio/mpeg");
 };
 
 function play_sfx(file){
-	var sfx = document.getElementById("audio_sfx");
-	
 	sfx.setAttribute("src", "audio/sfx/" + file);
 	sfx.setAttribute("type", "audio/wav");
 	
@@ -15,10 +19,13 @@ function play_sfx(file){
 }
 
 function music_on_off(){
-	var music = document.getElementById("audio_player");
-	if (music.muted){
+	if (status_muted){
+		status_muted = false;
 		music.muted = false;
+		sfx.muted = false;
 	}else{
+		status_muted = true;
 		music.muted = true;
+		sfx.muted = true;
 	}
 }

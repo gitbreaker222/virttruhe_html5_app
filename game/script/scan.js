@@ -1,4 +1,10 @@
-var scan_status = false;
+/* VCLSD-Pattern: LOGIC
+ * VIEW		
+ * CONTROL	
+ * LOGIC	<--
+ * SERVICE	
+ * DATA		
+ */
 function get_scan_status(){
 	return scan_status;
 }
@@ -15,7 +21,6 @@ function qr_stop(){
 	parent.removeChild(child);
 	
 	//change state back to inventory TODO: this needs a function
-	var music = document.getElementById("audio_player");
 	var page_inventory = document.getElementById("inventory");
 	var page_scan = document.getElementById("scan");
 	play_sfx("OOT_MainMenu_Error.wav");
