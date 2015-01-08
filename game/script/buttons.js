@@ -76,7 +76,9 @@ function btn_toggle_sound(){
 	music_on_off();
 	play_sfx("OOT_PauseMenu_Select.wav");
 	if(status_muted){
-		button.setActive;
+		button.setAttribute("class", "btn-icon btn-active");
+	}else{
+		button.setAttribute("class", "btn-icon");
 	}
 }
 
