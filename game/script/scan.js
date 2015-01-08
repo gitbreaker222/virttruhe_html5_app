@@ -54,7 +54,7 @@ function qr_start(){
 			console.log("...scanning...");
 			play_sfx("beep2_quiet.wav");
 		}, function(videoError){
-			//the video stream could be opened
+			//the video stream could not be opened
 			alert("your browser does not support camera access");
 		}
 	);

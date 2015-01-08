@@ -13,3 +13,12 @@ function play_sfx(file){
 	
 	sfx.play();
 }
+
+function music_on_off(){
+	var music = document.getElementById("audio_player");
+	if (music.muted){
+		music.muted = false;
+	}else{
+		music.muted = true;
+	}
+}

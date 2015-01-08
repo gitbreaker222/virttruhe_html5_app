@@ -155,7 +155,12 @@ audio{
 	display: table-cell;
 }
 
-
+#pause{
+	color: white;
+}
+#button_toggle_sound{
+	background-image: url("../img/icons/mute-sound.svg");
+}
 
 /* FOOTER BAR ------------*/
 #footer{

@@ -16,7 +16,7 @@ function btn_scan(){
 		
 	}else{
 		//close scanner view, show inventory
-		qr_stop()
+		qr_stop();
 		play_sfx("OOT_MainMenu_Error.wav");
 		setTimeout(function(){music.play();}, 700);
 		page_inventory.setAttribute("class", "show");
@@ -65,6 +65,11 @@ function btn_use(){
 function btn_delete(){
 	delete_all_from_inventory();
 	select_item();
+}
+
+function btn_toggle_sound(){
+	music_on_off();
+	play_sfx("OOT_PauseMenu_Select.wav");
 }
 
 //not in use, as it fired everytime
