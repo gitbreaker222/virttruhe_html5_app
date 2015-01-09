@@ -85,7 +85,7 @@ function decode_qr(){
 	    	//prepare reaction on successfull scan
 			qrcode.callback = function(data){
 				console.log("QR-Code says: " + data);
-            	//TODO pass the code to the item-functions...
+            	found_key(data);
 			};
             try {
 	    		//automaticly decodes canvas with id="qr-canvas"
