@@ -39,9 +39,11 @@ function found_key(qr_message){
 	/*
 	 * search for '#'. pick the key out of the text string
 	 */
+	var start_slice;
+	var stop_slice;
 		//test if there is the # prefix
 	try{
-		var start_slice = qr_message.indexOf("#");
+		start_slice = qr_message.indexOf("#");
 	}catch(error){
 		console.log(error);
 		alert("This code has no key in it!")
@@ -49,9 +51,9 @@ function found_key(qr_message){
 	}
 		//test if the key/text after the # is long enough
 	try{
-		var stop_slice = start_trim + 9;
+		stop_slice = start_slice + 9;
 	}catch(error){
-		console.log("error");
+		console.log(error);
 		alert("No valid key in this code (too short)");
 		return;
 	}

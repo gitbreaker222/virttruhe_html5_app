@@ -7,52 +7,38 @@
  */
 
 function btn_scan(){
-	if (scan_status == false){
+	if (game_status !== "scan"){
 		//open scanner view
-		scan_status = true;
 		music.pause();
 		play_sfx("OOT_ZTarget_Center1.wav");
-		page_inventory.setAttribute("class", "hide");
-		page_scan.setAttribute("class", "show");
-		page_pause.setAttribute("class", "hide");
-		unselect_all();
-		
-		//qr_start();
-		
+		change_status("scan");
 	}else{
 		//close scanner view, show inventory
-		scan_status = false;
-			//qr_stop();
 		play_sfx("OOT_MainMenu_Error.wav");
+		change_status("inventory");
 		setTimeout(function(){music.play();}, 700);
-		page_inventory.setAttribute("class", "show");
-		page_scan.setAttribute("class", "hide");
-		page_pause.setAttribute("class", "hide");
 	}
 	
 }
 
 function btn_options(){
 	//toggle page views and play/pause music
-	if (page_pause.getAttribute("class") == "hide"){
+	if (game_status !== "pause"){
 		//open pause menu
 		music.pause();
 		play_sfx("OOT_PauseMenu_Open.wav");
-		page_inventory.setAttribute("class", "hide");
-		page_scan.setAttribute("class", "hide");
-		page_pause.setAttribute("class", "show");
+		change_status("pause");
 		
 	}else{
 		//close pause menu, show inventory
 		play_sfx("OOT_PauseMenu_Close.wav");
 		setTimeout(function(){music.play();}, 700);
-		page_inventory.setAttribute("class", "show");
-		page_scan.setAttribute("class", "hide");
-		page_pause.setAttribute("class", "hide");
+		change_status("inventory");
 	}
 }
 
 function btn_use(){
+	//TODO add use_item() function
 	if (music.paused){
 		music.play();
 	}else{
@@ -75,9 +61,4 @@ function btn_toggle_sound(){
 	}else{
 		button.setAttribute("class", "btn-icon");
 	}
-}
-
-//not in use, as it fired everytime
-function background_tap(){
-	unselect_all();
 }
