@@ -144,6 +144,7 @@ audio{
 	border: 1px solid #DDD;
 	border-radius: 6px;
 	z-index: -10;
+	color: white;
 }
 
 #inventory{
@@ -172,9 +173,10 @@ audio{
 	display: table-cell;
 }
 
-#pause{
-	color: white;
+#qr-canvas{
+	display: none;
 }
+
 #button_toggle_sound{
 	background-image: url("../img/icons/mute-sound.svg");
 }

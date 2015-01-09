@@ -6,7 +6,7 @@
  * DATA		
  */
 
-
+//TODO delete qr_start and qr_stop because camera straming is not used
 function qr_start(){
 	//TODO remove last video picture, because after successfull scan, this will immediatly succeed before new scan
 	scan_status = true;
@@ -60,26 +60,44 @@ function qr_stop(){
 }
 
 function decode_qr(){
+	scan_status = true;
 	var canvas = document.getElementById("qr-canvas");
 	var context = canvas.getContext("2d");
-	var img = document.getElementById("help_img");
+	var image = document.getElementById("preview_img");
 	var file = document.querySelector('input[type=file]').files[0];
 	var reader = new FileReader();
 	
 	if (file) {
-    reader.readAsDataURL(file);
+	    reader.readAsDataURL(file);
 	}else {
-    img.src = "";
+	    image.src = "";
   	}
 	
     reader.onloadend = function(){
-    	img.src = reader.result;
-    	img.onload = function (){
+    	image.src = reader.result;
+    	//wait till the image is loaded
+    	image.onload = function (){
+    		//delete picture from previous scan
     		context.clearRect(0, 0, canvas.width, canvas.height);
-	    	context.drawImage(img,10,10,307,250);
-    		var code = qrcode.decode();
-        	alert(code);
-        	console.log(code);
+    		//...then draw it on the canvas
+	    	context.drawImage(image,10,10,307,250);
+	    	
+	    	//prepare reaction on successfull scan
+			qrcode.callback = function(data){
+				console.log("QR-Code says: " + data);
+            	alert("Item found: "+ data);
+            	//TODO pass the code to the item-functions...
+			};
+            try {
+	    		//automaticly decodes canvas with id="qr-canvas"
+				qrcode.decode();
+				return;
+            }catch(e) {
+              console.log(e);
+            }
 	    };	
     };
+    scan_status = false;
+    console.log("scan_status set back to FALSE");
+    
 }

@@ -38,7 +38,7 @@
 		<script src="script/inventory.js"></script>
 		<script src="script/audio.js"></script>
 		<script src="script/buttons.js"></script>
-		
+		<script type="text/javascript" src="script/scan.js"></script>
 		
 		<!-- jsqrcode (order important)-->
 		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
@@ -100,19 +100,21 @@
 			
 			<ul id="inventory" class="show">
 			</ul>
+			
 			<!-- ----------------------------------------------------------- -->
 			<div id="scan" class="hide">
 				<form>
 					<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" onchange="decode_qr()">
 				</form>
 				
+				<!-- the size of the img tag is more easy to handle and it gets loaded into the canvas -->
+				<img id="preview_img" src="" height="200" alt="Image preview...">
+				
 				<!-- hidden canvas where the qr-decoder reads the image. 
 					The ID "qr-canvas" is determined in decoder.js from jsqrcode-library -->
-				<canvas id="qr-canvas" width="500px" height="350px">
-				</canvas>
-				
-				<img id="preview_img" src="" height="200" alt="Image preview...">
+				<canvas id="qr-canvas" width="500px" height="350px"></canvas>
 			</div>
+			
 			<!-- ----------------------------------------------------------- -->
 			<div id="pause" class="hide">
 				<h2>Pause</h2>
