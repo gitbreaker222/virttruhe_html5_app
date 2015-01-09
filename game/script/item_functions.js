@@ -35,6 +35,7 @@ function generate_key(){
 	return(key);
 }
 
+
 function found_key(qr_message){
 	/*
 	 * search for '#'. pick the key out of the text string
@@ -71,7 +72,7 @@ function found_key(qr_message){
 			/*
 			 * tell the new-item() function, which item to present
 			 */
-			
+			new_item(item);
 			/*
 			 * tell add_to_inventory() which item to add
 			 */
@@ -82,6 +83,15 @@ function found_key(qr_message){
 	console.log("ERROR: Key matches no item.")
 	alert("This key does not fit to any VIRTTRUHE chest");
 }
+
+function new_item(item){
+	/*
+	 * css presentaton: the image of the new item comming out of a chest
+	 */
+	
+}
+
+
 
 function add_rupees(){
 	//does this belong here??
