@@ -60,21 +60,36 @@ function delete_from_inventory(item){
 
 
 function delete_all_from_inventory(){
-	//confirm action with an alert-popup box
 	play_sfx("OOT_MainMenu_Letter.wav");
-	if (window.confirm("Delete all items from the inventory. \n Are you sure?") == false){
-		//abort action
-		play_sfx("OOT_Dialogue_Done.wav");
-		return;
-	}
-	play_sfx("OOT_Dialogue_No.wav");
-	
-	//make each found status "false"
-	for (i = 0; i < items.length; i++){
-		items[i].found = false;
-		console.log("removed from inventory: " + items[i].name);
-	}
-	reload_inventory();
+	/*
+	 * confirm action with an jQueri UI -popup box
+	 */
+	reset_dialog_status();
+	dialog.innerHTML = '<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>'
+	+"Delete all items from the inventory. \n Are you sure?";
+	$( "#dialog" ).dialog({
+		resizable: false,
+		//height:140,
+		modal: true,
+		buttons: {
+			"Delete all items": function() {
+				play_sfx("OOT_Dialogue_No.wav");
+				//make each found status "false"
+				for (i = 0; i < items.length; i++){
+					items[i].found = false;
+					console.log("removed from inventory: " + items[i].name);
+				}
+				reload_inventory();
+				$( this ).dialog( "close" );
+			},
+			Cancel: function() {
+				//abort action
+				play_sfx("OOT_Dialogue_Done.wav");
+				$( this ).dialog( "close" );
+			}
+		}
+	});
+	$( "#dialog" ).dialog( "open" );
 }
 
 function unselect_all(){

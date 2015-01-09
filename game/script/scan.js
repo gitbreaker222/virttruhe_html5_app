@@ -33,24 +33,19 @@ function decode_qr(){
 			qrcode.callback = function(data){
 				console.log("QR-Code says: " + data);
             	found_key(data);
-            	setTimeout(function(){
-            		change_status("inventory");
-            		music.play();
-            		}, 1000
-            	);
-			};
+            };
             try {
 	    		//automaticly decodes canvas with id="qr-canvas"
 				qrcode.decode();
 				return;
             }catch(e) {
               console.log(e);
-              alert("Couldnt find any Items - Try again...")
+              alert("Couldnt find any Items - Try again...");//TODO popup
+              change_status("inventory");
             }
 	    };	
     };
     scan_status = false;
-    game_status = "inventory";
     console.log("scan_status set back to FALSE");
     
 }

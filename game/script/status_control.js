@@ -34,3 +34,21 @@ function change_status(status){
 			page_pause.setAttribute("class", "hide");
     }
 }
+
+function reset_dialog_status(){
+	$("#dialog").dialog({
+		title: "",
+		modal: false,
+		buttons: [{
+			text: "Ok",
+			icons: {
+				primary: "ui-icon-heart"
+			},
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}],
+		height: auto,
+		position: { my: "center", at: "center", of: window },
+	});
+}

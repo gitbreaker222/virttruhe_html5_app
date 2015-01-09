@@ -22,8 +22,13 @@
 		
 		<!-- css normalizer -->
 		<link href="css/normalize.css" rel="stylesheet">
-		<!-- JQUERY -->
+		<!-- jQUERY -->
 		<script src="lib/jquery-1.11.1.js"></script>
+		<!-- jQUERY UI -->
+		<link rel="stylesheet" href="lib/jquery-ui-1.11.2.custom/jquery-ui.css">
+		<script src="lib/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
+		<link rel="stylesheet" href="lib/jquery-ui-1.11.2.custom/jquery-ui.structure.css">
+		<script src="lib/jquery-ui-1.11.2.custom/jquery-ui.theme.css"></script>
 		
 		<!-- CUSTOM STYLE sheet -->
 		<link rel="stylesheet" href="css/style_manual.css" />
@@ -121,6 +126,9 @@
 				<h2>Pause</h2>
 				<span>Mute Sound: </span><button class="btn-icon" id="button_toggle_sound" onclick="btn_toggle_sound()"></button>
 			</div>
+			<!-- the dialog box, which is used to display various messages by the skripts -->
+			<div id="dialog" title="Ooops, this should't be written here..."></div>
+			<script>$( "#dialog" ).dialog({ autoOpen: false });</script>
 		</div>
 		<!-- ----------------------------------------------------------- -->
 			
@@ -130,7 +138,7 @@
 			<button class="btn-icon pull-right" id="button_use" onclick="btn_use()"></button>
 			<h3 id="item_title"></h3>
 		</div>
-			
+		
 		
 		
 	</body>

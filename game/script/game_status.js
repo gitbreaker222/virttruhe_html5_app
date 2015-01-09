@@ -9,6 +9,9 @@
 var game_status = "inventory";
 var previous_status;
 
+//INVENTORY
+var selected_item;
+
 //SCANNER
 var scan_status = false;
 
