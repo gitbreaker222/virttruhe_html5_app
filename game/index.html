@@ -58,9 +58,7 @@
 		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/findpat.js"></script>
 		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/alignpat.js"></script>
 		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/databr.js"></script>
-		<!-- html5 qrcode -->
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
-		<script type="text/javascript" src="script/scan.js"></script>
+		
 		
 		
 	</head>
@@ -105,17 +103,20 @@
 			<!-- ----------------------------------------------------------- -->
 			<div id="scan" class="hide">
 				<form>
-					<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+					<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" onchange="decode_qr()">
 				</form>
 				
-				<div id="reader" style="width:100%;height:300px">
- 				</div>
+				<!-- hidden canvas where the qr-decoder reads the image. 
+					The ID "qr-canvas" is determined in decoder.js from jsqrcode-library -->
+				<canvas id="qr-canvas" width="500px" height="350px">
+				</canvas>
+				
+				<img id="preview_img" src="" height="200" alt="Image preview...">
 			</div>
 			<!-- ----------------------------------------------------------- -->
 			<div id="pause" class="hide">
 				<h2>Pause</h2>
 				<span>Mute Sound: </span><button class="btn-icon" id="button_toggle_sound" onclick="btn_toggle_sound()"></button>
-			</div>
 			
 		</div>
 		<!-- ----------------------------------------------------------- -->

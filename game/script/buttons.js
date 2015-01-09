@@ -7,23 +7,22 @@
  */
 
 function btn_scan(){
-	var page_inventory = document.getElementById("inventory");
-	var page_scan = document.getElementById("scan");
-	var page_pause = document.getElementById("pause");
-	
-	if (page_scan.getAttribute("class") == "hide"){
+	if (scan_status == false){
 		//open scanner view
+		scan_status = true;
 		music.pause();
 		play_sfx("OOT_ZTarget_Center1.wav");
 		page_inventory.setAttribute("class", "hide");
 		page_scan.setAttribute("class", "show");
 		page_pause.setAttribute("class", "hide");
 		unselect_all();
-			//qr_start();
+		
+		//qr_start();
 		
 	}else{
 		//close scanner view, show inventory
-		qr_stop();
+		scan_status = false;
+			//qr_stop();
 		play_sfx("OOT_MainMenu_Error.wav");
 		setTimeout(function(){music.play();}, 700);
 		page_inventory.setAttribute("class", "show");
@@ -35,10 +34,6 @@ function btn_scan(){
 
 function btn_options(){
 	//toggle page views and play/pause music
-	var page_inventory = document.getElementById("inventory");
-	var page_scan = document.getElementById("scan");
-	var page_pause = document.getElementById("pause");
-	
 	if (page_pause.getAttribute("class") == "hide"){
 		//open pause menu
 		music.pause();

@@ -25,7 +25,7 @@
         var localMediaStream;
         
         var scan = function() {
-        	if (get_scan_status()){
+        	if (scan_status){
         		if (localMediaStream) {
 		            context.drawImage(video, 0, 0, 307,250);
 		    
