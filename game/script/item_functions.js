@@ -90,24 +90,25 @@ function new_item(item){
 	 * presentaton: the image of the new item comming out of a chest
 	 */
 		//chest appears, wait 600ms
-		$('<div id="presentation_div"></div>').appendTo("#scan");
-		$('<img src="img/chest.png" alt="chest"></img>').appendTo("#presentation_div");
+	$('<img src="img/chest.png" alt="chest"></img>').appendTo("#presentation_div");
 		
 		//sound: open chest
+	play_sfx("open_chest.ogg");
 		
 		//shiny background and item scales up, duration: 900ms
-		$('<img src="img/shiny.png" alt="shiny"></img>').appendTo("#presentation_div");
-		$('<img id="new_item" src="" alt="item"></img>').appendTo("#presentation_div");
-		$("#new_item").attr("src", item.image);
+	$('<img src="img/shiny.png" alt="shiny"></img>').appendTo("#presentation_div");
+	$('<img id="new_item" src="" alt="item"></img>').appendTo("#presentation_div");
+	$("#new_item").attr("src", item.image);
 		
 		//chest fades out, duration: 600ms
 		
 		//sound: get small item1, wait 800ms
+	play_sfx("OOT_Get_SmallItem1.wav");
 		
 		//pop up
 	
 	
-	play_sfx("OOT_Get_SmallItem1.wav");
+	
 	
 	
 	
@@ -117,14 +118,16 @@ function new_item(item){
 	 */
 	reset_dialog_status();
 	dialog.innerHTML = "You have found: <u>" + item.name + "</u>";
+	
 	$("#dialog").dialog({
 		title: "New Item!",
 	});
+	
 	$("#dialog").dialog ( "open" );
 	
 	setTimeout(function(){
 		//clear presentation
-		document.removeChild()
+		 $("#presentation_div").empty();
 		
 		change_status("inventory");
 		music.play();
