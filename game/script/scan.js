@@ -85,7 +85,6 @@ function decode_qr(){
 	    	//prepare reaction on successfull scan
 			qrcode.callback = function(data){
 				console.log("QR-Code says: " + data);
-            	alert("Item found: "+ data);
             	//TODO pass the code to the item-functions...
 			};
             try {
@@ -94,6 +93,7 @@ function decode_qr(){
 				return;
             }catch(e) {
               console.log(e);
+              alert("Couldnt find any Items - Try again...")
             }
 	    };	
     };

@@ -16,7 +16,12 @@ function generate_key(){
 	 * contain a human readable message and a key, like:
 	 * "VIRTTRUHE game from Ruben La Biunda --- #22FA3BC8"
 	 */
-	 
+	
+	/*
+	 * TODO USE HASHING (the items name) instead of RANDOM KEY!!! THIS MAKES
+	 * ITEM-LIST GENERATION AND QR-CODE PRODUCTION LESS COMPLEX
+	 */ 
+	
 	var key = "#";
 	
 	for(i = 0; i < 8; i++){
@@ -30,14 +35,49 @@ function generate_key(){
 	return(key);
 }
 
-function found_key(scan_key){
+function found_key(qr_message){
+	/*
+	 * search for '#'. pick the key out of the text string
+	 */
+		//test if there is the # prefix
+	try{
+		var start_slice = qr_message.indexOf("#");
+	}catch(error){
+		console.log(error);
+		alert("This code has no key in it!")
+		return;
+	}
+		//test if the key/text after the # is long enough
+	try{
+		var stop_slice = start_trim + 9;
+	}catch(error){
+		console.log("error");
+		alert("No valid key in this code (too short)");
+		return;
+	}
+	var key = qr_message.slice(start_slice, stop_slice);
+	console.log("key found in code: " + key);
+	
+	/*
+	 * compare key with item list
+	 */
 	var item;
 	for (i in items){
-		if (items[i].key == scan_key){
+		if (items[i].key == key){
 			item = items[i].name;
-			return(item);
+			
+			/*
+			 * tell the new-item() function, which item to present
+			 */
+			
+			/*
+			 * tell add_to_inventory() which item to add
+			 */
+			add_to_inventory(item);
+			return;
 		}
 	}
+	console.log("ERROR: Key matches no item.")
 	alert("This key does not fit to any VIRTTRUHE chest");
 }
 
