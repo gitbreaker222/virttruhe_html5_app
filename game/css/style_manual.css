@@ -24,10 +24,7 @@ button:active{
 img{
 	display: inline-block;
 }
-canvas{
-	border: 1px solid #d3d3d3;
-	background-color: white;
-}
+
 audio{
 	display: none;
 }
@@ -73,6 +70,10 @@ audio{
 	border: solid 1px #CCC;
 	margin: 2px;
 	z-index: 20;
+}
+
+.no-close .ui-dialog-titlebar-close {
+display: none;
 }
 
 
@@ -172,9 +173,29 @@ audio{
 	height: 48px;
 	display: table-cell;
 }
-
 #qr-canvas{
+	border: 1px solid #d3d3d3; /*for debugging*/
+	background-color: white; /*for debugging*/
 	display: none;
+}
+
+#presentation_box{
+	display: none;
+	position: fixed;
+	top:0px;
+	bottom:0px;
+	left: 0;
+	width: 100%;
+	background-color: rgba(51, 51, 51, 0.5);
+}
+
+#presentation_box img{
+	position: absolute;
+	margin: auto;
+ 	left: 0;
+ 	right: 0;
+ 	top: 0;
+ 	bottom: 0;
 }
 
 #button_toggle_sound{

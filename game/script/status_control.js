@@ -48,7 +48,7 @@ function reset_dialog_status(){
 				$( this ).dialog( "close" );
 			}
 		}],
-		height: auto,
+		height: "auto",
 		position: { my: "center", at: "center", of: window },
 	});
 }

@@ -109,7 +109,7 @@
 			
 			<!-- ----------------------------------------------------------- -->
 			<div id="scan" class="hide">
-				<form>
+				<form id="myForm">
 					<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" onchange="decode_qr()">
 				</form>
 				
@@ -121,7 +121,11 @@
 				<canvas id="qr-canvas" width="500px" height="350px"></canvas>
 				
 				<!-- here will be the presentation animation for new items -->
-				<div id="presentation_div"></div>
+				<div id="presentation_box">
+					<img id="img_chest" src="img/chest.png" alt="chest">
+					<img id="img_shiny" src="img/shiny.png" alt="shiny">
+					<img id="img_new_item" src="" alt="item">
+				</div>
 			</div>
 			
 			<!-- ----------------------------------------------------------- -->
