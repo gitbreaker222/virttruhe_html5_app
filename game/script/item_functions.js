@@ -128,7 +128,7 @@ function new_item(item){
 		
 		//chest fades out, duration: 600ms
 	var step_4 = function() {
-	   $("#img_chest").hide(600);
+	   $("#img_chest").toggle( "fade" );
 	   setTimeout(step_5(), 0);
 	};	
 		//sound: get small item1, wait 800ms

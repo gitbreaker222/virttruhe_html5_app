@@ -11,8 +11,8 @@ function decode_qr(){
 	var canvas = document.getElementById("qr-canvas");
 	var context = canvas.getContext("2d");
 	var image = document.getElementById("preview_img");
-	var input = document.getElementById("cameraInput");
-	var file = input.files[0];
+	var form = document.getElementById("myForm");
+	var file = form.childNodes[1].files[0];
 	var reader = new FileReader();
 	
 	if (file) {
@@ -46,10 +46,8 @@ function decode_qr(){
             //remove the preview image
 			image.src = "";
 			//remove the loaded file
-			document.getElementById("myForm").reset();
-			console.log("here");
-            
-	    };	
+			form.reset();
+		};	
     };
     scan_status = false;
     console.log("scan_status set back to FALSE");
