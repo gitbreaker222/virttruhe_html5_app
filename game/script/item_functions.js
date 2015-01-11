@@ -149,31 +149,34 @@ function new_item(item){
 	/*
 	 * pop up dialog
 	 */
-	.queue(function( next ){
-		reset_dialog_status();
-		dialog.innerHTML = "You have found: <u>" + item.name + "</u>";
-			//prepare dialog contents
-		$("#dialog").dialog({
-			title: "New Item!",
-			dialogClass: "no-close",
-			buttons: [{
-				text: "Ok",
-				icons: {
-					primary: "ui-icon-heart"
-				},
-				click: function() {
-					//hide presentation stage
-					$("#presentation_box").hide();
-					//go back to inventory
-					change_status("inventory");
-					music.play();
-					$( this ).dialog( "close" );
-				}
-			}],
-		});
-			//open dialog (after 800ms)
-		$("#dialog").delay(800).dialog ( "open" );
-		//end of item presentation
+		.queue(function(){
+			reset_dialog_status();
+			dialog.innerHTML = "You have found: <u>" + item.name + "</u>";
+				//prepare dialog contents
+			$("#dialog").dialog({
+				title: "New Item!",
+				dialogClass: "no-close",
+				buttons: [{
+					text: "Ok",
+					icons: {
+						primary: "ui-icon-heart"
+					},
+					click: function() {
+						//hide presentation stage
+						$("#presentation_box").hide();
+						console.log("here eee")
+						//go back to inventory
+						change_status("inventory");
+						music.play();
+						$( this ).dialog( "close" );
+					}
+				}],
+			});
+				//open dialog (after 800ms)
+			$("#dialog").delay(800).dialog ( "open" );
+			console.log("5");
+			$(this).dequeue();
+			//end of item presentation
 	});
 }
 
