@@ -213,7 +213,8 @@ display: none;
 	transform: scale(0.0);
 	transform-origin: 50% 50%;
 }
-#new_item_box .animate{
+img.animate{
+	transition: 900ms ease-out;
 	-webkit-transform: scale(1.0);
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform: scale(1.0);
@@ -224,8 +225,6 @@ display: none;
 	-ms-transform-origin: 50% 50%;
 	transform: scale(1.0);
 	transform-origin: 50% 50%;
-	-webkit-animation-duration: 900ms;
-	animation-duration: 900ms;
 	
 }
 

@@ -89,7 +89,15 @@ function found_key(qr_message){
 
 function new_item(item){
 	console.log("start new item presentation");
-	var q = $({});
+	//pause function to control the .dequeue triggering in the event queue
+	$.fn.pause = function (n) {
+	  return this.queue(function () {
+	    var el = this;
+	    setTimeout(function () {
+	      return $(el).dequeue();
+	    }, n);
+	  });
+	};
 	var p_queue = $({}); //presentation queue
 	
 	// //code from http://jsfiddle.net/gaby/qDbRm/2/ - with extra 'speed' parameter
@@ -114,31 +122,28 @@ function new_item(item){
 		//chest appears, wait 600ms
 	$("#presentation_box")
 		.queue(function() {
-			$("#img_chest").animate({opacity: "1.0"}, 600);
+			$("#img_chest").animate({opacity: "1.0"}, 200);
 			console.log("1");
-			$(this).dequeue();
 		})
-	/*	
+		.delay(600).dequeue()
+		//////.pause(600)
 		//sound: open chest
-		.queue(function() {
+		.queue(function(next) {
 			play_sfx("open_chest.ogg");
 			console.log("2");
-			$(this).dequeue();
+			next();
 		})
-		.queue(function() {
-			play_sfx("open_chest.ogg");
-			$(this).dequeue();
-		})
+		.pause(10) //just for demonstration, how to delay/queue non jQuery things, like the sound function
 		
 		//shiny background and item scales up, duration: 900ms
 		.queue(function() {
-			$("#element").attr("class", "animate");
-			//chest fades out, duration: 600ms
-			$("#img_chest").animate({opacity: "0.0"}, 600);
+			$("#new_item_box img").attr("class", "animate");
+			//chest fades out, duration: 1600ms
+			$("#img_chest").animate({opacity: "0.0"}, 1600);
 			console.log("3");
-			$(this).dequeue();
+			//$(this).dequeue();
 		})
-		
+		/*
 		//sound: get small item1, wait 800ms
 		.queue(function( next ) {
 			sfx.onplaying="alert('haha')";//'play_sfx("OOT_Get_SmallItem1.wav")';
