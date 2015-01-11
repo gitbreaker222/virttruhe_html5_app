@@ -34,7 +34,7 @@ function decode_qr(){
 			qrcode.callback = function(data){
 				console.log("QR-Code says: " + data);
 				//remove the preview image
-				//image.src = "";
+				image.src = "";
             	found_key(data);
             };
             try {
