@@ -12,6 +12,8 @@ function btn_scan(){
 		music.pause();
 		play_sfx("OOT_ZTarget_Center1.wav");
 		change_status("scan");
+		//remove the previous loaded file
+		document.getElementById("myForm").reset();
 	}else{
 		//close scanner view, show inventory
 		play_sfx("OOT_MainMenu_Error.wav");

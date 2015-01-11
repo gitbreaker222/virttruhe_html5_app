@@ -45,8 +45,6 @@ function decode_qr(){
             }
             //remove the preview image
 			image.src = "";
-			//remove the loaded file
-			form.reset();
 		};	
     };
     scan_status = false;
