@@ -118,6 +118,7 @@ function new_item(item){
 			console.log("1");
 			$(this).dequeue();
 		})
+	/*	
 		//sound: open chest
 		.queue(function() {
 			play_sfx("open_chest.ogg");
@@ -148,7 +149,7 @@ function new_item(item){
 	/*
 	 * pop up dialog
 	 */
-	.queue("p_queue", function( next ){
+	.queue(function( next ){
 		reset_dialog_status();
 		dialog.innerHTML = "You have found: <u>" + item.name + "</u>";
 			//prepare dialog contents

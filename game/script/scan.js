@@ -33,18 +33,19 @@ function decode_qr(){
 	    	//prepare reaction on successfull scan
 			qrcode.callback = function(data){
 				console.log("QR-Code says: " + data);
+				//remove the preview image
+				//image.src = "";
             	found_key(data);
             };
             try {
 	    		//automaticly decodes canvas with id="qr-canvas"
 				qrcode.decode();
+				return;
 			}catch(e) {
               console.log(e);
-              alert("Couldnt find any Items - Try again..."); //TODO popup
+              alert("something error (check console)..."); //TODO popup
               change_status("inventory");
             }
-            //remove the preview image
-			image.src = "";
 		};	
     };
     scan_status = false;
