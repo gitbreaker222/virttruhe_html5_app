@@ -102,7 +102,7 @@ function new_item(item){
 	//preparing the stage....
 	$("#img_chest").css("opacity", '0.0');
 	$("#img_new_item").attr("src", item.image);
-	$("#new_item_box").css("transform", "scale(0.2)");
+	$("#new_item_box img").attr("class", "scale_down");
 	//lift the curtain
 	$("#presentation_box").show();
 	
@@ -132,7 +132,7 @@ function new_item(item){
 		
 		//shiny background and item scales up, duration: 900ms
 		.queue(function() {
-			$("#element").addClass("animate");
+			$("#element").attr("class", "animate");
 			//chest fades out, duration: 600ms
 			$("#img_chest").animate({opacity: "0.0"}, 600);
 			console.log("3");

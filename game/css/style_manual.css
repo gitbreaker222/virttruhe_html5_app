@@ -201,7 +201,18 @@ display: none;
  	top: 0;
  	bottom: 0;
 }
-
+.scale_down{
+	-webkit-transform: scale(0.2);
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform: scale(0.2);
+	-moz-transform-origin: 50% 50%;
+	-o-transform: scale(0.2);
+	-o-transform-origin: 50% 50%;
+	-ms-transform: scale(0.2);
+	-ms-transform-origin: 50% 50%;
+	transform: scale(0.2);
+	transform-origin: 50% 50%;
+}
 #new_item_box .animate{
 	-webkit-transform: scale(1.0);
 	-webkit-transform-origin: 50% 50%;
