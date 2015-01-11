@@ -125,32 +125,31 @@ function new_item(item){
 			$("#img_chest").animate({opacity: "1.0"}, 200);
 			console.log("1");
 		})
-		.delay(600).dequeue()
-		//////.pause(600)
+		.delay(600).dequeue() //<-- delayed dequeue method 1
+		
 		//sound: open chest
 		.queue(function(next) {
 			play_sfx("open_chest.ogg");
 			console.log("2");
-			next();
+			next(); //<--queues next (redundant here) and dequeues itself
 		})
-		.pause(10) //just for demonstration, how to delay/queue non jQuery things, like the sound function
 		
 		//shiny background and item scales up, duration: 900ms
 		.queue(function() {
 			$("#new_item_box img").attr("class", "animate");
 			//chest fades out, duration: 1600ms
-			$("#img_chest").animate({opacity: "0.0"}, 1600);
+			$("#img_chest").delay(300).animate({opacity: "0.0"}, 1400);
 			console.log("3");
-			//$(this).dequeue();
+			$(this).dequeue();
 		})
-		/*
+		
 		//sound: get small item1, wait 800ms
-		.queue(function( next ) {
-			sfx.onplaying="alert('haha')";//'play_sfx("OOT_Get_SmallItem1.wav")';
+		.queue(function() {
+			
+			play_sfx("OOT_Get_SmallItem1.wav");
 			console.log("4");
-			next();
-		});
-		*/
+		})
+		.pause(1000) //<-- delayed dequeue method 2 - custom func with setTimeout
 	/*
 	 * pop up dialog
 	 */
