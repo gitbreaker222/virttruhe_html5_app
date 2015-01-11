@@ -134,6 +134,7 @@ display: none;
 
 
 /* CONTENT SECTION------------*/
+/* inventory------------*/
 #content{
 	width: 94%;  		/* !!! margin-left + margin-right + width = 100% !!! */
 	margin: 5% 3%; 		/* margin: x y = margin: x y x y */
@@ -173,6 +174,9 @@ display: none;
 	height: 48px;
 	display: table-cell;
 }
+
+/* scan ------------*/
+
 #qr-canvas{
 	border: 1px solid #d3d3d3; /*for debugging*/
 	background-color: white; /*for debugging*/
@@ -197,6 +201,24 @@ display: none;
  	top: 0;
  	bottom: 0;
 }
+
+#new_item_box .animate{
+	-webkit-transform: scale(1.0);
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform: scale(1.0);
+	-moz-transform-origin: 50% 50%;
+	-o-transform: scale(1.0);
+	-o-transform-origin: 50% 50%;
+	-ms-transform: scale(1.0);
+	-ms-transform-origin: 50% 50%;
+	transform: scale(1.0);
+	transform-origin: 50% 50%;
+	-webkit-animation-duration: 900ms;
+	animation-duration: 900ms;
+	
+}
+
+/* pause menu ------------*/
 
 #button_toggle_sound{
 	background-image: url("../img/icons/mute-sound.svg");

@@ -85,21 +85,25 @@ function found_key(qr_message){
 	game_status = "inventory";
 }
 
+
+
 function new_item(item){
 	console.log("start new item presentation");
 	var q = $({});
 	var p_queue = $({}); //presentation queue
-	//code from http://jsfiddle.net/gaby/qDbRm/2/ - with extra 'speed' parameter
-	function animToQueue(theQueue, selector, animationprops, speed) {
-	    theQueue.queue(function(next) {
-	        $(selector).animate(animationprops, speed, next);
-	    });
-	}
+	
+	// //code from http://jsfiddle.net/gaby/qDbRm/2/ - with extra 'speed' parameter
+	// function animToQueue(theQueue, selector, animationprops, speed) {
+	    // theQueue.queue(function(next) {
+	        // $(selector).animate(animationprops, speed, next);
+	    // });
+	// }
 	
 	//preparing the stage....
 	$("#img_chest").css("opacity", '0.0');
 	$("#img_new_item").attr("src", item.image);
-	$("#new_item_box").css("transform", "scale(0,0)");
+	$("#new_item_box").css("transform", "scale(0.2)");
+	//lift the curtain
 	$("#presentation_box").show();
 	
 	/*
@@ -108,35 +112,43 @@ function new_item(item){
 	 */
 	
 		//chest appears, wait 600ms
-	p_queue.queue(function( next ) {
-		$("#img_chest").css("opacity", '1.0');
-		setTimeout(next(),600);
-	});
-	
+	$("#presentation_box")
+		.queue(function() {
+			$("#img_chest").animate({opacity: "1.0"}, 600);
+			console.log("1");
+			$(this).dequeue();
+		})
 		//sound: open chest
-	p_queue.queue(function( next ) {
-		play_sfx("open_chest.ogg");
-		next();
-	});
+		.queue(function() {
+			play_sfx("open_chest.ogg");
+			console.log("2");
+			$(this).dequeue();
+		})
+		.queue(function() {
+			play_sfx("open_chest.ogg");
+			$(this).dequeue();
+		})
 		
 		//shiny background and item scales up, duration: 900ms
-	p_queue.queue(function( next ) {
-		$("#new_item_box").animate({transform: "scale(1,1)"}, 900);
-		//chest fades out, duration: 600ms
-		$("#img_chest").animate({opacity: "1.0"}, 600);
-		next();
-	});
+		.queue(function() {
+			$("#element").addClass("animate");
+			//chest fades out, duration: 600ms
+			$("#img_chest").animate({opacity: "0.0"}, 600);
+			console.log("3");
+			$(this).dequeue();
+		})
 		
 		//sound: get small item1, wait 800ms
-	p_queue.queue(function( next ) {
-		play_sfx("OOT_Get_SmallItem1.wav");
-		setTimeout(next(),800);
-	});
-		
+		.queue(function( next ) {
+			sfx.onplaying="alert('haha')";//'play_sfx("OOT_Get_SmallItem1.wav")';
+			console.log("4");
+			next();
+		});
+		*/
 	/*
 	 * pop up dialog
 	 */
-	p_queue.queue(function( next ) {
+	.queue("p_queue", function( next ){
 		reset_dialog_status();
 		dialog.innerHTML = "You have found: <u>" + item.name + "</u>";
 			//prepare dialog contents
@@ -161,6 +173,7 @@ function new_item(item){
 			//open dialog (after 800ms)
 		$("#dialog").delay(800).dialog ( "open" );
 		//end of item presentation
+	});
 }
 
 
