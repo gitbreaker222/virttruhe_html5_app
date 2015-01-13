@@ -98,14 +98,8 @@ function new_item(item){
 	    }, n);
 	  });
 	};
-	var p_queue = $({}); //presentation queue
 	
-	// //code from http://jsfiddle.net/gaby/qDbRm/2/ - with extra 'speed' parameter
-	// function animToQueue(theQueue, selector, animationprops, speed) {
-	    // theQueue.queue(function(next) {
-	        // $(selector).animate(animationprops, speed, next);
-	    // });
-	// }
+	var soundQueue = $({});
 	
 	//preparing the stage....
 	$("#img_chest").css("opacity", '0.0');
@@ -115,41 +109,42 @@ function new_item(item){
 	$("#presentation_box").show();
 	
 	/*
-	 * presentaton: the image of the new item comming out of a chest
+	 * presentaton: the image of the new item comming out of a chest.
 	 * to build a nice timed sequence, jQuerys ".queue" thing is used
 	 */
 	
 		//chest appears, wait 600ms
 	$("#presentation_box")
 		.queue(function() {
-			$("#img_chest").animate({opacity: "1.0"}, 200);
 			console.log("1");
+			$("#img_chest").animate({opacity: "1.0"}, 200);
 		})
-		.delay(600).dequeue() //<-- delayed dequeue method 1
+		.dequeue() //<-- delayed dequeue method 1
 		
 		//sound: open chest
-		.queue(function(next) {
-			play_sfx("open_chest.ogg");
+		.queue(function() {
 			console.log("2");
-			next(); //<--queues next (redundant here) and dequeues itself
+			play_sfx("open_chest.ogg");
+			//next(); //<--queues next (redundant here) and dequeues itself
 		})
-		
+		.dequeue()
 		//shiny background and item scales up, duration: 900ms
 		.queue(function() {
+			console.log("3");
 			$("#new_item_box img").attr("class", "animate");
 			//chest fades out, duration: 1600ms
 			$("#img_chest").delay(300).animate({opacity: "0.0"}, 1400);
-			console.log("3");
-			$(this).dequeue();
 		})
-		
-		//sound: get small item1, wait 800ms
+		.dequeue()
+		//sound: get small item1, wait 1500ms
 		.queue(function() {
-			
-			play_sfx("OOT_Get_SmallItem1.wav");
 			console.log("4");
+			setTimeout(function(){
+				play_sfx("OOT_Get_SmallItem1.wav");}
+				,1500);
 		})
-		.pause(1000) //<-- delayed dequeue method 2 - custom func with setTimeout
+		.delay(1500).dequeue()
+		//.pause(1500) //<-- delayed dequeue method 2 - custom func with setTimeout
 	/*
 	 * pop up dialog
 	 */
@@ -168,7 +163,6 @@ function new_item(item){
 					click: function() {
 						//hide presentation stage
 						$("#presentation_box").hide();
-						console.log("here eee")
 						//go back to inventory
 						change_status("inventory");
 						music.play();

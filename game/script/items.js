@@ -89,7 +89,7 @@ var items = [
 		},
 		{
 		"key": "#0000000a",
-		"name": "Emty Bottle",
+		"name": "Empty Bottle",
 		"image": "img/items/small/bottle_empty.png",
 		"icon": "img/items/small/bottle_empty.png",
 		"unlocked": true,
