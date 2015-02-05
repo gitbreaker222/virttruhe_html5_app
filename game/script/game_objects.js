@@ -6,6 +6,9 @@
  * DATA		<--
  */
 
+/*
+ * THESE ARE HTML-OBJECTS
+ */
 //PAGE OBJECTS
 var page_inventory;
 var page_scan;
