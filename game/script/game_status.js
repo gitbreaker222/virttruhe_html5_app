@@ -7,11 +7,11 @@
  */
 //GAME STATUS
 var global_status = {
-	"game_status"	: "start",
-	previous_status	: "",
-	selected_item	: "",
-	scan_status		: false,
-	muted			: false,
+	"current_location"	: "start",
+	"previous_location"	: "",
+	"selected_item"		: "",
+	"scan_status"		: false,
+	"muted"				: false,
 };
 
 var game_status = "inventory";
