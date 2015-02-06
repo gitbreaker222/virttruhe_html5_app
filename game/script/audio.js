@@ -6,8 +6,8 @@
  * DATA		
  */
 
-function change_music(){
-	music.setAttribute("src", "audio/The Legend of Zelda - Gerudo Valley.mp3");
+function change_music(file){
+	music.setAttribute("src", "audio/" + file);
 	music.setAttribute("type", "audio/mpeg");
 };
 

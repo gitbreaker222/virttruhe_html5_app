@@ -86,6 +86,7 @@ function check_code(qr_message){
 
 
 function map_key(key){
+	console.log("mapping the key for current layer: "+global_status.current_layer);
 	/*
 	 * This maps the key from the VIRTTRUHE to the Item key,
 	 * depending on the current location 
@@ -125,9 +126,12 @@ function map_key(key){
 				"#0000000e"	:	["item", "tanja"], // tanja
 				"#0000000f"	:	["attr", "rupees"], // 10 rupees
 				"#10000000"	:	["item", "beer"], // beer
-				"#a0000001"	:	["portal", "manual"], // start card
-				"#a0000002"	:	["portal", "manual"], // portal card
+				"#a0000001"	:	["portal", "N/A"], // start card
+				"#a0000002"	:	["portal", "kokiri_forest"], // portal card
 			};
+			type = map[key][0];
+			key = map[key][1];
+			console.log("the key is: "+key);
 	} 
 	
 	return(found_item(type, key));

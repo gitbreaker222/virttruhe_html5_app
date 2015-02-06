@@ -17,6 +17,7 @@ var page_pause;
 var dialog;
 
 var layer;
+var rupee_counter;
 
 //AUDIO OBJECTS
 var music;
@@ -31,6 +32,7 @@ function init_objects(){
 	dialog = document.getElementById("dialog");
 	
 	layer = document.getElementById("layer");
+	rupee_counter = document.getElementById("rupee_counter");
 	
 	music = document.getElementById("audio_player");
 	sfx = document.getElementById("audio_sfx");

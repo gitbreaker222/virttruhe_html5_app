@@ -49,7 +49,11 @@ function found_item(type, key){
 			 * check the type (portal or N/A)
 			 */
 			if (type == "portal"){
+				/*
+				 * initialise stuff
+				 */
 				play_sfx("OOT_PressStart.wav");
+				rupee_counter.innerHtml="0";
 				change_layer(key);
 				change_status("inventory");
 				$("body").removeAttr("style");
@@ -72,13 +76,14 @@ function found_item(type, key){
 				case "attribute":
 					apply_attribute(key);
 					break;
-				default: //collection item
+				case "item": //collection item, default
 					/*
 					 * compare key with item list or portal list
 					 */
 					var item;
 					for (i in items){
-						if (items[i].key == key){
+						
+						if (items[i].id == key){
 							item = items[i];
 							
 							/*
@@ -91,10 +96,10 @@ function found_item(type, key){
 							add_to_inventory(item.name);
 							return;
 						}
-						console.log("ERROR: Key matches no item.");
-						alert("This key does not fit to any VIRTTRUHE chest");//TODO popup
-						global_status.game_status = "inventory";
 					}
+					console.log("ERROR: Key matches no item.");
+					alert("This key does not fit to any VIRTTRUHE chest");//TODO popup
+					global_status.game_status = "inventory";
 			}
 			break;
 			
@@ -114,7 +119,7 @@ function change_layer(key){
 
 
 function apply_attribute(key){
-	
+	alert("Not available in demo. \n"+key);
 }
 
 

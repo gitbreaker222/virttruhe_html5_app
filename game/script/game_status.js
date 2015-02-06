@@ -7,9 +7,9 @@
  */
 //GAME STATUS
 var global_status = {
-	"game_status"		: "start",
+	"game_status"		: "",
 	"previous_status"	: "",
-	"current_layer"		: "title",
+	"current_layer"		: "",
 	"hearts"			: 2,
 	"keys"				: 0,
 	"rupees"			: 0,
