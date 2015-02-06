@@ -45,6 +45,8 @@ function found_item(type, key){
 	switch(global_status.current_layer) {
 		
 		
+		
+		
 		case "title":
 			/*
 			 * check the type (portal or N/A)
@@ -64,6 +66,8 @@ function found_item(type, key){
 				change_status("title");
 			}
 			break;
+		
+		
 			
 			
 		case "reality":
@@ -102,17 +106,9 @@ function found_item(type, key){
 						//open dialog (after 800ms)
 					$("#dialog").delay(800).dialog ( "open" );
 					break;
-					
-					
-					
-					
 				case "attribute":
 					apply_attribute(key);
 					break;
-					
-					
-					
-					
 				case "item": //collection item, default
 					/*
 					 * compare key with item list or portal list
@@ -141,8 +137,73 @@ function found_item(type, key){
 			break;
 			
 			
-		default:
 			
+			
+		default:
+			/*
+			 * check the type (portal, attribute item or collection item)
+			 */
+			switch(type){
+				case "portal":
+					/*
+					 * open a dialog
+					 */
+					reset_dialog_status();
+					console.log(layers[key].name);
+					dialog.innerHTML = "You have found the portal to: <u>" + layers[key].name + "</u>";
+						//prepare dialog contents
+					$("#dialog").dialog({
+						title: "A Portal!",
+						dialogClass: "no-close",
+						buttons: [{
+							text: "Enter",
+							click: function() {
+								//hide presentation stage
+								$("#presentation_box").hide();
+								//change layer
+								play_sfx("tring-tring-tring.ogg");
+								change_layer(key);
+								//go back to inventory
+								change_status("inventory");
+								//get the name of the track file from layer object and change the music to it
+								change_music(layers[key].music);
+								music.play();
+								$( this ).dialog( "close" );
+							}
+						}],
+					});
+						//open dialog (after 800ms)
+					$("#dialog").delay(800).dialog ( "open" );
+					break;
+				case "attribute":
+					apply_attribute(key);
+					break;
+				case "item": //collection item, default
+					/*
+					 * compare key with item list or portal list
+					 */
+					var item;
+					for (i in items){
+						
+						if (items[i].id == key){
+							item = items[i];
+							
+							/*
+							 * tell the new-item() function, which item to present
+							 */
+							new_item(item);
+							/*
+							 * tell add_to_inventory() which item to add
+							 */
+							add_to_inventory(item.name);
+							return;
+						}
+					}
+					console.log("ERROR: Key matches no item.");
+					alert("This key does not fit to any VIRTTRUHE chest");//TODO popup
+					global_status.game_status = "inventory";
+			}
+			break;
 		
 	}			
 }

@@ -157,11 +157,11 @@ function map_key(key){
 	        map = {
 	        	"#00000000"	:	["item", "manual"], // manual
 				"#00000001"	:	["item", "arrows"], // arrows
-				"#00000002"	:	["item", "deku_nut"], // deku nut
-				"#00000003"	:	["item", "deku_stick"], // deku stick
-				"#00000004"	:	["item", "deku_seeds"], // deku seeds
-				"#00000005"	:	["item", "deku_shield"], // deku shield
-				"#00000006"	:	["item", "deku_sword"], // deku sword
+				"#00000002"	:	["item", undefined], // deku nut
+				"#00000003"	:	["item", undefined], // deku stick
+				"#00000004"	:	["item", undefined], // deku seeds
+				"#00000005"	:	["item", undefined], // deku shield
+				"#00000006"	:	["item", undefined], // deku sword
 				"#00000007"	:	["item", "normal_boots"], // normal boots
 				"#00000008"	:	["item", "magic_beans"], // magic beans
 				"#00000009"	:	["item", "ocarina"], // ocarina
@@ -183,11 +183,11 @@ function map_key(key){
 	        map = {
 	        	"#00000000"	:	["item", "manual"], // manual
 				"#00000001"	:	["item", "arrows"], // arrows
-				"#00000002"	:	["item", "deku_nut"], // deku nut
-				"#00000003"	:	["item", "deku_stick"], // deku stick
-				"#00000004"	:	["item", "deku_seeds"], // deku seeds
-				"#00000005"	:	["item", "deku_shield"], // deku shield
-				"#00000006"	:	["item", "deku_sword"], // deku sword
+				"#00000002"	:	["item", undefined], // deku nut
+				"#00000003"	:	["item", undefined], // deku stick
+				"#00000004"	:	["item", undefined], // deku seeds
+				"#00000005"	:	["item", undefined], // deku shield
+				"#00000006"	:	["item", undefined], // deku sword
 				"#00000007"	:	["item", "normal_boots"], // normal boots
 				"#00000008"	:	["item", "magic_beans"], // magic beans
 				"#00000009"	:	["item", "ocarina"], // ocarina
