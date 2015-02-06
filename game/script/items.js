@@ -37,7 +37,7 @@ var items = [
 		"found": false
 		},
 		{
-		"id": "#deku_stick",
+		"id": "deku_stick",
 		"name": "Deku Stick",
 		"image": "img/items/small/deku_stick.png",
 		"icon": "img/items/small/deku_stick.png",
@@ -125,7 +125,7 @@ var items = [
 		"found": false
 		},
 		{
-		"id": "#lukas",
+		"id": "lukas",
 		"name": "Nadelsturm",
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
@@ -141,10 +141,10 @@ var items = [
 		"found": false
 		},
 		{
-		"id": "test1",
-		"name": "Test Icon",
-		"image": "img/items/small/sold_out.png",
-		"icon": "img/items/small/sold_out.png",
+		"id": "rupee",
+		"name": "Rupee",
+		"image": "img/items/small/rupee.png",
+		"icon": "img/items/small/rupee.png",
 		"unlocked": true,
 		"found": false
 		},
