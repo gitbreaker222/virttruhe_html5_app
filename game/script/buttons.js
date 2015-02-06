@@ -7,7 +7,7 @@
  */
 
 function btn_scan(){
-	if (game_status !== "scan"){
+	if (global_status.game_status !== "scan"){
 		//open scanner view
 		music.pause();
 		play_sfx("OOT_ZTarget_Center1.wav");
@@ -25,7 +25,7 @@ function btn_scan(){
 
 function btn_options(){
 	//toggle page views and play/pause music
-	if (game_status !== "pause"){
+	if (global_status.game_status !== "pause"){
 		//open pause menu
 		music.pause();
 		play_sfx("OOT_PauseMenu_Open.wav");

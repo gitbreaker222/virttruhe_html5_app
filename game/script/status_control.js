@@ -10,6 +10,7 @@ function change_status(status){
 	switch(status) {
 		case "title":
 	    	global_status.game_status = "title";
+	    	$("body").css("background-color", "#fff");
 	    	$("#status").attr("class", "hide");
 	    	hide_all_pages();
 			page_title.setAttribute("class", "show");

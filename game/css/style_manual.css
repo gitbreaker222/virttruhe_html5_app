@@ -7,8 +7,25 @@
  */
 
 body{
-	background-color: rgba(51, 51, 51, 1);
+	background-color: #333;
 }
+
+body .fade {
+    -moz-animation: fade 2s; /* Chrome, Safari, Opera */
+    animation: fade 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-moz-keyframes fade {
+    from {background-color: #fff;}
+    to {background-color: #333;}
+}
+
+/* Standard syntax */
+@keyframes fade {
+    from {background-color: #fff;}
+    to {background-color: #333;}
+} 
 
 button{
 	background-color: #FFF;

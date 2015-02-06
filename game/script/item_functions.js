@@ -49,8 +49,10 @@ function found_item(type, key){
 			 * check the type (portal or N/A)
 			 */
 			if (type == "portal"){
+				play_sfx("OOT_PressStart.wav");
 				change_layer(key);
 				change_status("inventory");
+				$("body").removeAttr("style");
 			}else{
 				alert("Not available. \n Key: " + key);
 			}
