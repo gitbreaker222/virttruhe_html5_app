@@ -38,7 +38,7 @@ function generate_key(){
 
 
 function found_item(type, key){
-	console.log("start found_item() with " +type + key);
+	console.log("start found_item() with " +type +" "+ key);
 	/*
 	 * check current layer
 	 */
@@ -76,7 +76,8 @@ function found_item(type, key){
 					 * open a dialog
 					 */
 					reset_dialog_status();
-					dialog.innerHTML = "You have found the portal to: <u>" + layers[key] + "</u>";
+					console.log(layers[key].name);
+					dialog.innerHTML = "You have found the portal to: <u>" + layers[key].name + "</u>";
 						//prepare dialog contents
 					$("#dialog").dialog({
 						title: "A Portal!",
@@ -91,7 +92,8 @@ function found_item(type, key){
 								change_layer(key);
 								//go back to inventory
 								change_status("inventory");
-								change_music("")
+								//get the name of the track file from layer object and change the music to it
+								change_music(layers[key].music);
 								music.play();
 								$( this ).dialog( "close" );
 							}
@@ -99,12 +101,18 @@ function found_item(type, key){
 					});
 						//open dialog (after 800ms)
 					$("#dialog").delay(800).dialog ( "open" );
-					//change the layer
-					change_layer(key);
 					break;
+					
+					
+					
+					
 				case "attribute":
 					apply_attribute(key);
 					break;
+					
+					
+					
+					
 				case "item": //collection item, default
 					/*
 					 * compare key with item list or portal list
@@ -142,8 +150,9 @@ function found_item(type, key){
 
 
 function change_layer(key){
+	console.log("change layer to: " + key);
 	global_status.current_layer = key;
-	layer.innerHTML = layers[key];
+	layer.innerHTML = layers[key].name;
 }
 
 
