@@ -64,3 +64,17 @@ function btn_toggle_sound(){
 		button.setAttribute("class", "btn-icon");
 	}
 }
+
+function btn_about(){
+	/*
+	 * open a dialog
+	 */
+	reset_dialog_status();
+	dialog.innerHTML = 'VIRTTRUHE HTML5 App by Ruben La Biunda. Visit <a href="tumblr.virttruhe.com">tumblr.virttruhe.com</a> for more information.';
+		//prepare dialog contents
+	$("#dialog").dialog({
+		title: "About",
+	});
+		//open dialog
+	$("#dialog").dialog ( "open" );
+}

@@ -239,6 +239,9 @@ img.animate{
 #button_toggle_sound{
 	background-image: url("../img/icons/mute-sound.svg");
 }
+#button_about{
+	background-image: url("../img/icons/info.svg");
+}
 
 /* FOOTER BAR ------------*/
 #footer{
