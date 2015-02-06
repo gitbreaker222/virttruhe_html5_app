@@ -121,7 +121,7 @@ function map_key(key){
 				"#0000000f"	:	["attr", "rupees"], // 10 rupees
 				"#10000000"	:	["item", "beer"], // beer
 				"#a0000000"	:	["portal", "gerudo_valley"], // start card
-				"#a0000001"	:	["portal", "kokiri_forest"], // portal card
+				"#a0000001"	:	["portal", "reality"], // portal card
 			};
 			type = map[key][0];
 			key = map[key][1];
@@ -146,7 +146,7 @@ function map_key(key){
 				"#0000000e"	:	["item", "tanja"], // tanja
 				"#0000000f"	:	["attr", "rupees"], // 10 rupees
 				"#10000000"	:	["item", "beer"], // beer
-				"#a0000000"	:	["portal", "gerudo_valley"], // start card
+				"#a0000000"	:	["portal", "reality"], // start card
 				"#a0000001"	:	["portal", "kokiri_forest"], // portal card
 			};
 			type = map[key][0];
@@ -172,8 +172,8 @@ function map_key(key){
 				"#0000000e"	:	["item", "tanja"], // tanja
 				"#0000000f"	:	["attr", "rupees"], // 10 rupees
 				"#10000000"	:	["item", "beer"], // beer
-				"#a0000000"	:	["portal", "gerudo_valley"], // start card
-				"#a0000001"	:	["portal", "kokiri_forest"], // portal card
+				"#a0000000"	:	["portal", "kokiri_forest"], // start card
+				"#a0000001"	:	["portal", "spirit_temple"], // portal card
 			};
 			type = map[key][0];
 			key = map[key][1];
@@ -198,8 +198,8 @@ function map_key(key){
 				"#0000000e"	:	["item", "tanja"], // tanja
 				"#0000000f"	:	["attr", "rupees"], // 10 rupees
 				"#10000000"	:	["item", "beer"], // beer
-				"#a0000000"	:	["portal", "gerudo_valley"], // start card
-				"#a0000001"	:	["portal", "kokiri_forest"], // portal card
+				"#a0000000"	:	["portal", "reality"], // start card
+				"#a0000001"	:	["portal", "gerudo_valley"], // portal card
 			};
 			type = map[key][0];
 			key = map[key][1];
@@ -224,7 +224,7 @@ function map_key(key){
 				"#0000000e"	:	["item", "tanja"], // tanja
 				"#0000000f"	:	["attr", "rupees"], // 10 rupees
 				"#10000000"	:	["item", "beer"], // beer
-				"#a0000000"	:	["portal", "gerudo_valley"], // start card
+				"#a0000000"	:	["portal", "shop"], // start card
 				"#a0000001"	:	["portal", "kokiri_forest"], // portal card
 			};
 			type = map[key][0];
