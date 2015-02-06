@@ -36,53 +36,81 @@ function generate_key(){
 }
 
 
-function found_key(qr_message){
+
+function found_item(type, key){
 	/*
-	 * search for '#'. pick the key out of the text string
+	 * check current layer
 	 */
-	var start_slice;
-	var stop_slice;
-		//test if there is the # prefix
-	try{
-		start_slice = qr_message.indexOf("#");
-	}catch(error){
-		console.log(error);
-		alert("This code has no key in it!");
-		return;
-	}
-		//test if the key/text after the # is long enough
-	try{
-		stop_slice = start_slice + 9;
-	}catch(error){
-		console.log(error);
-		alert("No valid key in this code (too short)");
-		return;
-	}
-	var key = qr_message.slice(start_slice, stop_slice);
-	console.log("key found in code: " + key);
-	
-	/*
-	 * compare key with item list
-	 */
-	var item;
-	for (i in items){
-		if (items[i].key == key){
-			item = items[i];
+	switch(global_status.current_layer) {
+		
+		
+		case "title":
+			/*
+			 * check the type (portal or N/A)
+			 */
+			if (type == "portal"){
+				change_layer(key);
+				change_status("inventory");
+			}else{
+				alert("Not available. \n Key: " + key);
+			}
+			break;
 			
+			
+		case "reality":
 			/*
-			 * tell the new-item() function, which item to present
+			 * check the type (portal, attribute item or collection item)
 			 */
-			new_item(item);
-			/*
-			 * tell add_to_inventory() which item to add
-			 */
-			add_to_inventory(item.name);
-			return;
-		}
-	}
-	console.log("ERROR: Key matches no item.");
-	alert("This key does not fit to any VIRTTRUHE chest");//TODO popup
-	game_status = "inventory";
+			switch(type){
+				case "portal":
+					change_layer(key);
+					break;
+				case "attribute":
+					apply_attribute(key);
+					break;
+				default: //collection item
+					/*
+					 * compare key with item list or portal list
+					 */
+					var item;
+					for (i in items){
+						if (items[i].key == key){
+							item = items[i];
+							
+							/*
+							 * tell the new-item() function, which item to present
+							 */
+							new_item(item);
+							/*
+							 * tell add_to_inventory() which item to add
+							 */
+							add_to_inventory(item.name);
+							return;
+						}
+						console.log("ERROR: Key matches no item.");
+						alert("This key does not fit to any VIRTTRUHE chest");//TODO popup
+						global_status.game_status = "inventory";
+					}
+			}
+			break;
+			
+			
+		default:
+			
+		
+	}			
+}
+
+
+
+function change_layer(key){
+	global_status.current_layer = key;
+	layer.innerHTML = layers[key];
+}
+
+
+function apply_attribute(key){
+	
 }
 
 
@@ -180,6 +208,17 @@ function new_item(item){
 
 
 
-function add_rupees(){
-	//does this belong here??
+/*
+ * FUNCTIONS FOR ATTRIBUTE ITEMS
+ */
+function add_health(units){
+	
+}
+
+function add_key(units){
+	
+}
+
+function add_rupees(units){
+	
 }

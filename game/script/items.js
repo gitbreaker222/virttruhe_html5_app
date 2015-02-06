@@ -6,6 +6,11 @@
  * DATA		<--
  */
 
+/*
+ * THESE ARE COLLECTION ITEMS
+ * they land in the inventory
+ * TODO some are stackable, like arrows
+ */
 var items = [
 		{
 		"key": "#00000000",
@@ -21,7 +26,7 @@ var items = [
 		"image": 	"img/items/small/arrows.png",
 		"icon": 	"img/items/small/arrows.png",
 		"unlocked": true,
-		"found": 	true
+		"found" : false
 		},
 		{
 		"key": "#00000002",
@@ -29,7 +34,7 @@ var items = [
 		"image": "img/items/small/deku_nut.png",
 		"icon": "img/items/small/deku_nut.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000003",
@@ -37,7 +42,7 @@ var items = [
 		"image": "img/items/small/deku_stick.png",
 		"icon": "img/items/small/deku_stick.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000004",
@@ -45,7 +50,7 @@ var items = [
 		"image": "img/items/small/deku_seeds.png",
 		"icon": "img/items/small/deku_seeds.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000005",
@@ -53,7 +58,7 @@ var items = [
 		"image": "img/items/small/deku_shield.png",
 		"icon": "img/items/small/deku_shield.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000006",
@@ -61,7 +66,7 @@ var items = [
 		"image": "img/items/small/deku_sword.png",
 		"icon": "img/items/small/deku_sword.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000007",
@@ -69,7 +74,7 @@ var items = [
 		"image": "img/items/small/boots_normal.png",
 		"icon": "img/items/small/boots_normal.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000008",
@@ -77,7 +82,7 @@ var items = [
 		"image": "img/items/small/magic_beans.png",
 		"icon": "img/items/small/magic_beans.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000009",
@@ -85,7 +90,7 @@ var items = [
 		"image": "img/items/small/ocarina.png",
 		"icon": "img/items/small/ocarina.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#0000000a",
@@ -93,7 +98,7 @@ var items = [
 		"image": "img/items/small/bottle_empty.png",
 		"icon": "img/items/small/bottle_empty.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#0000000b",
@@ -101,7 +106,7 @@ var items = [
 		"image": "img/items/small/bottle_health.png",
 		"icon": "img/items/small/bottle_health.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#0000000c",
@@ -109,7 +114,7 @@ var items = [
 		"image": "img/items/small/boomerang.png",
 		"icon": "img/items/small/boomerang.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#0000000d",
@@ -117,7 +122,7 @@ var items = [
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#0000000e",
@@ -125,7 +130,7 @@ var items = [
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#0000000f",
@@ -133,7 +138,7 @@ var items = [
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000010",
@@ -141,7 +146,7 @@ var items = [
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000011",
@@ -149,7 +154,7 @@ var items = [
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		{
 		"key": "#00000012",
@@ -157,7 +162,35 @@ var items = [
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
 		"unlocked": true,
-		"found": true
+		"found": false
 		},
 		
 ];
+
+
+
+/*
+ * THESE ARE ATTRIBUTE ITEMS
+ * they don't land in the inventory, but affect the players status
+ */
+var attr_items = [
+	"heart",
+	"key",
+	"rupee",
+];
+	
+
+
+/*
+ * THESE ARE PORTALS TO OTHER VIRTUAL LAYERS
+ * (special items)
+ */
+var layers = {
+	//"id"				: "display-name"
+	"title"				: "Reality",
+	"reality"			: "Reality",
+	"kokiri_forest"		: "Kokiri Forest",
+	"shop"				: "Shop",
+	"gerudo_valley"		: "Gerudo Valley",
+	"spirit_temple"		: "Spirit Temple",
+};

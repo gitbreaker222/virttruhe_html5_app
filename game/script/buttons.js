@@ -55,7 +55,7 @@ function btn_delete(){
 }
 
 function btn_toggle_sound(){
-	var button = document.getElementById("button_toggle_sound")
+	var button = document.getElementById("button_toggle_sound");
 	music_on_off();
 	play_sfx("OOT_PauseMenu_Select.wav");
 	if(status_muted){

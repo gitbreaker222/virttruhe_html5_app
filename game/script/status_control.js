@@ -8,31 +8,46 @@
 
 function change_status(status){
 	switch(status) {
+		case "title":
+	    	game_status = "pause"; //TODO remove old varible
+	    	global_status.game_status = "pause";
+	    	$("#status").attr("class", "hide");
+	    	hide_all_pages();
+			page_title.setAttribute("class", "show");
+	        break;
 	    case "scan":
-	    	game_status = "scan";
-	        page_inventory.setAttribute("class", "hide");
-			page_scan.setAttribute("class", "show");
-			page_pause.setAttribute("class", "hide");
+	    	game_status = "scan"; //TODO remove old varible
+	    	global_status.game_status = "scan";
+	    	hide_all_pages();
+	       	page_scan.setAttribute("class", "show");
 			unselect_all();
 	        break;
 	    case "inventory":
-	    	game_status = "inventory";
+	    	game_status = "inventory"; //TODO remove old varible
+	    	global_status.game_status = "inventory";
+	    	$("#status").attr("class", "show");
+	    	hide_all_pages();
 	        page_inventory.setAttribute("class", "show");
-			page_scan.setAttribute("class", "hide");
-			page_pause.setAttribute("class", "hide");
 	        break;
 	    case "pause":
-	    game_status = "pause";
-	        page_inventory.setAttribute("class", "hide");
-			page_scan.setAttribute("class", "hide");
+	    	game_status = "pause"; //TODO remove old varible
+	    	global_status.game_status = "pause";
+	    	hide_all_pages();
 			page_pause.setAttribute("class", "show");
 	        break;
 	    default:
 	    	console.log("Something is wrong. Set default status");
+	    	global_status.game_status = "inventory";
+	    	hide_all_pages();
 	    	page_inventory.setAttribute("class", "show");
-			page_scan.setAttribute("class", "hide");
-			page_pause.setAttribute("class", "hide");
     }
+}
+
+function hide_all_pages(){
+	page_title.setAttribute("class", "hide");
+	page_inventory.setAttribute("class", "hide");
+	page_scan.setAttribute("class", "hide");
+	page_pause.setAttribute("class", "hide");
 }
 
 function reset_dialog_status(){

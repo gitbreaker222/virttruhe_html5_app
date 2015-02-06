@@ -89,7 +89,7 @@ display: none;
 	background-image: url("../img/icons/options.svg");
 }
 
-#current_location{
+#layer{
 	font-size: 1em;
 	position: absolute;
 	left: 0px;
@@ -98,6 +98,11 @@ display: none;
 	overflow: auto;
 }
 
+
+/* TITLE SCREEN------------*/
+#title{
+	color: black;
+}
 
 /* STATUS BAR------------*/
 #status, #status > div{

@@ -107,9 +107,9 @@ function unselect_all(){
 
 function select_item(node, item){
 	unselect_all();
+	var text = document.getElementById("item_title");
 	
 	//if no specific item, reset - e.g. delete button
-	var text = document.getElementById("item_title");
 	if (item == undefined){
 		text.innerHTML = "";
 		return;
