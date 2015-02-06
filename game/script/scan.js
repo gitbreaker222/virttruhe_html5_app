@@ -109,24 +109,24 @@ function map_key(key){
 	    default: //reality
 	        map = {
 	        	"#00000000"	:	["item", "manual"], // manual
-				"#00000001"	:	"#00000001", // arrows
-				"#00000002"	:	"#00000002", // deku nut
-				"#00000003"	:	"#00000003", // deku stick
-				"#00000004"	:	"#00000004", // deku seeds
-				"#00000005"	:	"#00000005", // deku shield
-				"#00000006"	:	"#00000006", // deku sword
-				"#00000007"	:	"#00000007", // normal boots
-				"#00000008"	:	"#00000008", // magic beans
-				"#00000009"	:	"#00000009", // ocarina
-				"#0000000a"	:	"#0000000a", // empty bottle
-				"#0000000b"	:	"#0000000b", // health potion 
-				"#0000000c"	:	"#0000000c", // boomerang 
-				"#0000000d"	:	"#0000000d", // lukas 
-				"#0000000e"	:	"#0000000e", // tanja
-				"#0000000f"	:	"#0000000f", // 10 rupees
-				"#10000000"	:	"#00000010", // beer
-				"#a0000001"	:	"#00000011", // start card
-				"#a0000002"	:	"#00000012", // portal card
+				"#00000001"	:	["item", "arrows"], // arrows
+				"#00000002"	:	["item", "deku_nut"], // deku nut
+				"#00000003"	:	["item", "deku_stick"], // deku stick
+				"#00000004"	:	["item", "deku_seeds"], // deku seeds
+				"#00000005"	:	["item", "deku_shield"], // deku shield
+				"#00000006"	:	["item", "deku_sword"], // deku sword
+				"#00000007"	:	["item", "normal_boots"], // normal boots
+				"#00000008"	:	["item", "magic_beans"], // magic beans
+				"#00000009"	:	["item", "ocarina"], // ocarina
+				"#0000000a"	:	["item", "empty_bottle"], // empty bottle
+				"#0000000b"	:	["item", "health"], // health potion 
+				"#0000000c"	:	["item", "boomerang"], // boomerang 
+				"#0000000d"	:	["item", "lukas"], // lukas 
+				"#0000000e"	:	["item", "tanja"], // tanja
+				"#0000000f"	:	["attr", "rupees"], // 10 rupees
+				"#10000000"	:	["item", "beer"], // beer
+				"#a0000001"	:	["portal", "manual"], // start card
+				"#a0000002"	:	["portal", "manual"], // portal card
 			};
 	} 
 	

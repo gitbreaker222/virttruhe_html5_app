@@ -13,7 +13,7 @@
  */
 var items = [
 		{
-		"key": "#00000000",
+		"id": "manual",
 		"name": "Manual",
 		"image": "img/items/small/manual.png",
 		"icon": "img/items/small/manual.png",
@@ -21,7 +21,7 @@ var items = [
 		"found": true
 		},
 		{
-		"key": 		"#00000001",
+		"id": 		"arrows",
 		"name": 	"Arrows",
 		"image": 	"img/items/small/arrows.png",
 		"icon": 	"img/items/small/arrows.png",
@@ -29,7 +29,7 @@ var items = [
 		"found" : false
 		},
 		{
-		"key": "#00000002",
+		"id": "deku_nut",
 		"name": "Deku Nut",
 		"image": "img/items/small/deku_nut.png",
 		"icon": "img/items/small/deku_nut.png",
@@ -37,7 +37,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000003",
+		"id": "#deku_stick",
 		"name": "Deku Stick",
 		"image": "img/items/small/deku_stick.png",
 		"icon": "img/items/small/deku_stick.png",
@@ -45,7 +45,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000004",
+		"id": "deku_seeds",
 		"name": "Deku Seeds",
 		"image": "img/items/small/deku_seeds.png",
 		"icon": "img/items/small/deku_seeds.png",
@@ -53,7 +53,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000005",
+		"id": "deku_shield",
 		"name": "Deku Shield",
 		"image": "img/items/small/deku_shield.png",
 		"icon": "img/items/small/deku_shield.png",
@@ -61,7 +61,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000006",
+		"id": "deku_sword",
 		"name": "Deku Sword",
 		"image": "img/items/small/deku_sword.png",
 		"icon": "img/items/small/deku_sword.png",
@@ -69,7 +69,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000007",
+		"id": "normal_boots",
 		"name": "Normal Boots",
 		"image": "img/items/small/boots_normal.png",
 		"icon": "img/items/small/boots_normal.png",
@@ -77,7 +77,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000008",
+		"id": "magic_beans",
 		"name": "Magic Beans",
 		"image": "img/items/small/magic_beans.png",
 		"icon": "img/items/small/magic_beans.png",
@@ -85,7 +85,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000009",
+		"id": "ocarina",
 		"name": "Ocarina",
 		"image": "img/items/small/ocarina.png",
 		"icon": "img/items/small/ocarina.png",
@@ -93,7 +93,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#0000000a",
+		"id": "empty_bottle",
 		"name": "Empty Bottle",
 		"image": "img/items/small/bottle_empty.png",
 		"icon": "img/items/small/bottle_empty.png",
@@ -101,7 +101,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#0000000b",
+		"id": "health",
 		"name": "Health Potion",
 		"image": "img/items/small/bottle_health.png",
 		"icon": "img/items/small/bottle_health.png",
@@ -109,7 +109,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#0000000c",
+		"id": "boomerang",
 		"name": "Boomerang",
 		"image": "img/items/small/boomerang.png",
 		"icon": "img/items/small/boomerang.png",
@@ -117,7 +117,31 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#0000000d",
+		"id": "beer",
+		"name": "Bier",
+		"image": "img/items/small/bottle_beer.png",
+		"icon": "img/items/small/bottle_beer.png",
+		"unlocked": true,
+		"found": false
+		},
+		{
+		"id": "#lukas",
+		"name": "Nadelsturm",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"unlocked": true,
+		"found": false
+		},
+		{
+		"id": "tanja",
+		"name": "Sving",
+		"image": "img/items/small/sold_out.png",
+		"icon": "img/items/small/sold_out.png",
+		"unlocked": true,
+		"found": false
+		},
+		{
+		"id": "test1",
 		"name": "Test Icon",
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
@@ -125,7 +149,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#0000000e",
+		"id": "test2",
 		"name": "Test Icon",
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
@@ -133,7 +157,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#0000000f",
+		"id": "test3",
 		"name": "Test Icon",
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",
@@ -141,23 +165,7 @@ var items = [
 		"found": false
 		},
 		{
-		"key": "#00000010",
-		"name": "Test Icon",
-		"image": "img/items/small/sold_out.png",
-		"icon": "img/items/small/sold_out.png",
-		"unlocked": true,
-		"found": false
-		},
-		{
-		"key": "#00000011",
-		"name": "Test Icon",
-		"image": "img/items/small/sold_out.png",
-		"icon": "img/items/small/sold_out.png",
-		"unlocked": true,
-		"found": false
-		},
-		{
-		"key": "#00000012",
+		"id": "test4",
 		"name": "Test Icon",
 		"image": "img/items/small/sold_out.png",
 		"icon": "img/items/small/sold_out.png",

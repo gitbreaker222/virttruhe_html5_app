@@ -54,7 +54,9 @@ function found_item(type, key){
 				change_status("inventory");
 				$("body").removeAttr("style");
 			}else{
-				alert("Not available. \n Key: " + key);
+				play_sfx("OOT_MainMenu_Error.wav");
+				alert("Not available. Scan the START card \n Key: " + key);
+				change_status("title");
 			}
 			break;
 			
