@@ -126,8 +126,8 @@ function map_key(key){
 				"#0000000e"	:	["item", "tanja"], // tanja
 				"#0000000f"	:	["attr", "rupees"], // 10 rupees
 				"#10000000"	:	["item", "beer"], // beer
-				"#a0000001"	:	["portal", "N/A"], // start card
-				"#a0000002"	:	["portal", "kokiri_forest"], // portal card
+				"#a0000000"	:	["portal", "N/A"], // start card
+				"#a0000001"	:	["portal", "kokiri_forest"], // portal card
 			};
 			type = map[key][0];
 			key = map[key][1];

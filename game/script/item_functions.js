@@ -38,6 +38,7 @@ function generate_key(){
 
 
 function found_item(type, key){
+	console.log("start found_item() with " +type + key);
 	/*
 	 * check current layer
 	 */
@@ -71,6 +72,34 @@ function found_item(type, key){
 			 */
 			switch(type){
 				case "portal":
+					/*
+					 * open a dialog
+					 */
+					reset_dialog_status();
+					dialog.innerHTML = "You have found the portal to: <u>" + layers[key] + "</u>";
+						//prepare dialog contents
+					$("#dialog").dialog({
+						title: "A Portal!",
+						dialogClass: "no-close",
+						buttons: [{
+							text: "Enter",
+							click: function() {
+								//hide presentation stage
+								$("#presentation_box").hide();
+								//change layer
+								play_sfx("tring-tring-tring.ogg");
+								change_layer(key);
+								//go back to inventory
+								change_status("inventory");
+								change_music("")
+								music.play();
+								$( this ).dialog( "close" );
+							}
+						}],
+					});
+						//open dialog (after 800ms)
+					$("#dialog").delay(800).dialog ( "open" );
+					//change the layer
 					change_layer(key);
 					break;
 				case "attribute":
