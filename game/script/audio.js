@@ -13,7 +13,7 @@ function change_music(file){
 
 function play_sfx(file){
 	sfx.setAttribute("src", "audio/sfx/" + file);
-	sfx.setAttribute("type", "audio/wav");
+	sfx.setAttribute("type", "audio/ogg");
 	
 	sfx.play();
 }

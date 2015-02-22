@@ -127,16 +127,16 @@ var items = [
 		{
 		"id": "lukas",
 		"name": "Nadelsturm",
-		"image": "img/items/small/sold_out.png",
-		"icon": "img/items/small/sold_out.png",
+		"image": "img/items/small/lukas.png",
+		"icon": "img/items/small/lukas.png",
 		"unlocked": true,
 		"found": false
 		},
 		{
 		"id": "tanja",
 		"name": "Sving",
-		"image": "img/items/small/sold_out.png",
-		"icon": "img/items/small/sold_out.png",
+		"image": "img/items/small/sving.png",
+		"icon": "img/items/small/sving.png",
 		"unlocked": true,
 		"found": false
 		},

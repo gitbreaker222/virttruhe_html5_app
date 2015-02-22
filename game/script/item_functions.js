@@ -276,7 +276,7 @@ function new_item(item){
 		.queue(function() {
 			console.log("4");
 			setTimeout(function(){
-				play_sfx("OOT_Get_SmallItem1.wav");}
+				play_sfx("OOT_Get_SmallItem1.ogg");}
 				,1500);
 		})
 		.delay(1500).dequeue()
