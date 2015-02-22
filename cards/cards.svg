@@ -76,10 +76,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="238.76266"
-     inkscape:cy="309.19245"
+     inkscape:cx="437.76266"
+     inkscape:cy="330.19245"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="false"
      inkscape:object-nodes="true"
      inkscape:snap-bbox="true"
@@ -107,7 +107,7 @@
      inkscape:label="beer labels"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:none">
     <path
        inkscape:connector-curvature="0"
        id="path5046"
@@ -884,7 +884,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="karten vorn 2"
-     style="display:none">
+     style="display:inline">
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.73057055;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
        id="rect3885-8"
@@ -1397,22 +1397,22 @@
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
-       x="337.88574"
+       x="548.88574"
        y="934.27533"
        id="text5161"><tspan
          sodipodi:role="line"
          id="tspan5163"
-         x="337.88574"
+         x="548.88574"
          y="934.27533">START</tspan></text>
     <text
        id="text5165"
        y="-704.83826"
-       x="-402.11426"
+       x="-613.11426"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
        xml:space="preserve"
        transform="scale(-1,-1)"><tspan
          y="-704.83826"
-         x="-402.11426"
+         x="-613.11426"
          id="tspan5167"
          sodipodi:role="line">START</tspan></text>
   </g>
