@@ -53,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -728,5 +728,73 @@
        inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/Logo/Icon.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <g
+       transform="translate(-1298.6803,251.5352)"
+       id="g3112"
+       inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/Logo/Icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#7c7c7c;fill-opacity:1;stroke:none;stroke-width:7.66015148;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         d="m 863.9375,27.71875 -1.15625,0.34375 -85.71875,26.6875 -0.34375,0.09375 0,0.03125 c -5.073,1.159639 -8.85219,4.206494 -10.625,8.125 -1.81598,4.013927 -1.87916,8.469054 -1.4375,13.03125 l 0,0.0625 0,0.0625 9.8125,78.40625 c 1.74764,13.98106 14.49789,29.49384 31.125,45.53125 16.62711,16.03741 37.45176,32.1673 56.1875,45 l 2.15625,1.5"
+         id="path3114"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3116"
+         d="m 859.9375,25.71875 -1.15625,0.34375 -85.71875,26.6875 -0.34375,0.09375 0,0.03125 c -5.073,1.159639 -8.85219,4.206494 -10.625,8.125 -1.81598,4.013927 -1.87916,8.469054 -1.4375,13.03125 l 0,0.0625 0,0.0625 9.8125,78.40625 c 1.74764,13.98106 14.49789,29.49384 31.125,45.53125 16.62711,16.03741 37.45176,32.1673 56.1875,45 l 2.15625,1.5"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.66015148;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      <path
+         inkscape:connector-curvature="0"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.66015148;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         d="m 859.9375,25.71875 -1.15625,0.34375 -85.71875,26.6875 -0.34375,0.09375 0,0.03125 c -5.073,1.159639 -8.85219,4.206494 -10.625,8.125 -1.81598,4.013927 -1.87916,8.469054 -1.4375,13.03125 l 0,0.0625 0,0.0625 9.8125,78.40625 c 1.74764,13.98106 14.49789,29.49384 31.125,45.53125 16.62711,16.03741 37.45176,32.1673 56.1875,45 l 2.15625,1.5 0,-9.34375 C 842.04991,222.85923 822.46308,207.59884 806.90625,192.59375 790.73217,176.9933 779.27411,161.31788 778.0625,151.625 l -9.78125,-78.3125 c -0.37974,-3.922579 -0.1218,-7.160203 0.78125,-9.15625 0.90305,-1.996047 2.10627,-3.189677 5.5625,-3.90625 L 774.8125,60.21875 775,60.15625 859.9375,33.75 l 0,-8.03125 z"
+         id="path3118" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/Logo/Icon.png"
+       id="g3120"
+       transform="matrix(-1,0,0,1,521.0712,251.5352)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3122"
+         d="m 863.9375,27.71875 -1.15625,0.34375 -85.71875,26.6875 -0.34375,0.09375 0,0.03125 c -5.073,1.159639 -8.85219,4.206494 -10.625,8.125 -1.81598,4.013927 -1.87916,8.469054 -1.4375,13.03125 l 0,0.0625 0,0.0625 9.8125,78.40625 c 1.74764,13.98106 14.49789,29.49384 31.125,45.53125 16.62711,16.03741 37.45176,32.1673 56.1875,45 l 2.15625,1.5"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#7f7f7f;fill-opacity:1;stroke:none;stroke-width:7.66015148;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      <path
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.66015148;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         d="m 859.9375,25.71875 -1.15625,0.34375 -85.71875,26.6875 -0.34375,0.09375 0,0.03125 c -5.073,1.159639 -8.85219,4.206494 -10.625,8.125 -1.81598,4.013927 -1.87916,8.469054 -1.4375,13.03125 l 0,0.0625 0,0.0625 9.8125,78.40625 c 1.74764,13.98106 14.49789,29.49384 31.125,45.53125 16.62711,16.03741 37.45176,32.1673 56.1875,45 l 2.15625,1.5"
+         id="path3124"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path3126"
+         d="m 859.9375,25.71875 -1.15625,0.34375 -85.71875,26.6875 -0.34375,0.09375 0,0.03125 c -5.073,1.159639 -8.85219,4.206494 -10.625,8.125 -1.81598,4.013927 -1.87916,8.469054 -1.4375,13.03125 l 0,0.0625 0,0.0625 9.8125,78.40625 c 1.74764,13.98106 14.49789,29.49384 31.125,45.53125 16.62711,16.03741 37.45176,32.1673 56.1875,45 l 2.15625,1.5 0,-9.34375 C 842.04991,222.85923 822.46308,207.59884 806.90625,192.59375 790.73217,176.9933 779.27411,161.31788 778.0625,151.625 l -9.78125,-78.3125 c -0.37974,-3.922579 -0.1218,-7.160203 0.78125,-9.15625 0.90305,-1.996047 2.10627,-3.189677 5.5625,-3.90625 L 774.8125,60.21875 775,60.15625 859.9375,33.75 l 0,-8.03125 z"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.66015148;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/Logo/Icon.png"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-stretch:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:URW Gothic L;-inkscape-font-specification:URW Gothic L Book"
+       d="m -338.9758,325.49734 0,93.5307 24.0113,0 11.6502,0 -26.2129,-34.9504 c 17.9791,-1.8991 27.6416,-11.8796 27.6416,-28.466 0,-11.7749 -4.9519,-20.6153 -14.0681,-25.5532 -5.8241,-3.1653 -10.7407,-4.5611 -23.0221,-4.5611 z"
+       id="path3128"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccscc" />
+    <path
+       sodipodi:nodetypes="cccccscc"
+       inkscape:connector-curvature="0"
+       id="use3130"
+       d="m -438.68646,325.4428 0,93.53083 -22.82606,0 -11.65015,0 26.21287,-34.95041 c -17.97906,-1.89912 -27.6416,-11.87965 -27.6416,-28.46596 0,-11.77496 4.95196,-20.61545 14.06807,-25.55333 5.82418,-3.16531 9.55542,-4.56113 21.83687,-4.56113 z"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-stretch:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:URW Gothic L;-inkscape-font-specification:URW Gothic L Book" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/Logo/Icon.png"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-stretch:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:URW Gothic L;-inkscape-font-specification:URW Gothic L Book"
+       d="m -431.9795,325.49734 0,5.8185 21.8221,0 0,58.5249 6.423,0 0,-58.5249 30.6416,0 0,58.5249 6.423,0 0,-58.5249 21.8598,0 0,-5.8185 z"
+       id="path3132"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccc" />
   </g>
 </svg>
