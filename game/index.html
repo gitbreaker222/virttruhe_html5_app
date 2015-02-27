@@ -83,17 +83,22 @@
 			
 			
 			<!-- THE HIDDEN AUDIO PLAYERS ;) ONE FOR EACH TRACK (like: music, sfx) -->
-			<audio id="audio_player" loop></audio>
-			<audio id="audio_sfx"></audio>
+			<audio id="music_player" loop></audio>
+			<audio id="sfx_player"></audio>
 		</div>
 		
 		
 		
 		<!-- STATUS BAR WITH HEARTS, KEYS AND RUPEES ------------------- -->
 		<div id="status" class="bar hide">
-			<div class="pull-left">
+			<div id="life" class="pull-left">
 				<span class="icon-heart img"></span>
 				<span class="icon-heart img"></span>
+			</div>
+			
+			<div class="pull-right">
+				<img src="data/img/icons/key.png" />
+				<span id="keys">99</span>
 			</div>
 			
 			<div class="pull-right">

@@ -1,11 +1,3 @@
-/* VCLSD-Pattern: CONTROL
- * VIEW		
- * CONTROL	
- * LOGIC	
- * SERVICE	
- * DATA		<--
- */
-
 /*
  * THESE ARE COLLECTION ITEMS
  * they land in the inventory
