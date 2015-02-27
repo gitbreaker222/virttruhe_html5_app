@@ -24,7 +24,7 @@ var page = {
 };
 
 
-//save the actual jQuery opject, instead of the link into the page objects TODO check
+//save the actual jQuery opject, instead of the link TODO check
 function save_objects(){
 	for (obj in page){
 		page.obj = obj; 

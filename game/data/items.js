@@ -18,7 +18,7 @@ var items = [
 		"image": 	"img/items/small/arrows.png",
 		"icon": 	"img/items/small/arrows.png",
 		"unlocked": true,
-		"found" : false
+		"found" : 	false
 		},
 		{
 		"id": "deku_nut",
