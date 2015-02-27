@@ -1,3 +1,8 @@
+/*
+ * mostly jQuery objects. They get manipulated by a -logic- component,
+ * after another -logic- component wrote the content for it in -data-
+ * and visualized by -view-
+ */
 var page = {
 	/*
 	 * HEAD

@@ -28,6 +28,20 @@ var content = {
 };
 
 
+var dialog = {
+	"text"				: "",
+	"buttons"			: 
+	[
+		{
+			"label"		: "",
+			"funcion"	: "",
+		}
+	]
+	,
+	
+};
+
+
 var preferences = {
 	"music"				: true,
 	"sfx"				: true,

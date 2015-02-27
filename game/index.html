@@ -89,7 +89,7 @@
 		
 		
 		
-		<!-- STATUS BAR WITH HEARTS, KEYS AND RUPEES ------------------- -->
+		<!-- PLAYER STATUS BAR WITH HEARTS, KEYS AND RUPEES ------------------- -->
 		<div id="status" class="bar hide">
 			<div id="life" class="pull-left">
 				<span class="icon-heart img"></span>
@@ -108,6 +108,11 @@
 		</div>
 		
 		
+		
+		
+		
+		
+		
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
 		<div id="content">
 			
@@ -117,11 +122,13 @@
 				<h2>a VIRTTRUHE game</h2>
 			</div>
 			
-			<!-- ----------------------------------------------------------- -->
+			
+			<!-- INVENTORY-------------------------------------------------- -->
 			<ul id="inventory" class="hide">
 			</ul>
 			
-			<!-- ----------------------------------------------------------- -->
+			
+			<!-- SCAN------------------------------------------------------- -->
 			<div id="scan" class="hide">
 				<form id="myForm">
 					<input type="file"  accept="image/*" id="cameraInput" name="cameraInput" onchange="decode_qr()">
@@ -145,18 +152,31 @@
 				
 			</div>
 			
-			<!-- ----------------------------------------------------------- -->
+			
+			<!-- PAUSE------------------------------------------------------ -->
 			<div id="pause" class="hide">
 				<h2>Pause</h2>
 				<span>Mute Sound: </span><button class="btn-icon" id="button_toggle_sound" onclick="btn_toggle_sound()"></button>
 				<br />
 				<span>About: </span><button class="btn-icon" id="button_about" onclick="btn_about()"></button>
 			</div>
+			
+			
 			<!-- the dialog box, which is used to display various messages by the skripts -->
 			<div id="dialog" title="Ooops, this should't be written here..."></div>
 			<script>$( "#dialog" ).dialog({ autoOpen: false });</script>
+			
+			
 		</div>
+		
 		<!-- ----------------------------------------------------------- -->
+		
+		
+		
+		
+		
+		
+		
 			
 			
 		<div id="footer" class="bar">
