@@ -28,21 +28,22 @@ var content = {
 };
 
 
-var dialog = {
-	"text"				: "",
-	"buttons"			: 
-	[
-		{
-			"label"		: "",
-			"funcion"	: "",
-		}
-	]
-	,
-	
-};
+var dialog = [
+	{//page 1
+		"content"			: "",
+		"buttons"			: 
+		[
+			{
+				"label"		: "",
+				"funcion"	: "",
+			},
+		]
+	},
+];
 
 
 var preferences = {
 	"music"				: true,
 	"sfx"				: true,
+	"photo_scanner"		: false,
 };
