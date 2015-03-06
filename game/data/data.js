@@ -28,7 +28,7 @@ var content = {
 };
 
 
-var dialog = [	// informations that should be shown to the user. but only information, no format here. that is in html-objecs.js
+var dialog_data = [	// informations that should be shown to the user. but only information, no format here. that is in html-objecs.js
 	{//page 1
 		"content"			: "",
 		"buttons"			: 
