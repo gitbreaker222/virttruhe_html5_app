@@ -1,1 +1,1 @@
-var items_in_inventory = {};
+var items_in_inventory = [];

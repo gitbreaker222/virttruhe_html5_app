@@ -31,10 +31,11 @@
 		<script src="lib/jquery-1.11.1.js"></script>
 		<!-- custom style sheet -->
 		<link rel="stylesheet" href="css/style.css" />
+		<!-- item collection -->
+		<script src="data/items.js"></script>
 		<!-- custom data -->
 		<script src="data/data.js"></script>
 		<script src="data/html_objects.js"></script>
-		<script src="data/items.js"></script>
 		<script src="data/items_in_inventory.js"></script>
 		
 		<!-- --- LOGIC ------------------------>
@@ -47,23 +48,7 @@
 		
 		
 		<!-- --- VIEW ------------------------>
-		
-		
-		<!-- ITEM LIST (load before CONTROL-/LOGIC-skripts)-->
-		<script src="script/items.js"></script>
-		
-		<!-- VIRTTRUHE SCRIPT -->
-		<script src="script/game_status.js"></script>
-		<script src="script/game_objects.js"></script>
-		<script src="script/item_functions.js"></script>
-		<script src="script/inventory.js"></script>
-		<script src="script/audio.js"></script>
-		<script src="script/buttons.js"></script>
-		<script src="script/status_control.js"></script>
-		<script src="script/scan.js" type="text/javascript"></script>
-		
-		
-		
+		<!-- following html code represents the view -->
 		
 	</head>
 
@@ -71,7 +56,7 @@
 
 
 
-	<body onload="init_objects(); change_status('title'); change_layer('title'); reload_inventory()">
+	<body onload="init()">
 		
 		<div id="header" class="bar">
 			<button id="button_pause" class="btn-icon pull-right" onclick="btn_options()"></button>

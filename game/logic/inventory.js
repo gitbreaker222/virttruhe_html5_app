@@ -1,19 +1,3 @@
-/* VCLSD-Pattern: LOGIC
- * VIEW		
- * CONTROL	
- * LOGIC	<--
- * SERVICE	
- * DATA		
- */
-
-function generate_new_item_list(){
-	//search item folder for images and create json "items.js" based on their names
-	var item_path = "img/";
-	var list_path = "";
-	window.alert("no function yet");
-	//unfinished***************
-};
-
 function reload_inventory(){
 	var inventory = document.getElementById("inventory");
 	var node;
@@ -39,18 +23,22 @@ function reload_inventory(){
 };
 
 
-function add_to_inventory(item){
-	//search item list for a match with given item
-	for (i = 0; i < items.length; i++){
-		if (items[i].name == item){
-			items[i].found = true;
-			console.log("added to inventory: " + item);
-			
-			reload_inventory();
-			return;
+function add_to_inventory(item_id){
+	console.log("add to inventory item with id: " + item_id);
+	var item = "";
+	//search item list for a match
+	for (i in items){
+		if (items[i].id == item_id){
+			item = JSON.stringify(items[i]);
 		};
+		//move a copy to the inventory list
+		items_in_inventory.push(JSON.parse(item));
+		
+		return;
 	}
-	console.log("cannot find '" + item + "'");
+	//if the list looped through without a match, the item is not there
+	console.log("cannot find item: " + item_id);
+	return;
 };
 
 
