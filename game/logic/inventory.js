@@ -24,17 +24,17 @@ function reload_inventory(){
 
 
 function add_to_inventory(item_id){
-	console.log("add to inventory item with id: " + item_id);
 	var item = "";
 	//search item list for a match
 	for (i in items){
 		if (items[i].id == item_id){
+			console.log("add to inventory item with id: " + item_id);
 			item = JSON.stringify(items[i]);
+			//move a copy to the inventory list
+			items_in_inventory.push(JSON.parse(item));
+			
+			return;
 		};
-		//move a copy to the inventory list
-		items_in_inventory.push(JSON.parse(item));
-		
-		return;
 	}
 	//if the list looped through without a match, the item is not there
 	console.log("cannot find item: " + item_id);
