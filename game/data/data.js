@@ -3,12 +3,39 @@ var data = {
 	
 	"status"			: null, //the app status, e.g. "scanning" or "inventory" or "presentation"
 	
-	"prev_status"		: null, //the previous app status, when changing. Used to choose the next status, when going back from pause menu etc.
+	"prev_status1"		: null, //the previous app status, when changing. Used to choose the next status, when going back from pause menu etc.
+	
+	"prev_status2"		: null,
 	
 	"layer"				: "title", //the virtual layer, e.g. "Reality" or "Kokiri Forest"
 	
+	
+	get					: function(attribute){
+							if (attribute == undefined){
+								var list = [];
+								for (x in this){
+									list.push(x);
+								}
+								return(list);
+							}
+							console.log(data[attribute]);
+							},
+	set					: function(attr, val){
+								this[attr] = val;
+								events("data");
+							}
+	
 };
 
+
+function events(x){
+	console.log("event in " + x);
+	switch(x){
+		case "data" :
+			inventory.add("socks");
+	}
+	
+}
 
 var user_stats = {
 	
@@ -47,3 +74,5 @@ var preferences = {		// these are set in the pause menu
 	"sfx"				: true,
 	"photo_scanner"		: false,
 };
+
+

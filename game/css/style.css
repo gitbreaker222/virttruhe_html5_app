@@ -83,11 +83,11 @@ display: none;
 }
 
 #button_scan{
-	background-image: url("../img/icons/scan.svg");
+	background-image: url("../data/img/icons/scan.svg");
 	
 }
 #button_pause{
-	background-image: url("../img/icons/options.svg");
+	background-image: url("../data/img/icons/options.svg");
 }
 
 #layer{
@@ -124,11 +124,11 @@ display: none;
 }
 
 .icon-heart{
-	background-image: url("../img/icons/heart.svg");
+	background-image: url("../data/img/icons/heart.svg");
 }
 
 #rupee{
-	background-image: url("../img/icons/rupee.svg");
+	background-image: url("../data/img/icons/rupee.svg");
 }
 #rupee_counter{
 	font-style: italic;
@@ -237,10 +237,10 @@ img.animate{
 /* pause menu ------------*/
 
 #button_toggle_sound{
-	background-image: url("../img/icons/mute-sound.svg");
+	background-image: url("../data/img/icons/mute-sound.svg");
 }
 #button_about{
-	background-image: url("../img/icons/info.svg");
+	background-image: url("../data/img/icons/info.svg");
 }
 
 /* FOOTER BAR ------------*/
@@ -250,8 +250,8 @@ img.animate{
 }
 
 #button_use{
-	background-image: url("../img/icons/hand-grab.svg");
+	background-image: url("../data/img/icons/hand-grab.svg");
 }
 #button_delete{
-	background-image: url("../img/icons/delete.svg");
+	background-image: url("../data/img/icons/delete.svg");
 }
