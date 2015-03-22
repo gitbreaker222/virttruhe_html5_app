@@ -6,17 +6,16 @@ inventory = {
 	"update"	: function() {
 					console.log("update jquery objects");
 					var items = this.items;
-					var content = page.inventory;
+					var content = page.items;
 					var node;
-					
-					content.html("<ul>");
 					
 					for (i in items){
 						node = '<li><img src="items[i].icon" onclick="inventory.select(items[i])" /></li>';
+						node = document.createElement("LI");
+						
 						content.append(node);
+						console.log(node);
 					}
-					
-					content.append("</ul>");
 					
 				},
 	

@@ -12,11 +12,17 @@ function init(){
 	page.rupees = $("#rupees"),
 	page.title= $("#title"),
 	page.inventory= $("#inventory"),
+	page.items= $("#items"),
 	page.scan= $("#scan"),
 	page.pause= $("#pause"),
 	page.dialog= $("#dialog"),
 	
 	console.log("change status to inventory");
 	data.set("status", "inventory");
+	
+	for (i in items){
+		inventory.add(items[i].id);
+	};
+	inventory.update();
 	
 }
