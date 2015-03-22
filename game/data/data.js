@@ -22,7 +22,7 @@ var data = {
 							},
 	set					: function(attr, val){
 								this[attr] = val;
-								events("data");
+								//events("data");
 							}
 	
 };

@@ -1,11 +1,13 @@
-status = {
+app_status = {
 	"change"	: function (new_status) {
+			var previous_status = data.get("previous_status");
+			
 			data.set("previous_status", data.get("status"));
 			data.set("status", new_status);
 			
-			page[data.get("previous_status")].hide();
+			page[previous_status].hide();
 			
-			page[data.get("status")].show();
+			page[new_status].show();
 			
 			switch(status) {
 				case "title":
