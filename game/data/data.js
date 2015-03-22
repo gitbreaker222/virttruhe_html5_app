@@ -18,7 +18,7 @@ var data = {
 								}
 								return(list);
 							}
-							console.log(data[attribute]);
+							return(this[attribute]);
 							},
 	set					: function(attr, val){
 								this[attr] = val;

@@ -40,10 +40,10 @@
 		
 		<!-- --- LOGIC ------------------------>
 		<script src="logic/audio.js"></script>
-		<script src="logic/get_set.js"></script>
 		<script src="logic/inventory.js"></script>
 		<script src="logic/status.js"></script>
 		<script src="logic/init.js"></script>
+		<script src="logic/events.js"></script>
 		
 		<!-- --- CONTROL ------------------------>
 		<script src="control/buttons.js"></script>
@@ -103,6 +103,7 @@
 			<!-- INVENTORY-------------------------------------------------- -->
 			<div id="inventory" class="hide">
 				<ul>
+					<li><img src="items[i].icon" onclick="inventory.select(items[i])" /></li>
 				</ul>
 				
 				<div id="footer" class="bar">

@@ -3,8 +3,21 @@ inventory = {
 	"selected"	: null,
 	
 	
-	"reload"	: function() {
-					console.log("reload inventory");
+	"update"	: function() {
+					console.log("update jquery objects");
+					var items = this.items;
+					var content = page.inventory;
+					var node;
+					
+					content.html("<ul>");
+					
+					for (i in items){
+						node = '<li><img src="items[i].icon" onclick="inventory.select(items[i])" /></li>';
+						content.append(node);
+					}
+					
+					content.append("</ul>");
+					
 				},
 	
 	

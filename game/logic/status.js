@@ -1,39 +1,49 @@
+status = {
+	"change"	: function (new_status) {
+			data.set("previous_status", data.get("status"));
+			data.set("status", new_status);
+			
+			page[data.get("previous_status")].hide();
+			
+			page[data.get("status")].show();
+			
+			switch(status) {
+				case "title":
+			    	$("body").css("background-color", "#fff");
+			    	$("#status").attr("class", "hide");
+			    	hide_all_pages();
+					page_title.setAttribute("class", "show");
+			        break;
+			        
+			    case "scan":
+			    	hide_all_pages();
+			       	page_scan.setAttribute("class", "show");
+					unselect_all();
+			        break;
+			        
+			    case "inventory":
+			    	$("#status").attr("class", "show");
+			    	hide_all_pages();
+			    	
+			    	
+			        page.inventory.show();
+			        break;
+			        
+			    case "pause":
+			    	hide_all_pages();
+					page_pause.setAttribute("class", "show");
+			        break;
+			        
+			    default:
+			    	console.log("Something is wrong. Set default status");
+			    	hide_all_pages();
+			    	page_inventory.setAttribute("class", "show");
+		    }
+		}
+};
+
 function change_status(status){
-	switch(status) {
-		case "title":
-	    	global_status.game_status = "title";
-	    	$("body").css("background-color", "#fff");
-	    	$("#status").attr("class", "hide");
-	    	hide_all_pages();
-			page_title.setAttribute("class", "show");
-	        break;
-	        
-	    case "scan":
-	    	global_status.game_status = "scan";
-	    	hide_all_pages();
-	       	page_scan.setAttribute("class", "show");
-			unselect_all();
-	        break;
-	        
-	    case "inventory":
-	    	global_status.game_status = "inventory";
-	    	$("#status").attr("class", "show");
-	    	hide_all_pages();
-	        page_inventory.setAttribute("class", "show");
-	        break;
-	        
-	    case "pause":
-	    	global_status.game_status = "pause";
-	    	hide_all_pages();
-			page_pause.setAttribute("class", "show");
-	        break;
-	        
-	    default:
-	    	console.log("Something is wrong. Set default status");
-	    	global_status.game_status = "inventory";
-	    	hide_all_pages();
-	    	page_inventory.setAttribute("class", "show");
-    }
+					
 }
 
 function hide_all_pages(){
