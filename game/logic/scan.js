@@ -92,7 +92,7 @@ function map_key(key){
 	 * depending on the current location 
 	 */
 	var map = {};
-	switch(global_status.current_layer) {
+	switch(data.layer) {
 		case "title":
 			if (key == "#a0000000"){
 				type = "portal";
