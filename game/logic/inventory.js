@@ -1,20 +1,28 @@
 inventory = {
-	"items"		: [],
+	"item_index"		: [],
 	"selected"	: null,
 	
 	
 	"update"	: function() {
 					console.log("update jquery objects");
-					var items = this.items;
+					var item_index = this.item_index;
 					var content = page.items;
 					var node;
+					var node2;
 					
-					for (i in items){
-						node = '<li><img src="items[i].icon" onclick="inventory.select(items[i])" /></li>';
+					for (i in item_index){
 						node = document.createElement("LI");
 						
 						content.append(node);
-						console.log(node);
+						
+						node2 = document.createElement("IMG");
+						node2.setAttribute("src", items[i].icon);
+						node2.setAttribute("onclick", "inventory.select("+items[i].id +")");
+						
+						node.appendChild(node2);
+						
+						content.append(node);
+						
 					}
 					
 				},
@@ -22,30 +30,30 @@ inventory = {
 	
 	
 	"add"		: function (item) {
-					this.items.push(item);
-					return(this.items);
+					this.item_index.push(item);
+					return(this.item_index);
 				},
 	
 	
 	"remove"	: function (item) {
 					
-					var items = this.items;
+					var item_index = this.item_index;
 					
-					for (i in items){
-						if (items[i] == item){
+					for (i in item_index){
+						if (item_index[i] == item){
 							//removes 1 item beginning at position i
-							items.splice(i, 1);
+							item_index.splice(i, 1);
 							
 							if (this.selected == item){
 								this.select(null);
 							}
 							
-							return(items);
+							return(item_index);
 						}
 					}
 										
 					console.log(item + " not in inventory");
-					return(items);
+					return(item_index);
 					
 				},
 	
