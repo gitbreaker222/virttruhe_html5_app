@@ -1,11 +1,3 @@
-/* VCLSD-Pattern: DATA
- * VIEW		
- * CONTROL	
- * LOGIC	
- * SERVICE	
- * DATA		<--
- */
-
 body{
 	background-color: #333;
 }
@@ -166,7 +158,7 @@ display: none;
 	width: 48px;
 	height: 48px;
 	margin: 2px;
-	background-color: rgba(151, 234, 225, 0.6);
+	background-color: rgba(225, 225, 225, 0.1);
 	border: none;
 }
 
