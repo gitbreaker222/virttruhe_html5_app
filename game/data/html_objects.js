@@ -23,7 +23,8 @@ page = {
 	 */
 	"title"			: $("#title"),
 	"inventory"		: $("#inventory"),
-	"inventory_list": $("items"),
+	"inventory_list": $("#items"),
+	"item_title"	: $("#item_title"),
 	"scan"			: $("#scan"),
 	"pause"			: $("#pause"),
 	"dialog"		: $("#dialog"),

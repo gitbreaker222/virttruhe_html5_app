@@ -2,6 +2,7 @@
  * THESE ARE COLLECTION ITEMS
  * they land in the inventory
  * TODO some are stackable, like arrows
+ * TODO unlocked and found are not nessecary anymore
  */
 var items = [
 		{

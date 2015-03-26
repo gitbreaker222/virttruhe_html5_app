@@ -11,7 +11,25 @@
  */
 
 events = {
+	"event_flag": false,
+	/*
+	 *  INVENTORY EVENTS
+	 */
+	"select"	: function(){
+					if(event_flag){
+						return;
+					}
+					this.event_flag = true;
+					ui_update.select;
+				},
 	
+	"add"		: function(){
+					if(event_flag){
+						return;
+					}
+					this.event_flag = true;
+					ui_update.update_items;
+				},
 	
 	
 	

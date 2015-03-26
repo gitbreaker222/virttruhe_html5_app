@@ -18,11 +18,11 @@ function init(){
 	page.dialog= $("#dialog"),
 	
 	console.log("change status to inventory");
-	data.set("status", "inventory");
+	data.set_status("inventory");
 	
 	for (i in items){
 		inventory.add(items[i].id);
 	};
-	inventory.update();
+	inventory.ui_items_update();
 	
 }
