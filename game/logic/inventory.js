@@ -82,8 +82,17 @@ inventory = {
 					},
 	
 	"ui_select"	: function(){
+					var old = $("#items .selected");
 					var selected = $("#" + this.selected);
-					console.log(selected);
+					
+					console.log(old);
+					try{
+						old.removeClass("selected");
+					}finally{
+						selected.addClass("selected");
+					}
+					
+					return;
 				}
 	
 	
