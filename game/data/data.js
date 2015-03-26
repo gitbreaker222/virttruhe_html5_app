@@ -1,29 +1,28 @@
 var data = {
 	
+	//the app status, e.g. "scanning" or "inventory" or "presentation"
+	get_status			: function(){return this.status;},
+	set_status			: function(x){
+				this.status = x;
+			},
 	
-	"status"			: null, //the app status, e.g. "scanning" or "inventory" or "presentation"
+	//the previous app status, when changing. Used to choose the next status, when going back from pause menu etc.
+	get_prev_status1	: function(){return(this.prev_status1);},
+	set_prev_status1	: function(x){
+				this.prev_status1 = x;
+			},
 	
-	"prev_status1"		: null, //the previous app status, when changing. Used to choose the next status, when going back from pause menu etc.
+	get_prev_status2	: function(){return(this.prev_status2);},
+	set_prev_status2	: function(x){
+				this.prev_status2 = x;
+			},
 	
-	"prev_status2"		: null,
-	
-	"layer"				: "title", //the virtual layer, e.g. "Reality" or "Kokiri Forest"
-	
-	
-	get					: function(attribute){
-							if (attribute == undefined){
-								var list = [];
-								for (x in this){
-									list.push(x);
-								}
-								return(list);
-							}
-							return(this[attribute]);
-							},
-	set					: function(attr, val){
-								this[attr] = val;
-								//events("data");
-							}
+	//layer				: "title", //the virtual layer, e.g. "Reality" or "Kokiri Forest"
+	get_layer			: function(){return(this.layer);},
+	set_layer			: function(x){
+				this.layer = x;
+			},
+			
 	
 };
 

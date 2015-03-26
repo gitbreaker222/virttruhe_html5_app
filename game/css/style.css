@@ -97,15 +97,15 @@ display: none;
 	color: black;
 }
 
-/* STATUS BAR------------*/
-#status, #status > div{
+/* user_stats BAR------------*/
+#user_stats, #user_stats > div{
 	height: 24px;
 	margin-top:1px;
 	padding: 0px inherit;
 	background: none;
 	border: none;
 }
-#status .img{
+#user_stats .img{
 	background-repeat: no-repeat;
 	padding: 0px;
 	height: 100%;
@@ -113,6 +113,13 @@ display: none;
 	background-size: 100%;
 	border: none;
 	display: inline-block;
+}
+
+#user_stats > *{
+	font-style: italic;
+	color: #FFFFFF;
+	padding: 0px;
+	vertical-align: top;
 }
 
 .icon-heart{
@@ -123,10 +130,9 @@ display: none;
 	background-image: url("../data/img/icons/rupee.svg");
 }
 #rupee_counter{
-	font-style: italic;
+	
 	color: green;
-	padding: 0px;
-	vertical-align: top;
+	
 }
 
 
