@@ -38,30 +38,30 @@ function events(x){
 
 var user_stats = {
 	
-	"hearts"			: 2, // the players/users health bar
+	hearts				: 2, // the players/users health bar
 	
-	"keys"				: 0, // keys are used to unlock portals or chests that are locked
+	keys				: 0, // keys are used to unlock portals or chests that are locked
 	
-	"rupees"			: 0, // amount of the currency "rupees". Can be exchanged for items in the shop
+	rupees				: 0, // amount of the currency "rupees". Can be exchanged for items in the shop
 	
 };
 
 
 var content = {
 	
-	"selected_item"		: null, // the ID of the currently selected item in the inventory
+	selected_item		: null, // the ID of the currently selected item in the inventory
 	
 };
 
 
 var dialog_data = [	// informations that should be shown to the user. but only information, no format here. that is in html-objecs.js
 	{//page 1
-		"content"			: "",
-		"buttons"			: 
+		content				: "",
+		buttons				: 
 		[
 			{
-				"label"		: "",
-				"funcion"	: "",
+				label		: "",
+				funcion		: "",
 			},
 		]
 	},
@@ -69,9 +69,9 @@ var dialog_data = [	// informations that should be shown to the user. but only i
 
 
 var preferences = {		// these are set in the pause menu
-	"music"				: true,
-	"sfx"				: true,
-	"photo_scanner"		: false,
+	music				: true,
+	sfx					: true,
+	photo_scanner		: false,
 };
 
 

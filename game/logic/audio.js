@@ -1,31 +1,37 @@
-/* VCLSD-Pattern: LOGIC
- * VIEW		
- * CONTROL	
- * LOGIC	<--
- * SERVICE	
- * DATA		
- */
-
-function change_music(file){
-	music.setAttribute("src", "audio/" + file);
-	music.setAttribute("type", "audio/mpeg");
-};
-
-function play_sfx(file){
-	sfx.setAttribute("src", "audio/sfx/" + file);
-	sfx.setAttribute("type", "audio/ogg");
+audio = {
+	/*
+	 * PROPERTIES
+	 */
 	
-	sfx.play();
-}
-
-function music_on_off(){
-	if (status_muted){
-		status_muted = false;
-		music.muted = false;
-		sfx.muted = false;
-	}else{
-		status_muted = true;
-		music.muted = true;
-		sfx.muted = true;
-	}
-}
+	
+	
+	/*
+	 * 	METHODS
+	 */	
+	 change_music	: function(file){
+			music.setAttribute("src", "audio/" + file);
+			music.setAttribute("type", "audio/mpeg");
+		 },
+	 
+	 play_sfx		: function(file){
+		 	sfx.setAttribute("src", "audio/sfx/" + file);
+			sfx.setAttribute("type", "audio/ogg");
+			
+			sfx.play();
+		 },
+	 
+	 toggle_music	: function(file){
+	 		var music = preferences.music;
+			if (music){
+				music		= false;
+				music.muted	= true;
+				sfx.muted	= true;
+				
+			}else{
+				music		= true;
+				music.muted	= false;
+				sfx.muted	= false;
+			}
+			
+		 },
+};
