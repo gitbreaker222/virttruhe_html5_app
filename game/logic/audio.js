@@ -8,16 +8,19 @@ audio = {
 	/*
 	 * 	METHODS
 	 */	
+	 /*
+	  * TODO repari these methods. update variables, properties, etc...
+	  */
 	 change_music	: function(file){
-			music.setAttribute("src", "audio/" + file);
-			music.setAttribute("type", "audio/mpeg");
+			page.music.attr("src", "audio/" + file);
+			page.music.attr("type", "audio/mpeg");
 		 },
 	 
 	 play_sfx		: function(file){
-		 	sfx.setAttribute("src", "audio/sfx/" + file);
-			sfx.setAttribute("type", "audio/ogg");
+		 	page.sfx.attr("src", "data/audio/sfx/" + file);
+			page.sfx.attr("type", "audio/ogg");
 			
-			sfx.play();
+			page.sfx.trigger("play");
 		 },
 	 
 	 toggle_music	: function(file){

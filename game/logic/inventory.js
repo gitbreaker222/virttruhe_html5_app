@@ -85,12 +85,14 @@ inventory = {
 					var old = $("#items .selected");
 					var selected = $("#" + this.selected);
 					
-					console.log(old);
 					try{
 						old.removeClass("selected");
 					}finally{
 						selected.addClass("selected");
 					}
+					
+					//TODO play audio
+					audio.play_sfx("OOT_PauseMenu_Cursor.ogg");
 					
 					return;
 				}
