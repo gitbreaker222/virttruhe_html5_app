@@ -43,6 +43,7 @@
 		<script src="logic/inventory.js"></script>
 		<script src="logic/status.js"></script>
 		<script src="logic/init.js"></script>
+		<script src="logic/user_stats.js"></script>
 		<script src="logic/events.js"></script>
 		
 		<!-- --- CONTROL ------------------------>
@@ -74,15 +75,15 @@
 		
 		
 		<!-- PLAYER STATUS BAR WITH HEARTS, KEYS AND RUPEES ------------------- -->
-		<div id="user_stats" class="bar hide">
-			<div id="life" class="pull-left">
+		<div id="user_stats_display" class="bar hide">
+			<div id="life_counter" class="pull-left">
 				<span class="icon-heart img"></span>
 				<span class="icon-heart img"></span>
 			</div>
 			
 			<div class="pull-right">
 				<img src="data/img/icons/key.png"  class="img" />
-				<span id="keys">99</span>
+				<span id="keys_counter">99</span>
 			</div>
 			
 			<div class="pull-right">
