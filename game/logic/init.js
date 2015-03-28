@@ -11,7 +11,7 @@ function init(){
 	page.life		= $("#life"),
 	page.keys		= $("#keys"),
 	page.rupees		= $("#rupees"),
-	page.title		= $("#title"),
+	page.item_title		= $("#item_title"),
 	page.inventory	= $("#inventory"),
 	page.items		= $("#items"),
 	page.scan		= $("#scan"),
