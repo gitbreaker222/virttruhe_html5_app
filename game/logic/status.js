@@ -1,5 +1,5 @@
 app_status = {
-	"change"	: function (new_status) {
+	change		: function (new_status) {
 			var status = data.get_status();
 			var previous_status = data.get_prev_status1();
 			

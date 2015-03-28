@@ -37,14 +37,8 @@ function events(x){
 }
 
 
-var content = {
-	
-	selected_item		: null, // the ID of the currently selected item in the inventory
-	
-};
 
-
-var dialog_data = [	// informations that should be shown to the user. but only information, no format here. that is in html-objecs.js
+dialog_data = [	// informations that should be shown to the user. but only information, no format here. that is in html-objecs.js
 	{//page 1
 		content				: "",
 		buttons				: 
@@ -58,7 +52,7 @@ var dialog_data = [	// informations that should be shown to the user. but only i
 ];
 
 
-var preferences = {		// these are set in the pause menu
+preferences = {		// these are set in the pause menu
 	music				: true,
 	sfx					: true,
 	photo_scanner		: false,

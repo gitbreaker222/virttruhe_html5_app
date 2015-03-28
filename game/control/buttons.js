@@ -7,18 +7,21 @@
  */
 
 function btn_scan(){
-	if (global_status.game_status !== "scan"){
-		//open scanner view
-		music.pause();
-		play_sfx("OOT_ZTarget_Center1.ogg");
-		change_status("scan");
-		//remove the previous loaded file
-		document.getElementById("myForm").reset();
+	//TODO check this
+	var status = data.get_status;
+	var prev_status = data.get_prev_status1;
+	
+	if(data.get_status !== "scan"){
+		audio.play_sfx("OOT_ZTarget_Center1.ogg");
+		app_status.change("scan");
+		//start scanner
+		
 	}else{
 		//close scanner view, show inventory
-		play_sfx("OOT_MainMenu_Error.ogg");
-		change_status("inventory");
-		setTimeout(function(){music.play();}, 700);
+		audio.play_sfx("OOT_MainMenu_Error.ogg");
+		status.change(prev_status);
+		//TODO unfinished. check ...
+		//setTimeout(function(){music.play();}, 700);
 	}
 	
 }

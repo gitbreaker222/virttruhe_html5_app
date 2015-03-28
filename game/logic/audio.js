@@ -2,7 +2,7 @@ audio = {
 	/*
 	 * PROPERTIES
 	 */
-	
+	playing			: true,
 	
 	
 	/*
@@ -12,6 +12,20 @@ audio = {
 			page.music.attr("src", "data/audio/" + file);
 			page.music.attr("type", "audio/mpeg");
 		 },
+		 
+	play_pause		: function(){
+		
+			if (this.playing){
+				page.music.trigger("pause");
+				
+				this.playing = false;
+			}else{
+				page.music.trigger("play");
+				
+				this.playing = true;
+			}
+			
+		},
 		 
 	 
 	 play_sfx		: function(file){
