@@ -91,7 +91,6 @@ inventory = {
 						selected.addClass("selected");
 					}
 					
-					//TODO play audio
 					audio.play_sfx("OOT_PauseMenu_Cursor.ogg");
 					
 					return;

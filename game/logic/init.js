@@ -27,4 +27,7 @@ function init(){
 	};
 	inventory.ui_items_update();
 	
+	page.music.attr("src", "data/audio/The Legend of Zelda - Gerudo Valley.mp3");
+	page.music.attr("type", "audio/mpeg");
+	
 }
