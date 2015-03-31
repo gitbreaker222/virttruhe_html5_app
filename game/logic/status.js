@@ -8,8 +8,8 @@ app_status = {
 			data.set_status(new_status);
 			
 			//event
-			page.hide(previous_status);
-			page.show(status);
+			page.hide(status);
+			page.show(new_status);
 			
 			if(status == "title" || status == "scan"){
 				console.log(status);

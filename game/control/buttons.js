@@ -1,26 +1,21 @@
-/* VCLSD-Pattern: CONTROL
- * VIEW		
- * CONTROL	<--
- * LOGIC	
- * SERVICE	
- * DATA		
- */
-
 function btn_scan(){
 	//TODO check this
-	var status = data.get_status;
+	var status = data.get_status();
 	var prev_status = data.get_prev_status1;
 	
-	if(data.get_status !== "scan"){
+	if(status != "scan"){
 		audio.play_sfx("OOT_ZTarget_Center1.ogg");
+		
 		app_status.change("scan");
+		
 		//start scanner
 		
 	}else{
-		//close scanner view, show inventory
+		//close scanner view, show previous status
 		audio.play_sfx("OOT_MainMenu_Error.ogg");
-		status.change(prev_status);
-		//TODO unfinished. check ...
+		
+		app_status.change(prev_status);
+		
 		//setTimeout(function(){music.play();}, 700);
 	}
 	
