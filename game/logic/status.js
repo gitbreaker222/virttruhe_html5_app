@@ -8,7 +8,7 @@ app_status = {
 			data.set_status(new_status);
 			
 			//event
-			page.hide(status);
+			this.hide_all();
 			page.show(new_status);
 			
 			if(status == "title" || status == "scan"){
@@ -20,5 +20,13 @@ app_status = {
 			};
 			
 			return;
-		}
+		},
+		
+		
+		
+	hide_all	: function (){
+		page.hide("scan");
+		page.hide("inventory");
+		
+	}
 };
