@@ -15,12 +15,23 @@ scan = {
 		
 			this.status = true;
 		
-			$('#reader').html5_qrcode(
+			$('#reader')
+			
+				//clear canvas
+				.html("")
+				
+				.html5_qrcode(
 				
 				function(qr_message){
 			         // do something when code is read
-			         console.log("### code is read");
-			         console.log(data);
+			         console.log(qr_message);
+			         
+			         
+			         
+			         //TODO start working on handling the message....
+			         
+			         
+			         
 			    },
 			    
 			    function(error){
@@ -34,8 +45,6 @@ scan = {
 			    
 			);
 			
-			//TODO clear canvas to prevent next scan to use last saved picture, which is likely with the last readable qr code
-			console.log("### start scan. need to clear old canvas");
 		},
 		
 		
