@@ -58,9 +58,7 @@ inventory = {
 						content.empty();
 						
 						for (i=0; i <  item_index.length; i++){
-							
-							console.log(i);
-							console.log(item_index[i]);
+							var current_item_id = item_index[i];
 							
 							node = document.createElement("LI");
 							
@@ -70,9 +68,9 @@ inventory = {
 							node2.setAttribute("href", "#");
 							
 							node3 = document.createElement("IMG");
-							node3.setAttribute("id", items[i].id);
-							node3.setAttribute("src", items[i].icon);
-							node3.setAttribute("onclick", "inventory.select('"+items[i].id +"')");
+							node3.setAttribute("id", current_item_id);
+							node3.setAttribute("src", items[current_item_id].icon);
+							node3.setAttribute("onclick", "inventory.select('"+ current_item_id +"')");
 							
 							node2.appendChild(node3);
 							
