@@ -22,8 +22,7 @@ var data = { // TODO better rename this
 	set_layer			: function(x){
 				this.layer = x;
 			},
-			
-	scan_status			: true,
+	
 			
 	
 };

@@ -24,9 +24,7 @@
         var context = canvas.getContext('2d');
         var localMediaStream;
         
-        var scan = function() {
-        	
-        	// TODO make the scan status acassable from here
+        var qrscan = function() {
         	
         	if (scan.status){ //edited by gitbreaker222 @ github
         		if (localMediaStream) {
@@ -35,19 +33,19 @@
 		    
 		            try {
 		              qrcode.decode();
-		              console.log("QR-Code recognized! Stopping scan...");
+		              console.log("QR-Code recognized! Stopping qrscan...");
 		              context = null;
 		              return;
 		            } catch(e) {
 		              qrcodeError(e);
 		            }
-		    		setTimeout(scan, 500);
+		    		setTimeout(qrscan, 500);
 		    
 		        } else {
-		        	setTimeout(scan, 500);
+		        	setTimeout(qrscan, 500);
 		        }
         	}else{
-        		console.log("Scan stopped manually.");
+        		console.log("qrscan stopped manually.");
         		return;
         	};
         };//end snapshot function
@@ -60,7 +58,7 @@
             localMediaStream = stream;
     
             video.play();
-            setTimeout(scan,1000); //first scan call
+            setTimeout(qrscan,1000); //first scan call
         };
     
         // Call the getUserMedia method with our callback functions

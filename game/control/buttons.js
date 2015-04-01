@@ -15,6 +15,8 @@ function btn_scan(){
 		//close scanner view, show previous status
 		audio.play_sfx("OOT_MainMenu_Error.ogg");
 		
+		scan.stop();
+		
 		app_status.change(prev_status);
 		
 		//setTimeout(function(){music.play();}, 700);

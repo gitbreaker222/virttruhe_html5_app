@@ -13,6 +13,8 @@ scan = {
 	 */
 	start	: function(){
 		
+			this.status = true;
+		
 			$('#reader').html5_qrcode(
 				
 				function(qr_message){
@@ -33,14 +35,13 @@ scan = {
 			);
 			
 			//TODO clear canvas to prevent next scan to use last saved picture, which is likely with the last readable qr code
-			
-			console.log("### end of scan");
+			console.log("### start scan. need to clear old canvas");
 		},
 		
 		
 	stop	: function(){
 			
-			data.scan_status = false;
+			this.status = false;
 			
 		},
 	
