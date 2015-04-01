@@ -7,22 +7,16 @@ app_status = {
 			
 			data.set_status(new_status);
 			
+			console.log("changed status to: " + new_status);
+			
 			//event
 			this.hide_all();
 			page.show(new_status);
 			
-			if(status == "title" || status == "scan"){
-				console.log(status);
+			if(new_status == "title" || new_status == "scan"){
 				page.hide("user_stats");
 				
 			}else{
-				
-				
-				
-				//TODO bug: wont show user stats when toggle back from scan to inventory
-				
-				
-				
 				page.show("user_stats");
 			};
 			
