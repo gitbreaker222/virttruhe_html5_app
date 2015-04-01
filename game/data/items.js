@@ -165,7 +165,6 @@ var items = [
 		"unlocked": true,
 		"found": false
 		},
-		
 ];
 
 

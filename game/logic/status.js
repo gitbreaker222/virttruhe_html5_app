@@ -16,6 +16,13 @@ app_status = {
 				page.hide("user_stats");
 				
 			}else{
+				
+				
+				
+				//TODO bug: wont show user stats when toggle back from scan to inventory
+				
+				
+				
 				page.show("user_stats");
 			};
 			

@@ -5,7 +5,7 @@ inventory = {
 	
 	"add"		: function (item) {
 					this.item_index.push(item);
-					events.add;
+					
 					return(this.item_index);
 				},
 	
@@ -14,7 +14,7 @@ inventory = {
 					
 					var item_index = this.item_index;
 					
-					for (i in item_index){
+					for (i=0; i < item_index.length; i++){
 						if (item_index[i] == item){
 							//removes 1 item beginning at position i
 							item_index.splice(i, 1);
@@ -57,7 +57,11 @@ inventory = {
 						
 						content.empty();
 						
-						for (i in item_index){
+						for (i=0; i <  item_index.length; i++){
+							
+							console.log(i);
+							console.log(item_index[i]);
+							
 							node = document.createElement("LI");
 							
 							content.append(node);

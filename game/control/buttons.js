@@ -1,5 +1,5 @@
 function btn_scan(){
-	//TODO check this
+	
 	var status = data.get_status();
 	var prev_status = data.get_prev_status1();
 	
@@ -13,7 +13,7 @@ function btn_scan(){
 	}else{
 		//close scanner view, show previous status
 		audio.play_sfx("OOT_MainMenu_Error.ogg");
-		console.log(prev_status);
+		
 		app_status.change(prev_status);
 		
 		//setTimeout(function(){music.play();}, 700);

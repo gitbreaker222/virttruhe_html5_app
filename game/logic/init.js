@@ -19,12 +19,13 @@ function init(){
 	page.dialog		= $("#dialog"),
 	
 	console.log("change status to inventory");
-	data.set_status("inventory");
+	//data.set_status("inventory");
 	app_status.change("inventory");
 	
-	for (i in items){
+	for (i=2; i < items.length; i++){
 		inventory.add(items[i].id);
 	};
+	
 	inventory.ui_items_update();
 	
 	page.music.attr("src", "data/audio/The Legend of Zelda - Gerudo Valley.mp3");
