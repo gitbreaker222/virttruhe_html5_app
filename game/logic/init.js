@@ -22,8 +22,8 @@ function init(){
 	//data.set_status("inventory");
 	app_status.change("inventory");
 	
-	for (i=2; i < items.length; i++){
-		inventory.add(items[i].id);
+	for (i in items){
+		inventory.add(i);
 	};
 	
 	inventory.ui_items_update();
