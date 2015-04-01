@@ -1,4 +1,51 @@
 scan = {
+	/*
+	 * PROPERTIES
+	 */
+	status				: true, //scan status. set to false, to manually stop html5_qrcode 
+	get_status		: function(){return(this.status);},
+	
+	last_code_message	: "",
+	
+	
+	/*
+	 * METHODS
+	 */
+	start	: function(){
+		
+			$('#reader').html5_qrcode(
+				
+				function(qr_message){
+			         // do something when code is read
+			         console.log("### code is read");
+			         console.log(data);
+			    },
+			    
+			    function(error){
+			        //read errors 
+			        console.log(error);
+				},
+			    
+			    function(videoError){
+			        console.log(videoError);
+			    }
+			    
+			);
+			
+			//TODO clear canvas to prevent next scan to use last saved picture, which is likely with the last readable qr code
+			
+			console.log("### end of scan");
+		},
+		
+		
+	stop	: function(){
+			
+			data.scan_status = false;
+			
+		},
+	
+	
+	
 	
 };
 

@@ -1,4 +1,4 @@
-var data = {
+var data = { // TODO better rename this
 	
 	//the app status, e.g. "scanning" or "inventory" or "presentation"
 	get_status			: function(){return this.status;},
@@ -22,6 +22,8 @@ var data = {
 	set_layer			: function(x){
 				this.layer = x;
 			},
+			
+	scan_status			: true,
 			
 	
 };

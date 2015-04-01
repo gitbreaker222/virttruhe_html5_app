@@ -9,6 +9,7 @@ function btn_scan(){
 		app_status.change("scan");
 		
 		//start scanner
+		scan.start();
 		
 	}else{
 		//close scanner view, show previous status

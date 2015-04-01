@@ -25,8 +25,12 @@
         var localMediaStream;
         
         var scan = function() {
-        	if (scan_status){
+        	
+        	// TODO make the scan status acassable from here
+        	
+        	if (scan.status){ //edited by gitbreaker222 @ github
         		if (localMediaStream) {
+        		
 		            context.drawImage(video, 0, 0, 307,250);
 		    
 		            try {
@@ -39,9 +43,9 @@
 		            }
 		    		setTimeout(scan, 500);
 		    
-		          } else {
-		          	setTimeout(scan,500);
-		          }
+		        } else {
+		        	setTimeout(scan, 500);
+		        }
         	}else{
         		console.log("Scan stopped manually.");
         		return;

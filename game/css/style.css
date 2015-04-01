@@ -180,9 +180,7 @@ display: none;
 }
 
 /* scan ------------*/
-#scan div{
-	background-color: #0000FF;
-}
+
 
 #qr-canvas{
 	border: 1px solid #d3d3d3; /*for debugging*/
