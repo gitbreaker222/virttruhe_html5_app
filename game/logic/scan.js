@@ -29,7 +29,7 @@ scan = {
 			         
 			         
 			         //TODO start working on handling the message....
-			         
+			        app_status.change("inventory"); 
 			         
 			         
 			    },
