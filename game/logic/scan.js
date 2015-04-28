@@ -24,7 +24,7 @@ scan = {
 				
 				function(qr_message){
 			         // do something when code is read
-			         console.log(qr_message);
+			         message.print(qr_message);
 			         
 			         
 			         

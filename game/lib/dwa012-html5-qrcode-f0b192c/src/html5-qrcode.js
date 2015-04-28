@@ -33,7 +33,7 @@
 		    
 		            try {
 		              qrcode.decode();
-		              console.log("QR-Code recognized! Stopping qrscan...");
+		              message.print("QR-Code recognized! Stopping qrscan...");
 		              context = null;
 		              return;
 		            } catch(e) {
@@ -45,7 +45,7 @@
 		        	setTimeout(qrscan, 500);
 		        }
         	}else{
-        		console.log("qrscan stopped manually.");
+        		message.print("qrscan stopped manually.");
         		return;
         	};
         };//end snapshot function
