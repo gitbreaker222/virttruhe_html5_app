@@ -18,54 +18,65 @@
 
 		<!-- Sets initial viewport load and disables zooming  -->
 		<meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1">
-		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="shortcut icon" href="/favicon.png">
 		
+		
+		
+		
+		<!-- --- DATA ------------------------>
+		<!-- LIBS --------- -->
 		<!-- css normalizer -->
 		<link href="css/normalize.css" rel="stylesheet">
-		<!-- jQUERY -->
+		<!-- jQuery -->
 		<script src="lib/jquery-1.11.1.js"></script>
-		<!-- jQUERY UI -->
-		<link rel="stylesheet" href="lib/jquery-ui-1.11.2.custom/jquery-ui.css">
-		<script src="lib/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
-		<link rel="stylesheet" href="lib/jquery-ui-1.11.2.custom/jquery-ui.structure.css">
-		<script src="lib/jquery-ui-1.11.2.custom/jquery-ui.theme.css"></script>
 		
-		<!-- CUSTOM STYLE sheet -->
-		<link rel="stylesheet" href="css/style_manual.css" />
+		<!-- jsqrcode (order important)-- -->
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/version.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/detector.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/formatinf.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/errorlevel.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bitmat.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datablock.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bmparser.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datamask.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/rsdecoder.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256poly.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/decoder.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/qrcode.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/findpat.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/alignpat.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/databr.js"></script>
 		
-		<!-- ITEM LIST (load before CONTROL-/LOGIC-skripts)-->
-		<script src="script/items.js"></script>
-		
-		<!-- VIRTTRUHE SCRIPT -->
-		<script src="script/game_status.js"></script>
-		<script src="script/game_objects.js"></script>
-		<script src="script/item_functions.js"></script>
-		<script src="script/inventory.js"></script>
-		<script src="script/audio.js"></script>
-		<script src="script/buttons.js"></script>
-		<script src="script/status_control.js"></script>
-		<script src="script/scan.js" type="text/javascript"></script>
-		
-		<!-- jsqrcode (order important)-->
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/version.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/detector.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/formatinf.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/errorlevel.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bitmat.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datablock.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bmparser.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datamask.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/rsdecoder.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256poly.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/decoder.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/qrcode.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/findpat.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/alignpat.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/databr.js"></script>
+		<!-- html5-qrcode (based on jsqrcode)-->
+		<script src="lib/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
 		
 		
+		
+		<!-- custom style sheet -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- item collection -->
+		<script src="data/items.js"></script>
+		<!-- custom data -->
+		<script src="data/data.js"></script>
+		<script src="data/html_objects.js"></script>
+					<!-- <script src="data/items_in_inventory.js"></script> -->
+		
+		<!-- --- LOGIC ------------------------>
+		<script src="logic/audio.js"></script>
+		<script src="logic/inventory.js"></script>
+		<script src="logic/status.js"></script>
+		<script src="logic/init.js"></script>
+		<script src="logic/user_stats.js"></script>
+		<script src="logic/scan.js"></script>
+		<script src="logic/message.js"></script>
+		
+		<!-- --- CONTROL ------------------------>
+		<script src="control/buttons.js"></script>
+		
+		<!-- --- VIEW ------------------------>
+		<!-- following html code represents the view -->
 		
 	</head>
 
@@ -73,7 +84,7 @@
 
 
 
-	<body onload="init_objects(); change_status('title'); change_layer('title'); reload_inventory()">
+	<body onload="init()">
 		
 		<div id="header" class="bar">
 			<button id="button_pause" class="btn-icon pull-right" onclick="btn_options()"></button>
@@ -90,19 +101,19 @@
 		
 		
 		<!-- PLAYER STATUS BAR WITH HEARTS, KEYS AND RUPEES ------------------- -->
-		<div id="status" class="bar hide">
-			<div id="life" class="pull-left">
+		<div id="user_stats_display" class="bar hide">
+			<div id="life_counter" class="pull-left">
 				<span class="icon-heart img"></span>
 				<span class="icon-heart img"></span>
 			</div>
 			
 			<div class="pull-right">
-				<img src="data/img/icons/key.png" />
-				<span id="keys">99</span>
+				<img src="data/img/icons/key.png"  class="img" />
+				<span id="keys_counter">99</span>
 			</div>
 			
 			<div class="pull-right">
-				<div id="rupee" class="img"></div>
+				<div id="rupee_icon" class="img"></div>
 				<span id="rupee_counter">999</span>
 			</div>
 		</div>
@@ -116,55 +127,26 @@
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
 		<div id="content">
 			
-			<!-- TITLE SCREEN-------------------------------- -->
-			<div id="title" class="show">
-				<h1>ZELDA - Collecting Items</h1>
-				<h2>a VIRTTRUHE game</h2>
-			</div>
-			
-			
 			<!-- INVENTORY-------------------------------------------------- -->
-			<ul id="inventory" class="hide">
-			</ul>
-			
-			
-			<!-- SCAN------------------------------------------------------- -->
-			<div id="scan" class="hide">
-				<form id="myForm">
-					<input type="file"  accept="image/*" id="cameraInput" name="cameraInput" onchange="decode_qr()">
-				</form>
+			<div id="inventory">
+				<ul id="items">
+					
+				</ul>
 				
-				<!-- the size of the img tag is more easy to handle and it gets loaded into the canvas -->
-				<img id="preview_img" src="" height="200" alt="Image preview...">
-				
-				<!-- hidden canvas where the qr-decoder reads the image. 
-					The ID "qr-canvas" is determined in decoder.js from jsqrcode-library -->
-				<canvas id="qr-canvas" width="500px" height="350px"></canvas>
-				
-				<!-- here will be the presentation animation for new items -->
-				<div id="presentation_box">
-					<img id="img_chest" src="img/chest.png" alt="chest">
-					<div id="new_item_box">
-						<img id="img_shiny" src="img/shiny.png" alt="shiny">
-						<img id="img_new_item" src="" alt="item">
-					</div>
+				<div id="footer" class="bar">
+					<button class="btn-icon pull-right" id="button_delete" onclick="btn_delete()"></button>
+					<button class="btn-icon pull-right" id="button_use" onclick="btn_use()"></button>
+					<h3 id="item_title"></h3>
 				</div>
+			</div>
+			
+			
+			<!-- SCANNER -------------------------------------------------- -->
+			<div id="scan">
+				<div id="reader" style="width: 300px; height: 250px"></div>
 				
 			</div>
-			
-			
-			<!-- PAUSE------------------------------------------------------ -->
-			<div id="pause" class="hide">
-				<h2>Pause</h2>
-				<span>Mute Sound: </span><button class="btn-icon" id="button_toggle_sound" onclick="btn_toggle_sound()"></button>
-				<br />
-				<span>About: </span><button class="btn-icon" id="button_about" onclick="btn_about()"></button>
-			</div>
-			
-			
-			<!-- the dialog box, which is used to display various messages by the skripts -->
-			<div id="dialog" title="Ooops, this should't be written here..."></div>
-			<script>$( "#dialog" ).dialog({ autoOpen: false });</script>
+				
 			
 			
 		</div>
@@ -173,17 +155,6 @@
 		
 		
 		
-		
-		
-		
-		
-			
-			
-		<div id="footer" class="bar">
-			<button class="btn-icon pull-right" id="button_delete" onclick="btn_delete()"></button>
-			<button class="btn-icon pull-right" id="button_use" onclick="btn_use()"></button>
-			<h3 id="item_title"></h3>
-		</div>
 		
 		
 		
