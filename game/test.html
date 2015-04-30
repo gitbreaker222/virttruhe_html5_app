@@ -87,65 +87,28 @@
 
 
 
+<body class="ui-mobile-viewport ui-overlay-a" onload="init()">
 
-	<body onload="init()">
-		
-		<div data-role="page">
-			
-		
-		
-		
-			<div data-role="header">
-				<ul>
-					<li id="layer">
-						layer
-					</li>
-					<li>button 1</li>
-					<li>button 2</li>
-				</ul>
-			</div>
-			
-			
-		
-			<div data-role="content">
-		
-				<div id="inventory" data-role="page">
-					<p> this is the inventory</p>
-				</div>
-				
-				
-				
-				<div id="scanner" data-role="page">
-					<p> this is the scanner</p>
-				</div>
-				
-				
-				
-				<div id="options" data-role="page">
-					<p> this is the options</p>
-				</div>
-		
-			</div>
-			
-			
-			
-			
-			<div data-role="footer">
-				<h3>footer</h3>
-			</div>
-		
-		</div>
-		
-		
-		
-	</body>
-</html>
+<div style="min-height: 891px;" class="ui-page ui-page-theme-a ui-page-active" tabindex="0" data-url="/1.4.5/pages-single-page/index.html" data-role="page">
+
+	<div class="ui-header ui-bar-inherit" role="banner" data-role="header">
+		<h1 aria-level="1" role="heading" class="ui-title">layer</h1>
+	</div><!-- /layer -->
+	
+	<div class="ui-header ui-bar-inherit" role="banner" data-role="header">
+		<h1 aria-level="1" role="heading" class="ui-title">user stats</h1>
+	</div><!-- /user stats -->
+
+	<div id="inventory" role="main" class="ui-content">
+		<p>the inventory</p>
+	</div><!-- /content -->
+
+	<div class="ui-footer ui-bar-inherit" role="contentinfo" data-role="footer">
+		<h4 aria-level="1" role="heading" class="ui-title">tools</h4>
+	</div><!-- /tools -->
+
+</div><!-- /page -->
 
 
 
-
-
-
-
-
-
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div></body></html>
