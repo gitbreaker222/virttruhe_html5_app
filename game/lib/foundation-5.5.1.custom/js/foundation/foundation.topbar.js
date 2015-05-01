@@ -342,7 +342,7 @@
     breakpoint : function () {
       return !matchMedia(Foundation.media_queries['topbar']).matches;
     },
-
+*
     small : function () {
       return matchMedia(Foundation.media_queries['small']).matches;
     },
