@@ -34,6 +34,7 @@
 		<script src="lib/foundation-5.5.1.custom/js/vendor/modernizr.js"></script>
 		<!-- jQuery -->
 		<script src="lib/jquery-1.11.1.js"></script>
+		<script src="lib/jquery_plugin_svg_to_inline.js"></script>
 		
 		
 		<!-- jsqrcode (order important)-- -->
@@ -92,11 +93,10 @@
 
 	<body>
 	
-	  <!-- body content here -->
 	  <!------------------------------------ header 1 -->
 	  	
 	  	<div class="fixed">
-	  	<nav class="top-bar" data-topbar role="navigation">
+	  	<nav id="header" class="top-bar" data-topbar role="navigation">
 		  <ul class="title-area">
 		    <li class="name">
 		      <h1><a href="#">layer</a></h1>
@@ -110,12 +110,12 @@
 		    <ul class="right">
 		      <li >
 		      	<a class="item" onclick="btn_scan()">
-		      		<i class="fi-video"></i>
+		      		<i class="fi-video icon"></i>
 				</a>
 			  </li>
 			  <li >
 		      	<a class="item" onclick="btn_options()">
-		      		<i class="fi-list"></i>
+		      		<i class="fi-list icon"></i>
 				</a>
 			  </li>
 		      
@@ -126,15 +126,15 @@
 		<!------------------------------------ header 2 -->
 	  	<div id="user_stats_display" class="dark row">
 	  		<div class="small-8 columns">
-	  			<img src="data/img/icons/heart.svg" />
-	  			<img src="data/img/icons/heart.svg" />
-	  			<img src="data/img/icons/heart.svg" class="item"/>
+	  			<img src="data/img/icons/heart.svg" class=""/>
+	  			<img src="data/img/icons/heart.svg" class=""/>
+	  			<img src="data/img/icons/heart.svg" class=""/>
 	  		</div>
 	  		<div class="small-2 columns">
-	  			<i class="fi-key"></i>
+	  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
 	  		</div>
 	  		<div class="small-2 columns">
-	  			<img src="data/img/icons/rupee.svg" class="item" />
+	  			<img src="data/img/icons/rupee.svg" class="" />
 	  		</div>
 	  	</div>
 	    
@@ -142,43 +142,24 @@
 		</div>
 		
 		
+		<!-- THE HIDDEN AUDIO PLAYERS. ONE FOR EACH TRACK (like: music, sfx) -->
+		<audio id="music_player" loop></audio>
+		<audio id="sfx_player"></audio>
 		
 		
 		
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    <div class="row">
-	    	<div class="large-12 columns">
-	    		
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<div class="sticky"><p class="sticky">heeeeeere goes the inventory</p></div>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
-	    		<p>here goes the inventory</p>
+		
+		
+		
+		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
+		<div id="content" class="row">
+	    	<div id="inventory" class="large-12 columns">
+	    		<!-- INVENTORY-------------------------------------------------- -->
+			
+				<ul id="items">
+					
+				</ul>
+				
 	    		
 	    		<div id="footer" class="fixed-bottom icon-bar three-up">
 	    			<a class="item">
@@ -191,14 +172,47 @@
 	    				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg" >
 	    			</a>
 	    		</div>
-	    		
-	    		
-	    		
-	    		
-	    		
-	    		
-	    		
-	    	</div>
+			
+			</div>
+			
+			
+			
+			
+			<!-- SCANNER -------------------------------------------------- -->
+			<div id="scan" class="large-12 columns hide">
+				<div id="reader" style="width: 300px; height: 250px"></div>
+				<p>here goes the scanner</p>
+				<p>here goes the scanner</p>
+				<p>here goes the scanner</p>
+				<p>here goes the scanner</p>
+				<p>here goes the scanner</p>
+				<p>here goes the scanner</p>
+				<p>here goes the scanner</p>
+				<p>here goes the scanner</p>
+				
+			</div>
+			
+			
+			
+			<!-- OPTIONS -------------------------------------------------- -->
+			<div id="options" class="large-12 columns hide">
+				<div id="reader" style="width: 300px; height: 250px"></div>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				<p>here goes the options</p>
+				
+			</div>
+	    	
 	    </div>
 	    
 	    
@@ -210,6 +224,7 @@
 	  <script src="lib/foundation-5.5.1.custom/js/foundation.min.js"></script>
 	  <script>
 	    $(document).foundation();
+	    init();
 	  </script>
 	</body>
 </html>

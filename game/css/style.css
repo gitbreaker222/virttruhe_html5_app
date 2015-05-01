@@ -7,7 +7,12 @@ audio{
 }
 
 /* HEADER ------------*/
-#header{
+#header .icon{
+	font-size: 2em;
+}
+#user_stats_display .icon{
+	font-size: 1.5em;
+	fill: #FFFFFF;
 }
 
 #layer{
@@ -32,12 +37,20 @@ audio{
 }
 
 #rupee_counter{
-	
-	color: green;
-	
+	color: green;	
 }
 
 /* CONTENT ------------*/
+#content{
+	margin-bottom: 2em;
+}
+
+#items li{
+	float: left;
+	list-style: none;
+	margin: .5em;
+	width: 2.3em;
+}
 
 #footer{
 	/*height: 40px;
