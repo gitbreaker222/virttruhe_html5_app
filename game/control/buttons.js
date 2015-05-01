@@ -25,28 +25,29 @@ function btn_scan(){
 }
 
 function btn_options(){
+	
+	var status = data.get_status();
+	var prev_status = data.get_prev_status1();
+	
 	//toggle page views and play/pause music
-	if (global_status.game_status !== "pause"){
-		//open pause menu
-		music.pause();
+	if (status !== "pause"){
+		//pause music
+		audio.play_pause();
+		//play pause open sfx
+		//change status
+		page.music.pause();
 		play_sfx("OOT_PauseMenu_Open.ogg");
-		change_status("pause");
+		app_status.change("pause");
 		
 	}else{
 		//close pause menu, show inventory
 		play_sfx("OOT_PauseMenu_Close.ogg");
 		setTimeout(function(){music.play();}, 700);
-		change_status("inventory");
+		change_status(prev_status);
 	}
 }
 
 function btn_use(){
-	//TODO add use_item() function
-	if (music.paused){
-		music.play();
-	}else{
-		music.pause();
-	}
 	
 }
 
