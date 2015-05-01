@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en" >
 	<!-- VCLSD-Pattern: VIEW -->
 	<head>
 		<meta charset="utf-8">
@@ -16,7 +16,7 @@
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<!-- Sets initial viewport load and disables zooming  -->
+		<!-- Sets initial viewport load and disables zooming. Essential for foundation framework -->
 		<meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1">
 		<link rel="shortcut icon" href="/favicon.png">
 		
@@ -25,14 +25,16 @@
 		
 		<!-- --- DATA ------------------------>
 		<!-- LIBS --------- -->
-		<!-- css normalizer -->
-		<link href="css/normalize.css" rel="stylesheet">
+		<!-- foundation css -->
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/normalize.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation-icons.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/custom.css">
+		
+		<script src="lib/foundation-5.5.1.custom/js/vendor/modernizr.js"></script>
 		<!-- jQuery -->
 		<script src="lib/jquery-1.11.1.js"></script>
 		
-		<!-- jQuery mobile-->
-		<script type="text/javascript" src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
-		<link href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
 		
 		<!-- jsqrcode (order important)-- -->
 		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
@@ -88,56 +90,123 @@
 
 
 
-	<body onload="init()">
+	<body>
+	
+	  <!-- body content here -->
+	  <!------------------------------------ header 1 -->
+	  	
+	  	<div class="fixed">
+	  	<nav class="top-bar" data-topbar role="navigation">
+		  <ul class="title-area">
+		    <li class="name">
+		      <h1><a href="#">layer</a></h1>
+		    </li>
+		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+		  </ul>
 		
-		<div data-role="page">
-			
+		  <section class="top-bar-section">
+		    <!-- Right Nav Section -->
+		    <ul class="right">
+		      <li >
+		      	<a class="item" onclick="btn_scan()">
+		      		<i class="fi-video"></i>
+				</a>
+			  </li>
+			  <li >
+		      	<a class="item" onclick="btn_options()">
+		      		<i class="fi-list"></i>
+				</a>
+			  </li>
+		      
+		    </ul>
+		  </section>
+		</nav>
 		
-		
-		
-			<div data-role="header">
-				<ul>
-					<li id="layer">
-						layer
-					</li>
-					<li>button 1</li>
-					<li>button 2</li>
-				</ul>
-			</div>
-			
-			
-		
-			<div data-role="content">
-		
-				<div id="inventory" data-role="page">
-					<p> this is the inventory</p>
-				</div>
-				
-				
-				
-				<div id="scanner" data-role="page">
-					<p> this is the scanner</p>
-				</div>
-				
-				
-				
-				<div id="options" data-role="page">
-					<p> this is the options</p>
-				</div>
-		
-			</div>
-			
-			
-			
-			
-			<div data-role="footer">
-				<h3>footer</h3>
-			</div>
+		<!------------------------------------ header 2 -->
+	  	<div id="user_stats_display" class="dark row">
+	  		<div class="small-8 columns">
+	  			<img src="data/img/icons/heart.svg" />
+	  			<img src="data/img/icons/heart.svg" />
+	  			<img src="data/img/icons/heart.svg" class="item"/>
+	  		</div>
+	  		<div class="small-2 columns">
+	  			<i class="fi-key"></i>
+	  		</div>
+	  		<div class="small-2 columns">
+	  			<img src="data/img/icons/rupee.svg" class="item" />
+	  			<img src="data/img/icons/heart.svg" class="item"/>
+	  		</div>
+	  	</div>
+	    
 		
 		</div>
 		
 		
 		
+		
+		
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    <div class="row">
+	    	<div class="large-12 columns">
+	    		
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<div class="sticky"><p class="sticky">heeeeeere goes the inventory</p></div>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		<p>here goes the inventory</p>
+	    		
+	    		<dl class="sub-nav bottom fixed-bottom ">
+				 
+				  <dd class="active"><a href="#">use</a></dd>
+				  <dd><a href="#">share</a></dd>
+				  <dd><a href="#">delete</a></dd>
+				</dl>
+	    		
+	    		
+	    		
+	    		
+	    		
+	    		
+	    		
+	    	</div>
+	    </div>
+	    
+	    
+	    
+	    
+	    
+		<!-- SCRIPTS ----------------------->
+	  <script src="lib/foundation-5.5.1.custom/js/vendor/jquery.js"></script>
+	  <script src="lib/foundation-5.5.1.custom/js/foundation.min.js"></script>
+	  <script>
+	    $(document).foundation();
+	  </script>
 	</body>
 </html>
 
