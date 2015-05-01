@@ -27,14 +27,20 @@ audio{
 
 /* USER STATS DISPLAY------------*/
 
-#user_stats_display .img{
-	max-width: 2em;
+#user_stats_display img{
+	max-width: 1.5em;
 }
 
 #rupee_counter{
 	
 	color: green;
 	
+}
+
+/* CONTENT ------------*/
+
+#footer{
+	/*height: 40px;
 }
 
 
