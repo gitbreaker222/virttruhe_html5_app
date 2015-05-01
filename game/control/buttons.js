@@ -31,19 +31,15 @@ function btn_options(){
 	
 	//toggle page views and play/pause music
 	if (status !== "pause"){
-		//pause music
-		audio.play_pause();
-		//play pause open sfx
-		//change status
-		page.music.pause();
-		play_sfx("OOT_PauseMenu_Open.ogg");
+		audio.pause();
+		audio.play_sfx("OOT_PauseMenu_Open.ogg");
 		app_status.change("pause");
 		
 	}else{
 		//close pause menu, show inventory
-		play_sfx("OOT_PauseMenu_Close.ogg");
-		setTimeout(function(){music.play();}, 700);
-		change_status(prev_status);
+		setTimeout(function(){audio.play();}, 700);
+		audio.play_sfx("OOT_PauseMenu_Close.ogg");
+		app_status.change(prev_status);
 	}
 }
 

@@ -13,6 +13,16 @@ audio = {
 			page.music.attr("type", "audio/mpeg");
 		 },
 		 
+	play			: function(){
+			page.music.trigger("play");
+			this.playing = true;
+		},
+		
+	pause			: function(){
+			page.music.trigger("pause");
+			this.playing = false;
+		},
+		 
 	play_pause		: function(){
 		
 			if (this.playing){
