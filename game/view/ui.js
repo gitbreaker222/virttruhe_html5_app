@@ -1,4 +1,4 @@
-var ui_update = {
+var ui = {
 	
 	"update_items"		: inventory.ui_items_update(),
 	

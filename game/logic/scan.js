@@ -21,7 +21,6 @@ scan = {
 				.html("")
 				
 				.html5_qrcode(
-				
 				function(qr_message){
 			         // do something when code is read
 			         message.print(qr_message);
