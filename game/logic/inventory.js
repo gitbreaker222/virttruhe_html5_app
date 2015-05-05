@@ -1,34 +1,34 @@
 inventory = {
-	"item_index"		: [],
+	"item_list"		: [],
 	"selected"			: null,
 	
 	
 	"add"		: function (item) {
-					this.item_index.push(item);
+					this.item_list.push(item);
 					
-					return(this.item_index);
+					return;
 				},
 	
 	
 	"remove"	: function (item) {
 					
-					var item_index = this.item_index;
+					var list = this.item_list;
 					
-					for (i=0; i < item_index.length; i++){
-						if (item_index[i] == item){
+					for (i=0; i < list.length; i++){
+						if (list[i] == item){
 							//removes 1 item beginning at position i
-							item_index.splice(i, 1);
+							list.splice(i, 1);
 							
 							if (this.selected == item){
 								this.select(null);
 							}
 							
-							return(item_index);
+							return;
 						}
 					}
 										
 					console.log(item + " not in inventory");
-					return(item_index);
+					return(item_list);
 					
 				},
 	
@@ -39,17 +39,17 @@ inventory = {
 					//event
 					this.ui_select(item);
 					
-					return(this.selected);
+					return;
 			},
 				
 				
 				
 	/*
-	 * VIEW / CREATE jQUERY
+	 * VIEW, CREATE jQUERY
 	 */
 	"ui_items_update"	: function() {
 						console.log("update jquery objects");
-						var item_index = this.item_index;
+						var item_list = this.item_list;
 						var content = page.items;
 						var node;
 						var node2;
@@ -57,8 +57,8 @@ inventory = {
 						
 						content.empty();
 						
-						for (i=0; i <  item_index.length; i++){
-							var current_item_id = item_index[i];
+						for (i=0; i <  item_list.length; i++){
+							var current_item_id = item_list[i];
 							
 							node = document.createElement("LI");
 							

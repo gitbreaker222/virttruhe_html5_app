@@ -9,8 +9,6 @@ message = {
 	
 	log			: [],
 	
-	target		: page.layer, //link does not work for some reason  
-	
 	
 	/*
 	 * METHODS
