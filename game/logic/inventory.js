@@ -1,5 +1,5 @@
 inventory = {
-	item_list		: {},
+	item_list		: [],
 	selected			: null,
 	
 	
@@ -17,38 +17,46 @@ inventory = {
 						message.print("item not in list: " + item);
 						return;
 					}
-					//check if it is already in list
-					if(this.item_list[item]){
-						//add one
-						this.item_list[item].count++;
+					
+					//check if stackable
+					if(items[item].stackable){
+						//stackable
+						message.print("stackable");
+						//check if exists
+						//if()
+						
+						
 					}else{
-						//create first
-						this.item_list[item] = {count : 1};
+						//not stackable
+						message.print("not stackable");
+						
 					}
+					this.item_list.push(item);
 					
 					return(this.item_list);
 				},
 	
 	
-	remove	: function (item) {
+	removee	: function (item) {
+					/*
+					 * validation
+					 */
+					if(this.item_list[item] == undefined){
+						console.log(item + " not in inventory");
+						return;
+					}
 					
-					var list = this.item_list;
-					
-					for (i=0; i < list.length; i++){
-						if (list[i] == item){
-							//removes 1 item beginning at position i
-							list.splice(i, 1);
-							
-							if (this.selected == item){
-								this.select(null);
-							}
-							
-							return;
+					//check if stackable
+					if(this.item_list[item].count){
+						//check if only one left
+						if(this.item_list[item].count == 1){
+							//delete from list
 						}
 					}
-										
-					console.log(item + " not in inventory");
-					return(item_list);
+					
+					this.item_list[item].count--;				
+					
+					return(this.item_list);
 					
 				},
 	

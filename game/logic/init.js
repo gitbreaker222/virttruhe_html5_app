@@ -3,6 +3,7 @@ function init(){
 	
 	/*
 	 * create jQuery objects
+	 * TODO change "page" to "ui" and create props in ui.js
 	 */
 	page.layer 		= $("#layer");
 	page.music		= $("#music_player"),

@@ -19,7 +19,7 @@ message = {
 			
 			this.log.push(text);
 			
-			page.layer.html(text);
+			//page.layer.html(text);
 		},
 	
 };
