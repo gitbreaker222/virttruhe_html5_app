@@ -1,16 +1,36 @@
 inventory = {
-	"item_list"		: [],
-	"selected"			: null,
+	item_list		: {},
+	selected			: null,
 	
 	
-	"add"		: function (item) {
-					this.item_list.push(item);
+	
+	add		: function (item) {
+					/*
+					 * validation
+					 */
+					if(item == undefined){
+						message.print("cannot add nothing to inventory");
+						return;
+					}
+					//check if item exists in loaded item_set
+					if(items[item] == undefined){
+						message.print("item not in list: " + item);
+						return;
+					}
+					//check if it is already in list
+					if(this.item_list[item]){
+						//add one
+						this.item_list[item].count++;
+					}else{
+						//create first
+						this.item_list[item] = {count : 1};
+					}
 					
-					return;
+					return(this.item_list);
 				},
 	
 	
-	"remove"	: function (item) {
+	remove	: function (item) {
 					
 					var list = this.item_list;
 					
@@ -33,7 +53,7 @@ inventory = {
 				},
 	
 	
-	"select"	: function (item) {
+	select	: function (item) {
 					this.selected = item;
 					
 					//event
@@ -47,7 +67,7 @@ inventory = {
 	/*
 	 * VIEW, CREATE jQUERY
 	 */
-	"ui_items_update"	: function() {
+	ui_items_update	: function() {
 						console.log("update jquery objects");
 						var item_list = this.item_list;
 						var content = page.items;
@@ -83,7 +103,7 @@ inventory = {
 						
 					},
 	
-	"ui_select"	: function(){
+	ui_select	: function(){
 					var old 			= $("#items .selected");
 					var selected 		= $("#" + this.selected);
 					
