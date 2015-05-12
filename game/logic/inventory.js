@@ -75,10 +75,10 @@ inventory = {
 	/*
 	 * VIEW, CREATE jQUERY
 	 */
-	ui_items_update	: function() {
+	ui_items_update	: function() { //TODO remove
 						console.log("update jquery objects");
 						var item_list = this.item_list;
-						var content = page.items;
+						var content = ui.items;
 						var node;
 						var node2;
 						var node3;
@@ -111,7 +111,7 @@ inventory = {
 						
 					},
 	
-	ui_select	: function(){
+	ui_select	: function(){ //TODO remove
 					var old 			= $("#items .selected");
 					var selected 		= $("#" + this.selected);
 					
@@ -125,7 +125,7 @@ inventory = {
 					for(i in items){
 						var item = items[i];
 						if (item.id == this.selected){
-							page.item_title.html(item.name);
+							ui.item_title.html(item.name);
 						}
 					}
 					
