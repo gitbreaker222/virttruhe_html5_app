@@ -1,4 +1,5 @@
 ui = {
+	//jQuery objects after init
 	music		: undefined,
 	layer		: undefined,
 	sfx			: undefined,
@@ -27,11 +28,13 @@ ui = {
 				break;
 				
 			case "inventory" :
-				
+				this.scan.hide();
+				this.inventory.show();
 				break;
 				
 			case "scan" :
-				
+				this.inventory.hide();
+				this.scan.show();
 				break;
 				
 			case "pause" :
