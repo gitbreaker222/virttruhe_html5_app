@@ -37,7 +37,7 @@ inventory = {
 				},
 	
 	
-	removee	: function (item) {
+	remove	: function (item) {
 					/*
 					 * validation
 					 */

@@ -90,7 +90,9 @@ scan = {
 			}
 			
 			console.log("found "+ type +": "+ item_id);
-			return(found_item(type, item_id));
+			
+			inventory.add(item_id);
+			return;//(found_item(type, item_id));
 		}
 		
 	},

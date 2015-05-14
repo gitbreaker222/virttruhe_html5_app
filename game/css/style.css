@@ -51,6 +51,10 @@ audio{
 	width: 2.3em;
 }
 
+.selected{
+	box-shadow: 0px 0px 12px #4BD9FF;
+}
+
 #footer{
 	/*height: 40px;
 }
