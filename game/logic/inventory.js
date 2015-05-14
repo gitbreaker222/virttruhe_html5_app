@@ -65,7 +65,7 @@ inventory = {
 					this.selected = item;
 					
 					//event
-					this.ui_select(item);
+					ui.select(item);
 					
 					return;
 			},

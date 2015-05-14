@@ -4,7 +4,7 @@ audio = {
 	
 	
 	play_pause		: function(track){
-		
+		console.log("düng");
 	},
 	
 	stop			: function(track){

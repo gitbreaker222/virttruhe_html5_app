@@ -93,9 +93,9 @@ ui = {
 	},
 	
 	
-	select				: function(){
+	select				: function(item){
 		var old 			= $("#items .selected");
-		var selected 		= $("#" + inventory.selected);
+		var selected 		= $("#" + item);
 		
 		try{
 			old.removeClass("selected");
@@ -112,7 +112,8 @@ ui = {
 		}
 		
 		
-		audio.play_sfx("OOT_PauseMenu_Cursor.ogg");
+		audio.change_file("sfx", "OOT_PauseMenu_Cursor.ogg");
+		audio.play_pause("sfx");
 		
 		return;
 	},
