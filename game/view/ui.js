@@ -2,7 +2,7 @@ ui = {
 	music		: undefined,
 	layer		: undefined,
 	sfx			: undefined,
-	user_stats	: undefined,
+	user_status	: undefined,
 	life		: undefined,
 	keys		: undefined,
 	rupees		: undefined,
@@ -15,7 +15,46 @@ ui = {
 	
 	
 	
+	/*
+	 *  STATE
+	 */
+	update_state		: function(){
+		var state = system_status.state;
+		
+		switch(state){
+			case "title" :
+				
+				break;
+				
+			case "inventory" :
+				
+				break;
+				
+			case "scan" :
+				
+				break;
+				
+			case "pause" :
+				
+				break;
+				
+			case "new_item" :
+				
+				break;
+				
+			case "portal" :
+				
+				break;
+				
+			default :
+				
+		}
+	},
 	
+	
+	/*
+	 * INVENTORY
+	 */
 	update_items		: function(){
 		console.log("update jquery objects");
 		var item_list = inventory.item_list;
@@ -74,6 +113,11 @@ ui = {
 		
 		return;
 	},
+	
+	/*
+	 * USER STATS
+	 */
+	
 	
 	
 	
