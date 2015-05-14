@@ -1,8 +1,8 @@
 ui = {
 	//jQuery objects after init
-	music		: undefined,
+	music_player	: undefined,
+	sfx_player		: undefined,
 	layer		: undefined,
-	sfx			: undefined,
 	user_status	: undefined,
 	life		: undefined,
 	keys		: undefined,
