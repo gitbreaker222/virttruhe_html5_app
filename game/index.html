@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en" >
 	<!-- VCLSD-Pattern: VIEW -->
 	<head>
 		<meta charset="utf-8">
@@ -16,8 +16,8 @@
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<!-- Sets initial viewport load and disables zooming  -->
-		<meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1">
+		<!-- Sets initial viewport load and disables zooming. Essential for foundation framework -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 		<link rel="shortcut icon" href="/favicon.png">
 		
 		
@@ -25,10 +25,17 @@
 		
 		<!-- --- DATA ------------------------>
 		<!-- LIBS --------- -->
-		<!-- css normalizer -->
-		<link href="css/normalize.css" rel="stylesheet">
+		<!-- foundation css -->
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/normalize.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation-icons.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/custom.css">
+		
+		<script src="lib/foundation-5.5.1.custom/js/vendor/modernizr.js"></script>
 		<!-- jQuery -->
 		<script src="lib/jquery-1.11.1.js"></script>
+		<script src="lib/jquery_plugin_svg_to_inline.js"></script>
+		
 		
 		<!-- jsqrcode (order important)-- -->
 		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
@@ -56,28 +63,28 @@
 		
 		<!-- custom style sheet -->
 		<link rel="stylesheet" href="css/style.css" />
-		<!-- custom data -->
 		<script src="data/settings.js"></script>
 			<!-- <script src="data/html_objects.js"></script> -->
 		<!-- item collection -->
-		<script src="data/items.js"></script>			
+		<script src="data/items.js"></script>
 		
 		<!-- --- LOGIC ------------------------>
 		<script src="logic/audio.js"></script>
-		<script src="logic/init.js"></script>
 		<script src="logic/inventory.js"></script>
 		<script src="logic/message.js"></script>
 		<script src="logic/scan.js"></script>
 		<script src="logic/user_status.js"></script>
 		<script src="logic/system_status.js"></script>
 		
-		
 		<!-- --- CONTROL ------------------------>
 		<script src="control/buttons.js"></script>
 		
 		<!-- --- VIEW ------------------------>
 		<script src="view/ui.js"></script>
-		<!-- following html code represents the view -->
+		<!-- html code mainly represents the view -->
+		
+		
+		<script src="control/init.js"></script>
 		
 	</head>
 
@@ -85,40 +92,60 @@
 
 
 
-	<body onload="init()">
+	<body>
+	
+	  <!------------------------------------ header 1 -->
+	  	
+	  	<div class="fixed">
+	  	<nav id="header" class="top-bar" data-topbar role="navigation">
+		  <ul class="title-area">
+		    <li class="name">
+		      <h1 id="layer">layer of the player yes: first chapter</h1>
+		    </li>
+		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+		  </ul>
 		
-		<div id="header" class="bar">
-			<button id="button_pause" class="btn-icon pull-right" onclick="btn_options()"></button>
-			<button id="button_scan" class="btn-icon pull-right" onclick="btn_scan()"></button>
-			<span class="clear"></span>
-			<text id="layer"></text>
-			
-			
-			<!-- THE HIDDEN AUDIO PLAYERS ;) ONE FOR EACH TRACK (like: music, sfx) -->
-			<audio id="music_player" loop></audio>
-			<audio id="sfx_player"></audio>
+		  <section class="top-bar-section">
+		    <!-- Right Nav Section -->
+		    <ul class="right">
+		      <li >
+		      	<a class="item" onclick="btn_scan()">
+		      		<i class="fi-video icon"></i>
+				</a>
+			  </li>
+			  <li >
+		      	<a class="item" onclick="btn_options()">
+		      		<i class="fi-list icon"></i>
+				</a>
+			  </li>
+		      
+		    </ul>
+		  </section>
+		</nav>
+		
+		<!------------------------------------ header 2 -->
+	  	<div id="user_stats_display" class="dark row">
+	  		<div class="small-8 columns">
+	  			<img src="data/img/icons/heart.svg" class=""/>
+	  			<img src="data/img/icons/heart.svg" class=""/>
+	  			<img src="data/img/icons/heart.svg" class=""/>
+	  		</div>
+	  		<div class="small-2 columns">
+	  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
+	  		</div>
+	  		<div class="small-2 columns">
+	  			<img src="data/img/icons/rupee.svg" class="" />
+	  		</div>
+	  	</div>
+	    
+		
 		</div>
 		
 		
-		
-		<!-- PLAYER STATUS BAR WITH HEARTS, KEYS AND RUPEES ------------------- -->
-		<div id="user_stats_display" class="bar hide">
-			<div id="life_counter" class="pull-left">
-				<span class="icon-heart img"></span>
-				<span class="icon-heart img"></span>
-			</div>
-			
-			<div class="pull-right">
-				<img src="data/img/icons/key.png"  class="img" />
-				<span id="keys_counter">99</span>
-			</div>
-			
-			<div class="pull-right">
-				<div id="rupee_icon" class="img"></div>
-				<span id="rupee_counter">999</span>
-			</div>
-		</div>
-		
+		<!-- THE HIDDEN AUDIO PLAYERS. ONE FOR EACH TRACK (like: music, sfx) -->
+		<audio id="music_player" loop></audio>
+		<audio id="sfx_player"></audio>
 		
 		
 		
@@ -126,39 +153,60 @@
 		
 		
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
-		<div id="content">
+		<div id="content" class="row">
+	    	<div id="inventory" class="large-12 columns">
+	    		<!-- INVENTORY-------------------------------------------------- -->
 			
-			<!-- INVENTORY-------------------------------------------------- -->
-			<div id="inventory">
 				<ul id="items">
 					
 				</ul>
 				
-				<div id="footer" class="bar">
-					<button class="btn-icon pull-right" id="button_delete" onclick="btn_delete()"></button>
-					<button class="btn-icon pull-right" id="button_use" onclick="btn_use()"></button>
-					<h3 id="item_title"></h3>
-				</div>
+	    		
+	    		<div id="footer" class="fixed-bottom icon-bar three-up">
+	    			<a class="item" onclick="btn_use()">
+	    				<img src="lib/foundation-5.5.1.custom/img/icons/fi-home.svg" >
+	    			</a>
+					<a class="item" onclick="btn_share()">
+	    				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg" >
+	    			</a>
+	    			<a class="item" onclick="btn_delete()">
+	    				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg" >
+	    			</a>
+	    		</div>
+			
 			</div>
+			
+			
 			
 			
 			<!-- SCANNER -------------------------------------------------- -->
-			<div id="scan">
+			<div id="scan" class="large-12 columns hide">
+				<div id="reader" style="width: 300px; height: 250px"></div>
+				
+				
+			</div>
+			
+			
+			
+			<!-- OPTIONS -------------------------------------------------- -->
+			<div id="options" class="large-12 columns hide">
 				<div id="reader" style="width: 300px; height: 250px"></div>
 				
 			</div>
-				
-			
-			
-		</div>
-		
-		<!-- ----------------------------------------------------------- -->
-		
-		
-		
-		
-		
-		
+	    	
+	    </div>
+	    
+	    
+	    
+	    
+	    
+		<!-- SCRIPTS ----------------------->
+	  
+	  <script src="lib/foundation-5.5.1.custom/js/foundation.min.js"></script>
+	  <script>
+	    $(document).foundation();
+	    init();
+	  </script>
 	</body>
 </html>
 
