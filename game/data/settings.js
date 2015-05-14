@@ -3,6 +3,5 @@ settings = {
 	music				: true,
 	sfx					: true,
 	photo_scanner		: false,
+	
 };
-
-settings = JSON.stringify(settings);

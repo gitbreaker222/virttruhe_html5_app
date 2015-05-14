@@ -16,7 +16,6 @@ scan = {
 			this.status = true;
 		
 			$('#reader')
-			
 				//clear canvas
 				.html("")
 				

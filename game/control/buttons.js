@@ -7,13 +7,30 @@ function btn_scan(){
 	//load current state
 	var state = system_status.state;
 	var prev_state1 = system_status.prev_state1;
-	var prev_state2 = system_status.prev_state2;
+	//var prev_state2 = system_status.prev_state2;
 	
-	if(state != "scan"){
-		system_status.change_state("scan");
-	}else{
-		system_status.change_state(prev_state1);
-	}
+	switch(state){
+			case "scan" :
+				system_status.change_state(prev_state1);
+				break;
+				
+			case "pause" :
+				console.log("button disabled");
+				break;
+				
+			case "new_item" :
+				console.log("button disabled");
+				break;
+				
+			case "portal" :
+				console.log("button disabled");
+				break;
+				
+			default : //inventory, title
+				system_status.change_state("scan");
+				break;
+		}
+	
 	
 }
 
