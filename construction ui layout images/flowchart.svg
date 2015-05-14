@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.04"
-     inkscape:cx="3638.6076"
-     inkscape:cy="442.52417"
+     inkscape:zoom="1.4707821"
+     inkscape:cx="3414.5309"
+     inkscape:cy="266.82838"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -1040,6 +1040,41 @@
        id="pattern5322-58"
        xlink:href="#Strips1_1-49"
        inkscape:collect="always" />
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter5440-6"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur5442-2"
+         stdDeviation="1.785"
+         inkscape:collect="always" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.3839999"
+       y="-0.192"
+       width="1.3839999"
+       x="-0.192"
+       id="filter5478-8"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur5480-1"
+         stdDeviation="0.69"
+         inkscape:collect="always" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.4296287"
+       y="-0.21481436"
+       width="1.1662621"
+       x="-0.083131053"
+       id="filter5460-1"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur5462-8"
+         stdDeviation="5.0005829"
+         inkscape:collect="always" />
+    </filter>
   </defs>
   <metadata
      id="metadata7">
@@ -1049,7 +1084,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1272,7 +1307,7 @@
          y="149.79089" />
     </g>
     <g
-       transform="translate(-60.811183,1.4142136)"
+       transform="translate(-109.08482,1.4142136)"
        id="g5519">
       <rect
          style="fill:#00008b;fill-opacity:0.37091992;fill-rule:nonzero;stroke:#00008b;stroke-width:5.19999981;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5440)"
@@ -1313,7 +1348,7 @@
       </g>
     </g>
     <g
-       transform="translate(-50.911688,-18.384776)"
+       transform="translate(-99.185324,-18.384776)"
        id="g5511">
       <rect
          ry="18"
@@ -4552,7 +4587,7 @@
        id="rect4462"
        style="fill:#72c8d6;fill-opacity:0.91588781;fill-rule:nonzero;stroke:none;display:inline" />
     <g
-       transform="matrix(0.64091825,0,0,0.64091825,801.1176,294.99041)"
+       transform="matrix(0.64091825,0,0,0.64091825,752.84396,294.99041)"
        id="g11095">
       <g
          style="display:inline"
@@ -4788,7 +4823,7 @@
            style="stroke:none">pause</tspan></text>
     </g>
     <g
-       transform="matrix(0.64091825,0,0,0.64091825,801.1176,294.99041)"
+       transform="matrix(0.64091825,0,0,0.64091825,721.56808,294.99041)"
        id="g10958">
       <g
          style="display:inline"
@@ -4938,7 +4973,7 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
-       transform="matrix(0.64091825,0,0,0.64091825,801.1176,294.99041)"
+       transform="matrix(0.64091825,0,0,0.64091825,752.84396,294.99041)"
        id="g11064">
       <g
          style="display:inline"
@@ -5086,7 +5121,7 @@
            style="stroke-width:1.3706342">TITLE</tspan></text>
     </g>
     <g
-       transform="matrix(0.64091825,0,0,0.64091825,801.1176,294.99041)"
+       transform="matrix(0.64091825,0,0,0.64091825,693.01184,294.99041)"
        id="g10849">
       <g
          style="display:inline"
@@ -5389,7 +5424,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.64091825,0,0,0.64091825,801.1176,294.99041)"
+       transform="matrix(0.64091825,0,0,0.64091825,693.01184,294.99041)"
        id="g10905">
       <g
          style="display:inline"
@@ -5688,7 +5723,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.64091825,0,0,0.64091825,801.1176,294.99041)"
+       transform="matrix(0.64091825,0,0,0.64091825,721.56808,294.99041)"
        id="g10989">
       <g
          style="display:inline"
@@ -6577,8 +6612,9 @@
     <path
        inkscape:connector-curvature="0"
        id="path42476"
-       d="m 3096.3118,1788.59 23.117,35.3554 135.982,2.7196 c 0,0 116.9446,-20.3973 122.3839,-23.1169 5.4393,-2.7197 29.9161,-38.075 29.9161,-38.075 l -59.8322,-70.7107 -183.5758,-13.5982 -57.1124,12.2384 z"
-       style="fill:#ffffff;fill-opacity:0.28504675;fill-rule:nonzero;stroke:none" />
+       d="m 3096.3118,1788.59 23.117,35.3554 254.2864,12.2383 c 0,0 59.1522,-6.1191 64.5915,-8.8387 5.4393,-2.7197 -30.5959,-61.8719 -30.5959,-61.8719 l -59.8322,-70.7107 -183.5758,-13.5982 -57.1124,12.2384 z"
+       style="fill:#ffffff;fill-opacity:0.28504675;fill-rule:nonzero;stroke:none"
+       sodipodi:nodetypes="ccccccccc" />
     <g
        inkscape:transform-center-y="-14.174796"
        inkscape:transform-center-x="-2.1402451"
@@ -10402,34 +10438,34 @@
        id="text23763-3"
        y="1481.6632"
        x="3232.4182"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#222222;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.46200001000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#222222;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
        xml:space="preserve"><tspan
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke-width:0.46200001000000002;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono;stroke:none"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
          y="1481.6632"
          x="3232.4182"
          sodipodi:role="line"
          id="tspan23786-5">here are stored the:</tspan><tspan
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke-width:0.46200001000000002;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono;stroke:none"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
          y="1504.1632"
          x="3232.4182"
          sodipodi:role="line"
          id="tspan23861">items, portals, chests,</tspan><tspan
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke-width:0.46200001000000002;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono;stroke:none"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
          y="1526.6632"
          x="3232.4182"
          sodipodi:role="line"
          id="tspan23873">game and player statuses,</tspan><tspan
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke-width:0.46200001000000002;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono;stroke:none"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
          y="1549.1632"
          x="3232.4182"
          sodipodi:role="line"
          id="tspan23877">audio and images,</tspan><tspan
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke-width:0.46200001000000002;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono;stroke:none"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
          y="1571.6632"
          x="3232.4182"
          sodipodi:role="line"
-         id="tspan23929">stylesheets...</tspan><tspan
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke-width:0.46200001000000002;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono;stroke:none"
+         id="tspan23929">stylesheets, jQuery objects...</tspan><tspan
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
          y="1594.1632"
          x="3232.4182"
          sodipodi:role="line"
@@ -10970,5 +11006,88 @@
          x="2548.0923"
          id="tspan12823-2"
          sodipodi:role="line">player stats</tspan></text>
+    <g
+       style="display:inline"
+       transform="matrix(0.50301126,0,0,0.50301126,2606.238,888.30094)"
+       id="g5519-2">
+      <rect
+         style="fill:#00008b;fill-opacity:0.37091992;fill-rule:nonzero;stroke:#00008b;stroke-width:5.19999981;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5440-6)"
+         id="rect5401-6"
+         width="246"
+         height="111"
+         x="-341"
+         y="454.36218"
+         ry="18" />
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+         x="-216.94189"
+         y="514.36218"
+         id="text5403-1"><tspan
+           sodipodi:role="line"
+           id="tspan5405-8"
+           x="-216.94189"
+           y="514.36218">this is a dialog part</tspan></text>
+      <g
+         id="g5464-5"
+         transform="matrix(0.62184818,0,0,0.62184818,-78.002443,210.35458)">
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           id="path5409-5"
+           d="m -624.33638,-15.637817 -56.13853,71.836659 0,-143.673319 z"
+           inkscape:transform-center-y="3.730435"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter5460-1)"
+           transform="matrix(0,0.18639081,-0.18729103,0,-229.03495,677.87261)" />
+        <path
+           style="fill:#00008b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           inkscape:transform-center-y="3.5832716"
+           d="m -225.81328,561.13961 -12.9236,-10.05092 25.8472,0 z"
+           id="path5444-7"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc" />
+      </g>
+    </g>
+    <g
+       style="display:inline"
+       transform="matrix(0.50301126,0,0,0.50301126,2611.2175,878.34182)"
+       id="g5511-0">
+      <rect
+         ry="18"
+         y="607.86218"
+         x="-348"
+         height="111"
+         width="246"
+         id="rect5486-0"
+         style="fill:#00008b;fill-opacity:0.37091992;fill-rule:nonzero;stroke:#00008b;stroke-width:5.19999981;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5440-6)" />
+      <text
+         id="text5488-5"
+         y="667.86218"
+         x="-223.94189"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+         xml:space="preserve"><tspan
+           y="667.86218"
+           x="-223.94189"
+           id="tspan5490-0"
+           sodipodi:role="line">this is a final dialog</tspan></text>
+      <g
+         id="g5482-9"
+         transform="translate(-33.125,124)">
+        <rect
+           y="580.36218"
+           x="-195.5"
+           height="8.625"
+           width="8.625"
+           id="rect5470-2"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter5478-8)" />
+        <rect
+           style="fill:#00008b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="rect5472-7"
+           width="8.625"
+           height="8.625"
+           x="-195.5"
+           y="580.36218" />
+      </g>
+    </g>
   </g>
 </svg>

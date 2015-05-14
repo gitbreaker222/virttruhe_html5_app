@@ -1,87 +1,58 @@
-.btn-icon, .bar .icon{
-	width: 32px;
-	height: 32px;
-	background-size: 30px;
-	padding:0px;
+body{
+	background-color: #DDD;
 }
 
-.content{
-	background-color: rgba(51, 51, 51, 1);
+audio{
+	display: none;
 }
 
-.center{
-	margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-
-#pause_menu{
-	color: white;
-	width: 100%;
-	
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: -1;
-}
 /* HEADER ------------*/
-#header{
-	
+#header .icon{
+	font-size: 2em;
+}
+#user_stats_display .icon{
+	font-size: 1.5em;
+	fill: #FFFFFF;
 }
 
-#button_scan{
-	background-image: url("../img/icons/scan.svg");
+#layer{
+	font-size: 1em;
+	color: white;
+	padding:0em 1em;
+	overflow: auto;
 }
 
-#current_location{
-	text-align: left;
+
+/* TITLE SCREEN------------*/
+#title{
+	color: black;
 }
 
+/* USER STATS DISPLAY------------*/
 
-/* STATUS BAR------------*/
-#status{	
-	height: 30px;
+#user_stats_display img{
+	max-width: 1.5em;
 }
-#status img{
-	background-repeat: no-repeat;
-	/*width: 20px;*/
-}
-#rupee{
-	background-image: url("../img/icons/rupee.svg");
-}
+
 #rupee_counter{
-	font-style: italic;
-	position: relative;
-	top: -11px;
-}
-#life_bar .icon-heart{
-	background-image: url("../img/icons/heart.svg");
-	background-size: 20px;
-	width: 20px;
+	color: green;	
 }
 
-
-/* CONTENT SECTION------------*/
+/* CONTENT ------------*/
 #content{
-	padding-top: 73px;
+	margin-bottom: 2em;
 }
-#content li{
-	list-style: none;
+
+#items li{
+	height : 37px;
 	float: left;
-	width: 48px;
-	height: 48px;
-	background-color: rgba(218, 218, 218, 0.6);
-	border: solid 1px rgba(255, 253, 253, 0.4);
-	border-style: inset;
-}	
+	list-style: none;
+	margin: .5em;
+	width: 2.3em;
+}
 
-
-
-/* FOOTER BAR ------------*/
 #footer{
-	bottom: 0px;
+	/*height: 40px;
 }
 
-#button_use{
-	background-image: url("../img/icons/hand-grab.svg");
-}
+
