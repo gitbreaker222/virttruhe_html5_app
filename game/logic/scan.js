@@ -20,28 +20,28 @@ scan = {
 				.html("")
 				
 				.html5_qrcode(
-				function(qr_message){
-			         // do something when code is read
-			         message.print(qr_message);
-			         
-			         
-			         
-			         //TODO start working on handling the message....
-			        app_status.change("inventory"); 
-			         
-			         
-			    },
+					function(qr_message){
+				         // do something when code is read
+				         message.print(qr_message);
+				         
+				         
+				         
+				         //TODO start working on handling the message....
+				        app_status.change("inventory"); 
+				         
+				         
+				    },
+				    
+				    function(error){
+				        //read errors 
+				        console.log(error);
+					},
+				    
+				    function(videoError){
+				        console.log(videoError);
+				    }
 			    
-			    function(error){
-			        //read errors 
-			        console.log(error);
-				},
-			    
-			    function(videoError){
-			        console.log(videoError);
-			    }
-			    
-			);
+				);
 			
 		},
 		
