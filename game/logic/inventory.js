@@ -33,7 +33,10 @@ inventory = {
 					}
 					this.item_list.push(item);
 					
-					return(this.item_list);
+					
+					//event trigger
+					ui.update_items();
+					return;
 				},
 	
 	

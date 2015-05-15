@@ -22,9 +22,15 @@ function init(){
 	//data.set_status("inventory");
 	system_status.change_state("inventory");
 	
-	for (i in items){
-		inventory.add(i);
+	function load_items(){
+		var counter = 0;
+		for (i in items){
+			inventory.add(i);
+			counter++;
+			if(counter > 8){break;}
+		};
 	};
+	load_items();
 	
 	ui.update_items();
 	

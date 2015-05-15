@@ -100,9 +100,7 @@ scan = {
 		
 		
 	stop	: function(){
-		
 		this.status = false;
-		
 	},
 	
 	
