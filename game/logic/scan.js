@@ -14,6 +14,7 @@ scan = {
 	start	: function(){
 		
 		this.status = true;
+		audio.play_sfx("OOT_ZTarget_Center1");
 	
 		$('#reader')
 			//clear canvas
@@ -101,6 +102,7 @@ scan = {
 		
 	stop	: function(){
 		this.status = false;
+		audio.play_sfx("OOT_ZTarget_Center2");
 	},
 	
 	
