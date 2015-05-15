@@ -18,7 +18,6 @@ audio = {
 	play_sfx		: function (file){
 		//load file, if not already loaded
 		if(this.sfx != file){
-			console.log("change file " + file );
 			this.change_file("sfx", file);
 		}else{
 			//else, reset time marker

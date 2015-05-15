@@ -21,6 +21,7 @@ ui = {
 	 */
 	update_state		: function(){
 		var state = system_status.state;
+		var prev_state = system_status.prev_state1;
 		
 		switch(state){
 			case "title" :
@@ -28,17 +29,19 @@ ui = {
 				break;
 				
 			case "inventory" :
+				this.pause.hide();
 				this.scan.hide();
 				this.inventory.show();
 				break;
 				
 			case "scan" :
-				this.inventory.hide();
+				this[prev_state].hide();
 				this.scan.show();
 				break;
 				
 			case "pause" :
-				
+				this[prev_state].hide();
+				this.pause.show();
 				break;
 				
 			case "new_item" :

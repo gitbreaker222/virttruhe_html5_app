@@ -36,8 +36,8 @@ function btn_scan(){
 
 
 
-function btn_options(){
-	console.log("pressed pause/options button");
+function btn_pause(){
+	console.log("pressed pause/settings button");
 	
 	//load current state
 	var state = system_status.state;
@@ -46,8 +46,10 @@ function btn_options(){
 	
 	if(state != "pause"){
 		system_status.change_state("pause");
+		audio.play_sfx("OOT_PauseMenu_Open");
 	}else{
 		system_status.change_state(prev_state1);
+		audio.play_sfx("OOT_PauseMenu_Close");
 	}
 }
 

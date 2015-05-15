@@ -10,15 +10,22 @@ system_status = {
 	
 	
 	
-	change_state	: function(state){
-		this.prev_state2 = this.prev_state1;
-		this.prev_state1 = this.state;
-		this.state = state;
+	change_state	: function(next_state){
+		if(this.state == "pause" && next_state == "scan"){
+			this.state = next_state;
+			this.prev_state1 = this.prev_state2;
+			this.prev_state2 = "pause";
+		}else{
+			this.prev_state2 = this.prev_state1;
+			this.prev_state1 = this.state;
+			this.state = next_state;
+		}
+		
 		
 		console.log("state changed to " + this.state);
 		
 		//load state characteristics
-		switch(state){
+		switch(next_state){
 			case "inventory" :
 				if(this.prev_state1 == "scan"){
 					scan.stop();
@@ -33,6 +40,9 @@ system_status = {
 				break;
 				
 			case "pause" :
+				if(this.prev_state1 == "scan"){
+						scan.stop();
+					}
 				break;
 				
 			case "new_item" :
