@@ -111,29 +111,7 @@ inventory = {
 						
 					},
 	
-	ui_select	: function(){ //TODO remove
-					var old 			= $("#items .selected");
-					var selected 		= $("#" + this.selected);
-					
-					try{
-						old.removeClass("selected");
-					}finally{
-						selected.addClass("selected");
-					}
-					
-					//show item name at bottom TODO
-					for(i in items){
-						var item = items[i];
-						if (item.id == this.selected){
-							ui.item_title.html(item.name);
-						}
-					}
-					
-					
-					audio.play_sfx("OOT_PauseMenu_Cursor.ogg");
-					
-					return;
-				}
+	
 	
 	
 };

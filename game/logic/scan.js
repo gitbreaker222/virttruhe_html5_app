@@ -69,6 +69,7 @@ scan = {
 			console.log("key found in code: " + key);
 			
 			map_key(key);
+			return;
 		}
 		
 		

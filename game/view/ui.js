@@ -1,7 +1,7 @@
 ui = {
 	//jQuery objects after init
-	music_player	: undefined,
-	sfx_player		: undefined,
+	music		: undefined,
+	sfx			: undefined,
 	layer		: undefined,
 	user_status	: undefined,
 	life		: undefined,
@@ -112,8 +112,7 @@ ui = {
 		}
 		
 		
-		audio.change_file("sfx", "OOT_PauseMenu_Cursor.ogg");
-		audio.play_pause("sfx");
+		audio.play_sfx("OOT_PauseMenu_Cursor");
 		
 		return;
 	},

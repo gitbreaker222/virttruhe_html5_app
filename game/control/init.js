@@ -4,9 +4,9 @@ function init(){
 	/*
 	 * create jQuery objects
 	 */
-	ui.layer 		= $("#layer");
 	ui.music		= $("#music_player"),
 	ui.sfx			= $("#sfx_player"),
+	ui.layer 		= $("#layer");
 	ui.user_stats	= $("#user_stats_display"),
 	ui.life			= $("#life_counter"),
 	ui.keys			= $("#keys_counter"),
