@@ -68,6 +68,7 @@ ui = {
 		var node;
 		var node2;
 		var node3;
+		var node_label;
 		
 		content.empty();
 		
@@ -87,6 +88,14 @@ ui = {
 			node3.setAttribute("onclick", "inventory.select('"+ current_item_id +"')");
 			
 			node2.appendChild(node3);
+			
+			if(items[current_item_id].stackable){
+				node_label = document.createElement("SPAN");
+				node_label.setAttribute("class", "label");
+				node_label.innerHTML = items[current_item_id].count;
+				
+				node2.appendChild(node_label);
+			}
 			
 			node.appendChild(node2);
 			
