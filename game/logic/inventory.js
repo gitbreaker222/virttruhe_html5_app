@@ -5,39 +5,62 @@ inventory = {
 	
 	
 	add		: function (item) {
-					/*
-					 * validation
-					 */
-					if(item == undefined){
-						message.print("cannot add nothing to inventory");
-						return;
-					}
-					//check if item exists in loaded item_set
-					if(items[item] == undefined){
-						message.print("item not in list: " + item);
-						return;
-					}
-					
-					//check if stackable
-					if(items[item].stackable){
-						//stackable
-						message.print("stackable");
-						//check if exists
-						//if()
-						
-						
+		/*
+		 * validation
+		 */
+		if(item == undefined){
+			message.print("cannot add nothing to inventory");
+			return;
+		}
+		//check if item exists in loaded item_set
+		if(items[item] == undefined){
+			message.print("item not in list: " + item);
+			return;
+		}
+		
+		//check if stackable
+		if(items[item].stackable){
+			//stackable
+			message.print("stackable");
+			
+			
+			
+					//check if already exists					//TODO make this elegant
+					if(this.item_list.indexOf(item) == -1){
+						//no -> add counter
+						items[item].count = 1;
+						//...and write to list
+						this.item_list.push(item);
 					}else{
-						//not stackable
-						message.print("not stackable");
-						
+						//yes -> counter +1
+						items[item].count += 1;
 					}
-					this.item_list.push(item);
-					
-					
-					//event trigger
-					ui.update_items();
-					return;
-				},
+			
+			
+		}else{
+			//not stackable
+			message.print("not stackable");
+			
+			
+					//check if already exists					//TODO make this elegant (dry)
+					if(this.item_list.indexOf(item) == -1){
+						//no -> write to list
+						this.item_list.push(item);
+					}else{
+						//yes -> skip
+						message.print(item + " already in inventory");
+					}
+			
+			
+			
+		}
+		
+		
+		
+		//event trigger
+		ui.update_items();
+		return;
+	},
 	
 	
 	remove	: function (item) {
