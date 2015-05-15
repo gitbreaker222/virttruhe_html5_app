@@ -30,8 +30,6 @@ function btn_scan(){
 				system_status.change_state("scan");
 				break;
 		}
-	
-	
 }
 
 
@@ -70,7 +68,7 @@ function btn_share(){
 
 function btn_delete(){
 	console.log("pressed delete button");
-	
+	inventory.remove(inventory.selected);
 }
 
 

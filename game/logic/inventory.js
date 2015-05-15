@@ -41,26 +41,31 @@ inventory = {
 	
 	
 	remove	: function (item) {
+					var list = this.item_list;
+					var pos = list.indexOf(item); 
 					/*
 					 * validation
 					 */
-					if(this.item_list[item] == undefined){
+					if(pos == -1){
 						console.log(item + " not in inventory");
 						return;
 					}
 					
 					//check if stackable
-					if(this.item_list[item].count){
+					if(items[item].stackable){
 						//check if only one left
-						if(this.item_list[item].count == 1){
+						if(items[item].count == 1){
 							//delete from list
+							list.splice(pos, 1);
 						}
+						items[item].count--;	
 					}
 					
-					this.item_list[item].count--;				
+					list.splice(pos, 1);
 					
-					return(this.item_list);
 					
+					//event trigger
+					ui.update_items();
 				},
 	
 	
