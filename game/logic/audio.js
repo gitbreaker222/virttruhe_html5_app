@@ -18,6 +18,7 @@ audio = {
 	play_sfx		: function (file){
 		//load file, if not already loaded
 		if(this.sfx != file){
+			console.log("change file " + file );
 			this.change_file("sfx", file);
 		}else{
 			//else, reset time marker
@@ -42,6 +43,8 @@ audio = {
 		
 		ui[track].append(source_ogg);
 		ui[track].append(source_mp3);
+		
+		ui[track][0].load();
 		
 		this[track] = file;
 	},
