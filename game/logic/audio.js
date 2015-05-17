@@ -48,6 +48,28 @@ audio = {
 		this[track] = file;
 	},
 	
+	mute_music		: function(){
+		if(settings.music){
+			ui.music[0].muted = true;
+			settings.music = false;
+		}else{
+			ui.music[0].muted = false;
+			settings.music = true;
+		}
+		
+	},
+	
+	mute_sfx		: function(){
+		if(settings.sfx){
+			settings.sfx = false;
+			ui.sfx[0].muted = true;
+		}else{
+			settings.sfx = true;
+			ui.sfx[0].muted = false;
+		}
+		
+	}
+	
 };
 
 

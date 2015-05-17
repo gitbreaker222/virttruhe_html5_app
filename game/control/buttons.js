@@ -85,9 +85,11 @@ function switch_mute_music(){
 
 function switch_mute_sfx(){
 	if(settings.music){
-		settings.sfx = false;
+		settings.sfx = false; //maybe make as an audio event
+		audio.mute_music();
 	}else{
 		settings.sfx = true;
+		audio.mute_sfx();
 	}
 }
 
@@ -99,7 +101,21 @@ function switch_photo_scanner(){
 	}
 }
 
+function btn_save(){
+	//choose destination on file system
+	
+	//destination file content = JSON.stringify settings + items + inventory.item_list + user_stats
+}
 
+function btn_load(){
+	//chhose file to load
+	
+	//check if it is JSON
+	
+	//settings = load.settings
+	//audio.mute_music apply
+	//audio.mute_sfx apply
+}
 
 
 
