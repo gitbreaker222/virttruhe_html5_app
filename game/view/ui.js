@@ -93,12 +93,15 @@ ui = {
 			content.append(node);
 			
 			}
+			
+		this.item_title.html("Inventory");
 	},
 	
 	
 	select				: function(item){
 		var old 			= $("#items .selected");
 		var selected 		= $("#" + item);
+		var name			= items[item].name;
 		
 		try{
 			old.removeClass("selected");
@@ -107,12 +110,7 @@ ui = {
 		}
 		
 		//show item name at bottom TODO
-		for(i in items){
-			var item = items[i];
-			if (item.id == this.selected){
-				ui.item_title.html(item.name);
-			}
-		}
+		this.item_title.html(name);
 		
 		
 		audio.play_sfx("OOT_PauseMenu_Cursor");

@@ -86,6 +86,8 @@ inventory = {
 					
 					list.splice(pos, 1);
 					
+					inventory.selected = null;
+					
 					
 					//event trigger
 					ui.update_items();
