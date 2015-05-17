@@ -72,10 +72,32 @@ function btn_delete(){
 }
 
 
+/*
+ * PAUSE / SETTINGS BUTTONS
+ */
+function switch_mute_music(){
+	if(settings.music){
+		settings.music = false;
+	}else{
+		settings.music = true;
+	}
+}
 
+function switch_mute_sfx(){
+	if(settings.music){
+		settings.sfx = false;
+	}else{
+		settings.sfx = true;
+	}
+}
 
-
-
+function switch_photo_scanner(){
+	if(settings.music){
+		settings.photo_scanner = false;
+	}else{
+		settings.photo_scanner = true;
+	}
+}
 
 
 

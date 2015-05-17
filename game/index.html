@@ -101,7 +101,7 @@
 	  	<nav id="header" class="top-bar" data-topbar role="navigation">
 		  <ul class="title-area">
 		    <li class="name">
-		      <h1 id="layer">layer of the player yes: first chapter</h1>
+		      <h1 id="layer">layer of the player </h1>
 		    </li>
 		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 		    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -191,21 +191,36 @@
 			
 			<!-- pause / settings------------------------------------------- -->
 			<div id="pause" class="large-12 columns hide">
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
-				<p>pause</p><br />
+				<h2>Settings</h2>
+				
+				<table>
+					<tbody>
+						<tr>
+							<td>Mute music</td>
+							<td><div class="switch">
+								<input id="switch_mute_music" type="checkbox">
+								<label for="switch_mute_music" onclick="switch_mute_music()"></label>
+							</div></td>
+						</tr>
+						<tr>
+							<td>mute effects</td>
+							<td><div class="switch">
+							  <input id="switch_mute_sfx" type="checkbox">
+							  <label for="switch_mute_sfx" onclick="switch_mute_sfx()"></label>
+							</div></td>
+						</tr>
+						<tr>
+							<td>use photo scanner</td>
+							<td><div class="switch">
+							  <input id="switch_photo_scanner" type="checkbox">
+							  <label for="switch_photo_scanner" onclick="switch_photo_scanner()"></label>
+							</div></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<button>save game</button>
+				<button>load game</button>
 			</div>
 	    	
 	    </div>

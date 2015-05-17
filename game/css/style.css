@@ -31,7 +31,7 @@ audio{
 /* USER STATS DISPLAY------------*/
 
 #user_stats_display img{
-	max-width: 1.5em;
+	max-width: 1.1rem;
 }
 
 #rupee_counter{
@@ -56,7 +56,11 @@ audio{
 }
 
 #footer{
-	/*height: 40px;
+	/*height: 40px;*/
+}
+	
+#pause table{
+	width: 100%;
 }
 
 
