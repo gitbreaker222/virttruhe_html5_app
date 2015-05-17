@@ -76,25 +76,15 @@ function btn_delete(){
  * PAUSE / SETTINGS BUTTONS
  */
 function switch_mute_music(){
-	if(settings.music){
-		settings.music = false;
-	}else{
-		settings.music = true;
-	}
+	audio.mute_music();
 }
 
 function switch_mute_sfx(){
-	if(settings.music){
-		settings.sfx = false; //maybe make as an audio event
-		audio.mute_music();
-	}else{
-		settings.sfx = true;
-		audio.mute_sfx();
-	}
+	audio.mute_sfx();
 }
 
 function switch_photo_scanner(){
-	if(settings.music){
+	if(settings.photo_scanner){
 		settings.photo_scanner = false;
 	}else{
 		settings.photo_scanner = true;
