@@ -24,12 +24,39 @@ system_status = {
 		
 		console.log("state changed to " + this.state);
 		
-		//load state characteristics
+		//unload current state characteristics
+		switch(this.prev_state1){
+			case "inventory" :
+				break;
+				
+			case "scan" :
+				scan.stop();
+				break;
+				
+			case "title" :
+				break;
+				
+			case "pause" :
+				audio.play_sfx("OOT_PauseMenu_Close");
+				if(ui.music[0].paused){
+					audio.play_pause();
+				}
+				
+				break;
+				
+			case "new_item" :
+				break;
+				
+			case "portal" :
+				break;
+				
+			default :
+				break;
+		}
+		
+		//load next state characteristics
 		switch(next_state){
 			case "inventory" :
-				if(this.prev_state1 == "scan"){
-					scan.stop();
-				}
 				break;
 				
 			case "scan" :
@@ -40,9 +67,10 @@ system_status = {
 				break;
 				
 			case "pause" :
-				if(this.prev_state1 == "scan"){
-						scan.stop();
-					}
+				if(ui.music[0].paused == false){
+					audio.play_pause();
+				}
+				audio.play_sfx("OOT_PauseMenu_Open");
 				break;
 				
 			case "new_item" :

@@ -44,10 +44,10 @@ function btn_pause(){
 	
 	if(state != "pause"){
 		system_status.change_state("pause");
-		audio.play_sfx("OOT_PauseMenu_Open");
+		//audio.play_sfx("OOT_PauseMenu_Open");
 	}else{
 		system_status.change_state(prev_state1);
-		audio.play_sfx("OOT_PauseMenu_Close");
+		//audio.play_sfx("OOT_PauseMenu_Close");
 	}
 }
 
