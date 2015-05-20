@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" >
-	<!-- VCLSD-Pattern: VIEW -->
 	<head>
 		<meta charset="utf-8">
 
@@ -94,53 +93,38 @@
 
 
 	<body>
-	
-	  <!------------------------------------ header 1 -->
-	  	
-	  	<div class="fixed">
-	  	<nav id="header" class="top-bar" data-topbar role="navigation">
-		  <ul class="title-area">
-		    <li class="name">
-		      <h1 id="layer">layer of the player </h1>
-		    </li>
-		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-		    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-		  </ul>
-		
-		  <section class="top-bar-section">
-		    <!-- Right Nav Section -->
-		    <ul class="right">
-		      <li >
-		      	<a class="item" onclick="btn_scan()">
-		      		<i class="fi-video icon"></i>
-				</a>
-			  </li>
-			  <li >
-		      	<a class="item" onclick="btn_pause()">
-		      		<i class="fi-list icon"></i>
-				</a>
-			  </li>
-		      
-		    </ul>
-		  </section>
-		</nav>
-		
-		<!------------------------------------ header 2 -->
-	  	<div id="user_stats_display" class="dark row">
+		<div id="header" class="row fixed">
+			
+			<!------------------------------------ header 1 -->
 	  		<div class="small-8 columns">
-	  			<img src="data/img/icons/heart.svg" class=""/>
-	  			<img src="data/img/icons/heart.svg" class=""/>
-	  			<img src="data/img/icons/heart.svg" class=""/>
+	  			<h1 id="layer">layer of the player </h1>
 	  		</div>
 	  		<div class="small-2 columns">
-	  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
+	  			<button onclick="btn_scan()">
+					<img src="lib/foundation-5.5.1.custom/img/icons/fi-video.svg"/>
+				</button>
 	  		</div>
 	  		<div class="small-2 columns">
-	  			<img src="data/img/icons/rupee.svg" class="" />
+	  			<button onclick="btn_pause()">
+					<img src="lib/foundation-5.5.1.custom/img/icons/fi-list.svg"/img>
+				</button>
 	  		</div>
-	  	</div>
-	    
-		
+	  		
+	  		<!------------------------------------ header 2 -->
+	  		<div id="user_stats_display" class="row">
+		  		<div class="small-8 columns">
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  		</div>
+		  		<div class="small-2 columns">
+		  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
+		  		</div>
+		  		<div class="small-2 columns">
+		  			<img src="data/img/icons/rupee.svg" class="" />
+		  		</div>
+		  		
+		  	</div>
 		</div>
 		
 		
@@ -154,31 +138,24 @@
 		
 		
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
-		<div id="content" class="row">
-	    	<div id="inventory" class="small-12 columns">
+		<div id="content">
+	    	<div id="inventory" class="row">
 	    		
 	    		<!-- INVENTORY-------------------------------------------------- -->
-	    		<div class="row">
-	    			<div class="small-12 columns">
-	    				<ul id="items">	</ul>
-	    				<span class="clear"></span>
-	    			</div>
-	    		</div>
-				
+	    		
+				<div class="small-12 columns clearfix">
+					<ul id="items" class="clearfix">	</ul>
+				</div>
+	    		
+				<span class="clearfix clear"></span>
 				
 	    		<div class="row bottom">
-	    			<div id="item_title" class="small-6 columns">item title goes here</div>
+	    			<div id="item_title" class="small-6 columns">
+	    				item title goes here
+	    			</div>
 	    			
-	    			<div class="small-6 colums">
-    					<button class="icon" onclick="btn_use()">
-							<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/>
-						</button>
-						<button class="icon" onclick="btn_share()">
-							<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/>
-						</button>
-						<button class="icon" onclick="btn_delete()">
-							<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/>
-						</button>
+	    			<div id="item_interaction" class="small-6 columns">
+						buttons
 	    			</div>
 	    			
 	    		</div>
@@ -188,48 +165,50 @@
 			
 			
 			<!-- SCANNER -------------------------------------------------- -->
-			<div id="scan" class="large-12 columns hide">
-				<div id="reader"></div>
-				
-				
+			<div id="scan" class="row hide">
+				<div class="small-12 columns">
+					<div id="reader"></div>
+				</div>
 			</div>
 			
 			
 			
 			<!-- pause / settings------------------------------------------- -->
-			<div id="pause" class="large-12 columns hide">
-				<h2>Settings</h2>
-				
-				<table>
-					<tbody>
-						<tr>
-							<td>Mute music</td>
-							<td><div class="switch">
-								<input id="switch_mute_music" type="checkbox">
-								<label for="switch_mute_music" onclick="switch_mute_music()"></label>
-							</div></td>
-						</tr>
-						<tr>
-							<td>mute effects</td>
-							<td><div class="switch">
-							  <input id="switch_mute_sfx" type="checkbox">
-							  <label for="switch_mute_sfx" onclick="switch_mute_sfx()"></label>
-							</div></td>
-						</tr>
-						<tr>
-							<td>use photo scanner</td>
-							<td><div class="switch">
-							  <input id="switch_photo_scanner" type="checkbox">
-							  <label for="switch_photo_scanner" onclick="switch_photo_scanner()"></label>
-							</div></td>
-						</tr>
-					</tbody>
-				</table>
-				
-				<button>save game</button>
-				<button>load game</button>
+			<div id="pause" class="row hide">
+				<div class="small-12 columns">
+					<h2>Settings</h2>
+					
+					<table>
+						<tbody>
+							<tr>
+								<td>Mute music</td>
+								<td><div class="switch">
+									<input id="switch_mute_music" type="checkbox">
+									<label for="switch_mute_music" onclick="switch_mute_music()"></label>
+								</div></td>
+							</tr>
+							<tr>
+								<td>mute effects</td>
+								<td><div class="switch">
+								  <input id="switch_mute_sfx" type="checkbox">
+								  <label for="switch_mute_sfx" onclick="switch_mute_sfx()"></label>
+								</div></td>
+							</tr>
+							<tr>
+								<td>use photo scanner</td>
+								<td><div class="switch">
+								  <input id="switch_photo_scanner" type="checkbox">
+								  <label for="switch_photo_scanner" onclick="switch_photo_scanner()"></label>
+								</div></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<button>save game</button>
+					<button>load game</button>
+				</div>
 			</div>
-	    	
+    	
 	    </div>
 	    
 	    
