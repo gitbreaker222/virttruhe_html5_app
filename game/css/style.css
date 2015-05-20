@@ -6,6 +6,20 @@ audio{
 	display: none;
 }
 
+ .icon{
+	height: 2.9rem;
+	padding: 0rem;
+}
+
+a .icon:active{
+	box-shadow: 0px 5px 12px #333 inset;
+	background-color: #f15;
+}
+
+.clear{
+	clear: both;
+}
+
 /* HEADER ------------*/
 #header .icon{
 	font-size: 2em;
@@ -57,6 +71,11 @@ audio{
 
 #footer{
 	/*height: 40px;*/
+}
+
+#reader{
+	width: 300px;
+	height: 250px
 }
 	
 #pause table{

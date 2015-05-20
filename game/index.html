@@ -155,24 +155,30 @@
 		
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
 		<div id="content" class="row">
-	    	<div id="inventory" class="large-12 columns">
+	    	<div id="inventory" class="small-12 columns">
 	    		
 	    		<!-- INVENTORY-------------------------------------------------- -->
-				<ul id="items">	</ul>
+	    		<div class="row">
+	    			<div class="small-12 columns">
+	    				<ul id="items">	</ul>
+	    				<span class="clear"></span>
+	    			</div>
+	    		</div>
 				
-	    		<div class="row fixed-bottom">
+				
+	    		<div class="row bottom">
 	    			<div id="item_title" class="small-6 columns">item title goes here</div>
 	    			
 	    			<div class="small-6 colums">
-	    				<a class="button" onclick="btn_use()">
-							<i class="fi-hand-take"></i>
-						</a>
-						<a class="item" onclick="btn_share()">
-							<i class="fi-share"></i>
-						</a>
-						<a class="item" onclick="btn_delete()">
-							<i class="fi-trash"></i>
-						</a>
+    					<button class="icon" onclick="btn_use()">
+							<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/>
+						</button>
+						<button class="icon" onclick="btn_share()">
+							<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/>
+						</button>
+						<button class="icon" onclick="btn_delete()">
+							<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/>
+						</button>
 	    			</div>
 	    			
 	    		</div>
@@ -183,7 +189,7 @@
 			
 			<!-- SCANNER -------------------------------------------------- -->
 			<div id="scan" class="large-12 columns hide">
-				<div id="reader" style="width: 300px; height: 250px"></div>
+				<div id="reader"></div>
 				
 				
 			</div>
