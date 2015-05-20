@@ -1,14 +1,29 @@
 body{
 	background-color: #111;
+	color: #DDD;
 }
 
 audio{
 	display: none;
 }
 
- .icon{
-	height: 2.9rem;
-	padding: 0rem;
+.dark {
+	color: white;
+	background-color: #333333;
+}
+
+.light{
+	color: #333;
+	background-color: #DDD;
+}
+
+.icon, .icon img{
+	padding: 0;
+	height: 2em;
+	margin: 0px; 
+}
+button .icon{
+	width: 4em;
 }
 
 .icon:active{
@@ -24,40 +39,27 @@ audio{
 #header{
 	background-color: #DDD;
 }
-
 #header .row{
 	height: 2rem;
 }
 
-#header button, #header img{
-	padding: 0 10px;
-	height: 2em;
-	margin: 0; 
-}
-
-#user_stats_display .icon{
-	font-size: 1.5em;
-	fill: #FFFFFF;
+/* USER STATS DISPLAY------------*/
+#user_stats_display, #user_stats_display img{
+	height: 1em;
+	font-size: 1em;
 }
 
 #layer{
 	font-size: 1em;
-	color: white;
 	padding:0em 1em;
 	overflow: auto;
 }
-
 
 /* TITLE SCREEN------------*/
 #title{
 	color: black;
 }
 
-/* USER STATS DISPLAY------------*/
-
-#user_stats_display img{
-	max-width: 1.1rem;
-}
 
 #rupee_counter{
 	color: green;	
@@ -101,5 +103,6 @@ audio{
 #pause table{
 	width: 100%;
 }
+
 
 

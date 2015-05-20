@@ -92,20 +92,20 @@
 
 
 
-	<body>
+	<body class="dark">
 		<div id="header" class="row fixed">
 			
 			<!------------------------------------ header 1 -->
-	  		<div class="small-8 columns">
-	  			<h1 id="layer">layer of the player </h1>
+	  		<div class="small-7 columns">
+	  			<h1 id="layer">layer of the player layer of the player </h1>
 	  		</div>
 	  		<div class="small-2 columns">
-	  			<button onclick="btn_scan()">
+	  			<button class="icon" onclick="btn_scan()">
 					<img src="lib/foundation-5.5.1.custom/img/icons/fi-video.svg"/>
 				</button>
 	  		</div>
 	  		<div class="small-2 columns">
-	  			<button onclick="btn_pause()">
+	  			<button class="icon" onclick="btn_pause()">
 					<img src="lib/foundation-5.5.1.custom/img/icons/fi-list.svg"/img>
 				</button>
 	  		</div>
@@ -149,13 +149,23 @@
 	    		
 				<span class="clearfix clear"></span>
 				
-	    		<div class="row bottom">
+	    		<div class="light row bottom">
 	    			<div id="item_title" class="small-6 columns">
 	    				item title goes here
 	    			</div>
 	    			
 	    			<div id="item_interaction" class="small-6 columns">
-						buttons
+						
+		  			<button class="icon" onclick="btn_use()">
+						<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/>
+					</button>
+		  			<button class="icon" onclick="btn_share()">
+						<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
+					</button>
+					<button class="icon" onclick="btn_delete()">
+						<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
+					</button>
+				  		
 	    			</div>
 	    			
 	    		</div>
