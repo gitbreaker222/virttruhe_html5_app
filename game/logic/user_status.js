@@ -1,6 +1,6 @@
 user_status = {
 	
-	hearts				: 2, // the players/users health bar
+	hearts				: 3, // the players health bar
 	
 	keys				: 0, // keys are used to unlock portals or chests that are locked
 	

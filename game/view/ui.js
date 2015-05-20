@@ -3,8 +3,8 @@ ui = {
 	music		: undefined,
 	sfx			: undefined,
 	layer		: undefined,
-	user_status	: undefined,
-	life		: undefined,
+	user_status	: undefined, //TODO and remove?
+	hearts		: undefined,
 	keys		: undefined,
 	rupees		: undefined,
 	item_title	: undefined,
@@ -130,7 +130,14 @@ ui = {
 	/*
 	 * USER STATS
 	 */
+	update_layer		: function(){
+		this.layer.html(system_status.layer);
+	},
 	
+	update_user_stats	: function(){
+		//reset
+		//this.hearts.html ...
+	}
 	
 	
 	

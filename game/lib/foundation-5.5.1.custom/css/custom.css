@@ -197,3 +197,9 @@
 .icon-bar > img{
 	height: 100%;
 }
+
+.label{
+  padding: 0.1rem;
+  right: -1.3rem;
+  bottom: 1rem;
+}

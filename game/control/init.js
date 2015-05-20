@@ -8,7 +8,7 @@ function init(){
 	ui.sfx			= $("#sfx_player"),
 	ui.layer 		= $("#layer");
 	ui.user_stats	= $("#user_stats_display"),
-	ui.life			= $("#life_counter"),
+	ui.hearts		= $("#hearts"),
 	ui.keys			= $("#keys_counter"),
 	ui.rupees		= $("#rupee_counter"),
 	ui.item_title	= $("#item_title"),
