@@ -4,10 +4,18 @@ system_status = {
 	prev_state1	: undefined,
 	prev_state2	: undefined,
 	
-	layer		: "reality", //the virtual layer, e.g. "Reality" or "Kokiri Forest"
+	layer		: "Reality", //the virtual layer, e.g. "Reality" or "Kokiri Forest"
+	setLayer	: function(x){
+		this.layer = x;
+		//event
+		ui.change_layer(x);
+	},
 	
 	
 	
+	/*
+	 * METHODS
+	 */
 	change_state	: function(next_state){
 		if(this.state == "pause" && next_state == "scan"){
 			this.state = next_state;
@@ -92,6 +100,13 @@ system_status = {
 		ui.update_state();
 		
 		//TODO create layer characteristics (ui color, sounds, portals/items);
+		
+	},
+	
+	
+	
+	change_layer	: function(layer){
+		this.setLayer(layer);
 		
 	},
 	

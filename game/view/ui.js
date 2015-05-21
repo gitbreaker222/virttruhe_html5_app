@@ -64,6 +64,13 @@ ui = {
 	
 	
 	/*
+	 * LAYER
+	 */
+	change_layer(layer){
+		this.layer.html(layer);
+	},
+	
+	/*
 	 * INVENTORY
 	 */
 	update_items		: function(){
