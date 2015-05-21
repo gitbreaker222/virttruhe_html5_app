@@ -93,7 +93,7 @@ audio = {
 			audio.music = next_track;
 			
 			//play it
-			next_player[0].play();
+			if(settings.music){next_player[0].play();}
 		}
 		return;	
 	},

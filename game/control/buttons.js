@@ -56,8 +56,7 @@ function btn_pause(){
  * INVENTORY BUTTONS
  */
 function btn_use(){
-	console.log("pressed use button");
-	
+	items[inventory.selected].use();
 }
 
 
@@ -67,7 +66,6 @@ function btn_share(){
 }
 
 function btn_delete(){
-	console.log("pressed delete button");
 	inventory.remove(inventory.selected);
 }
 

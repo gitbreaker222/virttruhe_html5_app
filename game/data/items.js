@@ -5,7 +5,9 @@ var items = {
 			image		: "data/img/items/small/manual.png",
 			icon		: "data/img/items/small/manual.png",
 			stackable	: false,
-			use			: read,
+			use			: function(){
+				message.print("read manual");
+			},
 		},
 		arrows : {
 			id			: "arrows",
@@ -45,7 +47,9 @@ var items = {
 			image		: "data/img/items/small/deku_shield.png",
 			icon		: "data/img/items/small/deku_shield.png",
 			stackable	: false,
-			use			: use_fn,
+			use			: function(){
+				system_status.change_layer("shop");
+				},
 		},
 		deku_sword : {
 			id			: "deku_sword",
@@ -159,10 +163,12 @@ var items = {
 			stackable	: false,
 			use			: use_fn,
 		},
+		
+		
+		
+	
 };
 
 function use_fn(){
 	console.log("use");
 }
-
-function read(){message.print("read manual");}
