@@ -29,9 +29,14 @@ audio = {
 	},
 	
 	play		: function(){
-		if(audio.music != null){
-			$("#"+audio.music)[0].play();
-		};
+		//if music enabled by user
+		if(settings.music){
+			//if music defined by current layer
+			if(audio.music != null){
+				$("#"+audio.music)[0].play();
+			};
+		}
+			
 	},
 	
 	pause		: function(){

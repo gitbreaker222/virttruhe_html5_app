@@ -76,7 +76,12 @@ function btn_delete(){
  * PAUSE / SETTINGS BUTTONS
  */
 function switch_mute_music(){
-	audio.mute_music();
+	if(settings.music){
+		settings.music = false;
+	}else{
+		settings.music = true;
+	}
+	
 }
 
 function switch_mute_sfx(){
