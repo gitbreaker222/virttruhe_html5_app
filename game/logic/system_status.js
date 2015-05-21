@@ -45,9 +45,8 @@ system_status = {
 				
 			case "pause" :
 				audio.play_sfx("OOT_PauseMenu_Close");
-				if($("#"+audio.music)[0].paused){
-					audio.play_pause();
-				}
+				audio.play();
+				
 				//activate scan button
 				ui.btn_scan.removeClass("disabled");
 				break;
@@ -78,9 +77,7 @@ system_status = {
 				break;
 				
 			case "pause" :
-				if(ui.music[0].paused == false){
-					audio.play_pause();
-				}
+				audio.pause();
 				audio.play_sfx("OOT_PauseMenu_Open");
 				//disable scan button
 				ui.btn_scan.addClass("disabled");

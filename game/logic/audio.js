@@ -28,6 +28,20 @@ audio = {
 		}
 	},
 	
+	play		: function(){
+		console.log("A.m. = " + audio.music);
+		if(audio.music != null){
+			$("#"+audio.music)[0].play();
+		};
+	},
+	
+	pause		: function(){
+		console.log("a.m. = " + audio.music);
+		if(audio.music){
+			$("#"+audio.music)[0].pause();
+		};
+	},
+	
 	play_sfx		: function (file){
 		//load file, if not already loaded
 		if(this.sfx != file){

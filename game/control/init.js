@@ -26,7 +26,7 @@ function init(){
 	console.log("change status to inventory");
 	//data.set_status("inventory");
 	system_status.change_state("inventory");
-	system_status.change_layer("reality");
+	system_status.change_layer("shop");
 	
 	
 	function load_items(){

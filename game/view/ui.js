@@ -66,7 +66,7 @@ ui = {
 	/*
 	 * LAYER
 	 */
-	change_layer(layer){
+	change_layer		: function(layer){
 		this.layer.html(layer);
 	},
 	
