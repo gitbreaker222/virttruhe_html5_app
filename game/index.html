@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" >
-	<!-- VCLSD-Pattern: VIEW -->
 	<head>
 		<meta charset="utf-8">
 
@@ -18,7 +17,8 @@
 
 		<!-- Sets initial viewport load and disables zooming. Essential for foundation framework -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<link rel="shortcut icon" href="/favicon.png">
+
+		<link rel="shortcut icon" href="favicon.png">
 		
 		
 		
@@ -64,9 +64,11 @@
 		<!-- custom style sheet -->
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="data/settings.js"></script>
-			<!-- <script src="data/html_objects.js"></script> -->
+			
 		<!-- item collection -->
 		<script src="data/items.js"></script>
+		<script src="data/layers.js"></script>
+		<script src="data/item-map.js"></script>
 		
 		<!-- --- LOGIC ------------------------>
 		<script src="logic/audio.js"></script>
@@ -91,109 +93,162 @@
 
 
 
-
-	<body>
-	
-	  <!------------------------------------ header 1 -->
-	  	
-	  	<div class="fixed">
-	  	<nav id="header" class="top-bar" data-topbar role="navigation">
-		  <ul class="title-area">
-		    <li class="name">
-		      <h1 id="layer">layer of the player yes: first chapter</h1>
-		    </li>
-		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-		    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-		  </ul>
-		
-		  <section class="top-bar-section">
-		    <!-- Right Nav Section -->
-		    <ul class="right">
-		      <li >
-		      	<a class="item" onclick="btn_scan()">
-		      		<i class="fi-video icon"></i>
-				</a>
-			  </li>
-			  <li >
-		      	<a class="item" onclick="btn_options()">
-		      		<i class="fi-list icon"></i>
-				</a>
-			  </li>
-		      
-		    </ul>
-		  </section>
-		</nav>
-		
-		<!------------------------------------ header 2 -->
-	  	<div id="user_stats_display" class="dark row">
-	  		<div class="small-8 columns">
-	  			<img src="data/img/icons/heart.svg" class=""/>
-	  			<img src="data/img/icons/heart.svg" class=""/>
-	  			<img src="data/img/icons/heart.svg" class=""/>
-	  		</div>
-	  		<div class="small-2 columns">
-	  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
-	  		</div>
-	  		<div class="small-2 columns">
-	  			<img src="data/img/icons/rupee.svg" class="" />
-	  		</div>
-	  	</div>
-	    
-		
-		</div>
-		
+	<body class="dark">
 		
 		<!-- THE HIDDEN AUDIO PLAYERS. ONE FOR EACH TRACK (like: music, sfx) -->
 		<audio id="music_player" loop></audio>
+		<audio id="m01" preload loop>
+			<source src="data/audio/The Legend of Zelda - Kokiri Woods.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m02" preload loop>
+			<source src="data/audio/Zelda - Laden.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m03" preload loop>
+			<source src="data/audio/The Legend of Zelda - Gerudo Valley.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m04" preload loop>
+			<source src="data/audio/The Legend of Zelda - Spirit Temple.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m05" preload loop>
+			<source src="data/audio/The Legend of Zelda - Kotake and Koume.mp3" type="audio/mpeg"></source>
+		</audio>
+		
 		<audio id="sfx_player"></audio>
 		
+		
+		
+		
+		<div id="header" class="row fixed">
+			
+			<!------------------------------------ header 1 -->
+	  		<div class="small-8 columns">
+	  			<h1 id="layer">layer of the player layer of the player </h1>
+	  		</div>
+	  		<div class="small-4 columns no-padding">
+	  			<div class="icon-bar two-up">
+	  				<a id="btn_scan" class="item" onclick="btn_scan()">
+		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-video.svg"/img>
+		  			</a>
+		  			<a id="btn_pause" class="item" onclick="btn_pause()">
+		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-list.svg"/img>
+		  			</a>
+	  			</div>
+		  	</div>
+	  		
+	  		<!------------------------------------ header 2 -->
+	  		<div id="user_stats_display" class="row">
+		  		<div class="small-8 columns">
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  		</div>
+		  		<div class="small-2 columns">
+		  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
+		  		</div>
+		  		<div class="small-2 columns">
+		  			<img src="data/img/icons/rupee.svg"/>
+		  		</div>
+		  		
+		  	</div>
+		</div>
 		
 		
 		
 		
 		
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
-		<div id="content" class="row">
-	    	<div id="inventory" class="large-12 columns">
-	    		<!-- INVENTORY-------------------------------------------------- -->
-			
-				<ul id="items">
-					
-				</ul>
-				
+		<div id="content">
+	    	<div id="inventory" class="row">
 	    		
-	    		<div id="footer" class="fixed-bottom icon-bar three-up">
-	    			<a class="item" onclick="btn_use()">
-	    				<img src="lib/foundation-5.5.1.custom/img/icons/fi-home.svg" >
-	    			</a>
-					<a class="item" onclick="btn_share()">
-	    				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg" >
-	    			</a>
-	    			<a class="item" onclick="btn_delete()">
-	    				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg" >
-	    			</a>
+	    		<!-- INVENTORY-------------------------------------------------- -->
+	    		
+				<div class="small-12 columns clearfix">
+					<ul id="items" class="clearfix">	</ul>
+				</div>
+	    		
+				<span class="clearfix clear"></span>
+				
+	    		<div class="light row bottom">
+	    			<div id="item_title" class="small-6 columns">
+	    				item title goes here
+	    			</div>
+	    			<div class="small-6 columns no-padding">
+	    				<div class=" icon-bar three-up">
+	    					<a id="btn_use" class="item" onclick="btn_use()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/img>
+				  			</a>
+				  			<a id="btn_share" class="item" onclick="btn_share()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
+				  			</a>
+				  			<a href="#dialog" id="btn_delete" class="item" on>
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
+				  			</a>
+	    				</div>
+			  		</div>
+			  		
+	    			
+	    			
 	    		</div>
-			
 			</div>
 			
 			
 			
 			
 			<!-- SCANNER -------------------------------------------------- -->
-			<div id="scan" class="large-12 columns hide">
-				<div id="reader" style="width: 300px; height: 250px"></div>
-				
-				
+			<div id="scan" class="row hide">
+				<div class="small-12 columns">
+					<div id="reader"></div>
+				</div>
+			</div>
+			
+			
+			<!-- PAUSE / SETTINGS ------------------------------------------- -->
+			<div id="pause" class="row hide">
+				<div class="small-12 columns">
+					<h2>Settings</h2>
+					
+					<table>
+						<tbody>
+							<tr>
+								<td>Mute music</td>
+								<td><div class="switch">
+									<input id="switch_mute_music" type="checkbox">
+									<label for="switch_mute_music" onclick="switch_mute_music()"></label>
+								</div></td>
+							</tr>
+							<tr>
+								<td>mute effects</td>
+								<td><div class="switch">
+								  <input id="switch_mute_sfx" type="checkbox">
+								  <label for="switch_mute_sfx" onclick="switch_mute_sfx()"></label>
+								</div></td>
+							</tr>
+							<tr>
+								<td>use photo scanner</td>
+								<td><div class="switch">
+								  <input id="switch_photo_scanner" type="checkbox">
+								  <label for="switch_photo_scanner" onclick="switch_photo_scanner()"></label>
+								</div></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<button>save game</button>
+					<button>load game</button>
+				</div>
 			</div>
 			
 			
 			
-			<!-- OPTIONS -------------------------------------------------- -->
-			<div id="options" class="large-12 columns hide">
-				<div id="reader" style="width: 300px; height: 250px"></div>
-				
+			<!-- DIALOG BOX------------------------------------------- -->
+			<div id="dialog" class="panel hide">
+				<p>Do you really want to delete this item?</p>
+				<button class="icon" onclick="btn_delete()">
+				  	<img class="icon" src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
+				</button>
+				<a class="close" aria-label="Close">&#215;</a>
 			</div>
-	    	
+    	
 	    </div>
 	    
 	    

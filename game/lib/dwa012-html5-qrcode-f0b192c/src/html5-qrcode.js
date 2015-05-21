@@ -34,6 +34,7 @@
 		            try {
 		              qrcode.decode();
 		              message.print("QR-Code recognized! Stopping qrscan...");
+		              localMediaStream.stop();
 		              context = null;
 		              return;
 		            } catch(e) {
@@ -45,7 +46,8 @@
 		        	setTimeout(qrscan, 500);
 		        }
         	}else{
-        		message.print("qrscan stopped manually.");
+        		console.log("qrscan stopped manually.");
+        		localMediaStream.stop();
         		return;
         	};
         };//end snapshot function

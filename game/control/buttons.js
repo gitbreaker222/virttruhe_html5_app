@@ -30,14 +30,12 @@ function btn_scan(){
 				system_status.change_state("scan");
 				break;
 		}
-	
-	
 }
 
 
 
-function btn_options(){
-	console.log("pressed pause/options button");
+function btn_pause(){
+	console.log("pressed pause/settings button");
 	
 	//load current state
 	var state = system_status.state;
@@ -46,8 +44,10 @@ function btn_options(){
 	
 	if(state != "pause"){
 		system_status.change_state("pause");
+		//audio.play_sfx("OOT_PauseMenu_Open");
 	}else{
 		system_status.change_state(prev_state1);
+		//audio.play_sfx("OOT_PauseMenu_Close");
 	}
 }
 
@@ -56,8 +56,7 @@ function btn_options(){
  * INVENTORY BUTTONS
  */
 function btn_use(){
-	console.log("pressed use button");
-	
+	items[inventory.selected].use();
 }
 
 
@@ -67,17 +66,49 @@ function btn_share(){
 }
 
 function btn_delete(){
-	console.log("pressed delete button");
-	
+	inventory.remove(inventory.selected);
 }
 
 
+/*
+ * PAUSE / SETTINGS BUTTONS
+ */
+function switch_mute_music(){
+	if(settings.music){
+		settings.music = false;
+	}else{
+		settings.music = true;
+	}
+	
+}
 
+function switch_mute_sfx(){
+	audio.mute_sfx();
+}
 
+function switch_photo_scanner(){
+	if(settings.photo_scanner){
+		settings.photo_scanner = false;
+	}else{
+		settings.photo_scanner = true;
+	}
+}
 
+function btn_save(){
+	//choose destination on file system
+	
+	//destination file content = JSON.stringify settings + items + inventory.item_list + user_stats
+}
 
-
-
+function btn_load(){
+	//chhose file to load
+	
+	//check if it is JSON
+	
+	//settings = load.settings
+	//audio.mute_music apply
+	//audio.mute_sfx apply
+}
 
 
 

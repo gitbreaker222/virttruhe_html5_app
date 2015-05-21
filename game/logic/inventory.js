@@ -1,139 +1,129 @@
 inventory = {
 	item_list		: [],
-	selected			: null,
+	selected		: null,
+	setSelected		: function(x){
+		this.selected = x;
+		//event
+		if(x){
+			ui.select(x);
+		}else{
+			ui.update_items();
+		}
+	},
 	
 	
 	
 	add		: function (item) {
-					/*
-					 * validation
-					 */
-					if(item == undefined){
-						message.print("cannot add nothing to inventory");
-						return;
-					}
-					//check if item exists in loaded item_set
-					if(items[item] == undefined){
-						message.print("item not in list: " + item);
-						return;
-					}
-					
-					//check if stackable
-					if(items[item].stackable){
-						//stackable
-						message.print("stackable");
-						//check if exists
-						//if()
-						
-						
+		/*
+		 * validation
+		 */
+		if(item == undefined){
+			message.print("cannot add nothing to inventory");
+			return;
+		}
+		//check if item exists in loaded item_set
+		if(items[item] == undefined){
+			message.print("item not in list: " + item);
+			return;
+		}
+		
+		//check if stackable
+		if(items[item].stackable){
+			//stackable
+			message.print("stackable");
+			
+			
+			
+					//check if already exists					//TODO make this elegant
+					if(this.item_list.indexOf(item) == -1){
+						//no -> add counter
+						items[item].count = 1;
+						//...and write to list
+						this.item_list.push(item);
 					}else{
-						//not stackable
-						message.print("not stackable");
-						
+						//yes -> counter +1
+						items[item].count += 1;
 					}
-					this.item_list.push(item);
-					
-					return(this.item_list);
-				},
+			
+			
+		}else{
+			//not stackable
+			message.print("not stackable");
+			
+			
+					//check if already exists					//TODO make this elegant (dry)
+					if(this.item_list.indexOf(item) == -1){
+						//no -> write to list
+						this.item_list.push(item);
+					}else{
+						//yes -> skip
+						message.print(item + " already in inventory");
+					}
+			
+			
+			
+		}
+		
+		
+		
+		//event trigger
+		ui.update_items();
+		return;
+	},	
 	
 	
-	removee	: function (item) {
+	remove	: function (item) {
+					var list = this.item_list;
+					var pos = list.indexOf(item); 
 					/*
 					 * validation
 					 */
-					if(this.item_list[item] == undefined){
+					if(pos == -1){
 						console.log(item + " not in inventory");
 						return;
 					}
 					
 					//check if stackable
-					if(this.item_list[item].count){
+					if(items[item].stackable){
 						//check if only one left
-						if(this.item_list[item].count == 1){
+						if(items[item].count == 1){
 							//delete from list
+							list.splice(pos, 1);
+							inventory.selected == null;
 						}
+						items[item].count--;	
+					}else{
+						list.splice(pos, 1);
+						inventory.selected == null;
 					}
 					
-					this.item_list[item].count--;				
 					
-					return(this.item_list);
+					//event trigger
+					ui.update_items();
 					
 				},
 	
 	
 	select	: function (item) {
-					this.selected = item;
+					this.setSelected(item);
 					
 					//event
-					this.ui_select(item);
+					//enable buttons
+					ui.btn_use.removeClass("disabled");
+					ui.btn_share.removeClass("disabled");
+					ui.btn_delete.removeClass("disabled");
 					
 					return;
 			},
 				
 				
 				
-	/*
-	 * VIEW, CREATE jQUERY
-	 */
-	ui_items_update	: function() { //TODO remove
-						console.log("update jquery objects");
-						var item_list = this.item_list;
-						var content = ui.items;
-						var node;
-						var node2;
-						var node3;
-						
-						content.empty();
-						
-						for (i=0; i <  item_list.length; i++){
-							var current_item_id = item_list[i];
-							
-							node = document.createElement("LI");
-							
-							content.append(node);
-							
-							node2 = document.createElement("A");
-							node2.setAttribute("href", "#");
-							
-							node3 = document.createElement("IMG");
-							node3.setAttribute("id", current_item_id);
-							node3.setAttribute("src", items[current_item_id].icon);
-							node3.setAttribute("onclick", "inventory.select('"+ current_item_id +"')");
-							
-							node2.appendChild(node3);
-							
-							node.appendChild(node2);
-							
-							content.append(node);
-							
-				
-						}
-						
-					},
+	unselect : function(){
+		this.setSelected(null);
+	},
 	
-	ui_select	: function(){ //TODO remove
-					var old 			= $("#items .selected");
-					var selected 		= $("#" + this.selected);
-					
-					try{
-						old.removeClass("selected");
-					}finally{
-						selected.addClass("selected");
-					}
-					
-					//show item name at bottom TODO
-					for(i in items){
-						var item = items[i];
-						if (item.id == this.selected){
-							ui.item_title.html(item.name);
-						}
-					}
-					
-					
-					audio.play_sfx("OOT_PauseMenu_Cursor.ogg");
-					
-					return;
-				}
+	
+	
 	
 	
 };

@@ -1,7 +1,7 @@
 ui = {
-	//jQuery objects after init
-	music_player	: undefined,
-	sfx_player		: undefined,
+	//jQuery objects loaded after init fn
+	music		: undefined,
+	sfx			: undefined,
 	layer		: undefined,
 	user_status	: undefined,
 	life		: undefined,
@@ -13,6 +13,11 @@ ui = {
 	scan		: undefined,
 	pause		: undefined,
 	dialog		: undefined,
+	btn_scan	: undefined,
+	btn_pause	: undefined,
+	btn_use		: undefined,
+	btn_share	: undefined,
+	btn_delete	: undefined,
 	
 	
 	
@@ -21,6 +26,7 @@ ui = {
 	 */
 	update_state		: function(){
 		var state = system_status.state;
+		var prev_state = system_status.prev_state1;
 		
 		switch(state){
 			case "title" :
@@ -28,17 +34,19 @@ ui = {
 				break;
 				
 			case "inventory" :
+				this.pause.hide();
 				this.scan.hide();
 				this.inventory.show();
 				break;
 				
 			case "scan" :
-				this.inventory.hide();
+				this[prev_state].hide();
 				this.scan.show();
 				break;
 				
 			case "pause" :
-				
+				this[prev_state].hide();
+				this.pause.show();
 				break;
 				
 			case "new_item" :
@@ -56,6 +64,13 @@ ui = {
 	
 	
 	/*
+	 * LAYER
+	 */
+	change_layer		: function(layer){
+		this.layer.html(layer);
+	},
+	
+	/*
 	 * INVENTORY
 	 */
 	update_items		: function(){
@@ -65,6 +80,7 @@ ui = {
 		var node;
 		var node2;
 		var node3;
+		var node_label;
 		
 		content.empty();
 		
@@ -85,17 +101,35 @@ ui = {
 			
 			node2.appendChild(node3);
 			
+			if(items[current_item_id].stackable){
+				node_label = document.createElement("SPAN");
+				node_label.setAttribute("class", "label");
+				node_label.innerHTML = items[current_item_id].count;
+				
+				node2.appendChild(node_label);
+			}
+			
 			node.appendChild(node2);
 			
 			content.append(node);
 			
 			}
+			
+		this.item_title.html("Inventory");
+		
+		if(inventory.selected == null){
+			//disable buttons
+			ui.btn_use.addClass("disabled");
+			ui.btn_share.addClass("disabled");
+			ui.btn_delete.addClass("disabled");
+		}
 	},
 	
 	
-	select				: function(){
+	select				: function(item){
 		var old 			= $("#items .selected");
-		var selected 		= $("#" + inventory.selected);
+		var selected 		= $("#" + item);
+		var name			= items[item].name;
 		
 		try{
 			old.removeClass("selected");
@@ -104,15 +138,10 @@ ui = {
 		}
 		
 		//show item name at bottom TODO
-		for(i in items){
-			var item = items[i];
-			if (item.id == this.selected){
-				ui.item_title.html(item.name);
-			}
-		}
+		this.item_title.html(name);
 		
 		
-		audio.play_sfx("OOT_PauseMenu_Cursor.ogg");
+		audio.play_sfx("OOT_PauseMenu_Cursor");
 		
 		return;
 	},

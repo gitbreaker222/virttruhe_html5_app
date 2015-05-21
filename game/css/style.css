@@ -1,38 +1,73 @@
 body{
-	background-color: #DDD;
+	background-color: #111;
+	color: #DDD;
 }
 
 audio{
 	display: none;
 }
 
-/* HEADER ------------*/
-#header .icon{
-	font-size: 2em;
+.no-padding{
+	padding: 0;
 }
-#user_stats_display .icon{
-	font-size: 1.5em;
-	fill: #FFFFFF;
+.dark {
+	color: white;
+	background-color: #333333;
+}
+
+.light{
+	color: #333;
+	background-color: #DDD;
+}
+
+.icon{
+	max-height: 2rem;
+	padding 0rem;
+}
+.icon img{
+	
+}
+.icon-bar{
+	background: none;
+}
+
+.button:active{
+	box-shadow: 0px 5px 10px #333 inset;
+}
+
+.clear{
+	clear: both;
+}
+
+.reveal-modal{
+	color: #000;
+}
+
+/* HEADER ------------*/
+#header{
+	background-color: #DDD;
+}
+#header .row{
+	height: 2rem;
+}
+
+/* USER STATS DISPLAY------------*/
+#user_stats_display, #user_stats_display img{
+	height: 1em;
+	font-size: 1em;
 }
 
 #layer{
 	font-size: 1em;
-	color: white;
 	padding:0em 1em;
 	overflow: auto;
 }
-
 
 /* TITLE SCREEN------------*/
 #title{
 	color: black;
 }
 
-/* USER STATS DISPLAY------------*/
-
-#user_stats_display img{
-	max-width: 1.5em;
-}
 
 #rupee_counter{
 	color: green;	
@@ -40,7 +75,7 @@ audio{
 
 /* CONTENT ------------*/
 #content{
-	margin-bottom: 2em;
+	margin: 5em 0em 2em;;
 }
 
 #items li{
@@ -51,8 +86,36 @@ audio{
 	width: 2.3em;
 }
 
-#footer{
-	/*height: 40px;
+.selected{
+	box-shadow: 0px 0px 12px #4BD9FF;
 }
+
+.bottom{
+	background-color: #CCC;
+	position: fixed;
+	bottom: 0rem;
+	left: 0rem;
+	right: 0rem;
+  z-index: 99;
+	
+}
+
+.icon-bar img{
+	height: 3rem;
+	width: 3rem;
+}
+.icon-bar a:focus, .icon-bar a:hover{
+	background-color: none;
+}
+
+#reader{
+	width: 300px;
+	height: 250px
+}
+	
+#pause table{
+	width: 100%;
+}
+
 
 
