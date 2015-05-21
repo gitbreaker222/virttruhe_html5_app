@@ -1,10 +1,10 @@
 ui = {
-	//jQuery objects after init
+	//jQuery objects loaded after init fn
 	music		: undefined,
 	sfx			: undefined,
 	layer		: undefined,
-	user_status	: undefined, //TODO and remove?
-	hearts		: undefined,
+	user_status	: undefined,
+	life		: undefined,
 	keys		: undefined,
 	rupees		: undefined,
 	item_title	: undefined,
@@ -13,6 +13,7 @@ ui = {
 	scan		: undefined,
 	pause		: undefined,
 	dialog		: undefined,
+	btn_scan	: undefined,
 	
 	
 	
@@ -130,14 +131,7 @@ ui = {
 	/*
 	 * USER STATS
 	 */
-	update_layer		: function(){
-		this.layer.html(system_status.layer);
-	},
 	
-	update_user_stats	: function(){
-		//reset
-		//this.hearts.html ...
-	}
 	
 	
 	

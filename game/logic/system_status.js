@@ -41,7 +41,8 @@ system_status = {
 				if(ui.music[0].paused){
 					audio.play_pause();
 				}
-				
+				//activate scan button
+				ui.btn_scan.removeClass("disabled");
 				break;
 				
 			case "new_item" :
@@ -71,6 +72,8 @@ system_status = {
 					audio.play_pause();
 				}
 				audio.play_sfx("OOT_PauseMenu_Open");
+				//disable scan button
+				ui.btn_scan.addClass("disabled");
 				break;
 				
 			case "new_item" :
