@@ -96,19 +96,19 @@
 		<div id="header" class="row fixed">
 			
 			<!------------------------------------ header 1 -->
-	  		<div class="small-7 columns">
+	  		<div class="small-8 columns">
 	  			<h1 id="layer">layer of the player layer of the player </h1>
 	  		</div>
-	  		<div class="small-2 columns">
-	  			<button class="icon" onclick="btn_scan()">
-					<img src="lib/foundation-5.5.1.custom/img/icons/fi-video.svg"/>
-				</button>
-	  		</div>
-	  		<div class="small-2 columns">
-	  			<button class="icon" onclick="btn_pause()">
-					<img src="lib/foundation-5.5.1.custom/img/icons/fi-list.svg"/img>
-				</button>
-	  		</div>
+	  		<div class="small-4 columns no-padding">
+	  			<div class="icon-bar two-up">
+	  				<a class="item" onclick="btn_scan()">
+		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-video.svg"/img>
+		  			</a>
+		  			<a class="item" onclick="btn_pause()">
+		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-list.svg"/img>
+		  			</a>
+	  			</div>
+		  	</div>
 	  		
 	  		<!------------------------------------ header 2 -->
 	  		<div id="user_stats_display" class="row">
@@ -121,7 +121,7 @@
 		  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
 		  		</div>
 		  		<div class="small-2 columns">
-		  			<img src="data/img/icons/rupee.svg" class="" />
+		  			<img src="data/img/icons/rupee.svg"/>
 		  		</div>
 		  		
 		  	</div>
@@ -153,20 +153,21 @@
 	    			<div id="item_title" class="small-6 columns">
 	    				item title goes here
 	    			</div>
+	    			<div class="small-6 columns no-padding">
+	    				<div class=" icon-bar three-up">
+	    					<a class="item" onclick="btn_use()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/img>
+				  			</a>
+				  			<a class="item" onclick="btn_share()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
+				  			</a>
+				  			<a class="item" onclick="btn_delete()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
+				  			</a>
+	    				</div>
+			  		</div>
+			  		
 	    			
-	    			<div id="item_interaction" class="small-6 columns">
-						
-		  			<button class="icon" onclick="btn_use()">
-						<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/>
-					</button>
-		  			<button class="icon" onclick="btn_share()">
-						<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
-					</button>
-					<button class="icon" onclick="btn_delete()">
-						<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
-					</button>
-				  		
-	    			</div>
 	    			
 	    		</div>
 			</div>
