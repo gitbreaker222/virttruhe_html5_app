@@ -29,14 +29,12 @@ audio = {
 	},
 	
 	play		: function(){
-		console.log("A.m. = " + audio.music);
 		if(audio.music != null){
 			$("#"+audio.music)[0].play();
 		};
 	},
 	
 	pause		: function(){
-		console.log("a.m. = " + audio.music);
 		if(audio.music){
 			$("#"+audio.music)[0].pause();
 		};
@@ -75,12 +73,12 @@ audio = {
 		var current_player;
 		var next_player = $("#"+next_track);
 		
-		//if currently music is loaded/played
+		//if currently music is defined
 		if(audio.music){
 			current_player = $("#"+audio.music);
 			
 			//stop current track + reset
-			current_player[0].stop();
+			current_player[0].pause();
 			current_player[0].currentTime = 0;
 		}
 			
