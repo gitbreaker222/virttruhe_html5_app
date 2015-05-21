@@ -23,10 +23,8 @@ function init(){
 	ui.btn_share	= $("#btn_share"),
 	ui.btn_delete	= $("#btn_delete"),
 	
-	console.log("change status to inventory");
-	//data.set_status("inventory");
 	system_status.change_state("inventory");
-	system_status.change_layer("shop");
+	system_status.change_layer("reality");
 	
 	
 	function load_items(){

@@ -45,7 +45,6 @@ system_status = {
 				
 			case "pause" :
 				audio.play_sfx("OOT_PauseMenu_Close");
-				audio.play();
 				
 				//activate scan button
 				ui.btn_scan.removeClass("disabled");
@@ -67,9 +66,11 @@ system_status = {
 				if(this.prev_status != "pause"){
 					inventory.unselect();
 				}
+				audio.play();
 				break;
 				
 			case "scan" :
+				audio.pause();
 				scan.start();
 				break;
 				
