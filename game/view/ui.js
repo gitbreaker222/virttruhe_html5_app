@@ -14,6 +14,10 @@ ui = {
 	pause		: undefined,
 	dialog		: undefined,
 	btn_scan	: undefined,
+	btn_pause	: undefined,
+	btn_use		: undefined,
+	btn_share	: undefined,
+	btn_delete	: undefined,
 	
 	
 	
@@ -105,6 +109,13 @@ ui = {
 			}
 			
 		this.item_title.html("Inventory");
+		
+		if(inventory.selected == null){
+			//disable buttons
+			ui.btn_use.addClass("disabled");
+			ui.btn_share.addClass("disabled");
+			ui.btn_delete.addClass("disabled");
+		}
 	},
 	
 	

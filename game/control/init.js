@@ -19,6 +19,9 @@ function init(){
 	ui.dialog		= $("#dialog"),
 	ui.btn_scan		= $("#btn_scan"),
 	ui.btn_pause	= $("#btn_pause"),
+	ui.btn_use		= $("#btn_use"),
+	ui.btn_share	= $("#btn_share"),
+	ui.btn_delete	= $("#btn_delete"),
 	
 	console.log("change status to inventory");
 	//data.set_status("inventory");

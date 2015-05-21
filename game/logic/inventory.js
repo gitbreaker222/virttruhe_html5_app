@@ -60,7 +60,7 @@ inventory = {
 		//event trigger
 		ui.update_items();
 		return;
-	},
+	},	
 	
 	
 	remove	: function (item) {
@@ -91,6 +91,7 @@ inventory = {
 					
 					//event trigger
 					ui.update_items();
+					
 				},
 	
 	
@@ -99,6 +100,10 @@ inventory = {
 					
 					//event
 					ui.select(item);
+					//enable buttons
+					ui.btn_use.removeClass("disabled");
+					ui.btn_share.removeClass("disabled");
+					ui.btn_delete.removeClass("disabled");
 					
 					return;
 			},
@@ -108,7 +113,7 @@ inventory = {
 	/*
 	 * VIEW, CREATE jQUERY
 	 */
-	ui_items_update	: function() { //TODO remove
+	/*ui_items_update	: function() { //TODO remove
 						console.log("update jquery objects");
 						var item_list = this.item_list;
 						var content = ui.items;
@@ -142,7 +147,7 @@ inventory = {
 				
 						}
 						
-					},
+					},*/
 	
 	
 	

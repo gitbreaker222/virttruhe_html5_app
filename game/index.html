@@ -155,13 +155,13 @@
 	    			</div>
 	    			<div class="small-6 columns no-padding">
 	    				<div class=" icon-bar three-up">
-	    					<a class="item" onclick="btn_use()">
+	    					<a id="btn_use" class="item" onclick="btn_use()">
 				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/img>
 				  			</a>
-				  			<a class="item" onclick="btn_share()">
+				  			<a id="btn_share" class="item" onclick="btn_share()">
 				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
 				  			</a>
-				  			<a class="item" onclick="btn_delete()">
+				  			<a href="#dialog" id="btn_delete" class="item">
 				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
 				  			</a>
 	    				</div>
@@ -184,7 +184,7 @@
 			
 			
 			
-			<!-- pause / settings------------------------------------------- -->
+			<!-- PAUSE / SETTINGS ------------------------------------------- -->
 			<div id="pause" class="row hide">
 				<div class="small-12 columns">
 					<h2>Settings</h2>
@@ -218,6 +218,17 @@
 					<button>save game</button>
 					<button>load game</button>
 				</div>
+			</div>
+			
+			
+			
+			<!-- DIALOG BOX------------------------------------------- -->
+			<div id="dialog" class="panel hide">
+				<p>Do you really want to delete this item?</p>
+				<button class="icon" onclick="btn_delete()">
+				  	<img class="icon" src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
+				</button>
+				<a class="close" aria-label="Close">&#215;</a>
 			</div>
     	
 	    </div>

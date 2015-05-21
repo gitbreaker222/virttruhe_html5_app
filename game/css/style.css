@@ -20,6 +20,13 @@ audio{
 	background-color: #DDD;
 }
 
+.icon{
+	max-height: 2rem;
+	padding 0rem;
+}
+.icon img{
+	
+}
 .icon-bar{
 	background: none;
 }
@@ -30,6 +37,10 @@ audio{
 
 .clear{
 	clear: both;
+}
+
+.reveal-modal{
+	color: #000;
 }
 
 /* HEADER ------------*/
@@ -86,10 +97,15 @@ audio{
 	left: 0rem;
 	right: 0rem;
   z-index: 99;
+	
 }
 
-#item_interaction{
-	height: 2rem;
+.icon-bar img{
+	height: 3rem;
+	width: 3rem;
+}
+.icon-bar a:focus, .icon-bar a:hover{
+	background-color: none;
 }
 
 #reader{
