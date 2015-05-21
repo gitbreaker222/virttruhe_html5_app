@@ -8,7 +8,8 @@ system_status = {
 	setLayer	: function(x){
 		this.layer = x;
 		//event
-		ui.change_layer(x);
+		ui.change_layer(layers[x].name);
+		audio.change_file("music", layers[x].music);
 	},
 	
 	
@@ -105,9 +106,13 @@ system_status = {
 	
 	
 	
-	change_layer	: function(layer){
-		this.setLayer(layer);
-		
+	change_layer	: function(next_layer){
+		//validation
+		if(layers[next_layer] == undefined){
+			console.log(next_layer + " does not exist in current item-set");
+			return;
+		}
+		this.setLayer(next_layer);
 	},
 	
 };

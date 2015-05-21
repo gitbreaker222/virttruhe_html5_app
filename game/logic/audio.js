@@ -37,11 +37,19 @@ audio = {
 		ui[track].html("");
 		
 		//create new source
-		var source_ogg = "<source src='data/audio/sfx/"+file+".ogg'>";
-		var source_mp3 = "<source src='data/audio/sfx/"+file+".mp3'>";
+		try{
+			var source_ogg = "<source src='data/audio/sfx/"+file+".ogg' type='audio/ogg'>";
+			ui[track].append(source_ogg);
+		}catch(e){
+			console.log(e);
+		}
+		try{
+			var source_mp3 = "<source src='data/audio/sfx/"+file+".mp3' type='audio/mpeg'>";
+			ui[track].append(source_mp3);
+		}catch(e){
+			console.log(e);
+		}
 		
-		ui[track].append(source_ogg);
-		ui[track].append(source_mp3);
 		
 		ui[track][0].load();
 		
