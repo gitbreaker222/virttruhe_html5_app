@@ -1,17 +1,30 @@
 audio = {
-	music	: "", //the current music track
-	sfx		: "", //the current sfx track
+	music	: null, //the current music track
+	sfx		: null, //the current sfx track
 	
 	
 	play_pause		: function(track){
-		if(track == undefined){
-			track = "music";
+		//if no music loaded, skip
+		if(audio.music == null){
+			return;
 		}
 		
-		if(ui[track][0].paused ){
-			ui[track][0].play();
+		var player;
+		
+		if(track == undefined || "music"){
+			player = $("#"+audio.music);
+		}else if(track == "sfx"){
+			//player = $("#"+audio.sfx);
+			player = ui.sfx[0];
 		}else{
-			ui[track][0].pause();	
+			console.log("no such track: "+track);
+			return;
+		}
+		
+		if(player[0].paused ){
+			player[0].play();
+		}else{
+			player[0].pause();	
 		}
 	},
 	
@@ -28,24 +41,44 @@ audio = {
 	},
 	
 	stop			: function(track){
-		ui[track][0].pause();
-		ui[track][0].currentTime = 0;
+		var player;
+		
+		if(track == undefined || "music"){
+			player = $("#"+audio.music);
+		}else if(track == "sfx"){
+			//player = $("#"+audio.sfx);
+			player = ui.sfx[0];
+		}else{
+			console.log("no such track: "+track);
+			return;
+		}
+		
+		player[0].pause();
+		player[0].currentTime = 0;
 	},
 	
 	change_music	: function(next_track){
-		var current_player = $("#"+audio.music);
+		var current_player;
 		var next_player = $("#"+next_track);
 		
-		//stop current track + reset
-		current_player[0].stop();
-		current_player[0].currentTime = 0;
-		
-		//set next track as current track
-		audio.music = next_track;
-		
-		//play it
-		next_player.play();
-		
+		//if currently music is loaded/played
+		if(audio.music){
+			current_player = $("#"+audio.music);
+			
+			//stop current track + reset
+			current_player[0].stop();
+			current_player[0].currentTime = 0;
+		}
+			
+		//if next track is nothing, skip
+		if(next_track){
+			//set next track as current track
+			audio.music = next_track;
+			
+			//play it
+			next_player[0].play();
+		}
+		return;	
 	},
 	
 	change_file		: function(track, file){

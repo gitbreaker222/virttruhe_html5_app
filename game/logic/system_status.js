@@ -9,7 +9,7 @@ system_status = {
 		this.layer = x;
 		//event
 		ui.change_layer(layers[x].name);
-		//audio.change_file("music", layers[x].music);
+		audio.change_music(layers[x].music);
 	},
 	
 	
@@ -45,7 +45,7 @@ system_status = {
 				
 			case "pause" :
 				audio.play_sfx("OOT_PauseMenu_Close");
-				if(ui.music[0].paused){
+				if($("#"+audio.music)[0].paused){
 					audio.play_pause();
 				}
 				//activate scan button
