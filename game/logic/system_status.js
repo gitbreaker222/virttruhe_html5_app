@@ -24,7 +24,7 @@ system_status = {
 		
 		console.log("state changed to " + this.state);
 		
-		//unload current state characteristics
+		//unload current state characteristics (on leaf)
 		switch(this.prev_state1){
 			case "inventory" :
 				break;
@@ -55,9 +55,12 @@ system_status = {
 				break;
 		}
 		
-		//load next state characteristics
+		//load next state characteristics (on enter)
 		switch(next_state){
 			case "inventory" :
+				if(this.prev_status != "pause"){
+					inventory.unselect();
+				}
 				break;
 				
 			case "scan" :
