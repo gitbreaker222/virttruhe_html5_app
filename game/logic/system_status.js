@@ -9,7 +9,7 @@ system_status = {
 		this.layer = x;
 		//event
 		ui.change_layer(layers[x].name);
-		audio.change_file("music", layers[x].music);
+		audio.change_music(layers[x].music);
 	},
 	
 	
@@ -45,9 +45,7 @@ system_status = {
 				
 			case "pause" :
 				audio.play_sfx("OOT_PauseMenu_Close");
-				if(ui.music[0].paused){
-					audio.play_pause();
-				}
+				
 				//activate scan button
 				ui.btn_scan.removeClass("disabled");
 				break;
@@ -68,9 +66,11 @@ system_status = {
 				if(this.prev_status != "pause"){
 					inventory.unselect();
 				}
+				audio.play();
 				break;
 				
 			case "scan" :
+				audio.pause();
 				scan.start();
 				break;
 				
@@ -78,9 +78,7 @@ system_status = {
 				break;
 				
 			case "pause" :
-				if(ui.music[0].paused == false){
-					audio.play_pause();
-				}
+				audio.pause();
 				audio.play_sfx("OOT_PauseMenu_Open");
 				//disable scan button
 				ui.btn_scan.addClass("disabled");

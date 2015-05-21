@@ -56,8 +56,7 @@ function btn_pause(){
  * INVENTORY BUTTONS
  */
 function btn_use(){
-	console.log("pressed use button");
-	
+	items[inventory.selected].use();
 }
 
 
@@ -67,7 +66,6 @@ function btn_share(){
 }
 
 function btn_delete(){
-	console.log("pressed delete button");
 	inventory.remove(inventory.selected);
 }
 
@@ -76,7 +74,12 @@ function btn_delete(){
  * PAUSE / SETTINGS BUTTONS
  */
 function switch_mute_music(){
-	audio.mute_music();
+	if(settings.music){
+		settings.music = false;
+	}else{
+		settings.music = true;
+	}
+	
 }
 
 function switch_mute_sfx(){

@@ -9,19 +9,19 @@ layers = {
 						},
 	kokiri_forest	:   {
 						name : "Kokiri Forest",
-						music : "The Legend of Zelda - Kokiri Woods",
+						music : "m01",
 						},
 	shop			:   {
 						name : "Shop",
-						music : "Zelda - Laden",
+						music : "m02",
 						},
 	gerudo_valley	:   {
 						name : "Gerudo Valley",
-						music : "The Legend of Zelda - Gerudo Valley",
+						music : "m03",
 						},
 	spirit_temple	:   {
 						name : "Spirit Temple",
-						music : "The Legend of Zelda - Spirit Temple",
+						music : "m04",
 						},
 	
 };

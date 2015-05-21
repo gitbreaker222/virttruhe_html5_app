@@ -120,7 +120,8 @@ inventory = {
 				
 	unselect : function(){
 		this.setSelected(null);
-	}
+	},
+	
 	
 	
 	

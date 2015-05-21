@@ -1,18 +1,48 @@
 audio = {
-	music	: "",
-	sfx		: "",
+	music	: null, //the current music track
+	sfx		: null, //the current sfx track
 	
 	
 	play_pause		: function(track){
-		if(track == undefined){
-			track = "music";
+		//if no music loaded, skip
+		if(audio.music == null){
+			return;
 		}
 		
-		if(ui[track][0].paused ){
-			ui[track][0].play();
+		var player;
+		
+		if(track == undefined || "music"){
+			player = $("#"+audio.music);
+		}else if(track == "sfx"){
+			//player = $("#"+audio.sfx);
+			player = ui.sfx[0];
 		}else{
-			ui[track][0].pause();	
+			console.log("no such track: "+track);
+			return;
 		}
+		
+		if(player[0].paused ){
+			player[0].play();
+		}else{
+			player[0].pause();	
+		}
+	},
+	
+	play		: function(){
+		//if music enabled by user
+		if(settings.music){
+			//if music defined by current layer
+			if(audio.music != null){
+				$("#"+audio.music)[0].play();
+			};
+		}
+			
+	},
+	
+	pause		: function(){
+		if(audio.music){
+			$("#"+audio.music)[0].pause();
+		};
 	},
 	
 	play_sfx		: function (file){
@@ -28,8 +58,44 @@ audio = {
 	},
 	
 	stop			: function(track){
-		ui[track][0].pause();
-		ui[track][0].currentTime = 0;
+		var player;
+		
+		if(track == undefined || "music"){
+			player = $("#"+audio.music);
+		}else if(track == "sfx"){
+			//player = $("#"+audio.sfx);
+			player = ui.sfx[0];
+		}else{
+			console.log("no such track: "+track);
+			return;
+		}
+		
+		player[0].pause();
+		player[0].currentTime = 0;
+	},
+	
+	change_music	: function(next_track){
+		var current_player;
+		var next_player = $("#"+next_track);
+		
+		//if currently music is defined
+		if(audio.music){
+			current_player = $("#"+audio.music);
+			
+			//stop current track + reset
+			current_player[0].pause();
+			current_player[0].currentTime = 0;
+		}
+			
+		//if next track is nothing, skip
+		if(next_track){
+			//set next track as current track
+			audio.music = next_track;
+			
+			//play it
+			if(settings.music){next_player[0].play();}
+		}
+		return;	
 	},
 	
 	change_file		: function(track, file){
@@ -76,8 +142,30 @@ audio = {
 			ui.sfx[0].muted = false;
 		}
 		
-	}
+	},
 	
+	
+	
+	/*
+	 * ADVANCED AUDIO CONTEXT STUFF
+	 * http://www.html5rocks.com/en/tutorials/webaudio/intro/
+	 */
+	setupAudioContext	:function(){
+		var context;
+		window.addEventListener('load', init, false);
+		function init() {
+		  try {
+		    // Fix up for prefixing
+		    window.AudioContext = window.AudioContext||window.webkitAudioContext;
+		    context = new AudioContext();
+		  }
+		  catch(e) {
+		    alert('Web Audio API is not supported in this browser');
+		  }
+		}
+		return(context);
+	}
+		
 };
 
 
