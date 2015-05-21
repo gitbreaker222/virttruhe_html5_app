@@ -9,7 +9,7 @@ system_status = {
 		this.layer = x;
 		//event
 		ui.change_layer(layers[x].name);
-		audio.change_file("music", layers[x].music);
+		//audio.change_file("music", layers[x].music);
 	},
 	
 	

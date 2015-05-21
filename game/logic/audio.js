@@ -1,6 +1,6 @@
 audio = {
-	music	: "",
-	sfx		: "",
+	music	: "", //the current music track
+	sfx		: "", //the current sfx track
 	
 	
 	play_pause		: function(track){
@@ -30,6 +30,22 @@ audio = {
 	stop			: function(track){
 		ui[track][0].pause();
 		ui[track][0].currentTime = 0;
+	},
+	
+	change_music	: function(next_track){
+		var current_player = $("#"+audio.music);
+		var next_player = $("#"+next_track);
+		
+		//stop current track + reset
+		current_player[0].stop();
+		current_player[0].currentTime = 0;
+		
+		//set next track as current track
+		audio.music = next_track;
+		
+		//play it
+		next_player.play();
+		
 	},
 	
 	change_file		: function(track, file){
@@ -76,8 +92,30 @@ audio = {
 			ui.sfx[0].muted = false;
 		}
 		
-	}
+	},
 	
+	
+	
+	/*
+	 * ADVANCED AUDIO CONTEXT STUFF
+	 * http://www.html5rocks.com/en/tutorials/webaudio/intro/
+	 */
+	setupAudioContext	:function(){
+		var context;
+		window.addEventListener('load', init, false);
+		function init() {
+		  try {
+		    // Fix up for prefixing
+		    window.AudioContext = window.AudioContext||window.webkitAudioContext;
+		    context = new AudioContext();
+		  }
+		  catch(e) {
+		    alert('Web Audio API is not supported in this browser');
+		  }
+		}
+		return(context);
+	}
+		
 };
 
 
