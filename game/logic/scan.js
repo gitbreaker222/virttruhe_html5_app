@@ -87,6 +87,7 @@ scan = {
 			var item_id = map[layer][key];
 			var type = "item";
 			
+			// if code starts with a, its a portal. e.g. #a0000001
 			if(key[1] == "a"){
 				type = "portal";
 			}
@@ -94,6 +95,12 @@ scan = {
 			console.log("found "+ type +": "+ item_id);
 			if(type == "item"){
 				inventory.add(item_id);
+				
+				
+				//TODO start item presentation
+				
+				
+				
 			}else if(type == "portal"){
 				system_status.change_layer(item_id);
 			}else{
