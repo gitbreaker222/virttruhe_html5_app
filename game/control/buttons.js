@@ -66,6 +66,7 @@ function btn_share(){
 }
 
 function btn_delete(){
+	
 	inventory.remove(inventory.selected);
 }
 
