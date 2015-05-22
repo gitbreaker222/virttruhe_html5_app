@@ -89,17 +89,20 @@ inventory = {
 						if(items[item].count == 1){
 							//delete from list
 							list.splice(pos, 1);
-							inventory.selected == null;
+							console.log("#");
+							inventory.setSelected(null);
+							console.log("selected: "+inventory.selected);
 						}
-						items[item].count--;	
+						items[item].count--;
+						ui.update_items();
 					}else{
 						list.splice(pos, 1);
-						inventory.selected == null;
+						inventory.setSelected(null);
 					}
 					
 					
 					//event trigger
-					ui.update_items();
+					//ui.update_items();
 					
 				},
 	
