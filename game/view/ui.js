@@ -38,6 +38,8 @@ ui = {
 			case "inventory" :
 				this.pause.hide();
 				this.scan.hide();
+				this.new_item.hide();
+				this.portal.hide();
 				this.inventory.show();
 				break;
 				
@@ -57,7 +59,8 @@ ui = {
 				break;
 				
 			case "portal" :
-				
+				this[prev_state].hide();
+				ui.portal.show();
 				break;
 				
 			default :

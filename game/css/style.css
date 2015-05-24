@@ -74,8 +74,12 @@ audio{
 }
 
 /* CONTENT ------------*/
+#content h1{
+	color: #DDD;
+}
+
 #content{
-	margin: 5em 0em 2em;;
+	margin: 5em 0em 2em;
 }
 
 #items li{
