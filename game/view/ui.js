@@ -155,7 +155,35 @@ ui = {
 	 * USER STATS
 	 */
 	
-	
+	/*
+	 * PRESENTATION
+	 */
+	present_new_item	: function(item_id){
+		console.log("present new item ###");
+		var new_html = "";
+		var image = items[item_id].image;
+		
+		
+		
+		
+		//reset content of column
+		ui.new_item.children()[0].innerHTML = "";
+		
+		new_html += "<h1> Your new Item</h1>";
+		
+		//create <img> with that src
+		new_html += "<img src='"+image+"'></img>";
+		
+		//create return button
+		//TODO make this not with html strings, but with nodes!
+		new_html += "<button onclick='system_status.change_state("+"'inventory'"+")'>return</button>";
+		
+		
+		
+		
+		//insert new_html
+		ui.new_item.children()[0].innerHTML = new_html;
+	},
 	
 	
 };
