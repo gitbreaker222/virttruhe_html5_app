@@ -12,6 +12,8 @@ ui = {
 	items		: undefined,
 	scan		: undefined,
 	pause		: undefined,
+	new_item	: undefined,
+	portal		: undefined,
 	dialog		: undefined,
 	btn_scan	: undefined,
 	btn_pause	: undefined,
@@ -50,7 +52,8 @@ ui = {
 				break;
 				
 			case "new_item" :
-				
+				this[prev_state].hide();
+				ui.new_item.show();
 				break;
 				
 			case "portal" :
@@ -137,7 +140,6 @@ ui = {
 			selected.addClass("selected");
 		}
 		
-		//show item name at bottom TODO
 		this.item_title.html(name);
 		
 		

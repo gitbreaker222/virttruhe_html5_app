@@ -16,6 +16,8 @@ function init(){
 	ui.items		= $("#items"),
 	ui.scan			= $("#scan"),
 	ui.pause		= $("#pause"),
+	ui.new_item		= $("#new_item"),
+	ui.portal		= $("#portal"),
 	ui.dialog		= $("#dialog"),
 	ui.btn_scan		= $("#btn_scan"),
 	ui.btn_pause	= $("#btn_pause"),

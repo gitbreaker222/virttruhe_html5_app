@@ -90,6 +90,12 @@ system_status = {
 			case "portal" :
 				break;
 				
+			case "new_item":
+				break;
+				
+			case "portal":
+				break;
+				
 			default :
 				break;
 		}

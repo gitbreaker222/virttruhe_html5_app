@@ -98,7 +98,7 @@ scan = {
 				
 				
 				//TODO start item presentation
-				
+				system_status.change_state("new_item");
 				
 				
 			}else if(type == "portal"){
