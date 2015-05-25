@@ -158,7 +158,7 @@
 		
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
 		<div id="content">
-	    	<div id="inventory" class="row">
+	    	<div id="inventory" class="row hide">
 	    		
 	    		<!-- INVENTORY-------------------------------------------------- -->
 	    		
@@ -247,9 +247,15 @@
 			<div id="new_item" class="row hide">
 				<div class="small-12 columns">
 						
-					<h1 id="">I am a presentation for your new found item :)</h1>
-					<button onclick="system_status.change_state('inventory')">return</button>
+					<img id="ni_chest" src="data/img/chest.png"/>
 					
+					<img id="ni_shiny" class="a_zoom" src="data/img/shiny.png"/>
+					
+					<img id="ni_item" class="a_zoom" src="">
+					
+				</div>
+				<div class="small-12 columns">
+					<button onclick="system_status.change_state('inventory')">return</button>
 				</div>
 			</div>
 			
@@ -261,6 +267,9 @@
 						
 					<h1 id="">I am a presentation for the portal you opened (:</h1>
 					<button onclick="system_status.change_state('inventory')">return</button>
+					
+				</div>
+				<div class="small-12 columns">
 					
 				</div>
 			</div>

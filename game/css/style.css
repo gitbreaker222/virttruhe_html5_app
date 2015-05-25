@@ -121,6 +121,19 @@ audio{
 	width: 100%;
 }
 
+#new_item > .columns:first-child{
+	height: 17rem;
+}
+
+#new_item img{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+	
+}
+
 
 
 
