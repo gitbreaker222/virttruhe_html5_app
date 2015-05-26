@@ -77,6 +77,55 @@ ui = {
 	},
 	
 	/*
+	 * DIALOG BOX POP UP
+	 */
+	dialog				: function(obj){
+		/*
+		 * dialog_object = {
+		 * 	 message : "string w/ html formating or DOM nodes",
+		 *   actions : [
+		 *     {name : "string", fn : function()},
+		 *     {name : "string", fn : function()},
+		 *   ]
+		 * }
+		 */
+	
+		var dialog = this.dialog;
+		var d_message = $("#d_message");
+		var d_actions = $("#d_actions");
+		var actions_html = "";
+		
+		//remove old dialog content
+		dialog.empty();
+		
+		//create dialog message
+		d_message.html(obj.message);
+		
+		//create buttons for actions
+		for(i = 0; obj.actions.length; i++){
+			var node = document.createElement("A");
+			
+			if(obj.actions[i].name == "CLOSE"){
+				//if action is close button
+				node.setAttribute("class", "close-reveal-modal");
+				node.setAttribute("aria-label", "Close");
+				node.innerhtml = "&#215;"; //"X" Symbol
+			}else{
+				//else prepare label and click function for button
+				node.innerhtml = obj.actions[i].name;
+				node.setAttribute("class", "button");
+				node.setAttribute("onclick", obj.actions[i].fn);
+			}
+			
+			//append button node to actions section
+			d_actions.append(node);
+		}
+		
+		//show the modal / dialog box
+		dialog.foundation("modal", "open");
+	}
+	
+	/*
 	 * INVENTORY
 	 */
 	update_items		: function(){
@@ -163,10 +212,17 @@ ui = {
 		var ni_item = $("#ni_item"); //ni = New Item. ID prefix for new_item row
 		//sfx shortcuts
 		var sfx_chest = audio.play_sfx("open_chest");
+		var sfx_ni = audio.play_sfx("OOT_Get_SmallItem1");
 		
 		ni_item.attr("src", image);
 		
 		ni_item.on("animationstart", sfx_chest);
+		ni_item.on("animationend", sfx_ni);
+		
+		//show dialog box
+		ni_item.on("animationend", function(){
+			
+		});
 		
 		
 		
