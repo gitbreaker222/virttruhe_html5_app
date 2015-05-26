@@ -161,12 +161,12 @@ ui = {
 	present_new_item	: function(item_id){
 		var image = items[item_id].image;
 		var ni_item = $("#ni_item"); //ni = New Item. ID prefix for new_item row
+		//sfx shortcuts
+		var sfx_chest = audio.play_sfx("open_chest");
 		
 		ni_item.attr("src", image);
 		
-		function END(){console.log("END END END!");}
-		
-		ni_item.addEventListener("animationstart", END, false);
+		ni_item.on("animationstart", sfx_chest);
 		
 		
 		

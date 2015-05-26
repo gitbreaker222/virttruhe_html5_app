@@ -134,10 +134,10 @@ audio{
 }
 
 .a_zoom{
-	-webkit-animation: A_zoom 3s infinite;
-	-moz-animation: A_zoom 3s infinite;
-	-o-animation: A_zoom 3s infinite;
-	animation:  A_zoom 3s infinite;  /* IE 10+, Fx 29+*/
+	-webkit-animation: A_zoom 3s;
+	-moz-animation: A_zoom 3s;
+	-o-animation: A_zoom 3s;
+	animation:  A_zoom 3s;  /* IE 10+, Fx 29+*/
 } 
 
 
