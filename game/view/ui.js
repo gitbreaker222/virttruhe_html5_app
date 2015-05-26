@@ -54,7 +54,7 @@ ui = {
 				break;
 				
 			case "new_item" :
-				//this[prev_state].hide();
+				this[prev_state].hide();
 				ui.new_item.show();
 				break;
 				
@@ -159,12 +159,14 @@ ui = {
 	 * PRESENTATION
 	 */
 	present_new_item	: function(item_id){
-		item_id = "arrows";//#
-		
 		var image = items[item_id].image;
-		var ni_item = $("#ni_item");
+		var ni_item = $("#ni_item"); //ni = New Item. ID prefix for new_item row
 		
 		ni_item.attr("src", image);
+		
+		function END(){console.log("END END END!");}
+		
+		ni_item.addEventListener("animationstart", END, false);
 		
 		
 		

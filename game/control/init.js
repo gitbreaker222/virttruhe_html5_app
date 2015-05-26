@@ -25,7 +25,7 @@ function init(){
 	ui.btn_share	= $("#btn_share"),
 	ui.btn_delete	= $("#btn_delete"),
 	
-	system_status.change_state("new_item");
+	system_status.change_state("inventory");
 	system_status.change_layer("reality");
 	
 	
