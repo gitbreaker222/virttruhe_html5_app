@@ -159,9 +159,12 @@ ui = {
 	 * PRESENTATION
 	 */
 	present_new_item	: function(item_id){
+		item_id = "arrows";//#
+		
 		var image = items[item_id].image;
 		var ni_item = $("#ni_item");
 		
+		ni_item.attr("src", image);
 		
 		
 		

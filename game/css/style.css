@@ -134,6 +134,9 @@ audio{
 }
 
 .a_zoom{
+	-webkit-animation: A_zoom 3s infinite;
+	-moz-animation: A_zoom 3s infinite;
+	-o-animation: A_zoom 3s infinite;
 	animation:  A_zoom 3s infinite;  /* IE 10+, Fx 29+*/
 } 
 
@@ -144,12 +147,21 @@ audio{
 
 /* ANIMATIONS */
 @keyframes A_zoom {
-  0%   { 
-		transform: scale(0);
+  0%   {
+		-webkit-transform: scale(0) translate(-50%, -50%);
+		transform: scale(0) translate(-50%, -50%);
+		transform-origin: top left;
 	}
   100% {
-		transform: scale(1);
+		-webkit-transform: scale(1) translate(-50%, -50%);
+		transform: scale(1) translate(-50%, -50%);
+		transform-origin: top left;
 	}
+}
+
+@keyframes A_zoom2 {
+  0%   {width: 0%}
+  100% {width: 50%}
 }
 
 
