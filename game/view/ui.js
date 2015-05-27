@@ -79,9 +79,9 @@ ui = {
 	/*
 	 * DIALOG BOX POP UP
 	 */
-	dialog				: function(obj){
+	dialog				: function(dialog_obj){
 		/*
-		 * dialog_object = {
+		 * dialog_obj = {
 		 * 	 message : "string w/ html formating or DOM nodes",
 		 *   actions : [
 		 *     {name : "string", fn : function()},
@@ -90,36 +90,30 @@ ui = {
 		 * }
 		 */
 	
-		var dialog = this.dialog;
 		var d_message = $("#d_message");
 		var d_actions = $("#d_actions");
 		var actions_html = "";
 		
-		//remove old dialog content
-		dialog.empty();
-		
-		//create dialog message
-		d_message.html(obj.message);
+		//create dialog message (override)
+		d_message.html(dialog_obj.message);
 		
 		//create buttons for actions
-		for(i = 0; obj.actions.length; i++){
-			var node = document.createElement("A");
-			
-			if(obj.actions[i].name == "CLOSE"){
+		for(i = 0; dialog_obj.actions.length; i++){
+			//reset button html
+			var button = "";
+			if(dialog_obj.actions[i].name == "CLOSE"){
 				//if action is close button
-				node.setAttribute("class", "close-reveal-modal");
-				node.setAttribute("aria-label", "Close");
-				node.innerhtml = "&#215;"; //"X" Symbol
+				button = "<a class='close-reveal-modal' aria-label='Close'>&#215;</a>"
 			}else{
-				//else prepare label and click function for button
-				node.innerhtml = obj.actions[i].name;
-				node.setAttribute("class", "button");
-				node.setAttribute("onclick", obj.actions[i].fn);
+				//else prepare +label+ and click +function+ for button
+				button = "<a class='button' onclick='"+dialog_obj.actions[i].fn+"'>"+dialog_obj.actions[i].name+"</a>"
 			}
-			
 			//append button node to actions section
-			d_actions.append(node);
+			actions_html += button;
 		}
+		
+		//insert buttons into div (override)
+		d_actions.html(actions_html);
 		
 		//show the modal / dialog box
 		dialog.foundation("modal", "open");
@@ -129,6 +123,7 @@ ui = {
 	 * INVENTORY
 	 */
 	update_items		: function(){
+		//TODO change html insert style from nodes to direct strings + jQuery
 		console.log("update jquery objects");
 		var item_list = inventory.item_list;
 		var content = this.items;
