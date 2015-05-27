@@ -71,32 +71,13 @@ function btn_delete(){
 }
 
 function btn_delete_dialog(){
-	/*
-	<a class="button" aria-label="Close" onclick="$('#dialog').foundation('reveal', 'close'); btn_delete();">
-	<img class="icon" src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg" />
-	</a>
-	
-	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
-	 */
-	
-	var p = document.createElement("P");
-	p.innerHTML = "Do you really want to delete this item?";
-	
-	var a = document.createElement("A");
-	a.setAttribute("class", "button");
-	a.setAttribute("aria-label", "Close");
-	a.setAttribute("onclick", "$('#dialog').foundation('reveal', 'close'); btn_delete()");
-	
-	var img = document.createElemten("IMG");
-	img.setAttribute("class", "icon");
-	img.setAttribute("src", "lib/foundation-5.5.1.custom/img/icons/fi-trash.svg");
-	
-	a.append(img);
-	
-	var d_message = document.createElement()
+	var message_html= "<p>Do you really want to delete this item?</p>"
+			+ "<a class='button' aria-label='Close' onclick='$(\"#dialog\").foundation(\"reveal\", \"close\"); btn_delete();'>"
+			+   "<img class='icon' src='lib/foundation-5.5.1.custom/img/icons/fi-trash.svg' />"
+			+ "</a>"
 	/*
 	 * CONTUNUE HERE TODO
-	 * button.js and ui.js
+	 * button.js and ui.js	<a class="button" aria-label="Close" onclick="$('#dialog').foundation('reveal', 'close'); btn_delete();">
 	 * 
 	 * create dialog content as js object
 	 * send to ui
@@ -105,10 +86,8 @@ function btn_delete_dialog(){
 	 * not testet yet
 	 */
 	
-	
-				
 	var dialog_obj = {
-		message : d_message,
+		message : message_html,
 		actions : [
 			{name : "CLOSE", fn : null}
 		],
