@@ -76,10 +76,12 @@ ui = {
 		this.layer.html(layer);
 	},
 	
+	
 	/*
 	 * INVENTORY
 	 */
 	update_items		: function(){
+		//TODO change html insert style from nodes to direct strings + jQuery
 		console.log("update jquery objects");
 		var item_list = inventory.item_list;
 		var content = this.items;
@@ -161,12 +163,34 @@ ui = {
 	present_new_item	: function(item_id){
 		var image = items[item_id].image;
 		var ni_item = $("#ni_item"); //ni = New Item. ID prefix for new_item row
-		//sfx shortcuts
-		var sfx_chest = audio.play_sfx("open_chest");
+		$("#d_item").html(items[item_id].name); //dialog box, item name
 		
+		/*
+		 * TODO the event bindings can be optimized.
+		 * right now, they are bound once and removed each time.
+		 * The only thing changing is the displayed item name
+		 */
+		//set up fn for animation start/end
+		ni_item.one("animationstart", function(){
+			audio.play_sfx("open_chest");
+		});
+		
+		ni_item.one("animationend", function(){
+			//reset the animation
+			$("#ni_item").removeClass("a_zoom");
+			
+			audio.play_sfx("OOT_Get_SmallItem1");
+			//show dialog box
+			$("#d_ni").show();
+		});
+		
+		
+		//load item picture
 		ni_item.attr("src", image);
+		//start animation
+		$("#ni_item").addClass("a_zoom");
 		
-		ni_item.on("animationstart", sfx_chest);
+		
 		
 		
 		

@@ -95,22 +95,19 @@ scan = {
 			console.log("found "+ type +": "+ item_id);
 			if(type == "item"){
 				inventory.add(item_id);
-				
-				
-				//TODO start item presentation
 				system_status.change_state("new_item");
-				
 				ui.present_new_item(item_id);
-				
 				
 			}else if(type == "portal"){
 				system_status.change_layer(item_id);
+				//TODO
+				
 			}else{
 				console.log("item type undefined");
 			}
 			
 			
-			return;//(found_item(type, item_id));
+			return;
 		}
 		
 	},

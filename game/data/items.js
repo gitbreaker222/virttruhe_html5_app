@@ -83,7 +83,7 @@ var items = {
 			stackable	: false,
 			use			: use_fn,
 		},
-		empty_bootle : {
+		empty_bottle : {
 			id			: "empty_bottle",
 			name		: "Empty Bottle",
 			image		: "data/img/items/small/bottle_empty.png",

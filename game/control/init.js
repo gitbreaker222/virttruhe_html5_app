@@ -25,6 +25,8 @@ function init(){
 	ui.btn_share	= $("#btn_share"),
 	ui.btn_delete	= $("#btn_delete"),
 	
+	dialog.init();
+	
 	system_status.change_state("inventory");
 	system_status.change_layer("reality");
 	
@@ -41,6 +43,7 @@ function init(){
 	
 	
 	ui.update_items();
+	
 	
 	/*
 	ui.music.attr("src", "data/audio/The Legend of Zelda - Gerudo Valley.mp3");
