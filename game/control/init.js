@@ -44,7 +44,6 @@ function init(){
 	
 	ui.update_items();
 	
-	$("#d0").show();
 	
 	/*
 	ui.music.attr("src", "data/audio/The Legend of Zelda - Gerudo Valley.mp3");

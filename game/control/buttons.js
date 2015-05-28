@@ -70,7 +70,7 @@ function btn_delete(){
 }
 
 function btn_delete_dialog(){
-	$("#d_delete").show;
+	$("#d_delete").show();
 }
 
 

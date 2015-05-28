@@ -183,7 +183,7 @@
 				  			<a id="btn_share" class="item" onclick="btn_share()">
 				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
 				  			</a>
-				  			<a href="#dialog" id="btn_delete" data-reveal-id="dialog" class="item">
+				  			<a id="btn_delete" class="item" onclick="btn_delete_dialog()">
 				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
 				  			</a>
 	    				</div>
@@ -258,11 +258,8 @@
 					
 					<img id="ni_shiny" class="" src="data/img/shiny.png"/>
 					
-					<img id="ni_item" class="" src=""/>
+					<img id="ni_item" class="" src="" />
 					
-				</div>
-				<div class="small-12 columns">
-					<button onclick="system_status.change_state('inventory')">return</button>
 				</div>
 			</div>
 			
@@ -271,13 +268,9 @@
 			<!-- PRESENTATION/ENTER A PORTAL ------------------------- -->
 			<!-- ----------------------------------------------------- -->
 			<div id="portal" class="row hide">
-				<div class="small-12 columns">
+				<div class="small-12 columns" >
 						
 					<h1 id="">I am a presentation for the portal you opened (:</h1>
-					<button onclick="system_status.change_state('inventory')">return</button>
-					
-				</div>
-				<div class="small-12 columns">
 					
 				</div>
 			</div>
@@ -289,14 +282,15 @@
 			<!-- DIALOG BOXES----------------------------------------- -->
 			<!-- ----------------------------------------------------- -->
 			
-			<div id="d0" class="dialog">
+			<div id="d_ni" class="dialog">
 				<div class="center d_box">
 					<div class="d_message">
-						This is a test dialog box. Would you like to close it? It will close on any action though...
+						<h1>Congratulation!</h1>
+						<p>You have found: <i id="d_item"></i></p>
 					</div>
 					
 					<div class="d_actions">
-						<button onclick="system_status.change_state('inventory')">close</button>
+						<button onclick="system_status.change_state('inventory')">OK</button>
 					</div>
 				</div>
 			</div>
@@ -311,8 +305,7 @@
 					<div class="d_actions">
 						<img class="button icon"
 						     src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"
-						     onclick="btn_delete()" 
-						/img>
+						     onclick="btn_delete()" /img>
 						
 					</div>
 				</div>

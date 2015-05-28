@@ -165,10 +165,10 @@ audio{
 }
 
 .a_zoom{
-	-webkit-animation: A_zoom 3s;
-	-moz-animation: A_zoom 3s;
-	-o-animation: A_zoom 3s;
-	animation:  A_zoom 3s;  /* IE 10+, Fx 29+*/
+	-webkit-animation: A_zoom 2s;
+	-moz-animation: A_zoom 2s;
+	-o-animation: A_zoom 2s;
+	animation:  A_zoom 2s;  /* IE 10+, Fx 29+*/
 } 
 
 

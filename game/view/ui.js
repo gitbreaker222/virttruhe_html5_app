@@ -163,20 +163,25 @@ ui = {
 	present_new_item	: function(item_id){
 		var image = items[item_id].image;
 		var ni_item = $("#ni_item"); //ni = New Item. ID prefix for new_item row
+		$("#d_item").html(items[item_id].name); //dialog box, item name
 		
+		/*
+		 * TODO the event bindings can be optimized.
+		 * right now, they are bound once and removed each time.
+		 * The only thing changing is the displayed item name
+		 */
 		//set up fn for animation start/end
-		ni_item.on("animationstart", function(){
+		ni_item.one("animationstart", function(){
 			audio.play_sfx("open_chest");
 		});
 		
-		ni_item.on("animationend", function(){
+		ni_item.one("animationend", function(){
 			//reset the animation
 			$("#ni_item").removeClass("a_zoom");
 			
 			audio.play_sfx("OOT_Get_SmallItem1");
-			
 			//show dialog box
-			$("#d0").show();
+			$("#d_ni").show();
 		});
 		
 		
