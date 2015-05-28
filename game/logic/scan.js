@@ -26,7 +26,7 @@ scan = {
 			         
 			        check_code(qr_message);
 			        
-			        system_status.change_state("inventory");
+			        //system_status.change_state("inventory");
 			        return; 
 			    },
 			    
@@ -76,7 +76,7 @@ scan = {
 		
 		
 		function map_key(key){
-			console.log("mapping the key for current layer: "+system_status.layer);
+			console.log("mapping "+key+" for current layer: "+system_status.layer);
 			/*
 			 * This maps the key from the VIRTTRUHE to the Item key,
 			 * depending on the current location 
@@ -95,20 +95,19 @@ scan = {
 			console.log("found "+ type +": "+ item_id);
 			if(type == "item"){
 				inventory.add(item_id);
-				
-				
-				//TODO start item presentation
-				
-				
+				system_status.change_state("new_item");
+				ui.present_new_item(item_id);
 				
 			}else if(type == "portal"){
 				system_status.change_layer(item_id);
+				//TODO
+				
 			}else{
 				console.log("item type undefined");
 			}
 			
 			
-			return;//(found_item(type, item_id));
+			return;
 		}
 		
 	},

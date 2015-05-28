@@ -1,8 +1,8 @@
 system_status = {
 	
 	state		: undefined, //app- or game state. e.g. "inventory" or "scan"
-	prev_state1	: undefined,
-	prev_state2	: undefined,
+	prev_state1	: null,
+	prev_state2	: null,
 	
 	layer		: "Reality", //the virtual layer, e.g. "Reality" or "Kokiri Forest"
 	setLayer	: function(x){
@@ -88,6 +88,12 @@ system_status = {
 				break;
 				
 			case "portal" :
+				break;
+				
+			case "new_item":
+				break;
+				
+			case "portal":
 				break;
 				
 			default :

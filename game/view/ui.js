@@ -12,6 +12,8 @@ ui = {
 	items		: undefined,
 	scan		: undefined,
 	pause		: undefined,
+	new_item	: undefined,
+	portal		: undefined,
 	dialog		: undefined,
 	btn_scan	: undefined,
 	btn_pause	: undefined,
@@ -36,6 +38,8 @@ ui = {
 			case "inventory" :
 				this.pause.hide();
 				this.scan.hide();
+				this.new_item.hide();
+				this.portal.hide();
 				this.inventory.show();
 				break;
 				
@@ -50,11 +54,13 @@ ui = {
 				break;
 				
 			case "new_item" :
-				
+				this[prev_state].hide();
+				ui.new_item.show();
 				break;
 				
 			case "portal" :
-				
+				this[prev_state].hide();
+				ui.portal.show();
 				break;
 				
 			default :
@@ -70,10 +76,12 @@ ui = {
 		this.layer.html(layer);
 	},
 	
+	
 	/*
 	 * INVENTORY
 	 */
 	update_items		: function(){
+		//TODO change html insert style from nodes to direct strings + jQuery
 		console.log("update jquery objects");
 		var item_list = inventory.item_list;
 		var content = this.items;
@@ -137,7 +145,6 @@ ui = {
 			selected.addClass("selected");
 		}
 		
-		//show item name at bottom TODO
 		this.item_title.html(name);
 		
 		
@@ -150,7 +157,44 @@ ui = {
 	 * USER STATS
 	 */
 	
-	
+	/*
+	 * PRESENTATION
+	 */
+	present_new_item	: function(item_id){
+		var image = items[item_id].image;
+		var ni_item = $("#ni_item"); //ni = New Item. ID prefix for new_item row
+		$("#d_item").html(items[item_id].name); //dialog box, item name
+		
+		/*
+		 * TODO the event bindings can be optimized.
+		 * right now, they are bound once and removed each time.
+		 * The only thing changing is the displayed item name
+		 */
+		//set up fn for animation start/end
+		ni_item.one("animationstart", function(){
+			audio.play_sfx("open_chest");
+		});
+		
+		ni_item.one("animationend", function(){
+			//reset the animation
+			$("#ni_item").removeClass("a_zoom");
+			
+			audio.play_sfx("OOT_Get_SmallItem1");
+			//show dialog box
+			$("#d_ni").show();
+		});
+		
+		
+		//load item picture
+		ni_item.attr("src", image);
+		//start animation
+		$("#ni_item").addClass("a_zoom");
+		
+		
+		
+		
+		
+	},
 	
 	
 };

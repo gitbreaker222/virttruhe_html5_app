@@ -16,12 +16,16 @@ function init(){
 	ui.items		= $("#items"),
 	ui.scan			= $("#scan"),
 	ui.pause		= $("#pause"),
+	ui.new_item		= $("#new_item"),
+	ui.portal		= $("#portal"),
 	ui.dialog		= $("#dialog"),
 	ui.btn_scan		= $("#btn_scan"),
 	ui.btn_pause	= $("#btn_pause"),
 	ui.btn_use		= $("#btn_use"),
 	ui.btn_share	= $("#btn_share"),
 	ui.btn_delete	= $("#btn_delete"),
+	
+	dialog.init();
 	
 	system_status.change_state("inventory");
 	system_status.change_layer("reality");
@@ -39,6 +43,7 @@ function init(){
 	
 	
 	ui.update_items();
+	
 	
 	/*
 	ui.music.attr("src", "data/audio/The Legend of Zelda - Gerudo Valley.mp3");

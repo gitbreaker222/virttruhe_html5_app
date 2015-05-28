@@ -66,8 +66,11 @@ function btn_share(){
 }
 
 function btn_delete(){
-	
 	inventory.remove(inventory.selected);
+}
+
+function btn_delete_dialog(){
+	$("#d_delete").show();
 }
 
 
