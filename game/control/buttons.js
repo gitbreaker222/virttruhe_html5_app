@@ -62,7 +62,7 @@ function btn_use(){
 
 function btn_share(){
 	console.log("pressed share button");
-	
+	alert("not available in alpha version");
 }
 
 function btn_delete(){
@@ -91,6 +91,7 @@ function switch_mute_sfx(){
 }
 
 function switch_photo_scanner(){
+	alert("not available in alpha version");
 	if(settings.photo_scanner){
 		settings.photo_scanner = false;
 	}else{
@@ -99,12 +100,14 @@ function switch_photo_scanner(){
 }
 
 function btn_save(){
+	alert("not available in alpha version");
 	//choose destination on file system
 	
 	//destination file content = JSON.stringify settings + items + inventory.item_list + user_stats
 }
 
 function btn_load(){
+	alert("not available in alpha version");
 	//chhose file to load
 	
 	//check if it is JSON

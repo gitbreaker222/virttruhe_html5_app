@@ -31,15 +31,8 @@ function init(){
 	system_status.change_layer("reality");
 	
 	
-	function load_items(){
-		var counter = 0;
-		for (i in items){
-			inventory.add(i);
-			counter++;
-			if(counter > 8){break;}
-		};
-	};
-	load_items();
+	inventory.add("manual");
+	inventory.add("normal_boots");
 	
 	
 	ui.update_items();
