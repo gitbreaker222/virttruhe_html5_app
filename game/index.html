@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-	<!-- VCLSD-Pattern: VIEW -->
+<html class="no-js" lang="en" >
 	<head>
 		<meta charset="utf-8">
 
@@ -16,152 +15,344 @@
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<!-- Sets initial viewport load and disables zooming  -->
-		<meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1">
-		<link rel="shortcut icon" href="/favicon.ico">
+		<!-- Sets initial viewport load and disables zooming. Essential for foundation framework -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<link rel="shortcut icon" href="favicon.png">
 		
-		<!-- css normalizer -->
-		<link href="css/normalize.css" rel="stylesheet">
-		<!-- jQUERY -->
+		
+		
+		
+		<!-- --- DATA ------------------------>
+		<!-- LIBS --------- -->
+		<!-- foundation css -->
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/normalize.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation-icons.css">
+		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/custom.css">
+		
+		<script src="lib/foundation-5.5.1.custom/js/vendor/modernizr.js"></script>
+		<!-- jQuery -->
 		<script src="lib/jquery-1.11.1.js"></script>
-		<!-- jQUERY UI -->
-		<link rel="stylesheet" href="lib/jquery-ui-1.11.2.custom/jquery-ui.css">
-		<script src="lib/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
-		<link rel="stylesheet" href="lib/jquery-ui-1.11.2.custom/jquery-ui.structure.css">
-		<script src="lib/jquery-ui-1.11.2.custom/jquery-ui.theme.css"></script>
-		
-		<!-- CUSTOM STYLE sheet -->
-		<link rel="stylesheet" href="css/style_manual.css" />
-		
-		<!-- ITEM LIST (load before CONTROL-/LOGIC-skripts)-->
-		<script src="script/items.js"></script>
-		
-		<!-- VIRTTRUHE SCRIPT -->
-		<script src="script/game_status.js"></script>
-		<script src="script/game_objects.js"></script>
-		<script src="script/item_functions.js"></script>
-		<script src="script/inventory.js"></script>
-		<script src="script/audio.js"></script>
-		<script src="script/buttons.js"></script>
-		<script src="script/status_control.js"></script>
-		<script src="script/scan.js" type="text/javascript"></script>
-		
-		<!-- jsqrcode (order important)-->
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/version.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/detector.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/formatinf.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/errorlevel.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bitmat.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datablock.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bmparser.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datamask.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/rsdecoder.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256poly.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/decoder.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/qrcode.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/findpat.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/alignpat.js"></script>
-		<script type="text/javascript" src="script/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/databr.js"></script>
+		<script src="lib/jquery_plugin_svg_to_inline.js"></script>
 		
 		
+		<!-- jsqrcode (order important)-- -->
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/version.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/detector.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/formatinf.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/errorlevel.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bitmat.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datablock.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bmparser.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datamask.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/rsdecoder.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256poly.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/decoder.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/qrcode.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/findpat.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/alignpat.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/databr.js"></script>
+		
+		<!-- html5-qrcode (based on jsqrcode)-->
+		<script src="lib/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
+		
+		
+		
+		<!-- custom style sheet -->
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="data/settings.js"></script>
+			
+		<!-- item collection -->
+		<script src="data/items.js"></script>
+		<script src="data/layers.js"></script>
+		<script src="data/item-map.js"></script>
+		
+		<!-- --- LOGIC ------------------------>
+		<script src="logic/audio.js"></script>
+		<script src="logic/inventory.js"></script>
+		<script src="logic/message.js"></script>
+		<script src="logic/scan.js"></script>
+		<script src="logic/user_status.js"></script>
+		<script src="logic/system_status.js"></script>
+		
+		<!-- --- CONTROL ------------------------>
+		<script src="control/buttons.js"></script>
+		
+		<!-- --- VIEW ------------------------>
+		<script src="view/dialog.js"></script>
+		<script src="view/ui.js"></script>
+		<!-- html code mainly represents the view -->
+		
+		
+		<script src="control/init.js"></script>
 		
 	</head>
 
 
 
 
-
-	<body onload="init_objects(); change_status('title'); change_layer('title'); reload_inventory()">
+	<body class="dark">
 		
-		<div id="header" class="bar">
-			<button id="button_pause" class="btn-icon pull-right" onclick="btn_options()"></button>
-			<button id="button_scan" class="btn-icon pull-right" onclick="btn_scan()"></button>
-			<span class="clear"></span>
-			<text id="layer"></text>
+		<!-- THE HIDDEN AUDIO PLAYERS. ONE FOR EACH TRACK (like: music, sfx) -->
+		<audio id="music_player" loop></audio>
+		<audio id="m01" preload loop>
+			<source src="data/audio/The Legend of Zelda - Kokiri Woods.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m02" preload loop>
+			<source src="data/audio/Zelda - Laden.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m03" preload loop>
+			<source src="data/audio/The Legend of Zelda - Gerudo Valley.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m04" preload loop>
+			<source src="data/audio/The Legend of Zelda - Spirit Temple.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio id="m05" preload loop>
+			<source src="data/audio/The Legend of Zelda - Kotake and Koume.mp3" type="audio/mpeg"></source>
+		</audio>
+		
+		<audio id="sfx_player"></audio>
+		
+		
+		
+		
+		<div id="header" class="row fixed">
 			
-			
-			<!-- THE HIDDEN AUDIO PLAYERS ;) ONE FOR EACH TRACK (like: music, sfx) -->
-			<audio id="audio_player" loop></audio>
-			<audio id="audio_sfx"></audio>
+			<!------------------------------------ header 1 -->
+	  		<div class="small-8 columns">
+	  			<h1 id="layer">layer of the player layer of the player </h1>
+	  		</div>
+	  		<div class="small-4 columns no-padding">
+	  			<div class="icon-bar two-up">
+	  				<a id="btn_scan" class="item" onclick="btn_scan()">
+		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-video.svg"/img>
+		  			</a>
+		  			<a id="btn_pause" class="item" onclick="btn_pause()">
+		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-list.svg"/img>
+		  			</a>
+	  			</div>
+		  	</div>
+	  		
+	  		<!------------------------------------ header 2 -->
+	  		<div id="user_stats_display" class="row">
+		  		<div class="small-8 columns">
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  			<img src="data/img/icons/heart.svg" class=""/>
+		  		</div>
+		  		<div class="small-2 columns">
+		  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
+		  		</div>
+		  		<div class="small-2 columns">
+		  			<img src="data/img/icons/rupee.svg"/>
+		  		</div>
+		  		
+		  	</div>
 		</div>
 		
 		
 		
-		<!-- STATUS BAR WITH HEARTS, KEYS AND RUPEES ------------------- -->
-		<div id="status" class="bar hide">
-			<div class="pull-left">
-				<span class="icon-heart img"></span>
-				<span class="icon-heart img"></span>
-			</div>
-			
-			<div class="pull-right">
-				<div id="rupee" class="img"></div>
-				<span id="rupee_counter">999</span>
-			</div>
-		</div>
 		
 		
 		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
 		<div id="content">
-			
-			<!-- TITLE SCREEN-------------------------------- -->
-			<div id="title" class="show">
-				<h1>ZELDA - Collecting Items</h1>
-				<h2>a VIRTTRUHE game</h2>
+	    	<div id="inventory" class="row hide">
+	    		
+	    		<!-- ----------------------------------------------------- -->
+	    		<!-- INVENTORY-------------------------------------------- -->
+	    		<!-- ----------------------------------------------------- -->
+	    		
+				<div class="small-12 columns clearfix">
+					<ul id="items" class="clearfix">	</ul>
+				</div>
+	    		
+				<span class="clearfix clear"></span>
+				
+	    		<div class="light row bottom">
+	    			<div id="item_title" class="small-6 columns">
+	    				item title goes here
+	    			</div>
+	    			<div class="small-6 columns no-padding">
+	    				<div class=" icon-bar three-up">
+	    					<a id="btn_use" class="item" onclick="btn_use()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/img>
+				  			</a>
+				  			<a id="btn_share" class="item" onclick="btn_share()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
+				  			</a>
+				  			<a id="btn_delete" class="item" onclick="btn_delete_dialog()">
+				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
+				  			</a>
+	    				</div>
+			  		</div>
+			  		
+	    			
+	    			
+	    		</div>
 			</div>
 			
-			<!-- ----------------------------------------------------------- -->
-			<ul id="inventory" class="hide">
-			</ul>
 			
-			<!-- ----------------------------------------------------------- -->
-			<div id="scan" class="hide">
-				<form id="myForm">
-					<input type="file"  accept="image/*" id="cameraInput" name="cameraInput" onchange="decode_qr()">
-				</form>
-				
-				<!-- the size of the img tag is more easy to handle and it gets loaded into the canvas -->
-				<img id="preview_img" src="" height="200" alt="Image preview...">
-				
-				<!-- hidden canvas where the qr-decoder reads the image. 
-					The ID "qr-canvas" is determined in decoder.js from jsqrcode-library -->
-				<canvas id="qr-canvas" width="500px" height="350px"></canvas>
-				
-				<!-- here will be the presentation animation for new items -->
-				<div id="presentation_box">
-					<img id="img_chest" src="img/chest.png" alt="chest">
-					<div id="new_item_box">
-						<img id="img_shiny" src="img/shiny.png" alt="shiny">
-						<img id="img_new_item" src="" alt="item">
+			
+			<!-- ----------------------------------------------------- -->
+			<!-- SCANNER --------------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<div id="scan" class="row hide">
+				<div class="small-12 columns">
+					<div id="reader"></div>
+				</div>
+			</div>
+			
+			
+			<!-- ----------------------------------------------------- -->
+			<!-- PAUSE / SETTINGS ------------------------------------ -->
+			<!-- ----------------------------------------------------- -->
+			<div id="pause" class="row hide">
+				<div class="small-12 columns">
+					<h2>Settings</h2>
+					
+					<table>
+						<tbody>
+							<tr>
+								<td>Mute music</td>
+								<td><div class="switch">
+									<input id="switch_mute_music" type="checkbox">
+									<label for="switch_mute_music" onclick="switch_mute_music()"></label>
+								</div></td>
+							</tr>
+							<tr>
+								<td>mute effects</td>
+								<td><div class="switch">
+								  <input id="switch_mute_sfx" type="checkbox">
+								  <label for="switch_mute_sfx" onclick="switch_mute_sfx()"></label>
+								</div></td>
+							</tr>
+							<tr>
+								<td>use photo scanner</td>
+								<td><div class="switch">
+								  <input id="switch_photo_scanner" type="checkbox">
+								  <label for="switch_photo_scanner" onclick="switch_photo_scanner()"></label>
+								</div></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<button onclick="btn_save()">save game</button>
+					<button onclick="btn_load()">load game</button>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<!-- ----------------------------------------------------- -->
+			<!-- PRESENTATION/OPEN A CHEST --------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<div id="new_item" class="row hide">
+				<div class="small-12 columns">
+						
+					<img id="ni_chest" class="" src="data/img/chest.png"/>
+					
+					<img id="ni_shiny" class="" src="data/img/shiny.png"/>
+					
+					<img id="ni_item" class="" src="" />
+					
+				</div>
+			</div>
+			
+			
+			<!-- ----------------------------------------------------- -->
+			<!-- PRESENTATION/ENTER A PORTAL ------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<div id="portal" class="row hide">
+				<div class="small-12 columns" >
+						
+					<h1 id="">I am a presentation for the portal you opened (:</h1>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<!-- ----------------------------------------------------- -->
+			<!-- DIALOG BOXES----------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			
+			<!-- NEW ITEM -------------------------------------------- -->
+			<div id="d_ni" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						<h1>Congratulation!</h1>
+						<p>You have found: <i id="d_item"></i></p>
+					</div>
+					
+					<div class="d_actions">
+						<button onclick="system_status.change_state('inventory')">OK</button>
 					</div>
 				</div>
-				
 			</div>
 			
-			<!-- ----------------------------------------------------------- -->
-			<div id="pause" class="hide">
-				<h2>Pause</h2>
-				<span>Mute Sound: </span><button class="btn-icon" id="button_toggle_sound" onclick="btn_toggle_sound()"></button>
-				<br />
-				<span>About: </span><button class="btn-icon" id="button_about" onclick="btn_about()"></button>
+			<!-- USE ITEM ----------------------------------------- -->
+			<div id="d_use" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						Placeholder for the use function of: <i id="d_use_item"></i>
+					</div>
+					
+					<div class="d_actions">
+						<button>OK</button>
+					</div>
+				</div>
 			</div>
-			<!-- the dialog box, which is used to display various messages by the skripts -->
-			<div id="dialog" title="Ooops, this should't be written here..."></div>
-			<script>$( "#dialog" ).dialog({ autoOpen: false });</script>
-		</div>
-		<!-- ----------------------------------------------------------- -->
 			
+			<!-- DELETE ITEM ----------------------------------------- -->
+			<div id="d_delete" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						Do you really want to delete this item?
+					</div>
+					
+					<div class="d_actions">
+						<img class="button icon"
+						     src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"
+						     onclick="btn_delete()" /img>
+						
+					</div>
+				</div>
+			</div>
 			
-		<div id="footer" class="bar">
-			<button class="btn-icon pull-right" id="button_delete" onclick="btn_delete()"></button>
-			<button class="btn-icon pull-right" id="button_use" onclick="btn_use()"></button>
-			<h3 id="item_title"></h3>
-		</div>
-		
-		
-		
+			<!-- MANUAL ---------------------------------------------- -->
+			<div id="d_man" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						<p>Scan a VIRTTRUHE treasure card, to investigate it and collect items.</p>
+						<p>Select items from your inventory, to activate item interactions.</p>
+						<p>You can: use, share and delete them.</p>
+					</div>
+					
+					<div class="d_actions">
+						<button>OK</button>
+					</div>
+				</div>
+			</div>
+    	
+	    </div>
+	    
+	    
+	    
+	    
+	    
+		<!-- SCRIPTS ----------------------->
+	  
+	  <script src="lib/foundation-5.5.1.custom/js/foundation.min.js"></script>
+	  <script>
+	    $(document).foundation();
+	    init();
+	  </script>
 	</body>
 </html>
 
