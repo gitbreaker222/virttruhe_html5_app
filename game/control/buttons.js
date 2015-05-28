@@ -61,8 +61,7 @@ function btn_use(){
 
 
 function btn_share(){
-	console.log("pressed share button");
-	
+	share.create(inventory.selected);
 }
 
 function btn_delete(){
@@ -99,13 +98,15 @@ function switch_photo_scanner(){
 }
 
 function btn_save(){
+	alert("not available in alpha version");
 	//choose destination on file system
 	
 	//destination file content = JSON.stringify settings + items + inventory.item_list + user_stats
 }
 
 function btn_load(){
-	//chhose file to load
+	alert("not available in alpha version");
+	//choose file to load
 	
 	//check if it is JSON
 	

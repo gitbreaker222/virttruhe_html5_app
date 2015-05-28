@@ -171,6 +171,15 @@ audio{
 	animation:  A_zoom 2s;  /* IE 10+, Fx 29+*/
 } 
 
+#share_qrcode .d_box{
+	background-color: #fff;
+}
+#share_qrcode .d_message > img{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
 
 
 

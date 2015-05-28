@@ -57,13 +57,16 @@
 		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/databr.js"></script>
 		
 		<!-- html5-qrcode (based on jsqrcode)-->
-		<script src="lib/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
+		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
+		
+		<!-- qrcode.js -->
+		<script type="text/javascript" src="lib/qrcodejs/qrcode.min.js"></script>
 		
 		
 		
 		<!-- custom style sheet -->
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="data/settings.js"></script>
+		<script type="text/javascript" src="data/settings.js"></script>
 			
 		<!-- item collection -->
 		<script src="data/items.js"></script>
@@ -75,6 +78,7 @@
 		<script src="logic/inventory.js"></script>
 		<script src="logic/message.js"></script>
 		<script src="logic/scan.js"></script>
+		<script src="logic/share.js"></script>
 		<script src="logic/user_status.js"></script>
 		<script src="logic/system_status.js"></script>
 		
@@ -239,8 +243,8 @@
 						</tbody>
 					</table>
 					
-					<button>save game</button>
-					<button>load game</button>
+					<button onclick="btn_save()">save game</button>
+					<button onclick="btn_load()">load game</button>
 				</div>
 			</div>
 			
@@ -276,6 +280,20 @@
 			</div>
 			
 			
+			<!-- ----------------------------------------------------- -->
+			<!-- SHARE QR BOX ---------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<div id="share_qrcode" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						
+					</div>
+					
+					<div class="d_actions">
+						<button onclick="$('#share_qrcode').hide()">OK</button>
+					</div>
+				</div>
+			</div>
 			
 			
 			<!-- ----------------------------------------------------- -->
@@ -286,7 +304,7 @@
 				<div class="center d_box">
 					<div class="d_message">
 						<h1>Congratulation!</h1>
-						<p>You have found: <i id="d_item"></i></p>
+						<p>You have found: <i id="d_item"> </i></p>
 					</div>
 					
 					<div class="d_actions">
