@@ -5,7 +5,7 @@ share = {
 		//remove previous image
 		qrcode.html("");
 		//create new qr code
-		new QRCode(qrcode[0], "#"+item_id+" :: Zelda Demo - A VIRTTRUHE game");
+		new QRCode(qrcode[0], ",," + item_id);
 		//show dialog box
 		$("#share_qrcode").show();
 	}

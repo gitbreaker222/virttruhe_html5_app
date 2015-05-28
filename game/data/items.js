@@ -6,7 +6,7 @@ var items = {
 			icon		: "data/img/items/small/manual.png",
 			stackable	: false,
 			use			: function(){
-				message.print("read manual");
+				$("#d_man").show();
 			},
 		},
 		arrows : {
@@ -170,5 +170,6 @@ var items = {
 };
 
 function use_fn(){
-	console.log("use");
+	$("#d_use_item").html(inventory.selected);
+	$("#d_use").show();
 }
