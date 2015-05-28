@@ -160,7 +160,9 @@
 		<div id="content">
 	    	<div id="inventory" class="row hide">
 	    		
-	    		<!-- INVENTORY-------------------------------------------------- -->
+	    		<!-- ----------------------------------------------------- -->
+	    		<!-- INVENTORY-------------------------------------------- -->
+	    		<!-- ----------------------------------------------------- -->
 	    		
 				<div class="small-12 columns clearfix">
 					<ul id="items" class="clearfix">	</ul>
@@ -193,8 +195,9 @@
 			
 			
 			
-			
-			<!-- SCANNER -------------------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<!-- SCANNER --------------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
 			<div id="scan" class="row hide">
 				<div class="small-12 columns">
 					<div id="reader"></div>
@@ -202,7 +205,9 @@
 			</div>
 			
 			
-			<!-- PAUSE / SETTINGS ------------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<!-- PAUSE / SETTINGS ------------------------------------ -->
+			<!-- ----------------------------------------------------- -->
 			<div id="pause" class="row hide">
 				<div class="small-12 columns">
 					<h2>Settings</h2>
@@ -242,16 +247,17 @@
 			
 			
 			
-			
-			<!-- PRESENTATION/OPEN A CHEST -------------------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<!-- PRESENTATION/OPEN A CHEST --------------------------- -->
+			<!-- ----------------------------------------------------- -->
 			<div id="new_item" class="row hide">
 				<div class="small-12 columns">
 						
-					<img id="ni_chest" class="center" src="data/img/chest.png"/>
+					<img id="ni_chest" class="" src="data/img/chest.png"/>
 					
-					<img id="ni_shiny" class="center" src="data/img/shiny.png"/>
+					<img id="ni_shiny" class="" src="data/img/shiny.png"/>
 					
-					<img id="ni_item" class="center" src=""/>
+					<img id="ni_item" class="" src=""/>
 					
 				</div>
 				<div class="small-12 columns">
@@ -260,8 +266,9 @@
 			</div>
 			
 			
-			
-			<!-- PRESENTATION/ENTER A PORTAL -------------------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
+			<!-- PRESENTATION/ENTER A PORTAL ------------------------- -->
+			<!-- ----------------------------------------------------- -->
 			<div id="portal" class="row hide">
 				<div class="small-12 columns">
 						
@@ -277,14 +284,20 @@
 			
 			
 			
+			<!-- ----------------------------------------------------- -->
+			<!-- DIALOG BOXES----------------------------------------- -->
+			<!-- ----------------------------------------------------- -->
 			
-			<!-- DIALOG BOX------------------------------------------- -->
-			<div id="dialog" class="medium reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-				
-				<div id="d_message"></div>
-				
-				<div id="d_actions"></div>
-				
+			<div id="d0" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						This is a test dialog box. Would you like to close it? It will close on any action though...
+					</div>
+					
+					<div class="d_actions">
+						<button onclick="system_status.change_state('inventory')">close</button>
+					</div>
+				</div>
 			</div>
     	
 	    </div>

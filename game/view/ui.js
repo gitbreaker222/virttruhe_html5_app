@@ -215,10 +215,10 @@ ui = {
 			//reset the animation
 			$("#ni_item").removeClass("a_zoom");
 			
-			audio.play_sfx("OOT_Get_SmallItem1")
+			audio.play_sfx("OOT_Get_SmallItem1");
 			
 			//show dialog box
-			alert("YOUUUU GOT THE ITTEEEEEM WHAAAHAHAHAHAHA");
+			$("#d0").show();
 		});
 		
 		
