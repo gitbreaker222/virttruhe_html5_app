@@ -61,8 +61,7 @@ function btn_use(){
 
 
 function btn_share(){
-	console.log("pressed share button");
-	alert("not available in alpha version");
+	share.create(inventory.selected);
 }
 
 function btn_delete(){
@@ -108,7 +107,7 @@ function btn_save(){
 
 function btn_load(){
 	alert("not available in alpha version");
-	//chhose file to load
+	//choose file to load
 	
 	//check if it is JSON
 	
