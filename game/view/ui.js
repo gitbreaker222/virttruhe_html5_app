@@ -117,7 +117,7 @@ ui = {
 		
 		//show the modal / dialog box
 		dialog.foundation("modal", "open");
-	}
+	},
 	
 	/*
 	 * INVENTORY
@@ -205,19 +205,29 @@ ui = {
 	present_new_item	: function(item_id){
 		var image = items[item_id].image;
 		var ni_item = $("#ni_item"); //ni = New Item. ID prefix for new_item row
-		//sfx shortcuts
-		var sfx_chest = audio.play_sfx("open_chest");
-		var sfx_ni = audio.play_sfx("OOT_Get_SmallItem1");
 		
-		ni_item.attr("src", image);
-		
-		ni_item.on("animationstart", sfx_chest);
-		ni_item.on("animationend", sfx_ni);
-		
-		//show dialog box
-		ni_item.on("animationend", function(){
-			
+		//set up fn for animation start/end
+		ni_item.on("animationstart", function(){
+			audio.play_sfx("open_chest");
 		});
+		
+		ni_item.on("animationend", function(){
+			//reset the animation
+			$("#ni_item").removeClass("a_zoom");
+			
+			audio.play_sfx("OOT_Get_SmallItem1")
+			
+			//show dialog box
+			alert("YOUUUU GOT THE ITTEEEEEM WHAAAHAHAHAHAHA");
+		});
+		
+		
+		//load item picture
+		ni_item.attr("src", image);
+		//start animation
+		$("#ni_item").addClass("a_zoom");
+		
+		
 		
 		
 		
