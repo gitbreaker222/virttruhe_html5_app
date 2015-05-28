@@ -27,12 +27,10 @@ audio{
 }
 
 .icon{
-	max-height: 2rem;
-	padding 0rem;
+	max-height: 4rem;
+	padding: 0px;
 }
-.icon img{
-	
-}
+
 .icon-bar{
 	background: none;
 }

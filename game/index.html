@@ -82,6 +82,7 @@
 		<script src="control/buttons.js"></script>
 		
 		<!-- --- VIEW ------------------------>
+		<script src="view/dialog.js"></script>
 		<script src="view/ui.js"></script>
 		<!-- html code mainly represents the view -->
 		
@@ -296,6 +297,23 @@
 					
 					<div class="d_actions">
 						<button onclick="system_status.change_state('inventory')">close</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- DELETE ITEM ----------------------------------------- -->
+			<div id="d_delete" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						Do you really want to delete this item?
+					</div>
+					
+					<div class="d_actions">
+						<img class="button icon"
+						     src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"
+						     onclick="btn_delete()" 
+						/img>
+						
 					</div>
 				</div>
 			</div>

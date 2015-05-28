@@ -76,48 +76,6 @@ ui = {
 		this.layer.html(layer);
 	},
 	
-	/*
-	 * DIALOG BOX POP UP
-	 */
-	dialog				: function(dialog_obj){
-		/*
-		 * dialog_obj = {
-		 * 	 message : "string w/ html formating or DOM nodes",
-		 *   actions : [
-		 *     {name : "string", fn : function()},
-		 *     {name : "string", fn : function()},
-		 *   ]
-		 * }
-		 */
-	
-		var d_message = $("#d_message");
-		var d_actions = $("#d_actions");
-		var actions_html = "";
-		
-		//create dialog message (override)
-		d_message.html(dialog_obj.message);
-		
-		//create buttons for actions
-		for(i = 0; dialog_obj.actions.length; i++){
-			//reset button html
-			var button = "";
-			if(dialog_obj.actions[i].name == "CLOSE"){
-				//if action is close button
-				button = "<a class='close-reveal-modal' aria-label='Close'>&#215;</a>"
-			}else{
-				//else prepare +label+ and click +function+ for button
-				button = "<a class='button' onclick='"+dialog_obj.actions[i].fn+"'>"+dialog_obj.actions[i].name+"</a>"
-			}
-			//append button node to actions section
-			actions_html += button;
-		}
-		
-		//insert buttons into div (override)
-		d_actions.html(actions_html);
-		
-		//show the modal / dialog box
-		dialog.foundation("modal", "open");
-	},
 	
 	/*
 	 * INVENTORY

@@ -66,34 +66,11 @@ function btn_share(){
 }
 
 function btn_delete(){
-	
 	inventory.remove(inventory.selected);
 }
 
 function btn_delete_dialog(){
-	var message_html= "<p>Do you really want to delete this item?</p>"
-			+ "<a class='button' aria-label='Close' onclick='$(\"#dialog\").foundation(\"reveal\", \"close\"); btn_delete();'>"
-			+   "<img class='icon' src='lib/foundation-5.5.1.custom/img/icons/fi-trash.svg' />"
-			+ "</a>"
-	/*
-	 * CONTUNUE HERE TODO
-	 * button.js and ui.js	<a class="button" aria-label="Close" onclick="$('#dialog').foundation('reveal', 'close'); btn_delete();">
-	 * 
-	 * create dialog content as js object
-	 * send to ui
-	 * ui creates dialog pop up as modal
-	 * 
-	 * not testet yet
-	 */
-	
-	var dialog_obj = {
-		message : message_html,
-		actions : [
-			{name : "CLOSE", fn : null}
-		],
-	};
-	
-	ui.dialog(dialog_obj);
+	$("#d_delete").show;
 }
 
 
