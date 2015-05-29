@@ -1,142 +1,133 @@
 inventory = {
-	item_list		: [],
-	selected		: null,
-	setSelected		: function(x){
+	item_list : [],
+	selected : null,
+	setSelected : function(x) {
 		this.selected = x;
 		//event
-		if(x){
+		if (x) {
 			ui.select(x);
-		}else{
+		} else {
 			ui.update_items();
 		}
 	},
-	
-	
-	
-	add		: function (item) {
+
+	add : function(item) {
 		/*
 		 * validation
 		 */
-		if(item == undefined){
+		if (item == undefined) {
 			message.print("cannot add nothing to inventory");
 			return;
 		}
 		//check if item exists in loaded item_set
-		if(items[item] == undefined){
+		if (items[item] == undefined) {
 			message.print("item not in list: " + item);
 			return;
 		}
-		
+
 		//check if stackable
-		if(items[item].stackable){
+		if (items[item].stackable) {
 			//stackable
 			message.print("stackable");
-			
-			
-			
-					//check if already exists					//TODO make this elegant
-					if(this.item_list.indexOf(item) == -1){
-						//no -> add counter
-						items[item].count = 1;
-						//...and write to list
-						this.item_list.push(item);
-					}else{
-						//yes -> counter +1
-						items[item].count += 1;
-					}
-			
-			
-		}else{
+
+			//check if already exists					//TODO make this elegant, if possible
+			if (this.item_list.indexOf(item) == -1) {
+				//no -> add counter
+				items[item].count = 1;
+				//...and write to list
+				this.item_list.push(item);
+			} else {
+				//yes -> counter +1
+				items[item].count += 1;
+			}
+
+		} else {
 			//not stackable
 			message.print("not stackable");
-			
-			
-					//check if already exists					//TODO make this elegant (dry)
-					if(this.item_list.indexOf(item) == -1){
-						//no -> write to list
-						this.item_list.push(item);
-					}else{
-						//yes -> skip
-						message.print(item + " already in inventory");
-					}
-			
-			
-			
+
+			//check if already exists					//TODO make this elegant (d.r.y.)
+			if (this.item_list.indexOf(item) == -1) {
+				//no -> write to list
+				this.item_list.push(item);
+			} else {
+				//yes -> skip
+				message.print(item + " already in inventory");
+			}
+
 		}
-		
-		
-		
+
 		//event trigger
 		ui.update_items();
 		return;
-	},	
-	
-	
-	remove	: function (item) {
-					var list = this.item_list;
-					var pos = list.indexOf(item); 
-					/*
-					 * validation
-					 */
-					if(pos == -1){
-						console.log(item + " not in inventory");
-						return;
-					}
-					
-					//check if stackable
-					if(items[item].stackable){
-						//check if only one left
-						if(items[item].count == 1){
-							//delete from list
-							list.splice(pos, 1);
-							console.log("#");
-							inventory.setSelected(null);
-							console.log("selected: "+inventory.selected);
-						}
-						items[item].count--;
-						ui.update_items();
-					}else{
-						list.splice(pos, 1);
-						inventory.setSelected(null);
-					}
-					
-					
-					//event trigger
-					//ui.update_items();
-					
-				},
-	
-	
-	select	: function (item) {
-					this.setSelected(item);
-					
-					//event
-					//enable buttons
-					ui.btn_use.removeClass("disabled");
-					ui.btn_share.removeClass("disabled");
-					ui.btn_delete.removeClass("disabled");
-					
-					return;
-			},
-				
-				
-				
-	unselect : function(){
+	},
+
+	remove : function(item) {
+		var list = this.item_list;
+		var pos = list.indexOf(item);
+		/*
+		 * validation
+		 */
+		if (pos == -1) {
+			console.log(item + " not in inventory");
+			return;
+		}
+
+		//check if stackable
+		if (items[item].stackable) {
+			//check if only one left
+			if (items[item].count == 1) {
+				//delete from list
+				list.splice(pos, 1);
+				console.log("#");
+				inventory.setSelected(null);
+				console.log("selected: " + inventory.selected);
+			}
+			items[item].count--;
+			ui.update_items();
+		} else {
+			list.splice(pos, 1);
+			inventory.setSelected(null);
+		}
+
+		//event trigger
+		//ui.update_items();
+
+	},
+
+	select : function(item) {
+		this.setSelected(item);
+
+		//event
+		//enable buttons
+		ui.btn_use.removeClass("disabled");
+		ui.btn_share.removeClass("disabled");
+		ui.btn_delete.removeClass("disabled");
+
+		return;
+	},
+
+	unselect : function() {
 		this.setSelected(null);
 	},
-	
-	info	: function(){
+
+	info : function() {
 		var item = items[inventory.selected];
-		if(inventory.selected == null){
-			$("#d_use .d_message").html("Select an item from your inventory, to use, share or delete it.");
-		}else{
-			$("#d_use .d_message").html("Name: "+item.name+"<br/> Function: "+item.use);
+		if (inventory.selected == null) {
+			$("#d_info .d_message").html("Select an item from your inventory, to use, share or delete it.");
+		} else {
+			$("#d_info .d_message").html("Name: " + item.name + "<br/> Function: " + item.use);
 		}
-		$("#d_use").show();
-	}
-	
-	
-	
-	
-	
+		$("#d_info").show();
+	},
+
+	share : function(item_id) {
+		var qrcode = $("#share_qrcode .d_message");
+
+		//remove previous image
+		qrcode.html("");
+		//create new qr code
+		new QRCode(qrcode[0], ",," + item_id);
+		//show dialog box
+		$("#share_qrcode").show();
+	},
 };

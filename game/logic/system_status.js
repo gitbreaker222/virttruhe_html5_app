@@ -103,9 +103,6 @@ system_status = {
 		
 		//event
 		ui.update_state();
-		
-		//TODO create layer characteristics (ui color, sounds, portals/items);
-		
 	},
 	
 	
