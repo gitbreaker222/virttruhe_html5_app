@@ -176,8 +176,11 @@
 				<span class="clearfix clear"></span>
 				
 	    		<div class="light row bottom">
-	    			<div id="item_title" class="small-6 columns">
-	    				item title goes here
+	    			<div class="small-6 columns">
+	    				<a id="btn_info" onclick="btn_info()">
+			  				<img  class="icon" src="lib/foundation-5.5.1.custom/img/icons/fi-info.svg"/img>
+			  				<span id="item_title" > </span>
+			  			</a>
 	    			</div>
 	    			<div class="small-6 columns no-padding">
 	    				<div class=" icon-bar three-up">
@@ -313,11 +316,24 @@
 				</div>
 			</div>
 			
+			<!-- ITEM INFO --------------------------------------- -->
+			<div id="d_info" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						
+					</div>
+					
+					<div class="d_actions">
+						<button>OK</button>
+					</div>
+				</div>
+			</div>
+			
 			<!-- USE ITEM ----------------------------------------- -->
 			<div id="d_use" class="dialog">
 				<div class="center d_box">
 					<div class="d_message">
-						Placeholder for the use function of: <i id="d_use_item"></i>
+						Placeholder for the use function of: <i id="d_use_item"> </i>
 					</div>
 					
 					<div class="d_actions">

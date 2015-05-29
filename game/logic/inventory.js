@@ -125,6 +125,16 @@ inventory = {
 		this.setSelected(null);
 	},
 	
+	info	: function(){
+		var item = items[inventory.selected];
+		if(inventory.selected == null){
+			$("#d_use .d_message").html("Select an item from your inventory, to use, share or delete it.");
+		}else{
+			$("#d_use .d_message").html("Name: "+item.name+"<br/> Function: "+item.use);
+		}
+		$("#d_use").show();
+	}
+	
 	
 	
 	

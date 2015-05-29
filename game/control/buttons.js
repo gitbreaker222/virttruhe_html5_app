@@ -55,6 +55,10 @@ function btn_pause(){
 /*
  * INVENTORY BUTTONS
  */
+function btn_info(){
+	inventory.info();
+}
+
 function btn_use(){
 	items[inventory.selected].use();
 }
