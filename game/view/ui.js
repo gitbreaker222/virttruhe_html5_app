@@ -192,10 +192,21 @@ ui = {
 		$("#ni_shiny").addClass("a_zoom");
 		$("#ni_item").addClass("a_zoom");
 		
-		
-		
-		
 	},
+	
+	present_portal		: function(portal){
+		//reset animation
+		
+		//set up animation
+		
+		//start animation
+		
+		//prepare dialog
+		$("#d_portal .name").html(layers[portal].name);
+		//show dialog
+		$("#d_portal").show();
+		
+	}
 	
 	
 };

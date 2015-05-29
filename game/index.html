@@ -81,6 +81,7 @@
 		<script src="logic/share.js"></script>
 		<script src="logic/user_status.js"></script>
 		<script src="logic/system_status.js"></script>
+		<script src="logic/portal.js"></script>
 		
 		<!-- --- CONTROL ------------------------>
 		<script src="control/buttons.js"></script>
@@ -277,7 +278,9 @@
 			<div id="portal" class="row hide">
 				<div class="small-12 columns" >
 						
-					<h1 id="">I am a presentation for the portal you opened (:</h1>
+					<img id="p_card" class="" src="data/img/card.svg"/>
+					
+					<img id="p_portal" class="" src="data/img/portal.svg"/>
 					
 				</div>
 			</div>
@@ -303,11 +306,12 @@
 			<!-- DIALOG BOXES----------------------------------------- -->
 			<!-- ----------------------------------------------------- -->
 			
+			<!-- NEW ITEM -------------------------------------------- -->
 			<div id="d_ni" class="dialog">
 				<div class="center d_box">
 					<div class="d_message">
 						<h1>Congratulation!</h1>
-						<p>You have found: <i id="d_item"> </i></p>
+						<p>You have found: <i id="d_item"> </i></p><!--change <i></i> to: <span .name></span> -->
 					</div>
 					
 					<div class="d_actions">
@@ -316,7 +320,22 @@
 				</div>
 			</div>
 			
-			<!-- ITEM INFO --------------------------------------- -->
+			<!-- PORTAL ---------------------------------------------- -->
+			<div id="d_portal" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						<h1>Portal to <span class="name"> </span></h2>
+						<p>Do you want to enter?</p>
+					</div>
+					
+					<div class="d_actions">
+						<button onclick="$('#d_ni').hide(); portal.enter('current')">ENTER</button>
+						<button onclick="$('#d_ni').hide(); portal.leave()">LEAVE</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- ITEM INFO ------------------------------------------- -->
 			<div id="d_info" class="dialog">
 				<div class="center d_box">
 					<div class="d_message">
@@ -329,7 +348,7 @@
 				</div>
 			</div>
 			
-			<!-- USE ITEM ----------------------------------------- -->
+			<!-- USE ITEM -------------------------------------------- -->
 			<div id="d_use" class="dialog">
 				<div class="center d_box">
 					<div class="d_message">
