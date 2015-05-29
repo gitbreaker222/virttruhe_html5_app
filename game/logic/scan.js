@@ -126,13 +126,12 @@ scan = {
 				ui.present_new_item(item_id);
 				
 			}else if(type == "portal"){
-				system_status.change_layer(item_id);
-				//TODO
-				
+				portal.to_layer = item_id;
+				system_status.change_state("portal");
+				ui.present_portal(item_id);
 			}else{
 				console.log("item type undefined");
 			}
-			
 			
 			return;
 		}

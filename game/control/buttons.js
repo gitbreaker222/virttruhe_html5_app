@@ -53,24 +53,29 @@ function btn_pause(){
 
 
 /*
- * INVENTORY BUTTONS
- */
-function btn_use(){
+* INVENTORY BUTTONS
+*/
+function btn_info() {
+	inventory.info();
+}
+
+function btn_use() {
 	items[inventory.selected].use();
 }
 
-
-function btn_share(){
-	share.create(inventory.selected);
+function btn_share() {
+	inventory.share(inventory.selected);
 }
 
-function btn_delete(){
+function btn_delete() {
 	inventory.remove(inventory.selected);
 }
 
-function btn_delete_dialog(){
+function btn_delete_dialog() {
 	$("#d_delete").show();
+	//TODO pass this job to dialog.js
 }
+
 
 
 /*

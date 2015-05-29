@@ -81,6 +81,7 @@
 		<script src="logic/share.js"></script>
 		<script src="logic/user_status.js"></script>
 		<script src="logic/system_status.js"></script>
+		<script src="logic/portal.js"></script>
 		
 		<!-- --- CONTROL ------------------------>
 		<script src="control/buttons.js"></script>
@@ -176,8 +177,11 @@
 				<span class="clearfix clear"></span>
 				
 	    		<div class="light row bottom">
-	    			<div id="item_title" class="small-6 columns">
-	    				item title goes here
+	    			<div class="small-6 columns">
+	    				<a id="btn_info" onclick="btn_info()">
+			  				<img  class="icon" src="lib/foundation-5.5.1.custom/img/icons/fi-info.svg"/img>
+			  				<span id="item_title" > </span>
+			  			</a>
 	    			</div>
 	    			<div class="small-6 columns no-padding">
 	    				<div class=" icon-bar three-up">
@@ -274,7 +278,9 @@
 			<div id="portal" class="row hide">
 				<div class="small-12 columns" >
 						
-					<h1 id="">I am a presentation for the portal you opened (:</h1>
+					<img id="p_card" class="" src="data/img/card.svg"/>
+					
+					<img id="p_portal" class="" src="data/img/portal.svg"/>
 					
 				</div>
 			</div>
@@ -305,7 +311,7 @@
 				<div class="center d_box">
 					<div class="d_message">
 						<h1>Congratulation!</h1>
-						<p>You have found: <i id="d_item"> </i></p>
+						<p>You have found: <i id="d_item"> </i></p><!--change <i></i> to: <span .name></span> -->
 					</div>
 					
 					<div class="d_actions">
@@ -314,11 +320,39 @@
 				</div>
 			</div>
 			
-			<!-- USE ITEM ----------------------------------------- -->
+			<!-- PORTAL ---------------------------------------------- -->
+			<div id="d_portal" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						<h1>Portal to <span class="name"> </span></h2>
+						<p>Do you want to enter?</p>
+					</div>
+					
+					<div class="d_actions">
+						<button onclick="$('#d_ni').hide(); portal.enter('current')">ENTER</button>
+						<button onclick="$('#d_ni').hide(); portal.leave()">LEAVE</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- ITEM INFO ------------------------------------------- -->
+			<div id="d_info" class="dialog">
+				<div class="center d_box">
+					<div class="d_message">
+						
+					</div>
+					
+					<div class="d_actions">
+						<button>OK</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- USE ITEM -------------------------------------------- -->
 			<div id="d_use" class="dialog">
 				<div class="center d_box">
 					<div class="d_message">
-						Placeholder for the use function of: <i id="d_use_item"></i>
+						Placeholder for the use function of: <i id="d_use_item"> </i>
 					</div>
 					
 					<div class="d_actions">
