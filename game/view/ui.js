@@ -107,7 +107,8 @@ ui = {
             html_snippet = html_snippet.replace(/#id/g, item_list[i]);
             html_snippet = html_snippet.replace(/#src/, items[current_item_id].icon);
             if (items[current_item_id].stackable) {
-                html_snippet = html_snippet.replace(/#label/, items[current_item_id].count);
+                html_snippet = html_snippet.replace(/#label/, '<span class="label">#count</span>');
+                html_snippet = html_snippet.replace(/#count/, items[current_item_id].count);
             }else{
                 html_snippet = html_snippet.replace(/#label/, "");
             }
