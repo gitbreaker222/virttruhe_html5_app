@@ -14,7 +14,7 @@ scan = {
 	start	: function(){
 		
 		this.status = true;
-		audio.play_sfx("OOT_ZTarget_Center1");
+		audio.play_sfx("focus_in"); //TODO move sfx trigger to ui module
 	
 		$('#reader')
 			//clear canvas
@@ -141,7 +141,7 @@ scan = {
 		
 	stop	: function(){
 		this.status = false;
-		audio.play_sfx("OOT_ZTarget_Center2");
+		audio.play_sfx("focus_out");
 	},
 	
 	
