@@ -146,7 +146,7 @@ ui = {
 
         this.item_title.html(name);
 
-        audio.play_sfx("OOT_PauseMenu_Cursor");
+        audio.play_sfx("select");
 
         return;
     },
