@@ -1,15 +1,20 @@
 inventory = {
 	item_list : [],
-	selected : null,
-	setSelected : function(x) {
-		this.selected = x;
-		//event
-		if (x) {
-			ui.select(x);
-		} else {
-			ui.update_items();
-		}
+	
+	Selected : null,
+	get selected(){
+	    return this.Selected;
 	},
+	set selected(value){
+	    this.Selected = value;
+	    
+	    if (value) {
+            ui.select(value);
+        } else {
+            ui.update_items();
+        }
+	},
+	
 
 	add : function(item) {
 		/*
@@ -81,14 +86,14 @@ inventory = {
 				//delete from list
 				list.splice(pos, 1);
 				console.log("#");
-				inventory.setSelected(null);
+				inventory.selected = null;
 				console.log("selected: " + inventory.selected);
 			}
 			items[item].count--;
 			ui.update_items();
 		} else {
 			list.splice(pos, 1);
-			inventory.setSelected(null);
+			inventory.selected = null;
 		}
 
 		//event trigger
@@ -97,7 +102,7 @@ inventory = {
 	},
 
 	select : function(item) {
-		this.setSelected(item);
+		this.selected = item;
 
 		//event
 		//enable buttons
@@ -109,7 +114,7 @@ inventory = {
 	},
 
 	unselect : function() {
-		this.setSelected(null);
+		this.selected = null;
 	},
 
 	info : function() {

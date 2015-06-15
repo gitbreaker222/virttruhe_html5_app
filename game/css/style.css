@@ -85,6 +85,16 @@ audio{
 	background-color: #FFF;
 }
 
+#start :nth-child(1){
+	font-size: 1.2rem;
+}
+
+#start :nth-child(3){
+	position:absolute;
+	height: 18%;
+	bottom: 0px;
+	background-color: #00F;
+}
 
 /* HEADER ------------*/
 #header{

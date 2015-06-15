@@ -5,7 +5,7 @@ var items = {
         "image"     : "data/img/items/manual.png",
         "icon"      : "data/img/items/small/manual.png",
         "stackable" : false,
-        "use"       : "read"
+        "use"       : function(){read();}
     },
     short_summary : {
         "id" : "short_summary",
@@ -13,7 +13,7 @@ var items = {
         "image" : "data/img/items/memory-card_01.png",
         "icon" : "data/img/items/small/memory-card_01.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     sector : {
         "id" : "sector",
@@ -21,7 +21,7 @@ var items = {
         "image" : "data/img/items/memory-card_02.png",
         "icon" : "data/img/items/small/memory-card_02.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     detailed_description : {
         "id" : "detailed_description",
@@ -29,7 +29,7 @@ var items = {
         "image" : "data/img/items/memory-card_03.png",
         "icon" : "data/img/items/small/memory-card_03.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     aim : {
         "id" : "aim",
@@ -37,7 +37,7 @@ var items = {
         "image" : "data/img/items/memory-card_04.png",
         "icon" : "data/img/items/small/memory-card_04.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     target_group : {
         "id" : "target_group",
@@ -45,7 +45,7 @@ var items = {
         "image" : "data/img/items/memory-card_05.png",
         "icon" : "data/img/items/small/memory-card_05.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     what_is_new : {
         //"id" : "what_is_new",
@@ -53,7 +53,7 @@ var items = {
         "image" : "data/img/items/memory-card_06.png",
         "icon" : "data/img/items/small/memory-card_06.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     benefits_danube_region : {
         //"id" : "benefits_danube_region",
@@ -61,7 +61,7 @@ var items = {
         "image" : "data/img/items/memory-card_07.png",
         "icon" : "data/img/items/small/memory-card_07.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     technology : {
         //"id" : "technology",
@@ -69,7 +69,7 @@ var items = {
         "image" : "data/img/items/memory-card_08.png",
         "icon" : "data/img/items/small/memory-card_08.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     user_friendliness : {
         //"id" : "user_friendliness",
@@ -77,7 +77,7 @@ var items = {
         "image" : "data/img/items/memory-card_09.png",
         "icon" : "data/img/items/small/memory-card_09.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     next_steps : {
         //"id" : "next_steps",
@@ -85,7 +85,7 @@ var items = {
         "image" : "data/img/items/memory-card_10.png",
         "icon" : "data/img/items/small/memory-card_10.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     business_plan : {
         //"id" : "business_plan",
@@ -93,7 +93,7 @@ var items = {
         "image" : "data/img/items/memory-card_11.png",
         "icon" : "data/img/items/small/memory-card_11.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     background_and_contact : {
         //"id" : "background_and_contact",
@@ -101,7 +101,7 @@ var items = {
         "image" : "data/img/items/memory-card_12.png",
         "icon" : "data/img/items/small/memory-card_12.png",
         "stackable" : false,
-        "use" : "read"
+        "use" : function(){read();}
     },
     placeholder : {
         "name" : "Placeholder",
@@ -112,7 +112,8 @@ var items = {
     }
 };
 
-read = function read() {
+read = function() {
+    console.log("hellu asshole");
     $("#d_use_item").html(inventory.selected);
     $("#d_use").show();
 };

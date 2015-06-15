@@ -64,7 +64,7 @@ function btn_info() {
 }
 
 function btn_use() {
-	items[inventory.selected].use;
+	items[inventory.selected].use();
 }
 
 function btn_share() {
