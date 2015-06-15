@@ -15,23 +15,23 @@ inventory = {
 		/*
 		 * validation
 		 */
-		if (item == undefined) {
-			message.print("cannot add nothing to inventory");
+		if (item === undefined) {
+			console.log("cannot add nothing to inventory");
 			return;
 		}
 		//check if item exists in loaded item_set
-		if (items[item] == undefined) {
-			message.print("item not in list: " + item);
+		if (items[item] === undefined) {
+			console.log("item not in list: " + item);
 			return;
 		}
 
 		//check if stackable
 		if (items[item].stackable) {
 			//stackable
-			message.print("stackable");
+			console.log("stackable");
 
 			//check if already exists					//TODO make this elegant, if possible
-			if (this.item_list.indexOf(item) == -1) {
+			if (this.item_list.indexOf(item) === -1) {
 				//no -> add counter
 				items[item].count = 1;
 				//...and write to list
@@ -43,15 +43,15 @@ inventory = {
 
 		} else {
 			//not stackable
-			message.print("not stackable");
+			console.log("not stackable");
 
 			//check if already exists					//TODO make this elegant (d.r.y.)
-			if (this.item_list.indexOf(item) == -1) {
+			if (this.item_list.indexOf(item) === -1) {
 				//no -> write to list
 				this.item_list.push(item);
 			} else {
 				//yes -> skip
-				message.print(item + " already in inventory");
+				console.log(item + " already in inventory");
 			}
 
 		}
@@ -67,7 +67,7 @@ inventory = {
 		/*
 		 * validation
 		 */
-		if (pos == -1) {
+		if (pos === -1) {
 			console.log(item + " not in inventory");
 			return;
 		}
@@ -75,7 +75,7 @@ inventory = {
 		//check if stackable
 		if (items[item].stackable) {
 			//check if only one left
-			if (items[item].count == 1) {
+			if (items[item].count === 1) {
 				//delete from list
 				list.splice(pos, 1);
 				console.log("#");
@@ -112,7 +112,7 @@ inventory = {
 
 	info : function() {
 		var item = items[inventory.selected];
-		if (inventory.selected == null) {
+		if (inventory.selected === null) {
 			$("#d_info .d_message").html("Select an item from your inventory, to use, share or delete it.");
 		} else {
 			$("#d_info .d_message").html("Name: " + item.name + "<br/> Function: " + item.use);
