@@ -44,7 +44,7 @@ system_status = {
 				break;
 				
 			case "pause" :
-				audio.play_sfx("OOT_PauseMenu_Close");
+				audio.play_sfx("pause_open");
 				
 				//activate scan button
 				ui.btn_scan.removeClass("disabled");
@@ -79,7 +79,7 @@ system_status = {
 				
 			case "pause" :
 				audio.pause();
-				audio.play_sfx("OOT_PauseMenu_Open");
+				audio.play_sfx("pause_close");
 				//disable scan button
 				ui.btn_scan.addClass("disabled");
 				break;

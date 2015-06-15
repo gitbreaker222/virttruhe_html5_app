@@ -8,6 +8,11 @@ audio{
 	transform: translate(-50%, -50%);
 }
 
+.center_hor{
+	left: 50%;
+	transform: translate(-50%);
+}
+
 .no-padding{
 	padding: 0;
 }
@@ -68,6 +73,18 @@ audio{
 		.d_actions{
 			margin-top: 1rem;
 		}
+
+/* START ------------*/
+#start{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+	background-color: #FFF;
+}
+
 
 /* HEADER ------------*/
 #header{

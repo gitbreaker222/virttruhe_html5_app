@@ -13,7 +13,7 @@ item_map = {
         "#0000000a" : "next_steps",
         "#0000000b" : "business_plan",
         "#0000000c" : "background_and_contact",
-        "#0000000d" : null,
+        "#0000000d" : "placeholder",
         "#0000000e" : null,
         "#0000000f" : null,
         "#10000000" : null,

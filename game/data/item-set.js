@@ -135,7 +135,7 @@ var layers = {
 							"name" : "Reality",
 							"music" : null
 							},
-	"secret"		:   {
+	"secret_layer"		:   {
 							"name" : "Secret Layer",
 							"music" : ""
 							},

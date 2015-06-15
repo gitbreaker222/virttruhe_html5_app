@@ -100,6 +100,14 @@
 
 
 	<body class="dark">
+	    
+	    <div id="start">
+	        <h1>For best immersion, headphones are recommended</h1>
+	        <img src="data/img/headphones.svg"/>
+	        <button id="btn_start" onclick="btn_start()">
+	            <i class="fi-play"></i>
+	        </button>
+	    </div>
 		
 		<!-- THE HIDDEN AUDIO PLAYERS. ONE FOR EACH TRACK (like: music, sfx) -->
 		<audio id="music_player" loop></audio>
@@ -352,19 +360,6 @@
 			<div id="d_use" class="dialog">
 				<div class="center d_box">
 					<div class="d_message">
-						Placeholder for the use function of: <i id="d_use_item"> </i>
-					</div>
-					
-					<div class="d_actions">
-						<button>OK</button>
-					</div>
-				</div>
-			</div>
-			
-			<!-- USE ITEM ----------------------------------------- -->
-			<div id="d_use" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
 						Placeholder for the use function of: <i id="d_use_item"></i>
 					</div>
 					
@@ -404,6 +399,28 @@
 					</div>
 				</div>
 			</div>
+			
+			
+			<!-- ----------------------------------------------------- -->
+            <!-- ITEM DIALOG BOXES ----------------------------------- -->
+            <!-- ----------------------------------------------------- -->
+            <!-- MANUAL ---------------------------------------------- -->
+            <div id="node_01" class="dialog">
+                <div class="center d_box">
+                    <div class="d_message">
+                        <audio preload controls>
+                            <source src="data/audio/short_summary.mp3" type="audio/mpeg"></source>
+                            <source src="data/audio/short_summary.ogg" type="audio/mpeg"></source>
+                        </audio>
+                    </div>
+                    
+                    <div class="d_actions">
+                        <button>Back</button>
+                    </div>
+                </div>
+            </div>
+            
+			
     	
 	    </div>
 	    
