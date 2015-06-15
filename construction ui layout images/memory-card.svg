@@ -13,10 +13,10 @@
    inkscape:version="0.48.4 r9939"
    version="1.1"
    id="svg2"
-   height="256"
-   width="256"
+   height="72.003922"
+   width="72.000504"
    sodipodi:docname="memory-card.svg"
-   inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/virttruhe_html5_app.git/game/data/img/items/memory-card_12.png"
+   inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/virttruhe_html5_app.git/game/data/img/items/small/memory-card_12.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <sodipodi:namedview
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="172.04133"
-     inkscape:cy="42.952784"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-138.96309"
+     inkscape:cy="-87.935996"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -39,7 +39,7 @@
      inkscape:window-maximized="1"
      inkscape:object-nodes="false"
      inkscape:snap-bbox="true"
-     inkscape:bbox-nodes="true"
+     inkscape:bbox-nodes="false"
      showguides="true"
      inkscape:guide-bbox="true"
      fit-margin-top="0"
@@ -85,7 +85,7 @@
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Ebene 1"
-     transform="translate(-155.3124,-277.06259)">
+     transform="translate(-552.3746,-524.37118)">
     <text
        xml:space="preserve"
        style="font-size:50.35913849px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Oxygen Mono;-inkscape-font-specification:Oxygen Mono"
@@ -179,16 +179,6 @@
     <text
        xml:space="preserve"
        style="font-size:50.35913849px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Oxygen Mono;-inkscape-font-specification:Oxygen Mono"
-       x="28.45649"
-       y="120.82997"
-       id="text3956"><tspan
-         sodipodi:role="line"
-         id="tspan3958"
-         x="28.45649"
-         y="120.82997">01</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:50.35913849px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Oxygen Mono;-inkscape-font-specification:Oxygen Mono"
        x="29.341707"
        y="175.43279"
        id="text3960"><tspan
@@ -216,16 +206,20 @@
          id="tspan3970"
          x="27.75569"
          y="284.6384">04</tspan></text>
-    <path
-       inkscape:connector-curvature="0"
-       id="path3994"
-       d="m 565.75546,592.55943 0,-69.82143 41.60714,-4.93979 14.46429,12.74703 0,55.53571 z"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5.0999999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
-    <path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.0999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="m 609.18403,517 a 2.550255,2.550255 0 0 0 -0.125,0.0312 l -41.59375,4.9375 a 2.550255,2.550255 0 0 0 -2.25,2.53125 l 0,69.8125 a 2.550255,2.550255 0 0 0 2.84375,2.53125 l 56.0625,-6.46875 a 2.550255,2.550255 0 0 0 2.25,-2.53125 l 0,-55.53125 a 2.550255,2.550255 0 0 0 -0.84375,-1.90625 l -14.46875,-12.75 a 2.550255,2.550255 0 0 0 -1.625,-0.65625 2.550255,2.550255 0 0 0 -0.25,0 z m -4.4375,5.65625 0,18.53125 11.59375,-1.375 0,-10.71875 4.9375,4.34375 0,52.125 -50.96875,5.875 0,-64.6875 5.71875,-0.6875 0,18.53125 7.71875,-0.90625 0,-18.53125 4.21875,-0.5 0,18.53125 11.59375,-1.40625 0,-18.5 5.1875,-0.625 z"
-       id="path3976"
-       inkscape:connector-curvature="0" />
+    <g
+       id="g4106"
+       transform="translate(-1.7857143,0)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4.14167881;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 564.44772,589.89339 0,-56.70156 33.78891,-4.01157 11.74636,10.35179 0,45.10021 z"
+         id="path3994"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3976"
+         d="m 599.7158,528.53204 a 2.0710466,2.0710466 0 0 0 -0.10151,0.0253 l -33.77804,4.00971 a 2.0710466,2.0710466 0 0 0 -1.82721,2.05561 l 0,56.69431 a 2.0710466,2.0710466 0 0 0 2.30939,2.05561 l 45.52802,-5.25323 a 2.0710466,2.0710466 0 0 0 1.82721,-2.05561 l 0,-45.09659 a 2.0710466,2.0710466 0 0 0 -0.6852,-1.54806 l -11.74999,-10.35415 a 2.0710466,2.0710466 0 0 0 -1.31965,-0.53294 2.0710466,2.0710466 0 0 0 -0.20302,0 z m -3.60367,4.59341 0,15.04911 9.41521,-1.11663 0,-8.70463 4.00972,3.52753 0,42.3304 -41.39141,4.77105 0,-52.53232 4.64416,-0.55832 0,15.04912 6.26835,-0.73596 0,-15.04912 3.42602,-0.40605 0,15.04912 9.41521,-1.14201 0,-15.02374 4.21274,-0.50755 z"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.0999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+    </g>
     <g
        id="g4028"
        transform="matrix(0.74309362,0,0,0.74309362,67.64648,77.620614)">
@@ -248,16 +242,6 @@
          id="path4012"
          inkscape:connector-curvature="0" />
     </g>
-    <rect
-       style="fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:#000000;stroke-width:1.60000002;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect4026"
-       width="256"
-       height="256"
-       x="590.39386"
-       y="174.82521"
-       inkscape:export-filename="/home/Programme_Eigene_Dateien/Studium/9_WS_14-15/Bachelorarbeit Virttruhe/virttruhe_html5_app.git/game/data/img/items/memory-card_01.png"
-       inkscape:export-xdpi="90.141876"
-       inkscape:export-ydpi="90.141876" />
     <text
        id="text4071"
        y="498.36667"
@@ -269,5 +253,22 @@
          x="239.78253"
          id="tspan4073"
          sodipodi:role="line">12</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.65976335;fill-rule:nonzero;stroke:none"
+       id="rect4112"
+       width="50.535713"
+       height="35.357143"
+       x="571.48175"
+       y="558.87512" />
+    <text
+       xml:space="preserve"
+       style="font-size:43.12359238px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Oxygen Mono;-inkscape-font-specification:Oxygen Mono"
+       x="572.461"
+       y="590.68256"
+       id="text3956"><tspan
+         sodipodi:role="line"
+         id="tspan3958"
+         x="572.461"
+         y="590.68256">12</tspan></text>
   </g>
 </svg>
