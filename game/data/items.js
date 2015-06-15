@@ -102,6 +102,13 @@ var items = {
         "icon" : "data/img/items/small/memory-card_12.png",
         "stackable" : false,
         "use" : "read"
+    },
+    placeholder : {
+        "name" : "Placeholder",
+        "image" : "data/img/items/small/placeholder.png",
+        "icon" : "data/img/items/small/placeholder.png",
+        "stackable" : false,
+        "use" : null
     }
 };
 
