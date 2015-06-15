@@ -28,6 +28,8 @@ inventory = {
 		//check if stackable
 		if (items[item].stackable) {
 			//stackable
+			console.log(item);
+			console.log(items[item].stackable);
 			console.log("stackable");
 
 			//check if already exists					//TODO make this elegant, if possible

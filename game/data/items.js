@@ -4,7 +4,7 @@ var items = {
         "name"      : "Manual",
         "image"     : "data/img/items/manual.png",
         "icon"      : "data/img/items/small/manual.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use"       : "read"
     },
     short_summary : {
@@ -12,7 +12,7 @@ var items = {
         "name" : "Short Summary",
         "image" : "data/img/items/memory-card_01.png",
         "icon" : "data/img/items/small/memory-card_01.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     sector : {
@@ -20,7 +20,7 @@ var items = {
         "name" : "Sector",
         "image" : "data/img/items/memory-card_02.png",
         "icon" : "data/img/items/small/memory-card_02.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     detailed_description : {
@@ -28,7 +28,7 @@ var items = {
         "name" : "Detailed description",
         "image" : "data/img/items/memory-card_03.png",
         "icon" : "data/img/items/small/memory-card_03.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     aim : {
@@ -36,7 +36,7 @@ var items = {
         "name" : "Aim",
         "image" : "data/img/items/memory-card_04.png",
         "icon" : "data/img/items/small/memory-card_04.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     target_group : {
@@ -44,7 +44,7 @@ var items = {
         "name" : "Target group",
         "image" : "data/img/items/memory-card_05.png",
         "icon" : "data/img/items/small/memory-card_05.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     what_is_new : {
@@ -52,7 +52,7 @@ var items = {
         "name" : "What is new",
         "image" : "data/img/items/memory-card_06.png",
         "icon" : "data/img/items/small/memory-card_06.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     benefits_danube_region : {
@@ -60,7 +60,7 @@ var items = {
         "name" : "Benefits for Danube region",
         "image" : "data/img/items/memory-card_07.png",
         "icon" : "data/img/items/small/memory-card_07.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     technology : {
@@ -68,7 +68,7 @@ var items = {
         "name" : "Technology",
         "image" : "data/img/items/memory-card_08.png",
         "icon" : "data/img/items/small/memory-card_08.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     user_friendliness : {
@@ -76,7 +76,7 @@ var items = {
         "name" : "User friendliness",
         "image" : "data/img/items/memory-card_09.png",
         "icon" : "data/img/items/small/memory-card_09.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     next_steps : {
@@ -84,7 +84,7 @@ var items = {
         "name" : "Next steps",
         "image" : "data/img/items/memory-card_10.png",
         "icon" : "data/img/items/small/memory-card_10.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     business_plan : {
@@ -92,7 +92,7 @@ var items = {
         "name" : "Business plan",
         "image" : "data/img/items/memory-card_11.png",
         "icon" : "data/img/items/small/memory-card_11.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     },
     background_and_contact : {
@@ -100,7 +100,7 @@ var items = {
         "name" : "Background and contact info",
         "image" : "data/img/items/memory-card_12.png",
         "icon" : "data/img/items/small/memory-card_12.png",
-        "stackable" : "false",
+        "stackable" : false,
         "use" : "read"
     }
 };
