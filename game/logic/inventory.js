@@ -124,7 +124,7 @@ inventory = {
 		} else {
 			$("#d_info .d_message").html("Name: " + item.name + "<br/> Function: " + item.use);
 		}
-		$("#d_info").show();
+		$("#d_info").show().addClass("d_active");
 	},
 
 	share : function(item_id) {
@@ -135,6 +135,6 @@ inventory = {
 		//create new qr code
 		new QRCode(qrcode[0], ",," + item_id);
 		//show dialog box
-		$("#share_qrcode").show();
+		$("#share_qrcode").show().addClass("d_active");
 	},
 };

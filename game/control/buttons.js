@@ -76,7 +76,7 @@ function btn_delete() {
 }
 
 function btn_delete_dialog() {
-	$("#d_delete").show();
+	$("#d_delete").show().addClass("d_active");
 	//TODO pass this job to dialog.js
 }
 

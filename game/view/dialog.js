@@ -17,6 +17,5 @@ dialog = {
             $(".d_active audio")[0].currentTime = 0;
             $(".d_active audio").removeClass("d_active");
         }
-
     }
 };

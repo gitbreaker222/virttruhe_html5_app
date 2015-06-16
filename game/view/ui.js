@@ -182,7 +182,7 @@ ui = {
 
             audio.play_sfx("OOT_Get_SmallItem1");
             //show dialog box
-            $("#d_ni").show();
+            $("#d_ni").show().addClass("d_active");
         });
 
         //load item picture
@@ -203,7 +203,7 @@ ui = {
         //prepare dialog
         $("#d_portal .name").html(layers[portal].name);
         //show dialog
-        $("#d_portal").show();
+        $("#d_portal").show().addClass("d_active");
 
     }
 };
