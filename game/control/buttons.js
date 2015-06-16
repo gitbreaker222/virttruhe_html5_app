@@ -127,5 +127,13 @@ function btn_load(){
 
 
 
+/*
+ * DIALOG BOX BUTTONS
+ */
+function btn_close_dialog() {
+    dialog.close();
+}
+
+
 
 

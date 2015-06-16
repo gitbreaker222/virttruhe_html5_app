@@ -114,7 +114,7 @@ var items = {
 
 read = function(id) {
     var story_node = $(inventory.selected);
-    $("#"+id).show().addClass("active");
+    $("#"+id).show().addClass("d_active");
 };
 
 

@@ -300,7 +300,7 @@
 					</div>
 					
 					<div class="d_actions">
-						<button onclick="$('#share_qrcode').hide()">OK</button>
+						<button onclick="btn_close_dialog()">OK</button>
 					</div>
 				</div>
 			</div>
@@ -319,7 +319,7 @@
 					</div>
 					
 					<div class="d_actions">
-						<button onclick="$('#d_ni').hide(); system_status.change_state('inventory')">OK</button>
+						<button onclick="btn_close_dialog(); system_status.change_state('inventory')">OK</button>
 					</div>
 				</div>
 			</div>
@@ -333,8 +333,8 @@
 					</div>
 					
 					<div class="d_actions">
-						<button onclick="$('#d_ni').hide(); portal.enter('current')">ENTER</button>
-						<button onclick="$('#d_ni').hide(); portal.leave()">LEAVE</button>
+						<button onclick="btn_close_dialog(); portal.enter('current')">ENTER</button>
+						<button onclick="btn_close_dialog(); portal.leave()">LEAVE</button>
 					</div>
 				</div>
 			</div>
@@ -347,7 +347,7 @@
 					</div>
 					
 					<div class="d_actions">
-						<button>OK</button>
+						<button onclick="btn_close_dialog()">OK</button>
 					</div>
 				</div>
 			</div>
@@ -360,7 +360,7 @@
 					</div>
 					
 					<div class="d_actions">
-						<button>OK</button>
+						<button onclick="btn_close_dialog()">OK</button>
 					</div>
 				</div>
 			</div>
@@ -375,7 +375,7 @@
 					<div class="d_actions">
 						<img class="button icon"
 						     src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"
-						     onclick="btn_delete()" /img>
+						     onclick="btn_delete();btn_close_dialog()" /img>
 						
 					</div>
 				</div>
@@ -391,27 +391,28 @@
 					</div>
 					
 					<div class="d_actions">
-						<button>OK</button>
+						<button onclick="btn_close_dialog()">OK</button>
 					</div>
 				</div>
 			</div>
 			
 			
 			<!-- ----------------------------------------------------- -->
-            <!-- ITEM DIALOG BOXES ----------------------------------- -->
+            <!-- STORY NODE DIALOG BOXES ----------------------------- -->
             <!-- ----------------------------------------------------- -->
-            <!-- MANUAL ---------------------------------------------- -->
-            <div id="node_01" class="dialog">
+            
+            <!-- N01 - SHORT SUMMARY --------------------------------- -->
+            <div id="n01" class="dialog">
                 <div class="center d_box">
                     <div class="d_message">
-                        <audio preload controls>
+                        <audio preload controls volume=(0.5)>
                             <source src="data/audio/short_summary.mp3" type="audio/mpeg"></source>
                             <source src="data/audio/short_summary.ogg" type="audio/mpeg"></source>
                         </audio>
                     </div>
                     
                     <div class="d_actions">
-                        <button>Back</button>
+                        <button onclick="btn_close_dialog()">Back</button>
                     </div>
                 </div>
             </div>
