@@ -405,9 +405,25 @@
             <div id="n01" class="dialog">
                 <div class="center d_box">
                     <div class="d_message">
-                        <audio preload controls volume=(0.5)>
+                        <audio preload controls>
                             <source src="data/audio/short_summary.mp3" type="audio/mpeg"></source>
                             <source src="data/audio/short_summary.ogg" type="audio/mpeg"></source>
+                        </audio>
+                    </div>
+                    
+                    <div class="d_actions">
+                        <button onclick="btn_close_dialog()">Back</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- N02 - DETAILED DESCRIPTION -------------------------- -->
+            <div id="n02" class="dialog">
+                <div class="center d_box">
+                    <div class="d_message">
+                        <audio preload controls>
+                            <source src="data/audio/detailed_description.mp3" type="audio/mpeg"></source>
+                            <source src="data/audio/detailed_description.ogg" type="audio/mpeg"></source>
                         </audio>
                     </div>
                     
