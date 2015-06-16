@@ -9,13 +9,15 @@ dialog = {
     },
 
     close : function() {
-        $(".d_active").hide();
+       
         
         //if dialog has an audio track, then stop/reset it
         if ($(".d_active audio")[0]) {
             $(".d_active audio")[0].pause();
             $(".d_active audio")[0].currentTime = 0;
-            $(".d_active audio").removeClass("d_active");
+            $(".d_active audio");
         }
+        
+        $(".d_active").hide().removeClass("d_active");
     }
 };

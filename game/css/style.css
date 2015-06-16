@@ -89,11 +89,16 @@
 	font-size: 1.2rem;
 }
 
+#start img{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%)
+}
+
 #start :nth-child(3){
 	position:absolute;
 	height: 18%;
 	bottom: 0px;
-	background-color: #00F;
 }
 
 /* HEADER ------------*/
