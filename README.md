@@ -2,7 +2,7 @@ virttruhe_html5_app (alpha state)
 ===================
 
 LATEST VERSION:
-0.5.1
+0.6.1
 
 
 DESCRIPTION:

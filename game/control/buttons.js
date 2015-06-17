@@ -1,5 +1,5 @@
 function btn_start(){
-    $("#start").hide(400, "linear");
+    $("#start").fadeOut(3000, function(){$(this).hide();});
 };
 
 /*

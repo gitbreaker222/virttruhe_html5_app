@@ -76,29 +76,49 @@
 
 /* START ------------*/
 #start{
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	top: 0px;
-	left: 0px;
 	z-index: 999;
 	background-color: #FFF;
+	position: fixed;
+  top : 0px;
+  left : 0px;
+  width : 100%;
+  height : 100%;
+    
+  display: flex;
+  flex-direction: column;
 }
 
-#start :nth-child(1){
+#start :first-child{
 	font-size: 1.2rem;
+	flex : 1;
+    min-height: 6rem;
 }
 
-#start img{
-	position: relative;
-	left: 50%;
-	transform: translate(-50%)
+#start > :nth-child(2){
+    flex: 5;
 }
 
-#start :nth-child(3){
-	position:absolute;
-	height: 18%;
-	bottom: 0px;
+#start > :nth-child(2) *{
+	position: absolute;
+    
+  height: 35%;
+  max-height: 10rem;
+}
+
+#start > :last-child{
+    flex: 1;
+    min-height: 4rem;
+}
+
+#btn_start{
+	color: black;
+	background-color: transparent;
+	border-style: solid;
+	border-color: black;
+	border-width: 0.4rem;
+	border-radius: 100%;
+	
+	
 }
 
 /* HEADER ------------*/
