@@ -1,621 +1,174 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en" >
-	<head>
-		<meta charset="utf-8">
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Welcome to Foundation</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+          <p>Once you've exhausted the fun in this document, you should check out:</p>
+          <div class="row">
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+            </div>
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
+            </div>
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 medium-4 medium-push-2 columns">
+              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+            </div>
+            <div class="large-4 medium-4 medium-pull-2 columns">
+              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <div class="row">
+      <div class="large-8 medium-8 columns">
+        <h5>Here&rsquo;s your basic grid:</h5>
+        <!-- Grid Example -->
 
-		<title>VIRTTRUHE</title>
-		<meta name="description" content="">
-		<meta name="author" content="Ruben La Biunda">
-		
-		<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
-	    <meta name="apple-mobile-web-app-capable" content="yes">
-	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="callout panel">
+              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+        </div>
+        
+        <hr />
+                
+        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+        <form>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-12.columns" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 medium-4 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-4.columns" />
+            </div>
+            <div class="large-4 medium-4 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-4.columns" />
+            </div>
+            <div class="large-4 medium-4 columns">
+              <div class="row collapse">
+                <label>Input Label</label>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="small-9.columns" />
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Select Box</label>
+              <select>
+                <option value="husker">Husker</option>
+                <option value="starbuck">Starbuck</option>
+                <option value="hotdog">Hot Dog</option>
+                <option value="apollo">Apollo</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 medium-6 columns">
+              <label>Choose Your Favorite</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+            </div>
+            <div class="large-6 medium-6 columns">
+              <label>Check these out</label>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Textarea Label</label>
+              <textarea placeholder="small-12.columns"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>     
 
-		<!-- Sets initial viewport load and disables zooming. Essential for foundation framework -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-		<link rel="shortcut icon" href="favicon.png">
-		
-		
-		
-		
-		<!-- --- DATA ------------------------>
-		<!-- LIBS --------- -->
-		<!-- foundation css -->
-		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/normalize.css">
-		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation.css">
-		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/foundation-icons.css">
-		<link rel="stylesheet" href="lib/foundation-5.5.1.custom/css/custom.css">
-		
-		<script src="lib/foundation-5.5.1.custom/js/vendor/modernizr.js"></script>
-		<!-- jQuery -->
-		<script src="lib/jquery-1.11.1.js"></script>
-		<script src="lib/jquery_plugin_svg_to_inline.js"></script>
-		
-		
-		<!-- jsqrcode (order important)-- -->
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/grid.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/version.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/detector.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/formatinf.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/errorlevel.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bitmat.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datablock.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/bmparser.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/datamask.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/rsdecoder.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256poly.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/gf256.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/decoder.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/qrcode.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/findpat.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/alignpat.js"></script>
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/jsqrcode/src/databr.js"></script>
-		
-		<!-- html5-qrcode (based on jsqrcode)-->
-		<script type="text/javascript" src="lib/dwa012-html5-qrcode-f0b192c/src/html5-qrcode.js"></script>
-		
-		<!-- qrcode.js -->
-		<script type="text/javascript" src="lib/qrcodejs/qrcode.min.js"></script>
-		
-		
-		
-		<!-- custom style sheet -->
-		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="data/settings.js"></script>
-			
-		<!-- item collection -->
-		<script src="data/items.js"></script>
-		<script src="data/layers.js"></script>
-		<script src="data/item-map.js"></script>
-		
-		<!-- --- LOGIC ------------------------>
-		<script src="logic/audio.js"></script>
-		<script src="logic/inventory.js"></script>
-		<script src="logic/message.js"></script>
-		<script src="logic/scan.js"></script>
-		<script src="logic/share.js"></script>
-		<script src="logic/user_status.js"></script>
-		<script src="logic/system_status.js"></script>
-		<script src="logic/portal.js"></script>
-		
-		<!-- --- CONTROL ------------------------>
-		<script src="control/buttons.js"></script>
-		
-		<!-- --- VIEW ------------------------>
-		<script src="view/dialog.js"></script>
-		<script src="view/ui.js"></script>
-		<!-- html code mainly represents the view -->
-		
-		
-		<script src="control/init.js"></script>
-		
-	</head>
-
-
-
-
-	<body class="dark">
-	    
-	    <div id="start">
-	        <section>
-               <h2>For best immersion, headphones are recommended</h2>
-            </section>
-            <section>
-                 <img src="data/img/headphones.svg" class="center"/>
-            </section>
-            <section>
-                <button id="btn_start" class="center" onclick="btn_start()">
-                    <i class="fi-play"></i>
-                </button>
-            </section>
-	    </div>
-		
-		<!-- THE HIDDEN AUDIO PLAYERS. ONE FOR EACH TRACK (like: music, sfx) -->
-		<audio id="music_player" loop></audio>
-		<audio id="m01" preload loop>
-			<source src="data/audio/shadow6nothing9 - A cool night out.mp3" type="audio/mpeg"></source>
-			<source src="data/audio/shadow6nothing9 - A cool night out.ogg" type="audio/mpeg"></source>
-		</audio>
-		
-		
-		<audio id="sfx_player"></audio>
-		
-		
-		
-		
-		<header id="header" class="top-bar">
-			
-			<!------------------------------------ header 1 -->
-	  		<div class="small-8 columns">
-	  			<h1 id="layer">layer of the player layer of the player </h1>
-	  		</div>
-	  		<div class="small-4 columns no-padding">
-	  			<div class="icon-bar two-up">
-	  				<a id="btn_scan" class="item" onclick="btn_scan()">
-		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-video.svg"/img>
-		  			</a>
-		  			<a id="btn_pause" class="item" onclick="btn_pause()">
-		  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-list.svg"/img>
-		  			</a>
-	  			</div>
-		  	</div>
-	  		
-	  		<!------------------------------------ header 2 -->
-	  		<div id="user_stats_display" class="row">
-		  		<div class="small-8 columns">
-		  			<img src="data/img/icons/heart.svg" class=""/>
-		  			<img src="data/img/icons/heart.svg" class=""/>
-		  			<img src="data/img/icons/heart.svg" class=""/>
-		  		</div>
-		  		<div class="small-2 columns">
-		  			<img src="lib/foundation-5.5.1.custom/img/icons/fi-key.svg" />
-		  		</div>
-		  		<div class="small-2 columns">
-		  			<img src="data/img/icons/rupee.svg"/>
-		  		</div>
-		  		
-		  	</div>
-		</header>
-		
-		
-		
-		
-		
-		<!-- CONTENT AS SINGLEPAGE PAGES-------------------------------- -->
-		<div id="content">
-	    	<div id="inventory" class="row hide">
-	    		
-	    		<!-- ----------------------------------------------------- -->
-	    		<!-- INVENTORY-------------------------------------------- -->
-	    		<!-- ----------------------------------------------------- -->
-	    		
-				<div class="small-12 columns clearfix">
-					<ul id="items" class="clearfix">	</ul>
-				</div>
-	    		
-				<span class="clearfix clear"></span>
-				
-	    		<div class="light row bottom">
-	    			<div class="small-6 columns">
-	    				<a id="btn_info" onclick="btn_info()">
-			  				<img  class="icon" src="lib/foundation-5.5.1.custom/img/icons/fi-info.svg"/img>
-			  				<span id="item_title" > </span>
-			  			</a>
-	    			</div>
-	    			<div class="small-6 columns no-padding">
-	    				<div class=" icon-bar three-up">
-	    					<a id="btn_use" class="item" onclick="btn_use()">
-				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-hand-take.svg"/img>
-				  			</a>
-				  			<a id="btn_share" class="item" onclick="btn_share()">
-				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-share.svg"/img>
-				  			</a>
-				  			<a id="btn_delete" class="item" onclick="btn_delete_dialog()">
-				  				<img src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"/img>
-				  			</a>
-	    				</div>
-			  		</div>
-			  		
-	    			
-	    			
-	    		</div>
-			</div>
-			
-			
-			
-			<!-- ----------------------------------------------------- -->
-			<!-- SCANNER --------------------------------------------- -->
-			<!-- ----------------------------------------------------- -->
-			<div id="scan" class="row hide">
-				<div class="small-12 columns">
-					<div id="reader"></div>
-				</div>
-			</div>
-			
-			
-			<!-- ----------------------------------------------------- -->
-			<!-- PAUSE / SETTINGS ------------------------------------ -->
-			<!-- ----------------------------------------------------- -->
-			<div id="pause" class="row hide">
-				<div class="small-12 columns">
-					<h2>Settings</h2>
-					
-					<table>
-						<tbody>
-							<tr>
-								<td>Mute music</td>
-								<td><div class="switch">
-									<input id="switch_mute_music" type="checkbox">
-									<label for="switch_mute_music" onclick="switch_mute_music()"></label>
-								</div></td>
-							</tr>
-							<tr>
-								<td>mute effects</td>
-								<td><div class="switch">
-								  <input id="switch_mute_sfx" type="checkbox">
-								  <label for="switch_mute_sfx" onclick="switch_mute_sfx()"></label>
-								</div></td>
-							</tr>
-							<tr>
-								<td>use photo scanner</td>
-								<td><div class="switch">
-								  <input id="switch_photo_scanner" type="checkbox">
-								  <label for="switch_photo_scanner" onclick="switch_photo_scanner()"></label>
-								</div></td>
-							</tr>
-						</tbody>
-					</table>
-					
-					<button onclick="btn_save()">save game</button>
-					<button onclick="btn_load()">load game</button>
-				</div>
-			</div>
-			
-			
-			
-			
-			
-			<!-- ----------------------------------------------------- -->
-			<!-- PRESENTATION/OPEN A CHEST --------------------------- -->
-			<!-- ----------------------------------------------------- -->
-			<div id="new_item" class="row hide">
-				<div class="small-12 columns">
-						
-					<img id="ni_chest" class="" src="data/img/chest.png"/>
-					
-					<img id="ni_shiny" class="" src="data/img/shiny.png"/>
-					
-					<img id="ni_item" class="" src="" />
-					
-				</div>
-			</div>
-			
-			
-			<!-- ----------------------------------------------------- -->
-			<!-- PRESENTATION/ENTER A PORTAL ------------------------- -->
-			<!-- ----------------------------------------------------- -->
-			<div id="portal" class="row hide">
-				<div class="small-12 columns" >
-						
-					<img id="p_card" class="" src="data/img/card.svg"/>
-					
-					<img id="p_portal" class="" src="data/img/portal.svg"/>
-					
-				</div>
-			</div>
-			
-			
-			<!-- ----------------------------------------------------- -->
-			<!-- SHARE QR BOX ---------------------------------------- -->
-			<!-- ----------------------------------------------------- -->
-			<div id="share_qrcode" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
-						
-					</div>
-					
-					<div class="d_actions">
-						<button onclick="btn_close_dialog()">OK</button>
-					</div>
-				</div>
-			</div>
-			
-			
-			<!-- ----------------------------------------------------- -->
-			<!-- DIALOG BOXES----------------------------------------- -->
-			<!-- ----------------------------------------------------- -->
-			
-			<!-- NEW ITEM -------------------------------------------- -->
-			<div id="d_ni" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
-						<h1>Congratulation!</h1>
-						<p>You have found: <i id="d_item"> </i></p><!--change <i></i> to: <span .name></span> -->
-					</div>
-					
-					<div class="d_actions">
-						<button onclick="btn_close_dialog(); system_status.change_state('inventory')">OK</button>
-					</div>
-				</div>
-			</div>
-			
-			<!-- PORTAL ---------------------------------------------- -->
-			<div id="d_portal" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
-						<h1>Portal to <span class="name"> </span></h2>
-						<p>Do you want to enter?</p>
-					</div>
-					
-					<div class="d_actions">
-						<button onclick="btn_close_dialog(); portal.enter('current')">ENTER</button>
-						<button onclick="btn_close_dialog(); portal.leave()">LEAVE</button>
-					</div>
-				</div>
-			</div>
-			
-			<!-- ITEM INFO ------------------------------------------- -->
-			<div id="d_info" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
-						
-					</div>
-					
-					<div class="d_actions">
-						<button onclick="btn_close_dialog()">OK</button>
-					</div>
-				</div>
-			</div>
-			
-			<!-- USE ITEM -------------------------------------------- -->
-			<div id="d_use" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
-						Placeholder for the use function of: <i id="d_use_item"></i>
-					</div>
-					
-					<div class="d_actions">
-						<button onclick="btn_close_dialog()">OK</button>
-					</div>
-				</div>
-			</div>
-			
-			<!-- DELETE ITEM ----------------------------------------- -->
-			<div id="d_delete" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
-						Do you really want to delete this item?
-					</div>
-					
-					<div class="d_actions">
-						<img class="button icon"
-						     src="lib/foundation-5.5.1.custom/img/icons/fi-trash.svg"
-						     onclick="btn_delete();btn_close_dialog()" /img>
-						
-					</div>
-				</div>
-			</div>
-			
-			<!-- MANUAL ---------------------------------------------- -->
-			<div id="d_man" class="dialog">
-				<div class="center d_box">
-					<div class="d_message">
-						<p>Scan a VIRTTRUHE treasure card, to investigate it and collect items.</p>
-						<p>Select items from your inventory, to activate item interactions.</p>
-						<p>You can: use, share and delete them.</p>
-					</div>
-					
-					<div class="d_actions">
-						<button onclick="btn_close_dialog()">OK</button>
-					</div>
-				</div>
-			</div>
-			
-			
-			<!-- ----------------------------------------------------- -->
-            <!-- STORY NODE DIALOG BOXES ----------------------------- -->
-            <!-- ----------------------------------------------------- -->
-            
-            <!-- N01 - SHORT SUMMARY --------------------------------- -->
-            <div id="n01" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/short_summary.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/short_summary.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N02 - SECTOR -------------------------- -->
-            <div id="n02" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/sector.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/sector.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N03 - DETAILED DESCRIPTION -------------------------- -->
-            <div id="n03" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/detailed_description.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/detailed_description.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N04 - AIM -------------------------------------------- -->
-            <div id="n04" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/aim.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/aim.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N05 - TARGET GROUP -------------------------- -->
-            <div id="n05" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/target_group.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/target_group.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N06 - WHAT IS NEW -------------------------- -->
-            <div id="n06" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/what_is_new.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/what_is_new.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N07 - BENEFITS -------------------------- -->
-            <div id="n07" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/benefits_danube_region.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/benefits_danube_region.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N08 - TECHNOLOGY -------------------------- -->
-            <div id="n08" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/technology.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/technology.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N09 - USER FRIENDLINESS -------------------------- -->
-            <div id="n09" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/user_friendliness.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/user_friendliness.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N10 - NEXT STEPS -------------------------- -->
-            <div id="n10" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/next_steps.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/next_steps.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N11 - BACKGROUND -------------------------- -->
-            <div id="n11" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/business_plan.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/business_plan.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- N12 - BACKGROUND -------------------------- -->
-            <div id="n12" class="dialog">
-                <div class="center d_box">
-                    <div class="d_message">
-                        <audio preload controls>
-                            <source src="data/audio/background_and_contact.mp3" type="audio/mpeg"></source>
-                            <source src="data/audio/background_and_contact.ogg" type="audio/mpeg"></source>
-                        </audio>
-                    </div>
-                    
-                    <div class="d_actions">
-                        <button onclick="btn_close_dialog()">Back</button>
-                    </div>
-                </div>
-            </div>
-            
-			
-    	
-	    </div>
-	    
-	    
-	    
-	    
-	    
-		<!-- SCRIPTS ----------------------->
-	  
-	  <script src="lib/foundation-5.5.1.custom/js/foundation.min.js"></script>
-	  <script>
-	    $(document).foundation();
-	    init();
-	  </script>
-	</body>
+      <div class="large-4 medium-4 columns">
+        <h5>Try one of these buttons:</h5>
+        <p><a href="#" class="small button">Simple Button</a><br/>
+        <a href="#" class="small radius button">Radius Button</a><br/>
+        <a href="#" class="small round button">Round Button</a><br/>            
+        <a href="#" class="medium success button">Success Btn</a><br/>
+        <a href="#" class="medium alert button">Alert Btn</a><br/>
+        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
+        <div class="panel">
+          <h5>So many components, girl!</h5>
+          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
+          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
