@@ -1,0 +1,158 @@
+/************/
+/* ELEMENTS */
+body{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    background-color: #333;
+}
+
+ul{
+    margin: 0;
+    list-style: none;
+}
+
+button{
+    margin:0;
+}
+button{
+    background-color: rgba(255,255,255,0.5);
+    margin:0;
+    padding: 1rem;
+}
+
+button label{
+    position: relative;
+    bottom:-2rem;
+    font-size: 1rem;
+}
+
+
+
+/************/
+/* CLASSES */
+.bar{/*ul*/
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    /justify-content: space-between;
+    /align-content: stretch;
+    width: 100%;
+    height: 5rem;
+}
+.bar *{
+    flex-basis: 0;
+    flex-grow: 1;
+    
+}
+.bar li:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+.bar button{
+    width: 100%;
+    height: 5rem;;
+}
+.separator{
+    width: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: true;
+    border-color: rgba(255,255,255,0.3);
+    flex-grow: 0;
+}
+
+
+
+/************/
+/* SECTIONS */
+/* HEADER */
+#header{
+    height: 1.1rem;
+    background-color: #fff;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+/* HEADER2 */
+#header2 {
+    background-color: #212121;
+    color: #fff;
+}
+#btn_play{
+    background: url(../img/play.svg) no-repeat center center scroll; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+#audio_progress{
+    flex-grow: 2;
+}
+#btn_scan{
+    height: 80%;
+    background: url(../img/Tourism-Icons_qr-code.svg) no-repeat center center scroll; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+#btn_scan label{
+    color: #fff;
+}
+
+
+/* CONTENT */
+
+
+/* BUTTON BAR */
+#button_bar{
+    position: fixed;
+    bottom: 0px;
+    background-color: #ccc;
+}
+#btn_info{
+    height: 80%;
+    background: url(../img/fi-info.svg) no-repeat center center scroll; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+#btn_use{
+    height: 80%;
+    background: url(../img/hand%20icon.svg) no-repeat center center scroll; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+#btn_share{
+    height: 80%;
+    background: url(../img/fi-share.svg) no-repeat center center scroll;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+#btn_delete{
+    height: 80%;
+    background: url(../img/fi-trash.svg) no-repeat center center scroll;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+#btn_menu{
+    height: 80%;
+    background: url(../img/fi-wrench.svg) no-repeat center center scroll;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+
+
+
