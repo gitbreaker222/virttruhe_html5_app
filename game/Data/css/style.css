@@ -2,6 +2,23 @@
 	display: none;
 }
 
+.bar{
+	padding: 0.2rem;
+	background-color: #212121;
+}
+.bar  ul{
+	display: flex;
+	flex-direction: row;
+	-webkit-justify-content: space-between;
+    justify-content: space-between;
+	margin: 0;
+	list-style: none;
+}
+.bar label{
+	color: #fff;
+	text-align: center;
+}
+
 .center{
 	top: 50%;
 	left: 50%;
@@ -13,12 +30,9 @@
 	transform: translate(-50%);
 }
 
-.no-padding{
-	padding: 0;
-}
 .dark {
-	color: #2D2D2D;
-	background-color: #333333;
+	color: #dddddd;
+	background-color: #2d2d2d;
 }
 
 .light{
@@ -26,26 +40,28 @@
 	background-color: #DDD;
 }
 
-.icon{
-	max-height: 3rem;
-	padding: 0px;
-}
-
-.icon-bar{
-	background: none;
-}
-
 .button:active{
 	box-shadow: 0px 5px 10px #333 inset;
 }
 
-.clear{
-	clear: both;
+
+
+/* ICONS ------------*/
+.icon-hand{
+	background: url(../img/hand%20icon.svg) no-repeat center center scroll;
+}
+.icon{
+	height: 2.84rem;
+	width: 100%;
+	-webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 }
 
-.reveal-modal{
-	color: #000;
-}
+
+
+
 
 .dialog{
 	position: fixed;
@@ -88,28 +104,6 @@
   flex-direction: column;
 }
 
-#start :first-child{
-	font-size: 1.2rem;
-	flex : 1;
-    min-height: 6rem;
-}
-
-#start > :nth-child(2){
-    flex: 5;
-}
-
-#start > :nth-child(2) *{
-	position: absolute;
-    
-  height: 35%;
-  max-height: 10rem;
-}
-
-#start > :last-child{
-    flex: 1;
-    min-height: 4rem;
-}
-
 #btn_start{
 	color: black;
 	background-color: transparent;
@@ -123,23 +117,33 @@
 
 /* HEADER ------------*/
 #header{
-	background-color: #DDD;
-}
-#header .row{
-	height: 2rem;
-}
-
-/* USER STATS DISPLAY------------*/
-#user_stats_display, #user_stats_display img{
-	height: 1em;
-	font-size: 1em;
+	height: 1rem;
+	background-color: #FFF;
+	font-size: 0.8rem;
+	font-family: serif;
+	line-height: 1rem;
 }
 
-#layer{
-	font-size: 1em;
-	padding:0em 1em;
-	overflow: auto;
+
+
+/* BUTTON BAR ------------*/
+#button_bar{
+	position:fixed;
+	bottom: 0px;
+	height:4.5rem;
+	background-color: #ccc;
 }
+.icon-bar > * {
+	padding:0;
+}
+.icon-bar > * i{
+	color:black;
+}
+.icon-bar > * label{
+	color:black;
+}
+
+
 
 /* TITLE SCREEN------------*/
 #title{
@@ -147,22 +151,9 @@
 }
 
 
-#rupee_counter{
-	color: green;	
-}
 
 /* CONTENT ------------*/
-#content{
-	color: #DDD;
-}
-#content h1, #content h2{
-	color: inherit;
-}
-
-#content{
-	margin: 5em 0em 2em;
-}
-
+/* INVENTORY ------------*/
 #items li{
 	height : 37px;
 	float: left;
@@ -185,29 +176,18 @@
 	
 }
 
-.icon-bar img{
-	height: 3rem;
-	width: 3rem;
-}
-.icon-bar a:focus, .icon-bar a:hover{
-	background-color: none;
-}
-
+/* SCANNER ------------*/
 #reader{
 	width: 300px;
 	height: 250px
 }
-	
-#pause table{
-	width: 100%;
-}
 
-#new_item > .columns:first-child{
-	height: 17rem;
-}
 
+
+
+/* PRESENTATION ------------*/
 #new_item img{
-	position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
@@ -219,15 +199,6 @@
 	-moz-animation: A_zoom 2s;
 	-o-animation: A_zoom 2s;
 	animation:  A_zoom 2s;  /* IE 10+, Fx 29+*/
-} 
-
-#share_qrcode .d_box{
-	background-color: #fff;
-}
-#share_qrcode .d_message > img{
-	position: relative;
-	left: 50%;
-	transform: translate(-50%);
 }
 
 
