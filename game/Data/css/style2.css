@@ -1,10 +1,20 @@
 /************/
 /* ELEMENTS */
-body{
+body{/*header1, header2, content, button bar*/
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    align-content: stretch;
+    align-items: center;
     background-color: #333;
+}
+body *{
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    width: 100%;
 }
 
 ul{
@@ -59,7 +69,7 @@ button label{
     width: 0;
     border-style: solid;
     border-width: 1px;
-    border-collapse: true;
+    border-collapse: collapse;
     border-color: rgba(255,255,255,0.3);
     flex-grow: 0;
 }
@@ -77,6 +87,7 @@ button label{
 }
 /* HEADER2 */
 #header2 {
+    
     background-color: #212121;
     color: #fff;
 }
@@ -88,7 +99,7 @@ button label{
     background-size: contain;
 }
 #audio_progress{
-    flex-grow: 2;
+    flex-grow: 3;
 }
 #btn_scan{
     height: 80%;
@@ -104,12 +115,15 @@ button label{
 
 
 /* CONTENT */
-
+#content{
+    flex-grow: 1;
+    background-color: red;
+}
 
 /* BUTTON BAR */
 #button_bar{
-    position: fixed;
-    bottom: 0px;
+    /position: fixed;
+    /bottom: 0px;
     background-color: #ccc;
 }
 #btn_info{
@@ -156,3 +170,9 @@ button label{
 
 
 
+
+
+
+
+
+/* http://jsfiddle.net/ef75nc4n/1/ */
