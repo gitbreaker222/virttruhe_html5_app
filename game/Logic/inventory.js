@@ -28,21 +28,21 @@ var inventory = {
             return;
         }
         //check if stackable
-        if (items[item_id].stackable) {
+        if (items[item_id].stackable === true) {
             //stackable
-            console.log(item_id);
-            console.log(items[item_id].stackable);
             console.log("stackable");
 
             //check if already in list
-            if (exists(item_id)) {
+            if (this.exists(item_id)) {
                 //no -> add counter
                 items[item_id].count = 1;
                 //...and write to list
                 this.Item_list.push(item_id);
+                console.log(item_id + " now in inventory");
             } else {
                 //yes -> counter +1
                 items[item_id].count += 1;
+                console.log("added 1 " +item_id+ " to inventory");
             }
 
         } else {
@@ -50,9 +50,10 @@ var inventory = {
             console.log("not stackable");
 
             //check if already exists
-            if (exists(item_id)) {
+            if (this.exists(item_id) === false) {
                 //no -> write to list
                 this.item_list.push(item_id);
+                console.log(item_id + " now in inventory");
             } else {
                 //yes -> skip
                 console.log(item_id + " already in inventory");
@@ -65,7 +66,7 @@ var inventory = {
     /*
     SUBS
      */
-    "exists" : function(id){
+    exists : function(id){
         return this.item_list.indexOf(id) >= 0;
     }
 };
