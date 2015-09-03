@@ -66,6 +66,9 @@ var inventory = {
     /*
     SUBS
      */
+    /*
+    looks if an item already is in inventory and returns true if true
+     */
     exists : function(id){
         return this.item_list.indexOf(id) >= 0;
     }

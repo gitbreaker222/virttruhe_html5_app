@@ -1,4 +1,4 @@
-app = {
+var app = {
     /*
     APP STATES
      */
