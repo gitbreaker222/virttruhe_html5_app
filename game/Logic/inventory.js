@@ -76,7 +76,10 @@ var inventory = {
  */
 Object.defineProperties(this.inventory, {
     item_list: {
-        "get": function() { return inventory.Item_list},
+        "get": function() {
+            console.log("--EVENT-- inventory changed (read access can modify array)");
+            return inventory.Item_list
+        },
         "set": function(value) {
             inventory.Item_list = value;
             console.log("--EVENT-- inventory changed (add or remove)");

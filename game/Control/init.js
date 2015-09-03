@@ -21,6 +21,9 @@ function init(){
         }
 
     });
+
+    //change state to inventory
+    app.state = "inventory";
 }
 
 $(document).ready(init());
