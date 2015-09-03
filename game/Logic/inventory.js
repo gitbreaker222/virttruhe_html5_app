@@ -3,7 +3,6 @@
  */
 /**
  *
- * @constructor
  * @property item_list {array}
  */
 var inventory = {
