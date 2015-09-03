@@ -2,9 +2,11 @@ app = {
     /*
     APP STATES
      */
-    "State": "start",
-    "Prev_state": null,
-    "Prev_state2": null,
+    "State"         : "start",
+    "Prev_state"    : null,
+    "Prev_state2"   : null,
+    "Keys"          : 99,
+    "Gold"          : 999,
 
 
     /*
@@ -32,7 +34,21 @@ Object.defineProperties(this.app, {
         "get": function() { return app.State},
         "set": function(value) {
             app.State = value;
-            console.log("--EVENT-- inventory changed (add or remove)");
+            console.log("--EVENT-- state changed");
+        }
+    },
+    keys: {
+        "get": function() { return app.Keys},
+        "set": function(value) {
+            app.Keys = value;
+            console.log("--EVENT-- keys changed");
+        }
+    },
+    gold: {
+        "get": function() { return app.Gold},
+        "set": function(value) {
+            app.Gold = value;
+            console.log("--EVENT-- gold changed");
         }
     }
 });

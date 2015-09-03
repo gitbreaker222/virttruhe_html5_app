@@ -41,7 +41,7 @@ button label{
 
 /************/
 /* CLASSES */
-.bar{/*ul*/
+.bar{
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -84,6 +84,9 @@ button label{
     background-color: #fff;
     font-size: 1rem;
     line-height: 1rem;
+}
+#info{
+    flex-grow: 3;
 }
 /* HEADER2 */
 #header2 {
