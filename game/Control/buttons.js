@@ -6,8 +6,20 @@ var buttons = {
     TOP BAR
      */
     btn_scan : function(btn){
-        console.log("button pushed");
-        console.log(btn);
+        console.log("scan button pushed:");
+
+        switch (app.state){
+            case "inventory":
+                scanner.start();
+                break;
+            case "scan":
+                scanner.stop();
+                break;
+            default :
+                scanner.start();
+                console.log("=scanner startet from default case!=");
+                break;
+        }
     },
 
     btn_play : function(btn){

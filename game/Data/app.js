@@ -59,5 +59,4 @@ Object.defineProperties(this.app, {
 /*
 SHORTCUTS
  */
-var items = app.items;
 var story = app.story;

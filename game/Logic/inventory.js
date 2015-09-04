@@ -80,7 +80,7 @@ var inventory = {
 Object.defineProperties(this.inventory, {
     item_list: {
         "get": function() {
-            console.log("--EVENT-- inventory changed (read access can modify array)");
+            console.log("--EVENT-- inventory changed (read access can modify array)");//TODO add event listener on array modification (setter does not work on push())
             return inventory.Item_list
         },
         "set": function(value) {
