@@ -79,7 +79,7 @@ button label{
 /************/
 /* SECTIONS */
 /* HEADER */
-#header{
+#info_bar{
     height: 1.1rem;
     background-color: #fff;
     font-size: 1rem;
@@ -90,7 +90,7 @@ button label{
 }
 
 /* HEADER2 */
-#header2 {
+#top_controls{
     
     background-color: #212121;
     color: #fff;
