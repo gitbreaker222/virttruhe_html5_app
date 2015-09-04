@@ -38,13 +38,15 @@ var inventory = {
                 this.Item_list.push(item_id);
                 console.log(item_id + " now in inventory");
 
-                console.log("--EVENT--");
+                //console.log("--EVENT--");
+                views.inventory.add(item_id);
             } else {
                 //yes -> counter +1
                 items[item_id].count += 1;
                 console.log("added 1 " +item_id+ " to inventory");
 
-                console.log("--EVENT--");
+                //console.log("--EVENT--");
+                views.inventory.add(item_id);
             }
 
         } else {
@@ -55,7 +57,8 @@ var inventory = {
                 this.item_list.push(item_id);
                 console.log(item_id + " now in inventory");
 
-                console.log("--EVENT--");
+                //console.log("--EVENT--");
+                views.inventory.add(item_id);
             } else {
                 //yes -> skip
                 console.log(item_id + " already in inventory");

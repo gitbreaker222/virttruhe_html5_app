@@ -11,27 +11,31 @@ var views = {
      */
     inventory : {
         node : $("#inventory"),
-        template : "<ul>#items</ul>",
         update: function(){
+            console.log("update inventory");
             var items = inventory.item_list;
             var html = this.template;
-
-            for (id in items){
-                console.log("id");
+            for (i in items){
+                console.log(items[i]);
             }
-
             this.node.html(html)
+        },
+        add : function(id){
+            console.log("update inventory view");
+            var html =  '<li id="#id">'
+                     +      '<img src="#src">'
+                     +  '</li>';
+            html = html.replace("#id", id);
+            html = html.replace("#src", "Data/img/items/Memory-Card.png")//+id+"png")
+
+            this.node.append(html);
         }
     },
+
 
     text_scanner : {
         node: $("#text-scanner")
     },
-
-
-
-
-
 
 
 
@@ -41,7 +45,6 @@ var views = {
     state_update : function(){
         //show current content
         $("#content").children().hide();
-        console.log(app.state);
         switch (app.state){
             case "inventory":
                 this.inventory.node.show();
