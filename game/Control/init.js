@@ -22,6 +22,32 @@ function init(){
 
     });
 
+    //attach buttons
+    $("#btn_delete").click(function () {
+        buttons.btn_delete(this);
+    });
+    $("#btn_info").click(function () {
+        buttons.btn_info(this);
+    });
+    $("#btn_menu").click(function () {
+        buttons.btn_menu(this);
+    });
+    $("#btn_play").click(function () {
+        buttons.btn_play(this);
+    });
+    $("#btn_scan").click(function () {
+        buttons.btn_scan(this);
+    });
+    $("#btn_share").click(function () {
+        buttons.btn_share(this);
+    });
+    $("#btn_submit").click(function () {
+        buttons.btn_submit(this);
+    });
+    $("#btn_use").click(function () {
+        buttons.btn_use(this);
+    });
+
     //change state to inventory
     app.state = "inventory";
 }
