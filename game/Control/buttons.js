@@ -1,14 +1,15 @@
 /**
  * Created by lexon222 on 04.09.15.
  */
-var buttons = {
+var buttons;
+buttons = {
     /*
-    TOP BAR
+     TOP BAR
      */
-    btn_scan : function(btn){
+    btn_scan: function (btn) {
         console.log("scan button pushed:");
 
-        switch (app.state){
+        switch (app.state) {
             case "inventory":
                 scanner.start();
                 break;
@@ -22,48 +23,46 @@ var buttons = {
         }
     },
 
-    btn_play : function(btn){
+    btn_play: function (btn) {
         console.log("button pushed");
         console.log(btn);
     },
 
     /*
-    ITEM INTERACTION, BOTTOM BAR
+     ITEM INTERACTION, BOTTOM BAR
      */
-    btn_info : function(btn){
+    btn_info: function (btn) {
         console.log("button pushed");
         console.log(btn);
     },
 
-    btn_use : function(btn){
+    btn_use: function (btn) {
         console.log("button pushed");
         console.log(btn);
     },
 
-    btn_share : function(btn){
+    btn_share: function (btn) {
         console.log("button pushed");
         console.log(btn);
     },
 
-    btn_delete : function(btn){
+    btn_delete: function (btn) {
         console.log("button pushed");
         console.log(btn);
     },
 
-    btn_menu : function(btn){
+    btn_menu: function (btn) {
         console.log("button pushed");
         console.log(btn);
     },
 
     /*
-    TEXT SCANNER
+     TEXT SCANNER
      */
-    btn_submit : function(btn){
-        var message = $("#text-scanner input")[0].value;
+    btn_submit: function (btn) {
+        var message = $("#text-scanner").find("input")[0].value;
         scanner.search_key(message);
     },
-
-
 
 
 };

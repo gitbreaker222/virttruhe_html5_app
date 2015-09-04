@@ -30,8 +30,6 @@ var inventory = {
         //check if stackable
         if (items[item_id].stackable === true) {
             //stackable
-            console.log("stackable");
-
             //check if already in list
             if (this.exists(item_id)) {
                 //no -> add counter
@@ -39,27 +37,35 @@ var inventory = {
                 //...and write to list
                 this.Item_list.push(item_id);
                 console.log(item_id + " now in inventory");
+
+                console.log("--EVENT--");
             } else {
                 //yes -> counter +1
                 items[item_id].count += 1;
                 console.log("added 1 " +item_id+ " to inventory");
+
+                console.log("--EVENT--");
             }
 
         } else {
             //not stackable
-            console.log("not stackable");
-
             //check if already exists
             if (this.exists(item_id) === false) {
                 //no -> write to list
                 this.item_list.push(item_id);
                 console.log(item_id + " now in inventory");
+
+                console.log("--EVENT--");
             } else {
                 //yes -> skip
                 console.log(item_id + " already in inventory");
             }
 
         }
+
+    },
+
+    remove : function(id){
 
     },
 
@@ -77,15 +83,12 @@ var inventory = {
 /*
  GETTER SETTER and EVENT TRIGGER
  */
-Object.defineProperties(this.inventory, {
+Object.defineProperties(inventory, {
     item_list: {
-        "get": function() {
-            console.log("--EVENT-- inventory changed (read access can modify array)");//TODO add event listener on array modification (setter does not work on push())
-            return inventory.Item_list
-        },
+        "get": function() {return inventory.Item_list},
         "set": function(value) {
             inventory.Item_list = value;
-            console.log("--EVENT-- inventory changed (add or remove)");
+            console.log("--EVENT-- inventory changed via setter");
         }
     },
     selected: {

@@ -20,7 +20,7 @@ var app = {
     STORY STATES
      */
     "story": {
-        "layer" : "layer01",
+        "layer" : "layer1",
         "node"  : "0"
     }
 };
