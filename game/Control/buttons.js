@@ -47,8 +47,8 @@ var buttons = {
     TEXT SCANNER
      */
     btn_submit : function(btn){
-        console.log("button pushed");
-        console.log(btn);
+        var message = $("#text-scanner input")[0].value;
+        console.log(message);
     },
 
 
