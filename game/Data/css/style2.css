@@ -123,6 +123,15 @@ button label{
     flex: 1;
     overflow: auto;
 }
+#inventory li{
+    float: left;
+    width: 25%;
+    margin: 0.2rem 0;
+    padding: 0.2rem;
+}
+#inventory .selected{
+    box-shadow: 0px 0px 12px #4BD9FF;
+}
 /* BUTTON BAR */
 #button_bar{
     /position: fixed;
