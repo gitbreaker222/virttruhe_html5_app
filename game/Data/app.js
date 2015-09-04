@@ -29,12 +29,36 @@ var app = {
 /*
  GETTER SETTER and EVENT TRIGGER (APP)
  */
-Object.defineProperties(this.app, {
+Object.defineProperties(app, {
     state: {
-        "get": function() { return app.State},
+        "get": function() { return this.State},
         "set": function(value) {
-            app.State = value;
-            console.log("--EVENT-- state changed");
+            console.log("--EVENT-- state changed to: " + value);
+
+            if(this.State == "menu" && value == "scan"){
+                //special case when returning from pause menu to scanner
+                this.State = value;
+                this.prev_state = this.prev_state2;
+                this.prev_state2 = "menu";
+            }else{
+                this.prev_state2 = this.prev_state;
+                this.prev_state = this.State;
+                this.State = value;
+            }
+
+            //TODO views.update
+        }
+    },
+    prev_state: {
+        "get": function() { return app.Prev_state},
+        "set": function(value) {
+            app.Prev_state = value;
+        }
+    },
+    prev_state2: {
+        "get": function() { return app.Prev_state2},
+        "set": function(value) {
+            app.Prev_state2 = value;
         }
     },
     keys: {

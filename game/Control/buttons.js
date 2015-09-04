@@ -60,7 +60,7 @@ var buttons = {
      */
     btn_submit : function(btn){
         var message = $("#text-scanner input")[0].value;
-        console.log(message);
+        scanner.search_key(message);
     },
 
 
