@@ -46,7 +46,7 @@ Object.defineProperties(app, {
                 this.State = value;
             }
 
-            //TODO views.update
+            views.state_update();
         }
     },
     prev_state: {
