@@ -68,8 +68,40 @@ var inventory = {
 
     },
 
-    remove : function(id){
+    remove : function(id){//TODO test
+        var list = this.item_list;
+        var pos = list.indexOf(id);
+        /*
+         * validation
+         */
+        if (pos === -1) {
+            console.log(id + " not in inventory");
+            return;
+        }
 
+        //check if stackable
+        if (items[id].stackable === true) {
+            //check if only one left
+            if (items[id].count === 1) {
+                //delete from list
+                list.splice(pos, 1);
+                console.log("#");
+                inventory.selected = null;
+                console.log("selected: " + inventory.selected);
+            }
+            items[id].count--;
+            ui.update_items();
+        } else {
+            list.splice(pos, 1);
+            inventory.selected = null;
+        }
+
+        //event trigger
+        //ui.update_items();
+    },
+
+    select : function(id){
+        inventory.selected = id;
     },
 
     /*
@@ -85,6 +117,10 @@ var inventory = {
 
 /*
  GETTER SETTER and EVENT TRIGGER
+ note: event trigger for  item list  are not realized with setters, as an array is used!
+ The array gets modified via push() etc. methods and therefor "mutated" without setting a
+ new value to the carrying variable.
+ Instead the view update call follows the list manipulation in the add/remove method above.
  */
 Object.defineProperties(inventory, {
     item_list: {
@@ -98,7 +134,8 @@ Object.defineProperties(inventory, {
         "get": function() { return this.Selected},
         "set": function(value) {
             this.Selected = value;
-            console.log("--EVENT-- on: " + JSON.stringify(this));
+            console.log("item selected: "+value);
+            views.inventory.select(value);
         }
     },
 

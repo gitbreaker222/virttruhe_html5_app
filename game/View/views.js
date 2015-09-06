@@ -22,13 +22,22 @@ var views = {
         },
         add : function(id){
             console.log("update inventory view");
-            var html =  '<li id="#id">'
+            var html =  '<li id="#id" onclick="buttons.btn_select_item(this)">'
                      +      '<img src="#src">'
                      +  '</li>';
             html = html.replace("#id", id);
-            html = html.replace("#src", "Data/img/items/Memory-Card.png")//+id+"png")
+            html = html.replace("#src", "Data/img/items/small/"+id+".jpg");
 
             this.node.append(html);
+        },
+        remove : function(id){
+
+        },
+        select : function(id){
+            //unselect everything
+            $(".selected").removeClass("selected");
+            //select node with this id
+            $("#"+id).addClass("selected");
         }
     },
 
