@@ -132,7 +132,7 @@
 
 
 /* BUTTON BAR ------------*/
-#button_bar{
+#bottom_controls {
 	position:fixed;
 	bottom: 0px;
 	height:4.5rem;

@@ -23,7 +23,10 @@ var views = {
             default :
                 break;
         }
+
+        this.bottom_controls.update();
     },
+
 
     /*
     INFO BAR
@@ -103,6 +106,35 @@ var views = {
     text_scanner : {
         node: $("#text-scanner")
     },
+
+
+
+    /*
+    BOTTOM CONTROLS
+     */
+    bottom_controls : {
+        node : $("#bottom_controls"),
+        update: function(){
+            var state = app.state;
+            var selected = inventory.selected;
+
+            switch (state){
+                case "inventory":
+                    if(selected == null){
+                        //disable item buttons
+                        $(".item_button").addClass("disabled");
+                    }else{
+                        //enable item buttons
+                        $(".item_button").removeClass("disabled");
+                    }
+                    break;
+                case "scan":
+                    break;
+                case "menu":
+                    break;
+            }
+        }
+    }
 
 
 };
