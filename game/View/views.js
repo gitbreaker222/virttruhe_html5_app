@@ -6,6 +6,64 @@ function View(html_element){
 }
 
 var views = {
+    state_update : function(){
+        var state = app.state;
+
+        this.info_bar.update();
+
+        //hide all contents, then show current
+        $("#content").children().hide();
+        switch (state){
+            case "inventory":
+                this.inventory.node.show();
+                break;
+            case "scan":
+                this[app.config.scanner + "_scanner"].node.show();
+                break;
+            default :
+                break;
+        }
+    },
+
+    /*
+    INFO BAR
+     */
+    info_bar : {
+        node    : $("#info_bar"),
+        keys    : $("#keys"),
+        gold    : $("#gold"),
+
+        update  : function(){
+            var state = app.state;
+            var item;
+
+            //info
+            switch (state){
+                case "inventory":
+                    item = inventory.selected;
+                    if(item == null){
+                        item = "inventory"
+                    }
+
+                    $("#info").html(item);
+
+                    break;
+                case "scan":
+                    break;
+                default :
+                    break;
+            }
+
+            //keys
+            this.keys.find(".val").html(app.keys);
+
+            //gold
+            this.gold.find(".val").html(app.gold);
+        }
+    },
+
+
+
     /*
     CONTENT VIEWS
      */
@@ -46,25 +104,6 @@ var views = {
         node: $("#text-scanner")
     },
 
-
-
-    /*
-    UPDATE ALL VIEWS
-     */
-    state_update : function(){
-        //show current content
-        $("#content").children().hide();
-        switch (app.state){
-            case "inventory":
-                this.inventory.node.show();
-                break;
-            case "scan":
-                this[app.config.scanner + "_scanner"].node.show();
-                break;
-            default :
-                break;
-        }
-    }
 
 };
 
