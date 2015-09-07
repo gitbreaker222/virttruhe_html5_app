@@ -96,6 +96,11 @@ buttons = {
         $("#btn_use").click(function () {
             buttons.btn_use(this);
         });
+
+        //attach event handlers
+        $("#text-scanner").find("input").keydown(function(){
+            views.text_scanner.validate();
+        });
     },
 
 

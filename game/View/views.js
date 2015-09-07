@@ -44,14 +44,18 @@ var views = {
             switch (state){
                 case "inventory":
                     item = inventory.selected;
+
                     if(item == null){
                         item = "inventory"
+                    }else{
+                        item = items[item].name;
                     }
 
                     $("#info").html(item);
 
                     break;
                 case "scan":
+                    $("#info").html("scan...");
                     break;
                 default :
                     break;
@@ -97,14 +101,29 @@ var views = {
         select : function(id){
             //unselect everything
             $(".selected").removeClass("selected");
-            //select node with this id
+            //check if nothing selected
+            if(id == null){
+                return
+            }
+            //else select node with this id
             $("#"+id).addClass("selected");
         }
     },
 
 
     text_scanner : {
-        node: $("#text-scanner")
+        node        : $("#text-scanner"),
+
+        validate    : function(){
+            var message = $("#text-scanner").find("input")[0].value;
+            var pattern = /#(\d|[abcdef]){8}\s/i;
+            console.log(message);
+            if(message == pattern){
+                this.node.addClass("success");
+            }else{
+                this.node.removeClass("success");
+            }
+        },
     },
 
 

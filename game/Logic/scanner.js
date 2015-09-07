@@ -27,12 +27,13 @@ function Scanner(){
     };
 
     this.search_key = function(message){
-        var key = message.slice(/#(\d|[abcdef]){8}/i);
+        var key;
 
-        if(key === -1){
-            alert("nothing found");
+        if( message.search(/#(\d|[abcdef]){8}\s/i) == -1) {
+            alert("no VIRTTRUHE found");
             this.stop();
         }else{
+            key = message.slice(/#(\d|[abcdef]){8}\s/i);
             this.found_virttruhe(key)
         }
 
@@ -73,6 +74,7 @@ function Scanner(){
                 break;
 
             default :
+                console.log("error - item type not defined");
                 break;
         }
 
@@ -82,6 +84,9 @@ function Scanner(){
     };
 
     this.map_key = function(key){
+        if(key_map[key] === undefined){
+            return
+        }
         return key_map[key][app.story.layer];
     };
 

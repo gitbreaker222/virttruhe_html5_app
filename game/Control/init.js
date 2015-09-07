@@ -4,6 +4,13 @@
 
 function init(){
     console.log("=====INIT=====");
+
+    if(app.loading){
+        console.log("... loading ...")
+        setTimeout(function(){init()},100);
+        return;
+    }
+    console.log("OK");
     $(document).foundation(); //init for foundation framework or so
 
 
@@ -17,7 +24,7 @@ function init(){
     /*
     DEV
      */
-    //inventory.add("set_crime");
+    inventory.add("pine1");
 }
 
 $(document).ready(init());

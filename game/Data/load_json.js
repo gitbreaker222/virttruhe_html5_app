@@ -17,7 +17,9 @@ function load_json(){
         for(i in data){
             key_map[data[i].key] = data[i];
         }
-
+        console.log("ready");
+        //set ready flag
+        app.loading = false;
     });
 }
 

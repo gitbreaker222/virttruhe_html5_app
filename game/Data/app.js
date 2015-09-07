@@ -2,6 +2,7 @@ var app = {
     /*
     APP STATES
      */
+    "loading"       : true,
     "State"         : "start",
     "Prev_state"    : null,
     "Prev_state2"   : null,
@@ -46,6 +47,7 @@ Object.defineProperties(app, {
                 this.State = value;
             }
 
+            inventory.select(null);
             views.state_update();
         }
     },

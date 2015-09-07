@@ -24,7 +24,7 @@ var inventory = {
         }
         //check if item exists
         if (items[item_id] === undefined) {
-            console.log("item not in list: " + item);
+            console.log("item not in list: " + item_id);
             return;
         }
         //check if stackable
