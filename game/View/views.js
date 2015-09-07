@@ -136,18 +136,20 @@ var views = {
         update: function(){
             var state = app.state;
             var selected = inventory.selected;
+            var item_btn = $(".item_button");
 
             switch (state){
                 case "inventory":
                     if(selected == null){
                         //disable item buttons
-                        $(".item_button").addClass("disabled");
+                        item_btn.addClass("disabled");
                     }else{
                         //enable item buttons
-                        $(".item_button").removeClass("disabled");
+                        item_btn.removeClass("disabled");
                     }
                     break;
                 case "scan":
+                    item_btn.addClass("disabled");
                     break;
                 case "menu":
                     break;
