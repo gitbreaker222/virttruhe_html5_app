@@ -149,9 +149,9 @@ var views = {
             console.log(message);
             console.log(pattern.test(message));
             if(pattern.test(message)){
-                this.node.addClass("success");
+                $("#btn_submit").addClass("success");
             }else{
-                this.node.removeClass("success");
+                $("#btn_submit").removeClass("success");
             }
         },
     },
