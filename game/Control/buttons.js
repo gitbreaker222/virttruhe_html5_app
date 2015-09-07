@@ -18,7 +18,7 @@ buttons = {
                 break;
             default :
                 scanner.start();
-                console.log("=scanner startet from default case!=");
+                console.log("= scanner started from default case! =");
                 break;
         }
     },
@@ -59,8 +59,12 @@ buttons = {
     },
 
     btn_menu: function (btn) {
-        console.log("button pushed");
-        console.log(btn);
+        if(app.state !== "menu"){
+            app.state = "menu";
+        }else{
+            app.state = app.prev_state;
+        }
+
     },
 
     /*
