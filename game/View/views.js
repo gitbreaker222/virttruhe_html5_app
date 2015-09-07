@@ -26,7 +26,7 @@ var views = {
             default :
                 break;
         }
-
+        this.top_controls.update();
         this.bottom_controls.update();
     },
 
@@ -53,10 +53,9 @@ var views = {
                     }else{
                         item = items[item].name;
                     }
-
                     $("#info").html(item);
-
                     break;
+
                 case "scan":
                     $("#info").html("scan...");
                     break;
@@ -70,6 +69,30 @@ var views = {
             //gold
             this.gold.find(".val").html(app.gold);
         }
+    },
+
+
+
+    /*
+    TOP CONTROLS
+     */
+    top_controls : {
+        node : $("#top_controls"),
+
+        update : function(){
+            $("#btn_scan").removeClass("disabled");
+            switch (app.state){
+                case "inventory":
+                    break;
+                case "scan":
+                    break;
+                case "menu":
+                    $("#btn_scan").addClass("disabled");
+                    break;
+                default:
+                    break
+            }
+        },
     },
 
 

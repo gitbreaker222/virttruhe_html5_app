@@ -7,7 +7,7 @@ buttons = {
      TOP BAR
      */
     btn_scan: function (btn) {
-        console.log("scan button pushed:");
+        if (this.disabled(btn)) return;
 
         switch (app.state) {
             case "inventory":
