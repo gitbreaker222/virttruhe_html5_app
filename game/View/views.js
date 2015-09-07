@@ -179,10 +179,14 @@ var views = {
                         item_btn.removeClass("disabled");
                     }
                     break;
-                case "scan":
+                //case "scan":
                     item_btn.addClass("disabled");
                     break;
-                case "menu":
+                //case "menu":
+                    item_btn.addClass("disabled");
+                    break;
+                default:
+                    item_btn.addClass("disabled");
                     break;
             }
         }
