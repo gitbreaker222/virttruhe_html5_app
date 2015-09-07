@@ -65,14 +65,14 @@ Object.defineProperties(app, {
         "get": function() { return app.Keys},
         "set": function(value) {
             app.Keys = value;
-            console.log("--EVENT-- keys changed");
+            views.info_bar.update();
         }
     },
     gold: {
         "get": function() { return app.Gold},
         "set": function(value) {
             app.Gold = value;
-            console.log("--EVENT-- gold changed");
+            views.info_bar.update();
         }
     }
 });
