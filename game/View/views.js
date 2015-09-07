@@ -19,7 +19,7 @@ var views = {
                 this.inventory.node.show();
                 break;
             case "scan":
-                this.bottom_controls.node.show();
+                this.bottom_controls.node.hide();
                 this[app.config.scanner + "_scanner"].node.show();
                 break;
             case "menu":
@@ -154,6 +154,11 @@ var views = {
                 $("#btn_submit").removeClass("success");
             }
         },
+    },
+
+
+    video_scanner : {
+        node: $("#video-scanner"),
     },
 
     menu : {

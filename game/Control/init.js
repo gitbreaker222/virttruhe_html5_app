@@ -20,6 +20,9 @@ function init(){
     //change state to inventory
     app.state = "inventory";
 
+    //set video scanner as scanner
+    app.config.scanner = "video";
+
 
     /*
     DEV

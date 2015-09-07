@@ -188,6 +188,10 @@ button label{
         width: 6rem;
     }
 
+#video-scanner{
+    height: 75%;
+}
+
 
 /* BUTTON BAR */
 #bottom_controls {

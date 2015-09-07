@@ -12,6 +12,9 @@ function Scanner(){
             case "video":
                 video_scanner.start();
                 break;
+            case "photo":
+                alert("TO BE DONE");
+                break;
             default :
                 video_scanner.start();
                 break;
@@ -22,6 +25,8 @@ function Scanner(){
 
     this.stop = function(){
         console.log("==stop scanner==");
+
+        if(app.config.scanner == "video") video_scanner.stop();
 
         app.state = app.prev_state;
     };
