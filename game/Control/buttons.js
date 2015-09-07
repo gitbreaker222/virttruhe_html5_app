@@ -105,9 +105,7 @@ buttons = {
         });
 
         //attach event handlers
-        $("#text-scanner").find("input").keydown(function(){
-            views.text_scanner.validate();
-        });
+        //$("#text-scanner").find("input")[0].oninput="views.text_scanner.validate()";
     },
 
 

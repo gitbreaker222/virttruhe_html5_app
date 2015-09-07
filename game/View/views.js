@@ -145,9 +145,10 @@ var views = {
 
         validate    : function(){
             var message = $("#text-scanner").find("input")[0].value;
-            var pattern = /#(\d|[abcdef]){8}\s/i;
+            var pattern = /#(\d|[abcdef]){8}\b/i;
             console.log(message);
-            if(message == pattern){
+            console.log(pattern.test(message));
+            if(pattern.test(message)){
                 this.node.addClass("success");
             }else{
                 this.node.removeClass("success");
