@@ -41,16 +41,19 @@ buttons = {
     },
 
     btn_use: function (btn) {
+        if (this.disabled(btn)) return;
         console.log("button pushed");
         console.log(btn);
     },
 
     btn_share: function (btn) {
+        if (this.disabled(btn)) return;
         console.log("button pushed");
         console.log(btn);
     },
 
     btn_delete: function (btn) {
+        if (this.disabled(btn)) return;
         console.log("button pushed");
         console.log(btn);
     },
@@ -102,6 +105,18 @@ buttons = {
             views.text_scanner.validate();
         });
     },
+
+
+    /*
+    SUBS
+     */
+    disabled    : function(button){
+        if(button.className.search("disabled") !== -1){
+            console.log("button disabled");
+            return true
+        }
+        return false
+    }
 
 
 };
