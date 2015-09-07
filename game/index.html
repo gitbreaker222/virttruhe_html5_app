@@ -104,9 +104,108 @@
         video sc
       </div>
 
-      <div id="menu" class="small-12 columns">
-        menu
-      </div>
+      <ul id="menu" class="small-12 columns">
+        <li id="m_music">
+          <img src="Data/img/sound.svg"/>
+          Music ON/OFF
+          <span class="pull-right">
+            <input type="checkbox">
+          </span>
+        </li>
+        <li id="m_sfx">
+          <img src="Data/img/sfx.svg"/>
+          SFX ON/OFF
+          <span class="pull-right">
+            <input type="checkbox">
+          </span>
+        </li>
+        <li id="m_scanner">
+          <img src="Data/img/Tourism-Icons_qr-code-scan.svg"/>
+          Scanner:
+          <span class="pull-right">
+            <select name="scanner" id="scanner_select">
+              <option>Video</option>
+              <option>Photo</option>
+              <option>Text</option>
+            </select>
+          </span>
+        </li>
+        <li id="m_save" onclick="buttons.btn_m_save()">
+          <img src="Data/img/fi-download.svg"/>
+          SAVE
+          <label>last save: ###</label>
+        </li>
+        <li id="m_load" onclick="buttons.btn_exit()">
+          <img src="Data/img/fi-upload.svg"/>
+          LOAD
+        </li>
+        <li id="m_exit" onclick="buttons.btn_exit()">
+          <img src="Data/img/fi-x.svg"/>
+          Exit
+        </li>
+
+
+        <!--<section class="block-list">
+          <header>I'm a Checkbox</header>
+          <ul>
+            <li>
+              <input id="life" type="checkbox">
+              <label for="life">Yeah!</label>
+            </li>
+            <li>
+              <input id="rad" type="checkbox">
+              <label for="rad">Radical!</label>
+            </li>
+          </ul>
+        </section>
+        <section class="block-list">
+          <header>I Have Radio Buttons</header>
+          <ul>
+            <li>
+              <input name="delicious" id="eggs" value="eggs" checked="" type="radio">
+              <label for="eggs">Eggs</label>
+            </li>
+            <li>
+              <input name="delicious" id="bacon" value="bacon" type="radio">
+              <label for="bacon">Bacon</label>
+            </li>
+            <li>
+              <input name="delicious" id="toast" value="toast" type="radio">
+              <label for="toast">Toast</label>
+            </li>
+          </ul>
+        </section>
+        <section class="block-list">
+          <header>Look, I gotta Switch</header>
+          <ul>
+            <li>
+              <span>Switch!</span>
+              <div class="switch">
+                <input id="switchOne" type="checkbox">
+                <label for="switchOne"></label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="block-list">
+          <header>I Hold Forms</header>
+          <ul>
+            <li><input placeholder="User name" type="text"></li>
+            <li><input placeholder="Password" type="password"></li>
+          </ul>
+        </section>
+        <section class="block-list">
+          <header>I Even Have Selectboxes</header>
+          <ul>
+            <li class="with-dropdown"><select name="" id="">
+              <option>Now</option>
+              <option>Later</option>
+              <option>Eventually</option>
+              <option>Forever</option>
+            </select></li>
+          </ul>
+        </section>-->
+      </ul>
     </section>
 
 

@@ -20,6 +20,9 @@ var views = {
             case "scan":
                 this[app.config.scanner + "_scanner"].node.show();
                 break;
+            case "menu":
+                this.menu.node.show();
+                break//dance
             default :
                 break;
         }
@@ -124,6 +127,11 @@ var views = {
                 this.node.removeClass("success");
             }
         },
+    },
+
+    menu : {
+        node    : $("#menu"),
+
     },
 
 
