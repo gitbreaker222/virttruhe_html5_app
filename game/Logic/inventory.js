@@ -136,6 +136,7 @@ Object.defineProperties(inventory, {
             this.Selected = value;
             console.log("item selected: "+value);
             views.inventory.select(value);
+            views.info_bar.update();
         }
     },
 
