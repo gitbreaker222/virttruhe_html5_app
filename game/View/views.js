@@ -180,17 +180,24 @@ var views = {
         update: function(){
             var state = app.state;
             var selected = inventory.selected;
-            var item_btn = $(".item_button");
+            var item_btns = $(".item_button");
 
             switch (state){
                 case "inventory":
                     if(selected == null){
                         //disable item buttons
-                        item_btn.addClass("disabled");
+                        item_btns.addClass("disabled");
+                        return;
                     }else{
                         //enable item buttons
-                        item_btn.removeClass("disabled");
+                        item_btns.removeClass("disabled");
                     }
+                    // if selected item has no use fn
+                    if(items[selected].function === null){
+                        //disable use button
+                        $("#btn_use").addClass("disabled");
+                    }
+
                     break;
                 //case "scan":
                     item_btn.addClass("disabled");
