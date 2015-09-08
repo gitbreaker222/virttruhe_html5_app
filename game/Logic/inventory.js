@@ -68,9 +68,10 @@ var inventory = {
 
     },
 
-    remove : function(id){//TODO test
+    remove : function(id){
         var list = this.item_list;
         var pos = list.indexOf(id);
+        var item;
         /*
          * validation
          */
@@ -79,25 +80,28 @@ var inventory = {
             return;
         }
 
+        item = items[id];
+
         //check if stackable
-        if (items[id].stackable === true) {
+        if (item.stackable === true) {
             //check if only one left
-            if (items[id].count === 1) {
+            if (item.count === 1) {
                 //delete from list
                 list.splice(pos, 1);
-                console.log("#");
+                console.log(list);
                 inventory.selected = null;
                 console.log("selected: " + inventory.selected);
             }
+            //reduce counter
             items[id].count--;
-            ui.update_items();
+            //view.inventory
         } else {
             list.splice(pos, 1);
             inventory.selected = null;
         }
 
         //event trigger
-        //ui.update_items();
+        views.inventory.remove(id);
     },
 
     select : function(id){

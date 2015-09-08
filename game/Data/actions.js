@@ -6,7 +6,10 @@ actions = {
         if (!txt) txt = "no text given";
         console.log(txt);
     },
-    "fuck" : function(){
-        console.log("haha it sais fuck");
+    take_seeds : {
+        name : "Take seeds",
+        start: function(){
+            console.log("you take out the seeds and put them in your inventory. The pine is no longer useful");
+        }
     }
 };

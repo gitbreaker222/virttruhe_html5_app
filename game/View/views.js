@@ -129,7 +129,7 @@ var views = {
             this.node.append(html);
         },
         remove : function(id){
-
+            $("#"+id).remove();
         },
         select : function(id){
             //unselect everything
