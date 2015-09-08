@@ -3,9 +3,17 @@
  */
 function Video_scanner(){
     this.start = function(){
-        $('#video-scanner').html5_qrcode(function(data){
+        var node = $('#video-scanner');
+
+        //remove canvas from previous scan
+        node.html("");
+
+        //start new scan
+        node.html5_qrcode(function(data){
                 // do something when code is read
-                console.log(data)
+                console.log("QR-Code recognized! Stopping qrscan...");
+
+                scanner.search_key(data)
             },
             function(error){
                 //show read errors
@@ -17,6 +25,7 @@ function Video_scanner(){
     };
 
     this.stop = function(){
+        //not needed
     };
 }
 

@@ -26,30 +26,41 @@ function Scanner(){
     this.stop = function(){
         console.log("==stop scanner==");
 
-        if(app.config.scanner == "video") video_scanner.stop();
-
         app.state = app.prev_state;
     };
 
     this.search_key = function(message){
-        var key;
+        var key,
+            id,
+            pattern = /#(?:\d|[abcdef]){8}\b/i;
 
-        if( message.search(/#(\d|[abcdef]){8}\b/i) == -1) {
+        console.log("got message: "+message);
+
+        //look for key in message (e.g. #00000001)
+        if(pattern.test(message) == false){
             alert("no VIRTTRUHE found");
             this.stop();
         }else{
-            key = message.slice(/#(\d|[abcdef]){8}\b/i).trim();
-            this.found_virttruhe(key)
+            //extract key and trim whitespace
+            key = message.match(pattern)[0].trim();
+            //check if key is listed on item map
+            id = this.map_key(key);
+            if(id === undefined){
+                alert("Key not listed: "+key);
+                this.stop();
+                return;
+            }
+
+            this.found_virttruhe(id);
         }
 
     };
 
-    this.found_virttruhe = function(key){
-        console.log("found virttruhe: " + key);
-        var id, type, set, layer, decision;
+    this.found_virttruhe = function(id){
+        console.log("found virttruhe: " + id);
+        var type, set, layer, decision;
 
-        id = this.map_key(key);
-        type = this.get_type(id); //item/set/portal
+        type = this.get_type(id); //item/set/portal/null
 
         switch (type){
             case "item":
@@ -78,34 +89,34 @@ function Scanner(){
                     }
                 break;
 
+            case "empty":
+                alert("Empty VIRTTRUHE. Maybe on another layer");
+                break;
+
             default :
                 console.log("error - item type not defined");
                 break;
         }
 
-        app.state = "inventory";
-
-
+        //app.state = "inventory";
+        this.stop();
     };
 
     this.map_key = function(key){
         if(key_map[key] === undefined){
-            return
+            return undefined
         }
         return key_map[key][app.story.layer];
     };
 
     this.get_type = function(id){
-        //check if is set
-        if(id.search("set")>=0){
-            // e.g. id = "set_museum"
-            return "set";
-        }else if(id.substring(1,2) === "a"){
-            // e.g. #a0000000
-            return "portal"
-        }else{
-            return "item"
-        }
+        //check if null
+        if(id === null) return "empty";
+        //check if is set - e.g. id = "set_museum"
+        if(id.search("set")>=0) return "set";
+        //check if portal - e.g. #a0000000
+        if(id.substring(1,2) === "a") return "portal";
+        else return "item"
     }
 
 

@@ -26,15 +26,14 @@
         
         var qrscan = function() {
         	
-        	if (scan.status){ //edited by gitbreaker222 @ github
+        	if (app.state == "scan"){ //edited by gitbreaker222 @ github
         		if (localMediaStream) {
         		
 		            context.drawImage(video, 0, 0, 307,250);
 		    
 		            try {
-		              qrcode.decode();
-		              message.print("QR-Code recognized! Stopping qrscan...");
-		              localMediaStream.stop();
+                      qrcode.decode();
+                      localMediaStream.stop();
 		              context = null;
 		              return;
 		            } catch(e) {
@@ -45,7 +44,7 @@
 		        } else {
 		        	setTimeout(qrscan, 500);
 		        }
-        	}else{
+        	}else{ //edited by gitbreaker222 @ github
         		console.log("qrscan stopped manually.");
         		localMediaStream.stop();
         		return;
