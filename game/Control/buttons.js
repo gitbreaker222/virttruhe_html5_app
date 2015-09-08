@@ -36,8 +36,8 @@ buttons = {
     },
 
     btn_info: function (btn) {
-        console.log("button pushed");
-        console.log(btn);
+        dialog.write();
+        $('#dialog_box').show();
     },
 
     btn_use: function (btn) {
