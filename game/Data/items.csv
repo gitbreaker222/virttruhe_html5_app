@@ -1,25 +1,25 @@
-id;name;image;description;stackable;function;type;set
-pine1;Pine (closed);(id);A Pine. They are often put into fires for their cracking sounds;false;null;pine;garden
-pine2;Pine (open);;It's cracked from the heat;false;take_seeds;pine;garden
-pine_seed;Pine seed;;Can be planted;true;combine;seed;garden
-pot;Flower pot;;Can grow something;false;combine;pot;garden
-pot1;Pot with pineshine;;A light emitting flower;false;null;pot;garden
-flower01;Krokus;;...;true;null;flower;garden
-flower02;Tulpe;;...;true;null;flower;garden
-flower03;Rose;;...;true;null;flower;garden
-beer;Beer;;A bottle of cool beer;true;drink;alcohol;general
-wine;Wine;;A bottle of cheap wine;true;drink;alcohol;general
-knife;Knife;;Normal kitchen knife;false;cut;tools;general
-24dtf_song1;Song: 24 days to fall - New Frontiers;;Song from the Album ''A buggle wardshen'';false;listen;song;music
-24dtf_album01;Album: A buggle wardshen;;Album from ''24 days to fall'';false;show_songs;album;music
-st_wheel;Steering Wheel;;Part of a car. It is used to steer the car;false;combine;element;museum
-pedal;Gas pedal;;Part of a car. It is used to increase speed;false;combine;element;museum
-frame;Car frame;;The skelleton of a car;false;combine;element;museum
-car_parts1;Frame with steering wheel;;Combination of Frame and steering wheel;false;combine;element;museum
-car_parts2;Frame with pedal;;Combination of Frame and gas pedal;false;combine;element;museum
-car1;Mercedes 230 E;;The timeless Mercedes 230 E;false;null;car;museum
-note01;'Crime Scene';;The body lies face down on the floor. Blood spilled everywhere...;false;null;note;crime
-note02;Clue 'Hat';;This hat looks like the one from the guy in the bar...;false;null;note;crime
-fingerp_scanner;Finger print scanner;;Search for finger prints on items;false;combine;tools;crime
-pills;Sleeping Pills;;Super effective Sleeping pills. One is missing;false;filler;evidence;crime
-fingerprint01;Wifes Finger print;;found on the package of sleeping pills. hmm... as far as I know she has no problem getting to sleep...;false;null;evidence;crime
+id,name,image,description,stackable,function,type,set
+pine1,Pine (closed),(id),A Pine. They are often put into fires for their cracking sounds,false,combine,pine,garden
+pine2,Pine (open),,It's cracked from the heat,false,take_seeds,pine,garden
+pine_seed,Pine seed,,Can be planted,true,combine,seed,garden
+pot,Flower pot,,Can grow something,false,combine,pot,garden
+pot1,Pot with pineshine,,A light emitting flower,false,null,pot,garden
+flower01,Krokus,,...,true,null,flower,garden
+flower02,Tulpe,,...,true,null,flower,garden
+flower03,Rose,,...,true,null,flower,garden
+beer,Beer,,A bottle of cool beer,true,drink,alcohol,general
+wine,Wine,,A bottle of cheap wine,true,drink,alcohol,general
+knife,Knife,,Normal kitchen knife,false,cut,tools,general
+24dtf_song1,Song: 24 days to fall - New Frontiers,,Song from the Album ''A buggle wardshen'',false,listen,song,music
+24dtf_album01,Album: A buggle wardshen,,Album from ''24 days to fall'',false,show_songs,album,music
+st_wheel,Steering Wheel,,Part of a car. It is used to steer the car,false,combine,element,museum
+pedal,Gas pedal,,Part of a car. It is used to increase speed,false,combine,element,museum
+frame,Car frame,,The skelleton of a car,false,combine,element,museum
+car_parts1,Frame with steering wheel,,Combination of Frame and steering wheel,false,combine,element,museum
+car_parts2,Frame with pedal,,Combination of Frame and gas pedal,false,combine,element,museum
+car1,Mercedes 230 E,,The timeless Mercedes 230 E,false,null,car,museum
+note01,'Crime Scene',,The body lies face down on the floor. Blood spilled everywhere...,false,null,note,crime
+note02,Clue 'Hat',,This hat looks like the one from the guy in the bar...,false,null,note,crime
+fingerp_scanner,Finger print scanner,,Search for finger prints on items,false,combine,tools,crime
+pills,Sleeping Pills,,Super effective Sleeping pills. One is missing,false,filler,evidence,crime
+fingerprint01,Wifes Finger print,,found on the package of sleeping pills. hmm... as far as I know she has no problem getting to sleep...,false,null,evidence,crime

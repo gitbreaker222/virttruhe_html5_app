@@ -5,7 +5,7 @@
     "image":"",
     "description":"A Pine. They are often put into fires for their cracking sounds",
     "stackable":"false",
-    "function":null,
+    "function":"combine",
     "type":"pine",
     "set":"garden"
   },

@@ -42,8 +42,17 @@ buttons = {
 
     btn_use: function (btn) {
         if (this.disabled(btn)) return;
-        console.log("button pushed");
-        console.log(btn);
+
+        var id = inventory.selected;
+        var fn_name = items[id].function;
+        var action = actions[fn_name];
+
+        //ask user to confirm item use
+        var decision = window.confirm(action.name + "?");
+
+        if(decision){
+            action.start();
+        }
     },
 
     btn_share: function (btn) {

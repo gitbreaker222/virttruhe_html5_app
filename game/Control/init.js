@@ -28,6 +28,7 @@ function init(){
     DEV
      */
     inventory.add("pine1");
+    inventory.add("pine2");
 }
 
 $(document).ready(init());

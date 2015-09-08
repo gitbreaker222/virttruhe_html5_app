@@ -10,6 +10,9 @@ actions = {
         name : "Take seeds",
         start: function(){
             console.log("you take out the seeds and put them in your inventory. The pine is no longer useful");
+            inventory.add("pine_seed");
+            //presentation.new_item("seeds"); ...something like that yeah
+            inventory.remove("pine1");
         }
     }
 };
