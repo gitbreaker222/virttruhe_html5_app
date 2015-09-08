@@ -62,6 +62,10 @@ var views = {
                 case "scan":
                     $("#info").html("scan...");
                     break;
+
+                case "menu":
+                    $("#info").html("menu");
+                    break;
                 default :
                     break;
             }
