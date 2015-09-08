@@ -120,6 +120,12 @@ function Scanner(){
     }
 
 
+    this.change = function(type){
+        console.log(type);
+        app.config.scanner = type;
+    }
+
+
 }
 
 var scanner = new Scanner();

@@ -189,8 +189,8 @@ button label{
     #menu label{
         display: inline-block;
         position: relative;
-        top: 1rem;
-        left: -3rem;
+        top: -2rem;
+        left: 5rem
     }
     #menu input, #menu select{
         height: inherit;

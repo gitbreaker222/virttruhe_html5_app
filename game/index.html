@@ -128,18 +128,18 @@
         </li>
         <li id="m_scanner">
           <img src="Data/img/Tourism-Icons_qr-code-scan.svg"/>
-          Scanner: *TODO*
+          Scanner:
           <span class="pull-right">
-            <select name="scanner" id="scanner_select">
+            <select name="scanner" id="scanner_select" onchange="buttons.btn_scanner_select(event)">
               <option>Video</option>
-              <option>Photo</option>
+              <option>Photo *TODO*</option>
               <option>Text</option>
             </select>
           </span>
         </li>
         <li id="m_save" onclick="buttons.btn_m_save()" class="btn">
           <img src="Data/img/fi-download.svg"/>
-          SAVE *TODO*
+          SAVE *TODO*<br>
           <label>last save: ###</label>
         </li>
         <li id="m_load" onclick="buttons.btn_exit()" class="btn">

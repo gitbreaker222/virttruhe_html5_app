@@ -20,8 +20,8 @@ function init(){
     //change state to inventory
     app.state = "inventory";
 
-    //set video scanner as scanner
-    app.config.scanner = "video";
+    //set selected scanner (can be cached)
+    app.config.scanner = ($("#scanner_select")[0].value).toLowerCase();
 
 
     /*

@@ -84,6 +84,17 @@ buttons = {
         scanner.search_key(message);
     },
 
+
+    /*
+    MENU
+     */
+    btn_scanner_select: function(event){
+        var type = event.target.value; //get selected type
+        type = type.toLowerCase();
+        scanner.change(type)
+    },
+
+
     /*
     ATTACH BUTTONS AFTER HTML LOAD
      */

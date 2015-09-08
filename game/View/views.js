@@ -200,13 +200,13 @@ var views = {
 
                     break;
                 //case "scan":
-                    item_btn.addClass("disabled");
+                    item_btns.addClass("disabled");
                     break;
                 //case "menu":
-                    item_btn.addClass("disabled");
+                    item_btns.addClass("disabled");
                     break;
                 default:
-                    item_btn.addClass("disabled");
+                    item_btns.addClass("disabled");
                     break;
             }
         }
