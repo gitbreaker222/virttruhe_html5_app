@@ -104,6 +104,11 @@ buttons = {
             buttons.btn_use(this);
         });
 
+        //control/stop event propagation on clicks
+        $("#dialog").click(function(event){
+            event.stopPropagation();
+        });
+
         //attach event handlers
         //$("#text-scanner").find("input")[0].oninput="views.text_scanner.validate()";
     },
