@@ -1,0 +1,10 @@
+{
+  "test":"I am error",
+  "info": {
+    "default" : "scan VIRTTRUHE QR-Cards and click on items to interact with them",
+    "description" : "#description"
+  },
+  "use" : {
+    "ask" : "#name?<br> #dialog_ok #dialog_close"
+  }
+}

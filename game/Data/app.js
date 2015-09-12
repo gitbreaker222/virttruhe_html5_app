@@ -8,6 +8,7 @@ var app = {
     "Prev_state2"   : null,
     "Keys"          : 99,
     "Gold"          : 999,
+    "Dialog"        : "",
 
 
     /*
@@ -75,6 +76,13 @@ Object.defineProperties(app, {
         "set": function(value) {
             app.Gold = value;
             views.info_bar.update();
+        }
+    },
+    dialog: {
+        "get": function() { return app.Dialog},
+        "set": function(value) {
+            app.Dialog = value;
+            views.dialog.show();
         }
     }
 });

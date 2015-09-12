@@ -3,6 +3,18 @@
  */
 var items = {};
 var key_map = {};
+var dialogs = {};
+
+
+
+// Check for the various File API support.
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+    console.log(" Great success! All the File APIs are supported.")
+} else {
+    alert('The File APIs are not fully supported in this browser.');
+}
+
+
 
 function load_json(){
     //get JSON files
@@ -20,6 +32,9 @@ function load_json(){
         console.log("ready");
         //set ready flag
         app.loading = false;
+    });
+    $.getJSON('Data/dialogs.json', function(data){
+        dialogs = data;
     });
 }
 

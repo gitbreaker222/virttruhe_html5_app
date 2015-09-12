@@ -36,23 +36,13 @@ buttons = {
     },
 
     btn_info: function (btn) {
-        dialog.write();
+        dialog.write("info");
         $('#dialog_box').show();
     },
 
     btn_use: function (btn) {
         if (this.disabled(btn)) return;
-
-        var id = inventory.selected;
-        var fn_name = items[id].function;
-        var action = actions[fn_name];
-
-        //ask user to confirm item use
-        var decision = window.confirm(action.name + "?");
-
-        if(decision){
-            action.start();
-        }
+        dialog.write("use");
     },
 
     btn_share: function (btn) {
@@ -63,8 +53,8 @@ buttons = {
 
     btn_delete: function (btn) {
         if (this.disabled(btn)) return;
-        console.log("button pushed");
-        console.log(btn);
+
+        inventory.remove(inventory.selected);
     },
 
     btn_menu: function (btn) {

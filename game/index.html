@@ -7,7 +7,6 @@
 
     <title>VIRTTRUHE</title>
 
-
     <link rel="stylesheet" href="Data/css/foundation.min.css" />
     <link rel="stylesheet" href="Data/css/foundation-icons.css" />
     <link rel="stylesheet" href="Data/css/style2.css" />
@@ -25,7 +24,7 @@
     <!--DATA-->
     <script src="Data/load_json.js" defer ></script>
     <script src="Data/app.js" defer ></script>
-    <script src="Data/actions.js" defer ></script>
+    <script src="Logic/actions.js" defer ></script>
     <!--LOGIC-->
     <script src="Logic/inventory.js" defer ></script>
     <script src="Logic/scanner.js" defer ></script>
@@ -168,7 +167,7 @@
       </li>
       <li>
         <button id="btn_use" class="item_button">
-          <label>use *TD</label>
+          <label>use</label>
         </button>
       </li>
       <li>
@@ -191,7 +190,7 @@
     </ul>
 
 
-    <div id="dialog_box" onclick="$(this).hide()">
+    <div id="dialog_box" onclick="views.dialog.close()" class="hide">
       <div id="dialog" class="center">
         I am dialog
       </div>

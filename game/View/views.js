@@ -162,11 +162,11 @@ var views = {
 
 
     video_scanner : {
-        node: $("#video-scanner"),
+        node: $("#video-scanner")
     },
 
     menu : {
-        node    : $("#menu"),
+        node    : $("#menu")
 
     },
 
@@ -209,6 +209,34 @@ var views = {
                     item_btns.addClass("disabled");
                     break;
             }
+        }
+    },
+
+
+    /*
+    DIALOG BOX PUP UP
+     */
+    dialog : {
+        box     : $("#dialog_box"),
+        node    : $("#dialog"),
+
+        close: function(next_action){
+            console.log("close dialog");
+            //hide box
+            this.box.hide();
+            if(next_action !== undefined){
+                next_action();
+            }
+        },
+
+        show : function(){
+            console.log("show dialog");
+            //get message
+            var message = app.dialog;
+            //inject message into node
+            this.node.html(message);
+            //show box
+            this.box.show();
         }
     }
 
