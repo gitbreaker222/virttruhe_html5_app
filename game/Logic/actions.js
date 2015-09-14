@@ -4,10 +4,28 @@
 actions = {
     combine : {
         name: "Combine with another item",
-        start: function() {
-            var item1, item2;
-            //get items somehow
-            console.log("item1" + " will be combined with " + "item2");
+        start: function(item1, item2) {
+            //set state
+            app.state == "combine";
+            //check if items are given
+            if(item2 === undefined){
+                console.log("select second item");
+                return
+            }
+
+            console.log(item1 + " will be combined with " + "item2");
+
+            /*
+            HELPER FN
+             */
+            function select_items(){
+                //get item 1
+                var item1 = inventory.selected;
+                //user must select now item 2
+                dialog.write();
+                var item2;
+                return [item1, item2];
+            }
         }
     },
     "read" : function(txt){

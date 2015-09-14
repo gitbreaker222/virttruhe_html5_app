@@ -1,10 +1,14 @@
 {
   "test":"I am error",
   "info": {
-    "default" : "scan VIRTTRUHE QR-Cards and click on items to interact with them",
+    "default" : "scan VIRTTRUHE QR-Cards and click on items to interact with them #ok",
     "description" : "#description"
   },
   "use" : {
-    "ask" : "#name?<br> #dialog_ok #dialog_close"
-  }
+    "ask" : "#name?<br> #ok #no",
+    "combine" : "Select item...<br> <button onclick=''>OK</button>"
+  },
+
+  "ok" : "<button onclick='buttons.d_ok(#next)'>OK</button>",
+  "no" : "<button onclick='buttons.d_close()'>No</button>"
 }

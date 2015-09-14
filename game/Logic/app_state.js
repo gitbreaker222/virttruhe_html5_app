@@ -1,4 +1,5 @@
 var app_state = {
+    //this is not used at the time - instead use app.state setter
     change  : function(next_state){
             if(this.state == "menu" && next_state == "scan"){
                 //special case when returning from pause menu to scanner

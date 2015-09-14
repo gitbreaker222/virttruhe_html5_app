@@ -225,6 +225,7 @@ var views = {
             //hide box
             this.box.hide();
             if(next_action !== undefined){
+                console.log("next action");
                 next_action();
             }
         },
@@ -233,6 +234,8 @@ var views = {
             console.log("show dialog");
             //get message
             var message = app.dialog;
+            //replace #tags with html
+
             //inject message into node
             this.node.html(message);
             //show box

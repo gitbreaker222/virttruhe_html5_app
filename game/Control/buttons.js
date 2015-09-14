@@ -6,7 +6,7 @@ buttons = {
     /*
      TOP BAR
      */
-    btn_scan: function (btn) {
+    scan: function (btn) {
         if (this.disabled(btn)) return;
 
         switch (app.state) {
@@ -32,21 +32,27 @@ buttons = {
      ITEM INTERACTION, BOTTOM BAR
      */
     btn_select_item: function(item_id){
-        inventory.select(item_id.id);
+        if(app.state == "combine"){
+            //this is item2
+
+        }else {
+            inventory.select(item_id.id);
+        }
     },
 
     btn_info: function (btn) {
-        dialog.write("info");
-        $('#dialog_box').show();
+        dialog.get_message("info");
     },
 
     btn_use: function (btn) {
         if (this.disabled(btn)) return;
-        dialog.write("use");
+
+        dialog.get_message("use");
     },
 
     btn_share: function (btn) {
         if (this.disabled(btn)) return;
+
         console.log("button pushed");
         console.log(btn);
     },
@@ -86,6 +92,20 @@ buttons = {
 
 
     /*
+    DIALOG
+     */
+    d_close : function(event){
+        console.log("close dialog");
+        views.dialog.close();
+    },
+    d_ok    : function(next_action){
+        console.log("confirm dialog thingy");
+        this.d_close();
+        next_action();
+    },
+
+
+    /*
     ATTACH BUTTONS AFTER HTML LOAD
      */
     attach : function(){
@@ -102,7 +122,7 @@ buttons = {
             buttons.btn_play(this);
         });
         $("#btn_scan").click(function () {
-            buttons.btn_scan(this);
+            buttons.scan(this);
         });
         $("#btn_share").click(function () {
             buttons.btn_share(this);

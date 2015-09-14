@@ -3,63 +3,48 @@
  */
 var dialog = {
 
-    write  : function(start){
-        var container = $("#dialog");
+    get_message : function(context){
         var message;
-        var item;
-        var path = [start];
 
-
-        switch(start){
+        switch (context) {
             case "info":
-                if(inventory.selected === null){
-                    message = "scan VIRTTRUHE QR-Cards and click on items to interact with them";
-
-                    path.push("null");
+                if(app.selected == null){
+                    dialog.write(dialogs.info.default);
                 }else{
-                    item = items[inventory.selected];
-                    message = item.description;
+                    dialog.write(dialogs.info.description);
                 }
                 break;
-
             case "use":
-                item = items[inventory.selected];
-                var action_id = item.function;
-                var action_name = actions[action_id].name;
-                //var action = actions[action_id].start;
-
-                message = dialogs.use.ask;
-                //insert action name
-                message = message.replace("#name", action_name);
-                //insert button functions
-                message = message.replace("#dialog_ok", "<button onclick='views.dialog.close()(actions."+action_id+".start())'>OK</button>");
-                message = message.replace("#dialog_close", "<button onclick='views.dialog.close()'>No</button>");
-
-                app.dialog = message;
-                break;
-
-            case "share":
-                break;
-
-            case "delete":
-                break;
+                break
         }
+    },
 
-        //insert dialog to UI
-        //container.html(message);
+    write  : function(message){
+        //search for #tag variables
+        var tags = message.match(/#\w+/g);
+        console.log(tags);
+        //replace those tags
+        for (var tag in tags){
+            //sort out prototype properties. e.g. "array.remove"
+            if(!(tag >= 0)) continue;
 
-
-        /*
-        SUB FN
-         */
-        function walk_path(root, path) {
-            var node = root;
-            for (var index=0; index < path.length; index = index+1) {
-                node = node[path[index]];
+            switch (tags[tag]){
+                case "#ok":
+                    message = message.replace(/#ok/g, dialogs.ok);
+                    break;
+                case "#no":
+                    break;
+                case "#description":
+                    break;
+                case "#name":
+                    break;
+                case "#next":
+                    break;
+                default:
+                    alert("unhandled dialog #tag: "+tag);
+                    break;
             }
-            return node;
         }
-
-
+        app.dialog = message;
     }
 };
