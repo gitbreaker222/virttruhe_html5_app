@@ -1,12 +1,14 @@
 function audioplayer(){
-
 }
 
 var audio = new audioplayer;
 
 //TODO create some backgroundmusic records
-var sound = new Howl({
-    src: ['sound.ogg', 'sound.mp3', 'sound.wav'],
+var bgm = new Howl({
+    src: [
+        'Data/audio/background/shadow6nothing9 - A cool night out.ogg',
+        'Data/audio/background/shadow6nothing9 - A cool night out.m4a'
+    ],
     autoplay: true,
     loop: true,
     volume: 0.5,
@@ -16,6 +18,7 @@ var sound = new Howl({
 });
 
 //TODO create sfx sprites
+/*
 var sfx = new Howl({
     src: ['sounds.ogg', 'sounds.mp3'],
     sprite: {
@@ -27,3 +30,4 @@ var sfx = new Howl({
 
 // shoot the laser!
 sound.play('laser');
+*/

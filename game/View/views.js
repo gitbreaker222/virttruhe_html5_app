@@ -15,6 +15,7 @@ var views = {
         $("#content").children().hide();
         switch (state){
             case "inventory":
+                this.top_controls.node.show();
                 this.bottom_controls.node.show();
                 this.inventory.node.show();
                 break;
@@ -23,7 +24,7 @@ var views = {
                 this[app.config.scanner + "_scanner"].node.show();
                 break;
             case "menu":
-                this.bottom_controls.node.hide();
+                this.top_controls.node.hide();
                 this.menu.node.show();
                 break//dance
             default :
