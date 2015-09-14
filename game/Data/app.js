@@ -9,7 +9,7 @@ var app = {
     "Keys"          : 99,
     "Gold"          : 999,
     "Dialog"        : "",
-    "combine_item"  : false,
+    "Combine_item"  : false,
 
 
     /*
@@ -84,6 +84,13 @@ Object.defineProperties(app, {
         "set": function(value) {
             app.Dialog = value;
             views.dialog.show();
+        }
+    },
+    combine_item: {
+        "get": function() { return app.Combine_item},
+        "set": function(value) {
+            app.Combine_item = value;
+            views.inventory.toggle_combine();
         }
     }
 });

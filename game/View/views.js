@@ -140,6 +140,14 @@ var views = {
             }
             //else select node with this id
             $("#"+id).addClass("selected");
+        },
+        toggle_combine : function(){
+            var element = $(".selected");
+            if (element.hasClass("combine")){
+                element.removeClass("combine");
+            }else{
+                element.addClass("combine");
+            }
         }
     },
 

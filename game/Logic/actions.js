@@ -17,6 +17,7 @@ actions = {
             }
 
             console.log(item1 + " will be combined with " + item2);
+            app.combine_item = false;
         }
     },
     "read" : function(txt){
