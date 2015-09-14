@@ -9,6 +9,7 @@ var app = {
     "Keys"          : 99,
     "Gold"          : 999,
     "Dialog"        : "",
+    "combine_item"  : false,
 
 
     /*

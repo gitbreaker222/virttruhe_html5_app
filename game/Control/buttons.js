@@ -31,12 +31,13 @@ buttons = {
     /*
      ITEM INTERACTION, BOTTOM BAR
      */
-    btn_select_item: function(item_id){
-        if(app.state == "combine"){
-            //this is item2
-
+    btn_select_item: function(element){
+        if(app.combine_item){
+            //user selected second item for combine action
+            actions.combine.start(inventory.selected, element.id);
+            app.combine_item = false;
         }else {
-            inventory.select(item_id.id);
+            inventory.select(element.id);
         }
     },
 
@@ -95,13 +96,12 @@ buttons = {
     DIALOG
      */
     d_close : function(event){
-        console.log("close dialog");
         views.dialog.close();
     },
-    d_ok    : function(next_action){
+    d_ok    : function(){
         console.log("confirm dialog thingy");
         this.d_close();
-        next_action();
+        if(actions.next_action) actions[actions.next_action].start();
     },
 
 

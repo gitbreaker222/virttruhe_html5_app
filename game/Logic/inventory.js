@@ -6,8 +6,8 @@
  * @property item_list {array}
  */
 var inventory = {
-    "Item_list" : [],
-    "Selected": null,
+    Item_list   : [],
+    Selected    : null,
 
 
 

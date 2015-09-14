@@ -2,30 +2,21 @@
  * Created by lexon222 on 26.08.15.
  */
 actions = {
+    //if a user has to confirm an action, it is this action
+    next_action : null,
+
     combine : {
         name: "Combine with another item",
         start: function(item1, item2) {
             //set state
-            app.state == "combine";
+            app.combine_item = true;
             //check if items are given
             if(item2 === undefined){
                 console.log("select second item");
                 return
             }
 
-            console.log(item1 + " will be combined with " + "item2");
-
-            /*
-            HELPER FN
-             */
-            function select_items(){
-                //get item 1
-                var item1 = inventory.selected;
-                //user must select now item 2
-                dialog.write();
-                var item2;
-                return [item1, item2];
-            }
+            console.log(item1 + " will be combined with " + item2);
         }
     },
     "read" : function(txt){

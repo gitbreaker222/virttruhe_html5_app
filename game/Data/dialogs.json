@@ -1,14 +1,17 @@
 {
-  "test":"I am error",
+  "test":[
+    "this is the first page of a multipage dialog #next",
+    "this is a second page of a multipage dialog #prev #ok"
+  ],
   "info": {
     "default" : "scan VIRTTRUHE QR-Cards and click on items to interact with them #ok",
-    "description" : "#description"
+    "description" : "#description <br> #ok"
   },
   "use" : {
     "ask" : "#name?<br> #ok #no",
-    "combine" : "Select item...<br> <button onclick=''>OK</button>"
+    "combine" : "Select item...<br> #ok"
   },
 
-  "ok" : "<button onclick='buttons.d_ok(#next)'>OK</button>",
+  "ok" : "<button onclick='buttons.d_ok()'>OK</button>",
   "no" : "<button onclick='buttons.d_close()'>No</button>"
 }
