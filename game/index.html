@@ -19,6 +19,7 @@
     <!--html5-qrcode decoder-->
     <script src="Data/lib/jsqrcode-combined.min.js" ></script>
     <script src="Data/lib/html5-qrcode.js" ></script>
+    <!--audio-->
 
 
     <!--DATA-->
@@ -31,6 +32,7 @@
     <script src="Logic/text_scanner.js" defer ></script>
     <script src="Logic/video_scanner.js" defer ></script>
     <script src="Logic/dialog.js" defer ></script>
+    <script src="Logic/audio.js" defer ></script>
     <!--CONTROL-->
     <script src="Control/buttons.js" defer ></script>
     <!--VIEW-->
@@ -73,7 +75,14 @@
       <li>
         <button id="btn_play"></button>
       </li>
-      <li id="audio_progress"></li>
+      <li id="audio_progress">
+        <span id="progress_bar"></span>
+        <img src="Data/img/slider.svg">
+        <div id="time_box">
+          <span id="progress_time"></span>
+          <span id="total_time"></span>
+        </div>
+      </li>
       <li class="separator"></li>
       <li>
         <button id="btn_scan">
