@@ -6,9 +6,13 @@ HTML5 app for collecting virtual items. A playground for transmedial storyworlds
 See the blog on virttruhe.tumblr.com
 
 ## LATEST VERSION:
-0.7.10
+0.7.11
 
 ### Changelog:
+0.7.11
+- enhanced dialog system
+- use button progress
+
 0.7.10: 
 - added dialog popup template
 - set up video scanner
