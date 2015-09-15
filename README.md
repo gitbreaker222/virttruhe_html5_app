@@ -6,9 +6,13 @@ HTML5 app for collecting virtual items. A playground for transmedial storyworlds
 See the blog on virttruhe.tumblr.com
 
 ## LATEST VERSION:
-0.7.11
+0.7.12
 
 ### Changelog:
+0.7.12
+- added background music
+- added mute bgm function in menu
+
 0.7.11
 - enhanced dialog system
 - use button progress

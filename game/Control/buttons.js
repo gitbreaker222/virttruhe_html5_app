@@ -90,6 +90,13 @@ buttons = {
         type = type.toLowerCase();
         scanner.change(type)
     },
+    toggle_bgm: function(){
+        if(bgm.playing()){
+            bgm.pause();
+        }else {
+            bgm.play();
+        }
+    },
 
 
     /*
@@ -132,6 +139,9 @@ buttons = {
         });
         $("#btn_use").click(function () {
             buttons.btn_use(this);
+        });
+        $("#m_music").find("input").change(function(){
+            buttons.toggle_bgm()
         });
 
         //control/stop event propagation on clicks

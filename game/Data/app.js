@@ -10,7 +10,7 @@ var app = {
     "Gold"          : 999,
     "Dialog"        : "",
     "Combine_item"  : false,
-    version         : "0.7.11",
+    version         : "0.7.12",
 
 
     /*
