@@ -5,17 +5,21 @@ var dialog = {
     next_page    : null,
 
     get_message : function(context){
+        var state = app.state;
         var message;
 
         switch (context) {
             case "info":
-                //assume state is inventory
-                if(inventory.selected == null){
-                    //the default information
-                    dialog.write(dialogs.info.default);
-                }else{
-                    //description of the selected item
-                    dialog.write(dialogs.info.description);
+                if(state == "inventory") {
+                    if (inventory.selected == null) {
+                        //the default information
+                        dialog.write(dialogs.info.default);
+                    } else {
+                        //description of the selected item
+                        dialog.write(dialogs.info.description);
+                    }
+                }else if(state == "menu"){
+                    dialog.write(dialogs[context].version)
                 }
                 break;
             case "use":
@@ -52,7 +56,7 @@ var dialog = {
                     break;
                 case "#name":
                     //verb for item action
-                    message = message.replace(/#name/g, actions[items[inventory.selected].function].name);
+                    message = message.replace(/#name/g, actions[items[inventory.selected].action].name);
                     //
                     break;
                 case "#prev":

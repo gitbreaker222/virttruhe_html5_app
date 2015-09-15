@@ -33,9 +33,6 @@ function load_json(){
         //set ready flag
         app.loading = false;
     });
-    $.getJSON('Data/dialogs.json', function(data){
-        dialogs = data;
-    });
 }
 
 load_json();
