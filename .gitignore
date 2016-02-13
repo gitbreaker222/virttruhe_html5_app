@@ -1,7 +1,6 @@
-/documentation/ger/Dokumentation (finaler Entwurf).pdf
-/documentation/ger/test-1_font_in_dok_eingebettet.pdf
-/documentation/ger/test-2_font_in_dok_eingebettet_PDF-A-1a.pdf
-/documentation/ger/VIRTTRUHE - Dokumentation v2.0.pdf
-/documentation/ger/VIRTTRUHE - Dokumentation v3.0.pdf
-*.project
-/.idea/
+.DS_Store
+node_modules
+npm-debug.log
+bower_components
+build
+.sass-cache
