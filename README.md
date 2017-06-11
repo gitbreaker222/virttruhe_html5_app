@@ -1,4 +1,4 @@
-virttruhe_html5_app (alpha state)
+virttruhe_html5_app (depricated. see [VIRTTRUHE](https://github.com/gitbreaker222/virttruhe))
 ===================
 
 LATEST VERSION:
